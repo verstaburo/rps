@@ -100,6 +100,11 @@ a, input, button, select, textarea {
   transition: all .25s ease-in-out;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 select, input, textarea, button {
   color: $color-input;
   margin: 0;

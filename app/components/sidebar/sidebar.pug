@@ -1,0 +1,8 @@
+include ../../blocks/icon/icons
+include ../../blocks/aside-menu/aside-menu
+
+mixin sidebar()
+  +b.sidebar&attributes(attributes)
+    +e.A.logo(href="#")
+      +icon('logo')
+    +aside-menu

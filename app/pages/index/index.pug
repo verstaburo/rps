@@ -1,7 +1,12 @@
 extends ../../layouts/default
+include ../../components/header/header
 
 block head
-  - var pageTitle = 'Versta Project Template'
+  - var pageTitle = 'RPS — Главная'
 
-block content
+block layout-left
+  +sidebar
+
+block layout-right
+  +header
   +b.index

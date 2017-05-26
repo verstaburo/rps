@@ -1,0 +1,44 @@
+mixin aside-menu()
+  +b.UL.aside-menu&attributes(attributes)
+    +e.LI.item._bottom
+      +e.A.link(href="#")
+        +e.icon
+            +icon('icon-ui-7')
+        +e.SPAN.text Выход  
+      
+    +e.LI.item.active
+      +e.A.link(href="#")
+        +e.icon
+          +icon('icon-ui-1')
+        +e.SPAN.text Центр управления
+        
+    +e.LI.item
+      +e.A.link(href="#")
+        +e.icon
+          +icon('icon-ui-2')
+        +e.SPAN.text Клиенты
+        
+    +e.LI.item
+      +e.A.link(href="#")
+        +e.icon
+          +icon('icon-ui-3')
+        +e.SPAN.text Касса
+        
+    +e.LI.item
+      +e.A.link(href="#")
+        +e.icon
+          +icon('icon-ui-4')
+        +e.SPAN.text Статистика
+        
+    +e.LI.item
+      +e.A.link(href="#")
+        +e.icon
+          +icon('icon-ui-5')
+        +e.SPAN.text Настройки
+                    
+    +e.LI.item
+      +e.A.link(href="#")
+        +e.counter 4
+        +e.icon
+            +icon('icon-ui-6')
+        +e.SPAN.text Помощь                                           

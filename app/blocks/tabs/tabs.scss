@@ -1,0 +1,28 @@
+.tabs {
+  display: flex;
+
+  &__tab {
+    display: inline-flex;
+    vertical-align: top;
+
+    &.active, &:hover {
+
+      .tabs__link {
+        border-color: $color-main;
+        color: #f9ad1a;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #797b7c;
+    border-bottom: 4px solid transparent;
+    text-align: center;
+    display: flex;
+    padding: 15px 18px 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+}
