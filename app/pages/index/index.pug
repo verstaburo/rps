@@ -3,6 +3,7 @@ include ../../blocks/button/button
 include ../../blocks/icon-button/icon-button
 include ../../blocks/search-bar/search-bar
 include ../../blocks/table/table
+include ../../blocks/checkbox/checkbox
 include ../../components/header/header
 include ../../components/actions-header/actions-header
 
@@ -14,7 +15,7 @@ block layout-left
 
 block layout-right
   +header
-  +b.index
+  +b.index.page
     +actions-header
       +actions-header-col
         +button(href="#")._green Добавить клиента
@@ -31,11 +32,625 @@ block layout-right
           +table-filter-button А-Я
         +table-header-col('Тип')._width_120
           +table-filter-button Все
-        +table-header-col('Физ. лиц')._width_90._align_center
-        +table-header-col('Карт')._width_90._align_center
-        +table-header-col('ТС')._width_90._align_center
+        +table-header-col('Физ. лиц')._width_100._align_center
+        +table-header-col('Карт')._width_100._align_center
+        +table-header-col('ТС')._width_100._align_center
         +table-header-col('Дата изменения')._width_200
           +table-filter-button._orange 9-1
         +table-header-col('Комментарий')._width_260
-          
+      
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Novotel Moscow City
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 51
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 67
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 67
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 13:34:32
+          +table-col._width_260
+            +table-text Перезвонить 28.04.2017
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b ООО «ПТК»
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 21
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 45
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 34
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 13:32:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Сбербанк
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 12
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 56
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 12
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:56:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Globalone
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 32
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 35
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 36
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:47:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text-block
+              +table-text
+                a(href="#")
+                  b Иванов Дмитрий Евгеньевич
+              +table-text._grey Сбербанк
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") —
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 1
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 1
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 10:44:00
+          +table-col._width_260
+            +table-text
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Газпром
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 2
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 5
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 35
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:14:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b ООО «Робот-Икс»
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 23
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 5
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 56
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 10:57:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text-block
+              +table-text
+                a(href="#")
+                  b Александрова Александра Александровна
+              +table-text._grey Газпром
+          +table-col._width_120
+            +table-text
+              | Физ. лицо
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") —
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 1
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 5
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 11:22:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Energizer
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 5
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 45
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 45
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:05:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b 7Days
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 2
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 2
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 1
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:23:32
+          +table-col._width_260
+            +table-text Очень много неоплачено
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b ВТБ 24
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 143
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 167
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 145
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:23:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Sun Clinic
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 8
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 10
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 8
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:23:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Хостел Сити
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 12
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 15
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 15
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:23:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Novotel Moscow City
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 51
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 67
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 67
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 13:34:32
+          +table-col._width_260
+            +table-text Перезвонить 28.04.2017
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b ООО «ПТК»
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 21
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 45
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 34
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 13:32:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Сбербанк
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 12
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 56
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 12
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:56:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Globalone
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 32
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 35
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 36
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:47:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text-block
+              +table-text
+                a(href="#")
+                  b Иванов Дмитрий Евгеньевич
+              +table-text._grey Сбербанк
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") —
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 1
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 1
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 10:44:00
+          +table-col._width_260
+            +table-text
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Газпром
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 2
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 5
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 35
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:14:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b ООО «Робот-Икс»
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 23
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 5
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 56
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 10:57:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text-block
+              +table-text
+                a(href="#")
+                  b Александрова Александра Александровна
+              +table-text._grey Газпром
+          +table-col._width_120
+            +table-text
+              | Физ. лицо
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") —
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 1
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 5
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 11:22:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Energizer
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 5
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 45
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 45
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:05:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b 7Days
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 2
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 2
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 1
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:23:32
+          +table-col._width_260
+            +table-text Очень много неоплачено
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b ВТБ 24
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 143
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 167
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 145
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:23:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Sun Clinic
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 8
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 10
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 8
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:23:32
+          +table-col._width_260
+      +table-row
+        +table-row._main
+          +table-col._flexible
+            +checkbox('row', 'value').__checkbox
+            +table-text
+              a(href="#")
+                b Хостел Сити
+          +table-col._width_120
+            +table-text Компания
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 12
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 15
+          +table-col._width_100._align_center
+            +table-text
+              a(href="#") 15
+          +table-col._width_200
+            +table-text-block
+              +table-text 28.04.2017
+              +table-text._size_small 12:23:32
+          +table-col._width_260
             

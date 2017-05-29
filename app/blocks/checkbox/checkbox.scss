@@ -1,0 +1,38 @@
+.checkbox {
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover .checkbox__box { border-color: #ffbb33; }
+
+  &__box {
+    position: relative;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #d2d3d3;
+    border-radius: 2px;
+    transition: all .25s ease-in-out;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 10px;
+    fill: #ffbb33;
+    transition: all .25s ease-in-out;
+    opacity: 0;
+
+    @include center-image;
+  }
+
+  &__input {
+    @include visual-hide;
+
+    &:checked + .checkbox__box {
+      border-color: #ffbb33;
+
+      .checkbox__icon {
+        opacity: 1;
+      }
+    }
+  }
+}

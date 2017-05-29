@@ -37,7 +37,7 @@
     position: relative;
 
     &:last-of-type {
-      .aside-menu__link { border-bottom: 2px solid black; }
+      .aside-menu__link { border-bottom: 1px solid black; }
     }
 
     &.active, &:hover {
@@ -46,6 +46,7 @@
         border-color: transparent;
         background-color: #2b2f31;
         border-color: transparent;
+        box-shadow: inset 2px 0 0 $color-main;
       }
       & + .aside-menu__item .aside-menu__link { border-top-color: transparent; }
     }
@@ -57,7 +58,7 @@
     display: flex;
     text-align: center;
     flex-direction: column;
-    border-top: 2px solid black;
+    border-top: 1px solid black;
   }
 
   .aside-menu__icon, .aside-menu__text {

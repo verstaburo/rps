@@ -2,5 +2,8 @@
   display: flex;
   min-height: 100vh;
 
-  &__right { flex: 1; }
+  &__right {
+    flex: 1;
+    overflow: hidden;
+  }
 }

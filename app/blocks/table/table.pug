@@ -2,19 +2,31 @@ mixin table()
   +b.table&attributes(attributes)
     block
 
-
-
 mixin table-header()
-  +b.table-header&attributes(attributes)
+  +e.header&attributes(attributes)
     block
 
 mixin table-header-col(text)
   +e.col&attributes(attributes)
-    +e.P.text= text
+    +e.P.header-text= text
+    block
+      
+mixin table-filter-button()
+  +e.filter-button&attributes(attributes)
     block
 
-
-
-mixin table-filter-button()
-  +b.table-filter-button&attributes(attributes)
+mixin table-row()
+  +e.row&attributes(attributes)
+    block
+      
+mixin table-col()
+  +e.col&attributes(attributes)
+    block
+      
+mixin table-text()
+  +e.P.text&attributes(attributes)
+    block
+      
+mixin table-text-block()
+  +e.text-block&attributes(attributes)
     block
