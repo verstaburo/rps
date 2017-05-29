@@ -1,3 +1,7 @@
+# RPS
+
+* Ссылка на билд: https://verstaburo.github.io/rps/
+
 # Шаблон для быстрого старта проектов в студии Versta
 
 * [Как начать проект](readme/how-to-start-project.md)
