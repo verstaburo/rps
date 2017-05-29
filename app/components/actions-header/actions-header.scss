@@ -1,0 +1,18 @@
+.actions-header {
+  display: flex;
+  height: 56px;
+  background-color: #f7f7f7;
+  box-shadow: 0 1px 2px rgba(211, 211, 211, 0.75);
+  padding: 8px;
+
+  &__col {
+    position: relative;
+    display: flex;
+
+    &_flexible { flex: 1; }
+
+    &:not(:last-child) { margin-right: 15px; }
+  }
+
+  &__search-bar { width: 100%; }
+}

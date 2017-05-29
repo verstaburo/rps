@@ -1,11 +1,8 @@
 mixin tabs()
   +b.UL.tabs&attributes(attributes)
-    +e.LI.tab.active
-      +e.A.link(href="#") Клиенты
+    block
       
-    +e.LI.tab
-      +e.A.link(href="#") Сессии
-      
-    +e.LI.tab
-      +e.A.link(href="#") Чёрный список
+mixin tabs-tab(href, text)
+  +e.LI.tab&attributes(attributes)
+    +e.A.link(href=href)= text
         

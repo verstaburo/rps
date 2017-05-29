@@ -1,0 +1,23 @@
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d2d3d3;
+  border-radius: 3px;
+  transition: all .25s ease-in-out;
+  padding: 9px;
+  min-height: 40px;
+
+  &:hover {
+    background-color: white;
+
+    .icon-button__icon { fill: #555; }
+  }
+
+  &__icon {
+    fill: #797b7c;
+    width: 19px;
+    height: 19px;
+    transition: all .25s ease-in-out;
+  }
+}

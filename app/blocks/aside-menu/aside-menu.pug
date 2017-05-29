@@ -1,44 +1,20 @@
 mixin aside-menu()
-  +b.UL.aside-menu&attributes(attributes)
-    +e.LI.item._bottom
-      +e.A.link(href="#")
-        +e.icon
-            +icon('icon-ui-7')
-        +e.SPAN.text Выход  
+  +b.aside-menu&attributes(attributes)
+    block                 
+
+mixin aside-menu-item(href, text, icon)                            
+  +e.item&attributes(attributes)
+    +e.A.link(href=href)
+      +e.icon
+          +icon(icon)
+      +e.SPAN.text= text
+      block
       
-    +e.LI.item.active
-      +e.A.link(href="#")
-        +e.icon
-          +icon('icon-ui-1')
-        +e.SPAN.text Центр управления
-        
-    +e.LI.item
-      +e.A.link(href="#")
-        +e.icon
-          +icon('icon-ui-2')
-        +e.SPAN.text Клиенты
-        
-    +e.LI.item
-      +e.A.link(href="#")
-        +e.icon
-          +icon('icon-ui-3')
-        +e.SPAN.text Касса
-        
-    +e.LI.item
-      +e.A.link(href="#")
-        +e.icon
-          +icon('icon-ui-4')
-        +e.SPAN.text Статистика
-        
-    +e.LI.item
-      +e.A.link(href="#")
-        +e.icon
-          +icon('icon-ui-5')
-        +e.SPAN.text Настройки
-                    
-    +e.LI.item
-      +e.A.link(href="#")
-        +e.counter 4
-        +e.icon
-            +icon('icon-ui-6')
-        +e.SPAN.text Помощь                                           
+mixin aside-menu-item-counter()
+  +e.counter&attributes(attributes)
+    block
+
+mixin aside-menu-bottom-block()
+  +e.bottom-block&attributes(attributes)
+    block
+  

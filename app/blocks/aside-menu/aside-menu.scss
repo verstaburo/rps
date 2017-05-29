@@ -1,8 +1,19 @@
 .aside-menu {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  padding-bottom: 116px;
   flex: 1;
+
+  &__bottom-block {
+    flex: 1;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    order: 2;
+
+    .aside-menu__item:last-of-type .aside-menu__link { border-bottom: 0; }
+  }
 
   &__counter {
     position: absolute;
@@ -37,13 +48,6 @@
         border-color: transparent;
       }
       & + .aside-menu__item .aside-menu__link { border-top-color: transparent; }
-    }
-
-    &_bottom {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      border-bottom: 0;
     }
   }
 
