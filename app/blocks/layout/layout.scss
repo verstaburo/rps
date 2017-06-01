@@ -1,6 +1,25 @@
 .layout {
   display: flex;
   min-height: 100vh;
+  padding-left: 80px;
+
+  &__scroll {
+    overflow-y: scroll;
+    width: 100%;
+    box-sizing: content-box;
+    padding-right: 25px;
+    height: 100%;
+  }
+
+  &__left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 80px;
+    z-index: 50;
+  }
 
   &__right {
     flex: 1;

@@ -180,9 +180,11 @@ div {
   padding: 0;
   width: 0;
   height: 0;
+  opacity: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
+  position: absolute;
 }
 
 /*

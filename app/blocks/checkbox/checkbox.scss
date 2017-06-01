@@ -25,7 +25,7 @@
   }
 
   &__input {
-    @include visual-hide;
+    display: none;
 
     &:checked + .checkbox__box {
       border-color: #ffbb33;
