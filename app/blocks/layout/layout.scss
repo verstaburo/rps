@@ -19,6 +19,8 @@
     overflow: hidden;
     width: 80px;
     z-index: 50;
+
+    @include performance;
   }
 
   &__right {

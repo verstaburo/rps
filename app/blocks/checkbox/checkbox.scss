@@ -2,7 +2,7 @@
   display: inline-block;
   cursor: pointer;
 
-  &:hover .checkbox__box { border-color: #ffbb33; }
+  &:hover .checkbox__box { border-color: #fb3; }
 
   &__box {
     position: relative;
@@ -17,7 +17,7 @@
   &__icon {
     width: 14px;
     height: 10px;
-    fill: #ffbb33;
+    fill: #fb3;
     transition: all .25s ease-in-out;
     opacity: 0;
 
@@ -28,7 +28,7 @@
     display: none;
 
     &:checked + .checkbox__box {
-      border-color: #ffbb33;
+      border-color: #fb3;
 
       .checkbox__icon {
         opacity: 1;
