@@ -4,6 +4,7 @@ include ../../blocks/icon-button/icon-button
 include ../../blocks/search-bar/search-bar
 include ../../blocks/table/table
 include ../../blocks/checkbox/checkbox
+include ../../blocks/partial-button/partial-button
 include ../../components/header/header
 include ../../components/actions-header/actions-header
 
@@ -17,15 +18,23 @@ block layout-right
   +header
   +b.index.page
     +actions-header
+      //+actions-header-col
+      //  +button(href="#")._green Добавить клиента
+      //
+      //+actions-header-col._flexible
+      //  +search-bar('Введите название партнёра, название или адрес объекта')._white.__search-bar
+      //
+      //+actions-header-col
+      //  +icon-button('icon-settings')(href="#")
       +actions-header-col
-        +button(href="#")._green Добавить клиента
-        
-      +actions-header-col._flexible
-        +search-bar('Введите название партнёра, название или адрес объекта')._white.__search-bar
-        
+        +partial-button('icon-close')._grey 1
       +actions-header-col
-        +icon-button('icon-settings')(href="#")
-        
+        +button(href='#')._uppercase._grey Изменение данных карт
+      +actions-header-col
+        +button(href='#')._uppercase._grey Удалить компанию
+      +actions-header-col
+        +button(href='#')._uppercase._grey Удалить Физ. лицо
+
     +table()
       +table-header
         +table-header-col('Клиент')._flexible
@@ -38,7 +47,7 @@ block layout-right
         +table-header-col('Дата изменения')._width_200
           +table-filter-button._orange 9-1
         +table-header-col('Комментарий')._width_260
-      
+
       +table-row
         +table-row._main
           +table-col._flexible
@@ -653,4 +662,4 @@ block layout-right
               +table-text 28.04.2017
               +table-text._size_small 12:23:32
           +table-col._width_260
-            
+

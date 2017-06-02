@@ -5,6 +5,10 @@
   padding: 0 28px;
   min-height: 40px;
 
+  &_uppercase {
+    text-transform: uppercase;
+  }
+
   &_green {
     font-size: 14px;
     color: white;
@@ -17,5 +21,17 @@
     border: 1px solid #0ab55d;
 
     &:hover { background-color: #17de78; }
+  }
+
+  &_grey {
+    color: #797b7c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .88px;
+    border-radius: 3px;
+    border: 1px solid #d2d3d3;
+    background-color: #f6f6f6;
+
+    &:hover { box-shadow: 0 2px 4px rgba(0, 0, 0, .1), inset 0 2px 0 #fff; }
   }
 }

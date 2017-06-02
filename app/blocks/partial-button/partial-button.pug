@@ -1,0 +1,8 @@
+include ../icon/icons
+
+mixin partial-button(icon)
+  +b.A.partial-button&attributes(attributes)
+    +e.part
+      +icon(icon).icon
+    +e.part
+      block
