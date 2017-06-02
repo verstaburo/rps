@@ -1,5 +1,6 @@
 import $ from 'jquery';
+import popup from '../blocks/popup/popup';
 
 $(() => {
-  // your code goes here
+  popup();
 });
