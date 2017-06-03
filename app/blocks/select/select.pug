@@ -1,0 +1,13 @@
+include ../icon/icons
+
+//- Модификаторы
+//- ._active - Добавляет тень и меняет направление caret
+//- ._size_small - уменьшенный селект
+
+mixin select(items)
+  +b.select&attributes(attributes)
+    +e.SELECT.control
+      each item in items
+        option(value=value)= item.title
+    +e.button
+      +icon('icon-caret').caret
