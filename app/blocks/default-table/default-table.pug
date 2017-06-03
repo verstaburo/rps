@@ -1,0 +1,19 @@
+mixin default-table()
+  +b.TABLE.default-table&attributes(attributes)
+    block
+
+mixin default-table-header()
+  +e.THEAD.header&attributes(attributes)
+    block
+
+mixin default-table-body()
+  +e.TBODY.body&attributes(attributes)
+    block
+
+mixin default-table-row()
+  +e.TR.row&attributes(attributes)
+    block
+
+mixin default-table-cell()
+  +e.TD.cell&attributes(attributes)
+    block

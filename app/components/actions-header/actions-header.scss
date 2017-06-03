@@ -12,6 +12,10 @@
 
     &_flexible { flex: 1; }
 
+    &_push_right {
+      margin-left: auto;
+    }
+
     &:not(:last-child) { margin-right: 15px; }
   }
 

@@ -3,3 +3,7 @@ include ../icon/icons
 mixin icon-button(iconn)
   +b.A.icon-button&attributes(attributes)
     +icon(iconn).__icon
+
+    if block
+      +e.SPAN.text
+        block

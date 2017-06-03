@@ -1,0 +1,21 @@
+.default-table {
+  width: 100%;
+
+  &__header {
+
+    .default-table__cell {
+      font-weight: 500;
+    }
+  }
+
+  &__cell {
+    color: #1b1c1f;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 0;
+
+    &:not(:first-child) {
+      padding-left: 16px;
+    }
+  }
+}

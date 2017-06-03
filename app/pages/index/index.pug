@@ -7,6 +7,7 @@ include ../../blocks/checkbox/checkbox
 include ../../blocks/partial-button/partial-button
 include ../../components/header/header
 include ../../components/actions-header/actions-header
+include ../../components/add-to-blacklist/add-to-blacklist
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -17,6 +18,7 @@ block layout-left
 block layout-right
   +header
   +b.index.page
+    +add-to-blacklist
     +actions-header
       //+actions-header-col
       //  +button(href="#")._green Добавить клиента
@@ -29,7 +31,7 @@ block layout-right
       +actions-header-col
         +partial-button('icon-close')._grey 1
       +actions-header-col
-        +button(href='#')._uppercase._grey Изменение данных карт
+        +button(href='#' data-target-popup='#add-to-blacklist')._uppercase._grey.js-show-popup Изменение данных карт
       +actions-header-col
         +button(href='#')._uppercase._grey Удалить компанию
       +actions-header-col

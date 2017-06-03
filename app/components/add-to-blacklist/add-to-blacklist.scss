@@ -1,0 +1,38 @@
+.add-to-blacklist {
+  display: block;
+  min-width: 669px;
+
+  &__actions {
+    padding: 0;
+    border-top: 0;
+  }
+
+  &__import {
+    margin: 8px 0 8px 8px;
+    min-width: 142px;
+  }
+
+  &__action-btn {
+    border-left: 1px solid #d2d3d3;
+  }
+
+  &__content {
+    padding: 4px 10px;
+  }
+
+  &__input {
+    color: #1b1c1f;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 16px;
+  }
+
+  &__cell-sm {
+    width: 100px;
+  }
+
+  &__cell-xs {
+    width: 32px;
+  }
+}
+
