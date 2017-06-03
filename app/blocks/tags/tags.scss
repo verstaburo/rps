@@ -1,0 +1,27 @@
+.tags {
+  display: inline-flex;
+  flex-flow: row wrap;
+  margin-right: -5px;
+  margin-bottom: -5px;
+
+  &__item {
+    padding: 0 6px;
+    border-radius: 3px;
+    border: 1px solid #797b7c;
+    line-height: 16px;
+    color: #202325;
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+    &_active {
+      background-color: #f9ae17;
+      border: 0;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+}
