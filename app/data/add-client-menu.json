@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Компанию",
+    "icon": "icon-company",
+    "iconClass": "",
+    "href": "#"
+  },
+  {
+    "title": "Физ. лицо",
+    "icon": "icon-person",
+    "iconClass": "",
+    "href": "#"
+  },
+  {
+    "title": "Импорт",
+    "icon": "icon-import",
+    "iconClass": "",
+    "href": "#"
+  }
+]

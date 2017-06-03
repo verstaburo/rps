@@ -1,0 +1,14 @@
+include ../icon/icons
+
+//- Данные
+//- [{ title: 'Заголовок', icon: 'icon-name', href: '#', iconClass: 'myBlock__element' }]
+//- iconClass - нужен, чтобы миксовать элементы и задавать нужные размеры для иконки
+
+mixin icon-menu(items)
+  +b.UL.icon-menu&attributes(attributes)
+    each item in items
+      +e.LI.item
+        +e.A(href=item.href || '#').link
+          +e.icon-wrap
+            +icon(item.icon)(class=item.iconClass || '').icon
+          +e.SPAN.text= item.title
