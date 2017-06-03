@@ -1,0 +1,56 @@
+include ../../blocks/inner-sidebar/inner-sidebar
+include ../../blocks/vertical-menu/vertical-menu
+include ../../blocks/field/field
+include ../../blocks/tags/tags
+include ../../blocks/select/select
+include ../../blocks/input/input
+include ../../blocks/button/button
+
+mixin search-filter()
+  +b.search-filter&attributes(attributes)
+    +inner-sidebar.__sidebar
+      +inner-sidebar-item._menu
+        +vertical-menu
+          +vertical-menu-item._active
+            +vertical-menu-text Новый фильтр
+          +vertical-menu-item
+            +vertical-menu-text Физ. лица без привязки
+          +vertical-menu-item
+            +vertical-menu-text Компании без физ. лиц
+          +vertical-menu-item
+            +vertical-menu-text Клиенты без карт
+          +vertical-menu-item
+            +vertical-menu-text Компании без карт
+    +e.container
+      +e.content
+        +field._align_top
+          +field-label Тэги:
+          +field-item
+            +tags
+              +tags-item VIP-Клиент
+              +tags-item._active Империя
+              +tags-item С доступом в личный кабинет
+              +tags-item Свои места на парковке
+              +tags-item Тэг
+              +tags-item._active Партнёры
+        +field
+          +field-label Тип клиента:
+          +field-item
+            +select([{ title: 'Разовый', value: 1 }, { title: 'Разовый 1', value: 2 }])._size_small
+        +field
+          +field-label Последняя дата изменения:
+          +field-item
+            +input._size_small
+        +field
+          +field-label Группа доступа:
+          +field-item
+            +select([{ title: 'Любая', value: 1 }, { title: 'Любая 1', value: 2 }])._size_small
+        +field
+          +field-label Тарифный план:
+          +field-item
+            +select([{ title: 'Любой', value: 1 }, { title: 'Любой 1', value: 2 }])._size_small
+
+      +e.footer
+        +button(href='#')._text_grey._uppercase.__reset Сбросить
+        +button(href='#')._grey._uppercase.__button Сохранить фильтр
+        +button(href='#')._green._uppercase.__button Применить

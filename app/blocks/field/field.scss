@@ -1,0 +1,26 @@
+.field {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &_align_top {
+    align-items: flex-start;
+  }
+
+  &__label {
+    display: block;
+    color: #202325;
+    font-size: 14px;
+    font-weight: 500;
+    width: 190px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    width: 100%;
+  }
+}

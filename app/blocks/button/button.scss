@@ -44,6 +44,15 @@
     &:hover { color: #0ee877; }
   }
 
+  &_text_grey {
+    color: #797b7c;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    &:hover { color: #202325; }
+  }
+
   &_text_red {
     color: #ed1c24;
     font-size: 14px;
