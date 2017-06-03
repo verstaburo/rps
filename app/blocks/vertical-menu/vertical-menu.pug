@@ -1,0 +1,12 @@
+mixin vertical-menu()
+  +b.UL.vertical-menu&attributes(attributes)
+    block
+
+mixin vertical-menu-item(href)
+  +e.LI.item&attributes(attributes)
+    +e.A(href=href || '#').link
+      block
+
+mixin vertical-menu-text
+  +e.SPAN.text&attributes(attributes)
+    block

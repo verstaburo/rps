@@ -5,7 +5,6 @@ include ../../blocks/search-bar/search-bar
 include ../../blocks/table/table
 include ../../blocks/checkbox/checkbox
 include ../../blocks/partial-button/partial-button
-include ../../blocks/icon-menu/icon-menu
 include ../../components/header/header
 include ../../components/actions-header/actions-header
 include ../../components/add-to-blacklist/add-to-blacklist
@@ -19,6 +18,8 @@ block layout-left
 block layout-right
   +header
   +b.index.page
+    //div(style="width: 100vw; height: 100vh; background-color: #fff; position: fixed; top: 0; left: 0; z-index: 9999; padding: 50px;")
+
     +add-to-blacklist
     +actions-header
       //+actions-header-col

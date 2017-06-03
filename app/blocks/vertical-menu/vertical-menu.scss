@@ -1,0 +1,42 @@
+.vertical-menu {
+  display: block;
+
+  &__item {
+    display: block;
+
+    &:hover, &_active {
+
+      .vertical-menu {
+
+        &__link {
+          border-left: 4px solid #f9ae17;
+        }
+
+        &__text {
+          color: #f69f15;
+        }
+      }
+    }
+
+    &_active .vertical-menu__text {
+      font-weight: 500;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 32px;
+    border-left: 4px solid transparent;
+  }
+
+  &__text {
+    color: #666869;
+    font-weight: 400;
+    will-change: color;
+    transition: color .25s ease-in-out;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+}
