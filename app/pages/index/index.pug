@@ -8,7 +8,6 @@ include ../../blocks/partial-button/partial-button
 include ../../components/header/header
 include ../../components/actions-header/actions-header
 include ../../components/add-to-blacklist/add-to-blacklist
-include ../../components/search-filter/search-filter
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -19,9 +18,7 @@ block layout-left
 block layout-right
   +header
   +b.index.page
-    div(style="width: 100vw; height: 100vh; background-color: #cecece; position: fixed; top: 0; left: 0; z-index: 9999; padding: 50px;")
-      +search-filter
-
+    //- TODO это для прмиера (убрать)
     +add-to-blacklist
     +actions-header
       //+actions-header-col
@@ -35,6 +32,7 @@ block layout-right
       +actions-header-col
         +partial-button('icon-close')._grey 1
       +actions-header-col
+        //- TODO это для прмиера (убрать открытие попапа)
         +button(href='#' data-target-popup='#add-to-blacklist')._uppercase._grey.js-show-popup Изменение данных карт
       +actions-header-col
         +button(href='#')._uppercase._grey Удалить компанию
