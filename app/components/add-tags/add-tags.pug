@@ -1,0 +1,12 @@
+include ../../blocks/tags/tags
+
+mixin add-tags(tags)
+  +b.add-tags&attributes(attributes)
+    +e.header
+      +e.SPAN.heading Тэги
+      +icon-button('icon-close')._size_small.__button
+
+    +tags.__tags
+      each tag in tags
+        +tags-item._active
+          =tag
