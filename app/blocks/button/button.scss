@@ -9,6 +9,10 @@
     text-transform: uppercase;
   }
 
+  &_align_center {
+    justify-content: center;
+  }
+
   &_green {
     font-size: 14px;
     color: white;

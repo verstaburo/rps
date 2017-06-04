@@ -18,6 +18,10 @@
     width: 190px;
     margin-right: 10px;
     flex-shrink: 0;
+
+    &_align_right {
+      text-align: right;
+    }
   }
 
   &__content {
