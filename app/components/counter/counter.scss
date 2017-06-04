@@ -1,0 +1,25 @@
+.counter {
+  display: flex;
+  width: 232px;
+
+  &__col {
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &_input {
+      width: 100%;
+      flex: 1;
+    }
+  }
+
+  &__button {
+
+    .icon-button__icon {
+      transform: rotate(45deg);
+    }
+  }
+}
