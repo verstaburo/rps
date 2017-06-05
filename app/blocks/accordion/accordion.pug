@@ -1,0 +1,13 @@
+include ../icon/icons
+
+mixin accordion()
+  +b.accordion&attributes(attributes)
+    block
+
+mixin accordion-item(heading)
+  +e.item&attributes(attributes)
+    +e.button
+      +icon('icon-caret').icon
+      +e.SPAN.heading= heading
+    +e.content
+      block

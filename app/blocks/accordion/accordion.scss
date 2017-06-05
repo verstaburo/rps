@@ -1,0 +1,67 @@
+.accordion {
+  display: block;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 48px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    cursor: pointer;
+
+    &:hover {
+
+      .accordion {
+
+        &__heading {
+          color: #f9ad1b;
+        }
+
+        &__icon {
+          stroke: #f9ad1b;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 14px;
+    height: 8px;
+    fill: none;
+    stroke: #202325;
+    will-change: transform, stroke;
+    transition: transform .25s ease-in-out, stroke .25s ease-in-out;
+  }
+
+  &__heading {
+    margin-left: 16px;
+    color: #0353a4;
+    font-size: 14px;
+    font-weight: 500;
+    will-change: color;
+    transition: color .25s ease-in-out;
+  }
+
+  &__item {
+    display: block;
+
+    &_active {
+
+      .accordion {
+
+        &__icon {
+          transform: rotate(180deg);
+        }
+
+        &__content {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+}
