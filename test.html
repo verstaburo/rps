@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RPS — Главная</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="layout__left">
+            <div class="layout__scroll">
+                <div class="sidebar">
+                    <a class="sidebar__logo" href="#">
+                        <svg><use xlink:href="assets/images/icon.svg#icon_logo"></use></svg>
+                    </a>
+                    <div class="aside-menu">
+                        <div class="aside-menu__bottom-block">
+                            <div class="aside-menu__item">
+                                <a class="aside-menu__link" href="#">
+                                    <span class="aside-menu__icon">
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_icon-ui-7"></use></svg>
+                                    </span>
+                                    <span class="aside-menu__text">Выход</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="aside-menu__item active">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg><use xlink:href="assets/images/icon.svg#icon_icon-ui-1"></use></svg>
+                                </span>
+                                <span class="aside-menu__text">Центр управления</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg><use xlink:href="assets/images/icon.svg#icon_icon-ui-2"></use></svg>
+                                </span>
+                                <span class="aside-menu__text">Клиенты</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg><use xlink:href="assets/images/icon.svg#icon_icon-ui-3"></use></svg>
+                                </span>
+                                <span class="aside-menu__text">Касса</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg><use xlink:href="assets/images/icon.svg#icon_icon-ui-4"></use></svg>
+                                </span>
+                                <span class="aside-menu__text">Статистика</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg><use xlink:href="assets/images/icon.svg#icon_icon-ui-5"></use></svg>
+                                </span>
+                                <span class="aside-menu__text">Настройки</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg><use xlink:href="assets/images/icon.svg#icon_icon-ui-6"></use></svg>
+                                </span>
+                                <span class="aside-menu__text">Помощь</span>
+                                <span class="aside-menu__counter">4</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout__right">
+            <div class="header">
+                <div class="header__col">
+                    <ul class="tabs header__tabs">
+                        <li class="tabs__tab active">
+                            <a class="tabs__link" href="#">Клиенты</a>
+                        </li>
+                        <li class="tabs__tab">
+                            <a class="tabs__link" href="#">Сессии</a>
+                        </li>
+                        <li class="tabs__tab">
+                            <a class="tabs__link" href="#">Чёрный список</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__col">
+                    <form class="search-bar header__col-block header__search-bar" method="post" action="#">
+                        <button class="search-bar__button" type="submit">
+                            <svg><use xlink:href="assets/images/icon.svg#icon_icon-search"></use></svg>
+                        </button>
+                        <input class="search-bar__input" type="search" placeholder="ПОИСК" />
+                    </form>
+                    <div class="indicators header__col-block header__indicators">
+                        <a class="indicators__item indicators__item_red" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">7</span>
+                        </a>
+                        <a class="indicators__item indicators__item_brown" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">24</span>
+                        </a>
+                        <a class="indicators__item indicators__item_yellow" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">12</span>
+                        </a>
+                        <a class="indicators__item indicators__item_grey" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">0</span>
+                        </a>
+                    </div>
+                    <span class="notifications header__col-block header__notifications">
+                        <svg class="notifications__icon"><use xlink:href="assets/images/icon.svg#icon_icon-bell"></use></svg>
+                        <span class="notifications__counter">3</span>
+                    </span>
+                </div>
+            </div>
+            <div class="test page">
+                <div class="actions-header">
+                    <div class="actions-header__col">
+                        <a class="partial-button partial-button_grey">
+                            <span class="partial-button__part">
+                                <svg class="partial-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                            </span>
+                            <span class="partial-button__part">1</span>
+                        </a>
+                    </div>
+                    <div class="actions-header__col">
+                        <a class="button button_uppercase button_grey" href="#">Изменение данных карт</a>
+                    </div>
+                    <div class="actions-header__col">
+                        <a class="button button_uppercase button_grey" href="#">Удалить компанию</a>
+                    </div>
+                    <div class="actions-header__col">
+                        <a class="button button_uppercase button_grey" href="#">Удалить Физ. лицо</a>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: inline-block; margin: 15px;">
+                        <a class="button button_uppercase button_grey js-show-popup" href="#" data-target-popup="#add-to-blacklist">Добавить в черный список (попап)</a>
+                    </div>
+                    <div style="display: inline-block; margin: 15px;">
+                        <a class="button button_uppercase button_grey js-show-popup" href="#" data-target-popup="#clients-common-info">Общая информаци о клиентах (попап)</a>
+                    </div>
+                </div>
+                <div style="display: block; margin: 15px; width: 300px;">
+                    <div class="accordion">
+                        <div class="accordion__item">
+                            <div class="accordion__button">
+                                <svg class="accordion__icon"><use xlink:href="assets/images/icon.svg#icon_icon-caret"></use></svg>
+                                <span class="accordion__heading">Заголовок</span>
+                            </div>
+                            <div class="accordion__content">
+                                <div style="font-size: 14px; padding: 10px; background-color: lightblue;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi at ante elementum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec rhoncus posuere accumsan. Duis
+                                    rutrum, nisl in rhoncus posuere, risus velit convallis velit, ut rhoncus velit elit nec urna. Fusce id volutpat arcu, vel aliquam velit. Integer volutpat velit eu arcu ultricies venenatis. Donec mollis diam id cursus
+                                    lobortis. Nam eget tempor enim. Quisque ipsum urna, efficitur non mollis sit amet, tincidunt sed magna. Phasellus sit amet fringilla sem. Etiam in nibh pharetra, posuere nibh quis, pharetra massa. Sed quis ante cursus,
+                                    vestibulum tellus et, sollicitudin neque. In ultrices justo vitae nibh aliquet mattis. Aliquam eu lorem eget nisl facilisis consequat sed at tellus.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <div style="display: block; width: 300px; margin: 15px;">
+                        <ul class="icon-menu">
+                            <li class="icon-menu__item">
+                                <a class="icon-menu__link" href="#">
+                                    <span class="icon-menu__icon-wrap">
+                                        <svg class="icon-menu__icon"><use xlink:href="assets/images/icon.svg#icon_icon-company"></use></svg>
+                                    </span>
+                                    <span class="icon-menu__text">Компанию</span>
+                                </a>
+                            </li>
+                            <li class="icon-menu__item">
+                                <a class="icon-menu__link" href="#">
+                                    <span class="icon-menu__icon-wrap">
+                                        <svg class="icon-menu__icon"><use xlink:href="assets/images/icon.svg#icon_icon-person"></use></svg>
+                                    </span>
+                                    <span class="icon-menu__text">Физ. лицо</span>
+                                </a>
+                            </li>
+                            <li class="icon-menu__item">
+                                <a class="icon-menu__link" href="#">
+                                    <span class="icon-menu__icon-wrap">
+                                        <svg class="icon-menu__icon"><use xlink:href="assets/images/icon.svg#icon_icon-import"></use></svg>
+                                    </span>
+                                    <span class="icon-menu__text">Импорт</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="display: block; width: 300px; margin: 15px;">
+                        <div class="search-filter">
+                            <div class="inner-sidebar search-filter__sidebar">
+                                <div class="inner-sidebar__item inner-sidebar__item_menu">
+                                    <ul class="vertical-menu">
+                                        <li class="vertical-menu__item vertical-menu__item_active">
+                                            <a class="vertical-menu__link" href="#">
+                                                <span class="vertical-menu__text">Новый фильтр</span>
+                                            </a>
+                                        </li>
+                                        <li class="vertical-menu__item">
+                                            <a class="vertical-menu__link" href="#">
+                                                <span class="vertical-menu__text">Физ. лица без привязки</span>
+                                            </a>
+                                        </li>
+                                        <li class="vertical-menu__item">
+                                            <a class="vertical-menu__link" href="#">
+                                                <span class="vertical-menu__text">Компании без физ. лиц</span>
+                                            </a>
+                                        </li>
+                                        <li class="vertical-menu__item">
+                                            <a class="vertical-menu__link" href="#">
+                                                <span class="vertical-menu__text">Клиенты без карт</span>
+                                            </a>
+                                        </li>
+                                        <li class="vertical-menu__item">
+                                            <a class="vertical-menu__link" href="#">
+                                                <span class="vertical-menu__text">Компании без карт</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="search-filter__container">
+                                <div class="search-filter__content">
+                                    <div class="field field_align_top">
+                                        <div class="field__label">Тэги:</div>
+                                        <div class="field__content">
+                                            <ul class="tags">
+                                                <li class="tags__item">VIP-Клиент</li>
+                                                <li class="tags__item tags__item_active">Империя</li>
+                                                <li class="tags__item">С доступом в личный кабинет</li>
+                                                <li class="tags__item">Свои места на парковке</li>
+                                                <li class="tags__item">Тэг</li>
+                                                <li class="tags__item tags__item_active">Партнёры</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field__label">Тип клиента:</div>
+                                        <div class="field__content">
+                                            <div class="select select_size_small">
+                                                <select class="select__control">
+                                                    <option>Разовый</option>
+                                                    <option>Разовый 1</option>
+                                                </select>
+                                                <div class="select__button">
+                                                    <svg class="select__caret"><use xlink:href="assets/images/icon.svg#icon_icon-caret"></use></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field__label">Последняя дата изменения:</div>
+                                        <div class="field__content">
+                                            <input class="input input_size_small" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field__label">Группа доступа:</div>
+                                        <div class="field__content">
+                                            <div class="select select_size_small">
+                                                <select class="select__control">
+                                                    <option>Любая</option>
+                                                    <option>Любая 1</option>
+                                                </select>
+                                                <div class="select__button">
+                                                    <svg class="select__caret"><use xlink:href="assets/images/icon.svg#icon_icon-caret"></use></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field__label">Тарифный план:</div>
+                                        <div class="field__content">
+                                            <div class="select select_size_small">
+                                                <select class="select__control">
+                                                    <option>Любой</option>
+                                                    <option>Любой 1</option>
+                                                </select>
+                                                <div class="select__button">
+                                                    <svg class="select__caret"><use xlink:href="assets/images/icon.svg#icon_icon-caret"></use></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-filter__footer">
+                                    <a class="button button_text_grey button_uppercase search-filter__reset" href="#">Сбросить</a>
+                                    <a class="button button_grey button_uppercase search-filter__button" href="#">Сохранить фильтр</a>
+                                    <a class="button button_green button_uppercase search-filter__button" href="#">Применить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="add-to-blacklist">
+                        <div class="popup__wrapper">
+                            <div class="popup__content">
+                                <div class="popup__header">
+                                    <h2 class="popup__heading">Добавить ТС в чёрный список</h2>
+                                    <div class="popup__close">
+                                        <svg class="popup__close-icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="popup__body">
+                                    <div class="add-to-blacklist">
+                                        <div class="actions-header add-to-blacklist__actions">
+                                            <div class="actions-header__col">
+                                                <a class="icon-button icon-button_uppercase add-to-blacklist__import" href="#">
+                                                    <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-import"></use></svg>
+                                                    <span class="icon-button__text">Импорт</span>
+                                                </a>
+                                            </div>
+                                            <div class="actions-header__col actions-header__col_push_right">
+                                                <a class="button button_text_green button_uppercase add-to-blacklist__action-btn" href="#">Сохранить</a>
+                                                <a class="button button_text_red button_uppercase add-to-blacklist__action-btn" href="#">Отмена</a>
+                                            </div>
+                                        </div>
+                                        <div class="add-to-blacklist__content">
+                                            <table class="default-table">
+                                                <thead class="default-table__header">
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell add-to-blacklist__cell-sm">Номер ТС</td>
+                                                        <td class="default-table__cell" colspan="2">Причина добавления в ЧС</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="default-table__body">
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell add-to-blacklist__cell-sm">
+                                                            <input class="input input_size_small add-to-blacklist__input" value="В654АЯ78" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell">
+                                                            <input class="input input_size_small" value="Нарушил правила парковки" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell add-to-blacklist__cell-xs">
+                                                            <a class="icon-button icon-button_shadow icon-button_size_small" href="#">
+                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-trash"></use></svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell add-to-blacklist__cell-sm">
+                                                            <input class="input input_size_small add-to-blacklist__input" value="В654АЯ78" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell">
+                                                            <input class="input input_size_small" value="Водитель Uber" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell add-to-blacklist__cell-xs">
+                                                            <a class="icon-button icon-button_shadow icon-button_size_small" href="#">
+                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-trash"></use></svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell add-to-blacklist__cell-sm">
+                                                            <input class="input input_size_small add-to-blacklist__input" value="О777ОО78" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell">
+                                                            <input class="input input_size_small" value="Водитель Uber" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell add-to-blacklist__cell-xs">
+                                                            <a class="icon-button icon-button_shadow icon-button_size_small" href="#">
+                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-trash"></use></svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell add-to-blacklist__cell-sm">
+                                                            <input class="input input_size_small add-to-blacklist__input" value="Я317ВК78" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell">
+                                                            <input class="input input_size_small" value="Нарушил правила парковки" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell add-to-blacklist__cell-xs">
+                                                            <a class="icon-button icon-button_shadow icon-button_size_small" href="#">
+                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-trash"></use></svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell add-to-blacklist__cell-sm">
+                                                            <input class="input input_size_small add-to-blacklist__input" placeholder="Номер ТС" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell">
+                                                            <input class="input input_size_small" placeholder="Укажите причину добавления" type="text" />
+                                                        </td>
+                                                        <td class="default-table__cell add-to-blacklist__cell-xs">
+                                                            <a class="icon-button icon-button_green icon-button_shadow icon-button_size_small" href="#">
+                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-accept"></use></svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="clients-common-info">
+                        <div class="popup__wrapper">
+                            <div class="popup__content">
+                                <div class="popup__header">
+                                    <h2 class="popup__heading">Сбербанк</h2>
+                                    <div class="popup__close">
+                                        <svg class="popup__close-icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="popup__body">
+                                    <div class="clients-common-info">
+                                        <div class="inner-sidebar clients-common-info__sidebar">
+                                            <div class="inner-sidebar__item inner-sidebar__item_menu">
+                                                <ul class="vertical-menu">
+                                                    <li class="vertical-menu__item vertical-menu__item_active">
+                                                        <a class="vertical-menu__link" href="#">
+                                                            <span class="vertical-menu__text">Общая информация</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="vertical-menu__item">
+                                                        <a class="vertical-menu__link" href="#">
+                                                            <span class="vertical-menu__text">Физ. лица</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="vertical-menu__item">
+                                                        <a class="vertical-menu__link" href="#">
+                                                            <span class="vertical-menu__text">Список ТС</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="vertical-menu__item">
+                                                        <a class="vertical-menu__link" href="#">
+                                                            <span class="vertical-menu__text">QR-коды</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="vertical-menu__item">
+                                                        <a class="vertical-menu__link" href="#">
+                                                            <span class="vertical-menu__text">MiFare карты</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="vertical-menu__item">
+                                                        <a class="vertical-menu__link" href="#">
+                                                            <span class="vertical-menu__text">Доступ в ЛК</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="inner-sidebar__item">
+                                                <div class="add-tags">
+                                                    <div class="add-tags__header">
+                                                        <span class="add-tags__heading">Тэги</span>
+                                                        <a class="icon-button icon-button_size_small add-tags__button">
+                                                            <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                                        </a>
+                                                    </div>
+                                                    <ul class="tags add-tags__tags">
+                                                        <li class="tags__item tags__item_active">VIP-Клиент</li>
+                                                        <li class="tags__item tags__item_active">Империя</li>
+                                                        <li class="tags__item tags__item_active">С доступом в личный кабинет</li>
+                                                        <li class="tags__item tags__item_active">Партнёры</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="inner-sidebar__item clients-common-info__sidebar-btn">
+                                                <a class="icon-button icon-button_uppercase icon-button_shadow clients-common-info__delete-button">
+                                                    <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-trash"></use></svg>
+                                                    <span class="icon-button__text">Удалить компанию</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <form class="clients-common-info__content">
+                                            <fieldset class="clients-common-info__fieldset">
+                                                <legend class="clients-common-info__heading">Данные о компании</legend>
+                                                <div class="field">
+                                                    <div class="field__label field__label_align_right clients-common-info__label">Название:</div>
+                                                    <div class="field__content">
+                                                        <input class="input" type="text" />
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="field__label field__label_align_right clients-common-info__label">Телефон:</div>
+                                                    <div class="field__content">
+                                                        <input class="input" type="text" />
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="field__label field__label_align_right clients-common-info__label">E-mail:</div>
+                                                    <div class="field__content">
+                                                        <input class="input" type="text" />
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="field__label field__label_align_right clients-common-info__label">Парковочных мест:</div>
+                                                    <div class="field__content">
+                                                        <div class="counter">
+                                                            <div class="counter__col counter__col_input">
+                                                                <input class="input js-counter-input" type="text" />
+                                                            </div>
+                                                            <div class="counter__col">
+                                                                <a class="icon-button icon-button_shadow counter__button js-counter-button" href="#" data-action="minus">
+                                                                    <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-minus"></use></svg>
+                                                                </a>
+                                                            </div>
+                                                            <div class="counter__col">
+                                                                <a class="icon-button icon-button_shadow counter__button js-counter-button" href="#" data-action="plus">
+                                                                    <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="clients-common-info__fieldset">
+                                                <legend class="clients-common-info__heading">Контактное лицо</legend>
+                                                <div class="field">
+                                                    <div class="field__label field__label_align_right clients-common-info__label">ФИО:</div>
+                                                    <div class="field__content">
+                                                        <input class="input" type="text" />
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="field__label field__label_align_right clients-common-info__label">Телефон:</div>
+                                                    <div class="field__content">
+                                                        <input class="input" type="text" />
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="field__label field__label_align_right clients-common-info__label">E-mail:</div>
+                                                    <div class="field__content">
+                                                        <input class="input" type="text" />
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="clients-common-info__save-button">
+                                                <a class="button button_green button_uppercase button_align_center" href="#">Сохранить изменения</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
