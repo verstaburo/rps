@@ -18,26 +18,13 @@ block layout-left
 block layout-right
   +header
   +b.index.page
-    //- TODO это для прмиера (убрать)
-    +add-to-blacklist
     +actions-header
-      //+actions-header-col
-      //  +button(href="#")._green Добавить клиента
-      //
-      //+actions-header-col._flexible
-      //  +search-bar('Введите название партнёра, название или адрес объекта')._white.__search-bar
-      //
-      //+actions-header-col
-      //  +icon-button('icon-settings')(href="#")
       +actions-header-col
-        +partial-button('icon-close')._grey 1
+        +button(href="#")._green Добавить клиента
+      +actions-header-col._flexible
+        +search-bar('Введите название партнёра, название или адрес объекта')._white.__search-bar
       +actions-header-col
-        //- TODO это для прмиера (убрать открытие попапа)
-        +button(href='#' data-target-popup='#add-to-blacklist')._uppercase._grey.js-show-popup Изменение данных карт
-      +actions-header-col
-        +button(href='#')._uppercase._grey Удалить компанию
-      +actions-header-col
-        +button(href='#')._uppercase._grey Удалить Физ. лицо
+        +icon-button('icon-settings')(href="#")
 
     +table()
       +table-header

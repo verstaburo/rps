@@ -39,6 +39,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #d2d3d3;
+    flex-shrink: 0;
   }
 
   &__heading {
