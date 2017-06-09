@@ -1,3 +1,5 @@
+include ../icon/icons
+
 mixin tags()
   +b.UL.tags&attributes(attributes)
     block
@@ -13,3 +15,13 @@ mixin tags-item-checkbox()
       +e.INPUT(type='checkbox').control&attributes(attributes)
       +e.SPAN.text
         block
+
+//- Для использование этого миксина, нужно миксину +tags добавить модификатор deletable, примерно так
+//- +tags._deletable
+//-   +tags-item-deletable._active Тэг
+mixin tags-item-deletable()
+  +e.LI.item&attributes(attributes)
+    +e.SPAN.text._left_radius
+      block
+    +e.text._right_radius.__close
+      +icon('icon-close').icon
