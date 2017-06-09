@@ -47,11 +47,11 @@ export default () => {
 
     unfreeze();
 
-    overlay.fadeOut(FADE_DURATION, () => {
-      overlay.removeClass(ACTIVE_OVERLAY_CLASS);
+    dropdown.slideUp(FADE_DURATION, () => {
+      dropdown.removeClass(ACTIVE_DROPDOWN_CLASS);
 
-      dropdown.fadeOut(FADE_DURATION, () => {
-        dropdown.removeClass(ACTIVE_DROPDOWN_CLASS);
+      overlay.fadeOut(FADE_DURATION, () => {
+        overlay.removeClass(ACTIVE_OVERLAY_CLASS);
       });
     });
   };
@@ -79,7 +79,7 @@ export default () => {
     overlay.fadeIn(FADE_DURATION, () => {
       overlay.addClass(ACTIVE_OVERLAY_CLASS);
 
-      dropdown.fadeIn(FADE_DURATION, () => {
+      dropdown.slideDown(FADE_DURATION, () => {
         dropdown.addClass(ACTIVE_DROPDOWN_CLASS);
       });
     });
