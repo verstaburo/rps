@@ -1,0 +1,6 @@
+include ../../blocks/icon-menu/icon-menu
+include ../../blocks/dropdown/dropdown
+
+mixin add-client-dropdown()
+  +dropdown#add-client-dropdown.add-client-dropdown
+    +icon-menu(getData('add-client-menu'))

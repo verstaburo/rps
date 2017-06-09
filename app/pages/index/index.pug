@@ -4,10 +4,11 @@ include ../../blocks/icon-button/icon-button
 include ../../blocks/search-bar/search-bar
 include ../../blocks/table/table
 include ../../blocks/checkbox/checkbox
+include ../../blocks/dropdown/dropdown
 include ../../blocks/partial-button/partial-button
 include ../../components/header/header
 include ../../components/actions-header/actions-header
-include ../../components/add-to-blacklist/add-to-blacklist
+include ../../components/add-client-dropdown/add-client-dropdown
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -20,7 +21,8 @@ block layout-right
   +b.index.page
     +actions-header
       +actions-header-col
-        +button(href="#")._green Добавить клиента
+        +button(href="#" data-target-dropdown='#add-client-dropdown')._green.js-show-dropdown Добавить клиента
+        +add-client-dropdown
       +actions-header-col._flexible
         +search-bar('Введите название партнёра, название или адрес объекта')._white.__search-bar
       +actions-header-col
@@ -653,3 +655,4 @@ block layout-right
               +table-text 28.04.2017
               +table-text._size_small 12:23:32
           +table-col._width_260
+  +dropdown-overlay
