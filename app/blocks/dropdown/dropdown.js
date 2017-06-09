@@ -38,24 +38,6 @@ export default () => {
     });
   };
 
-  const show = function () { // eslint-disable-line func-names
-    const dropdown = $(this);
-
-    if (dropdown.hasClass(ACTIVE_DROPDOWN_CLASS)) {
-      return;
-    }
-
-    overlay.fadeIn(FADE_DURATION, () => {
-      overlay.addClass(ACTIVE_OVERLAY_CLASS);
-
-      freeze();
-
-      dropdown.fadeIn(FADE_DURATION, () => {
-        dropdown.addClass(ACTIVE_DROPDOWN_CLASS);
-      });
-    });
-  };
-
   const hide = function () { // eslint-disable-line func-names
     const dropdown = $(this);
 
@@ -63,10 +45,10 @@ export default () => {
       return;
     }
 
+    unfreeze();
+
     overlay.fadeOut(FADE_DURATION, () => {
       overlay.removeClass(ACTIVE_OVERLAY_CLASS);
-
-      unfreeze();
 
       dropdown.fadeOut(FADE_DURATION, () => {
         dropdown.removeClass(ACTIVE_DROPDOWN_CLASS);
@@ -74,6 +56,34 @@ export default () => {
     });
   };
 
+  const show = function () { // eslint-disable-line func-names
+    const dropdown = $(this);
+
+    if (dropdown.hasClass(ACTIVE_DROPDOWN_CLASS)) {
+      return;
+    }
+
+    freeze();
+
+    // before show dropdown, hide others, but dont hide overlay
+    $(document)
+      .find(`.${ACTIVE_DROPDOWN_CLASS}`)
+      .each(function () { // eslint-disable-line func-names
+        const activeDropdown = $(this);
+
+        activeDropdown.fadeOut(FADE_DURATION, () => {
+          activeDropdown.removeClass(ACTIVE_DROPDOWN_CLASS);
+        });
+      });
+
+    overlay.fadeIn(FADE_DURATION, () => {
+      overlay.addClass(ACTIVE_OVERLAY_CLASS);
+
+      dropdown.fadeIn(FADE_DURATION, () => {
+        dropdown.addClass(ACTIVE_DROPDOWN_CLASS);
+      });
+    });
+  };
   items
     .on('dropdown:show', show)
     .on('dropdown:hide', hide);

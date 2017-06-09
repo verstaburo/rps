@@ -1,18 +1,11 @@
 .search-filter {
   display: flex;
-  width: 904px; // TODO change to 100%
-  height: 376px; // TODO change to 100%
+  width: 904px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
   border-radius: 3px;
-  overflow: hidden;
-
-  &__sidebar {
-    flex-shrink: 0;
-  }
 
   &__container {
-    width: 100%;
-    height: 100%;
+    flex: 1;
     background-color: #fff;
   }
 

@@ -5,6 +5,32 @@
   margin-bottom: -5px;
 
   &__item {
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+    &_active {
+
+      .tags__text {
+        background-color: #f9ae17;
+        border-color: #f9ae17;
+      }
+    }
+  }
+
+  &__box {
+    cursor: pointer;
+  }
+
+  &__control {
+    display: none;
+
+    &:checked + .tags__text {
+      background-color: #f9ae17;
+      border-color: #f9ae17;
+    }
+  }
+
+  &__text {
     padding: 0 6px;
     border-radius: 3px;
     border: 1px solid #797b7c;
@@ -12,16 +38,5 @@
     color: #202325;
     font-size: 12px;
     font-weight: 400;
-    margin-right: 5px;
-    margin-bottom: 5px;
-
-    &_active {
-      background-color: #f9ae17;
-      border: 0;
-    }
-
-    &:empty {
-      display: none;
-    }
   }
 }

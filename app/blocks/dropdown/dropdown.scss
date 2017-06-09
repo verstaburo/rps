@@ -2,11 +2,22 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
   margin-top: 8px;
   z-index: 55;
   display: none;
   overflow-y: auto;
+  width: auto;
+
+  &_right {
+    left: initial;
+    right: 0;
+  }
+
+  &_center {
+    left: 50%;
+    transform: translateX(-50%);
+    right: initial;
+  }
 
   &_loading {
     pointer-events: none !important;

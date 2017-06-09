@@ -4,4 +4,12 @@ mixin tags()
 
 mixin tags-item()
   +e.LI.item&attributes(attributes)
-    block
+    +e.A(href='#').text
+      block
+
+mixin tags-item-checkbox()
+  +e.LI.item
+    +e.LABEL.box
+      +e.INPUT(type='checkbox').control&attributes(attributes)
+      +e.SPAN.text
+        block
