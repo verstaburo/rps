@@ -8,6 +8,32 @@
     .table__col:not(:last-child) { border-color: #d2d3d3; }
   }
 
+  &__toggle {
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    min-height: initial;
+    padding: 0;
+    margin-left: auto;
+    margin-right: -6px;
+
+    .icon-button__icon {
+      width: 12px;
+      height: 7px;
+      fill: none;
+      stroke: #797b7c;
+    }
+
+    &:hover {
+
+      .icon-button__icon {
+        fill: none;
+        stroke: #555;
+      }
+    }
+  }
+
   &__checkbox {
     margin-right: 16px;
   }
