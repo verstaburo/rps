@@ -46,6 +46,21 @@
     margin-right: 16px;
   }
 
+  &__icon {
+    margin-right: 16px;
+    fill: #797b7c;
+
+    &_person {
+      width: 16px;
+      height: 12px;
+    }
+
+    &_card {
+      width: 15px;
+      height: 12px;
+    }
+  }
+
   &__text-block {
     display: block;
     flex: 1;
@@ -56,8 +71,16 @@
     display: flex;
     width: 100%;
 
+    &_parent {
+      flex-direction: column;
+    }
+
     &:nth-of-type(odd) {
       .table__row_main { background-color: #f9f9f9; }
+    }
+
+    &_selected {
+      background-color: #fffaf0 !important;
     }
 
     &_main {

@@ -12,6 +12,21 @@
     border: 1px solid #d2d3d3;
     border-radius: 2px;
     transition: all .25s ease-in-out;
+
+    // indeterminate state
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      background-color: #fb3;
+      opacity: 0;
+      transition: opacity .25s ease-in-out;
+    }
   }
 
   &__icon {
@@ -31,6 +46,14 @@
       border-color: #fb3;
 
       .checkbox__icon {
+        opacity: 1;
+      }
+    }
+
+    &:indeterminate + .checkbox__box {
+      border-color: #fb3;
+
+      &::before {
         opacity: 1;
       }
     }
