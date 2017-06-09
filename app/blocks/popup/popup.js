@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { freeze, unfreeze } from '../../scripts/libs/disable-scroll';
 
 export default () => {
   const POPUP_CLASS = '.popup';
@@ -13,8 +14,6 @@ export default () => {
     return;
   }
 
-  const body = $('body');
-
   const show = function () { // eslint-disable-line func-names
     const popup = $(this);
 
@@ -22,12 +21,8 @@ export default () => {
       return;
     }
 
-    body.css({
-      overflow: 'hidden',
-      height: '100vh',
-    });
-
     popup.fadeIn(250, () => {
+      freeze();
       popup.addClass(ACTIVE_POPUP_CLASS);
     });
   };
@@ -44,11 +39,7 @@ export default () => {
     popup.removeClass(ACTIVE_POPUP_CLASS);
 
     content.on('transitionend', () => {
-      body.css({
-        overflow: 'initial',
-        height: 'auto',
-      });
-
+      unfreeze();
       popup.fadeOut(250);
       content.off('transitionend');
     });
