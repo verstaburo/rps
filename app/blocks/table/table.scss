@@ -32,6 +32,14 @@
         stroke: #555;
       }
     }
+
+    &_active {
+
+      .icon-button__icon {
+        transform: rotate(180deg);
+        stroke: #000;
+      }
+    }
   }
 
   &__checkbox {
