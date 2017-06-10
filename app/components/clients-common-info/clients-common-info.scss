@@ -7,7 +7,7 @@ $labelMgr: 10px; // margin right
   height: 100%;
 
   &__sidebar {
-    width: 239px;
+    min-width: 239px;
     flex-shrink: 0;
   }
 
