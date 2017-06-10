@@ -47,6 +47,8 @@ export default () => {
 
     unfreeze();
 
+    $(document).find(OPEN_BUTTON_CLASS).removeClass('active');
+
     dropdown.slideUp(FADE_DURATION, () => {
       dropdown.removeClass(ACTIVE_DROPDOWN_CLASS);
 
@@ -66,6 +68,7 @@ export default () => {
     freeze();
 
     // before show dropdown, hide others, but dont hide overlay
+    $(document).find(OPEN_BUTTON_CLASS).removeClass('active');
     $(document)
       .find(`.${ACTIVE_DROPDOWN_CLASS}`)
       .each(function () { // eslint-disable-line func-names
@@ -76,6 +79,10 @@ export default () => {
         });
       });
 
+    $(document)
+      .find(`[data-${DATA_ATTRIBUTE}="#${dropdown.attr('id')}"]`)
+      .addClass('active');
+
     overlay.fadeIn(FADE_DURATION, () => {
       overlay.addClass(ACTIVE_OVERLAY_CLASS);
 
@@ -84,6 +91,7 @@ export default () => {
       });
     });
   };
+
   items
     .on('dropdown:show', show)
     .on('dropdown:hide', hide);

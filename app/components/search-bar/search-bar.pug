@@ -1,0 +1,23 @@
+include ../../blocks/icon/icons
+include ../../blocks/tags/tags
+include ../search-filter/search-filter
+
+mixin search-bar(placeholder)
+  +b.FORM.search-bar(method="post" action="#")&attributes(attributes)
+    +e.BUTTON.button(type="submit")
+      +icon('icon-search')
+    +e.INPUT.input(type="search" placeholder=placeholder)
+
+mixin search-bar-filter(placeholder)
+  +b.FORM.search-bar(method="post" action="#")&attributes(attributes)
+    +e.BUTTON.button(type="submit")
+      +icon('icon-search')
+    +e.INPUT.input(type="search" placeholder=placeholder)
+
+    +tags._deletable
+      +tags-item-deletable._active Империя
+      +tags-item-deletable._active Партнёры
+      +tags-item-deletable._active 3 фильтра
+
+    +icon-button('icon-filter')(href='#' data-target-dropdown='#search-filter-dropdown').__filter-button.js-show-dropdown
+    +search-filter

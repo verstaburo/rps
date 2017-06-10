@@ -15,6 +15,21 @@
     }
   }
 
+  &__filter-button {
+    margin-left: 6px;
+    border: 0;
+    border-left: 1px solid #d3d4d4;
+    border-radius: 0;
+    background-color: transparent;
+
+    &.active {
+
+      .icon-button__icon {
+        fill: #f9af0f;
+      }
+    }
+  }
+
   &__button {
     width: 16px;
     height: 16px;
@@ -31,31 +46,25 @@
   }
 
   &_white {
+    padding-left: 16px;
+    background-color: white;
+    border: 1px solid #d2d3d3;
+    border-radius: 3px;
 
     .search-bar {
 
       &__button {
-        position: absolute;
-        left: 16px;
-        top: 0;
-        bottom: 0;
-        margin: auto;
         fill: #d2d3d3;
       }
 
       &__input {
+        margin: 0;
+        padding: 0 13px;
         font-weight: 400;
-        background-color: white;
-        border: 1px solid #d2d3d3;
-        margin-left: 0;
         height: 100%;
         display: flex;
         align-items: center;
-        border-radius: 3px;
-        padding-left: 45px;
-        padding-right: 25px;
         width: 100%;
-        padding-bottom: 2px;
 
         &::placeholder { color: #d2d3d3; }
       }

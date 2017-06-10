@@ -1,7 +1,7 @@
 extends ../../layouts/default
 include ../../blocks/button/button
 include ../../blocks/icon-button/icon-button
-include ../../blocks/search-bar/search-bar
+include ../../components/search-bar/search-bar
 include ../../blocks/table/table
 include ../../blocks/checkbox/checkbox
 include ../../blocks/dropdown/dropdown
@@ -9,7 +9,6 @@ include ../../blocks/partial-button/partial-button
 include ../../components/header/header
 include ../../components/actions-header/actions-header
 include ../../components/add-client-dropdown/add-client-dropdown
-include ../../components/search-filter/search-filter
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -26,8 +25,7 @@ block layout-right
         +add-client-dropdown
       +actions-header-col._flexible
         //- TODO УБРАТЬ АКТИВАЦИЮ DROPDOWN С ПОЛЯ ВВОДА
-        +search-bar('Введите название партнёра, название или адрес объекта')(data-target-dropdown='#search-filter-dropdown')._white.__search-bar.js-show-dropdown
-        +search-filter
+        +search-bar-filter('Введите название партнёра, название или адрес объекта')._white.__search-bar
       +actions-header-col
         +icon-button('icon-settings')(href="#")
 

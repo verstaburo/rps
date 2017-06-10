@@ -1,7 +1,7 @@
 include ../../blocks/tabs/tabs
 include ../../blocks/notifications/notifications
 include ../../blocks/indicators/indicators
-include ../../blocks/search-bar/search-bar
+include ../search-bar/search-bar
 
 mixin header()
   +b.header&attributes(attributes)
@@ -10,14 +10,14 @@ mixin header()
         +tabs-tab("#", "Клиенты").active
         +tabs-tab("#", "Сессии")
         +tabs-tab("#", "Чёрный список")
-    
+
     +e.col
       +search-bar('ПОИСК').__col-block.__search-bar
-      
+
       +indicators.__col-block.__indicators
         +indicator(href="#")._red 7
         +indicator(href="#")._brown 24
         +indicator(href="#")._yellow 12
         +indicator(href="#")._grey 0
-      
+
       +notifications.__col-block.__notifications
