@@ -1,6 +1,7 @@
 .individual-info {
   display: block;
-  width: 669px;
+  min-width: 669px;
+  background-color: #f7f7f7;
 
   &__header {
     display: flex;
