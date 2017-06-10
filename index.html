@@ -134,7 +134,35 @@
             <div class="index page">
                 <div class="actions-header">
                     <div class="actions-header__col">
-                        <a class="button button_green" href="#">Добавить клиента</a>
+                        <a class="button button_green js-show-dropdown" href="#" data-target-dropdown="#add-client-dropdown">Добавить клиента</a>
+                        <div class="dropdown add-client-dropdown" id="add-client-dropdown">
+                            <ul class="icon-menu">
+                                <li class="icon-menu__item">
+                                    <a class="icon-menu__link" href="#">
+                                        <span class="icon-menu__icon-wrap">
+                                            <svg class="icon-menu__icon"><use xlink:href="assets/images/icon.svg#icon_icon-company"></use></svg>
+                                        </span>
+                                        <span class="icon-menu__text">Компанию</span>
+                                    </a>
+                                </li>
+                                <li class="icon-menu__item">
+                                    <a class="icon-menu__link" href="#">
+                                        <span class="icon-menu__icon-wrap">
+                                            <svg class="icon-menu__icon"><use xlink:href="assets/images/icon.svg#icon_icon-person"></use></svg>
+                                        </span>
+                                        <span class="icon-menu__text">Физ. лицо</span>
+                                    </a>
+                                </li>
+                                <li class="icon-menu__item">
+                                    <a class="icon-menu__link" href="#">
+                                        <span class="icon-menu__icon-wrap">
+                                            <svg class="icon-menu__icon"><use xlink:href="assets/images/icon.svg#icon_icon-import"></use></svg>
+                                        </span>
+                                        <span class="icon-menu__text">Импорт</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="actions-header__col actions-header__col_flexible">
                         <form class="search-bar search-bar_white actions-header__search-bar" method="post" action="#">
@@ -142,6 +170,164 @@
                                 <svg><use xlink:href="assets/images/icon.svg#icon_icon-search"></use></svg>
                             </button>
                             <input class="search-bar__input" type="search" placeholder="Введите название партнёра, название или адрес объекта" />
+                            <ul class="tags tags_deletable">
+                                <li class="tags__item tags__item_active">
+                                    <span class="tags__text tags__text_left_radius">Империя</span>
+                                    <div class="tags__text tags__text_right_radius tags__close">
+                                        <svg class="tags__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                    </div>
+                                </li>
+                                <li class="tags__item tags__item_active">
+                                    <span class="tags__text tags__text_left_radius">Партнёры</span>
+                                    <div class="tags__text tags__text_right_radius tags__close">
+                                        <svg class="tags__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                    </div>
+                                </li>
+                                <li class="tags__item tags__item_active">
+                                    <span class="tags__text tags__text_left_radius">3 фильтра</span>
+                                    <div class="tags__text tags__text_right_radius tags__close">
+                                        <svg class="tags__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a class="icon-button search-bar__filter-button js-show-dropdown" href="#" data-target-dropdown="#search-filter-dropdown">
+                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-filter"></use></svg>
+                            </a>
+                            <div class="dropdown dropdown_right" id="search-filter-dropdown">
+                                <div class="search-filter">
+                                    <div class="inner-sidebar">
+                                        <div class="inner-sidebar__item inner-sidebar__item_menu">
+                                            <ul class="vertical-menu">
+                                                <li class="vertical-menu__item vertical-menu__item_active">
+                                                    <a class="vertical-menu__link" href="#">
+                                                        <span class="vertical-menu__text">Новый фильтр</span>
+                                                    </a>
+                                                </li>
+                                                <li class="vertical-menu__item">
+                                                    <a class="vertical-menu__link" href="#">
+                                                        <span class="vertical-menu__text">Физ. лица без привязки</span>
+                                                    </a>
+                                                </li>
+                                                <li class="vertical-menu__item">
+                                                    <a class="vertical-menu__link" href="#">
+                                                        <span class="vertical-menu__text">Компании без физ. лиц</span>
+                                                    </a>
+                                                </li>
+                                                <li class="vertical-menu__item">
+                                                    <a class="vertical-menu__link" href="#">
+                                                        <span class="vertical-menu__text">Клиенты без карт</span>
+                                                    </a>
+                                                </li>
+                                                <li class="vertical-menu__item">
+                                                    <a class="vertical-menu__link" href="#">
+                                                        <span class="vertical-menu__text">Компании без карт</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="search-filter__container">
+                                        <div class="search-filter__content">
+                                            <div class="field field_align_top">
+                                                <div class="field__label">Тэги:</div>
+                                                <div class="field__content">
+                                                    <ul class="tags">
+                                                        <li class="tags__item">
+                                                            <label class="tags__box">
+                                                                <input class="tags__control" type="checkbox" />
+                                                                <span class="tags__text">VIP-Клиент</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="tags__item">
+                                                            <label class="tags__box">
+                                                                <input class="tags__control" type="checkbox" checked="checked" />
+                                                                <span class="tags__text">Империя</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="tags__item">
+                                                            <label class="tags__box">
+                                                                <input class="tags__control" type="checkbox" />
+                                                                <span class="tags__text">С доступом в личный кабинет</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="tags__item">
+                                                            <label class="tags__box">
+                                                                <input class="tags__control" type="checkbox" />
+                                                                <span class="tags__text">Свои места на парковке</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="tags__item">
+                                                            <label class="tags__box">
+                                                                <input class="tags__control" type="checkbox" />
+                                                                <span class="tags__text">Тэг</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="tags__item">
+                                                            <label class="tags__box">
+                                                                <input class="tags__control" type="checkbox" checked="checked" />
+                                                                <span class="tags__text">Партнёры</span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="field__label">Тип клиента:</div>
+                                                <div class="field__content">
+                                                    <div class="select select_size_small">
+                                                        <select class="select__control">
+                                                            <option>Разовый</option>
+                                                            <option>Разовый 1</option>
+                                                        </select>
+                                                        <div class="select__button">
+                                                            <svg class="select__caret"><use xlink:href="assets/images/icon.svg#icon_icon-caret"></use></svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="field__label">Последняя дата изменения:</div>
+                                                <div class="field__content">
+                                                    <input class="input input_size_small" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="field__label">Группа доступа:</div>
+                                                <div class="field__content">
+                                                    <div class="select select_size_small">
+                                                        <select class="select__control">
+                                                            <option>Любая</option>
+                                                            <option>Любая 1</option>
+                                                        </select>
+                                                        <div class="select__button">
+                                                            <svg class="select__caret"><use xlink:href="assets/images/icon.svg#icon_icon-caret"></use></svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="field__label">Тарифный план:</div>
+                                                <div class="field__content">
+                                                    <div class="select select_size_small">
+                                                        <select class="select__control">
+                                                            <option>Любой</option>
+                                                            <option>Любой 1</option>
+                                                        </select>
+                                                        <div class="select__button">
+                                                            <svg class="select__caret"><use xlink:href="assets/images/icon.svg#icon_icon-caret"></use></svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-filter__footer">
+                                            <a class="button button_text_grey button_uppercase search-filter__reset" href="#">Сбросить</a>
+                                            <a class="button button_grey button_uppercase search-filter__button" href="#">Сохранить фильтр</a>
+                                            <a class="button button_green button_uppercase search-filter__button" href="#">Применить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <div class="actions-header__col">
@@ -387,50 +573,6 @@
                                 <div class="table__text-block">
                                     <p class="table__text">28.04.2017</p>
                                     <p class="table__text table__text_size_small">10:44:00</p>
-                                </div>
-                            </div>
-                            <div class="table__col table__col_width_260">
-                                <p class="table__text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table__row">
-                        <div class="table__row table__row_main">
-                            <div class="table__col table__col_flexible">
-                                <label class="checkbox table__checkbox">
-                                    <input class="checkbox__input" type="checkbox" name="row" value="value" />
-                                    <span class="checkbox__box">
-                                        <svg class="checkbox__icon"><use xlink:href="assets/images/icon.svg#icon_icon-check"></use></svg>
-                                    </span>
-                                </label>
-                                <p class="table__text">
-                                    <a href="#">
-                                        <b>Газпром</b>
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="table__col table__col_width_120">
-                                <p class="table__text">Компания</p>
-                            </div>
-                            <div class="table__col table__col_width_100 table__col_align_center">
-                                <p class="table__text">
-                                    <a href="#">2</a>
-                                </p>
-                            </div>
-                            <div class="table__col table__col_width_100 table__col_align_center">
-                                <p class="table__text">
-                                    <a href="#">5</a>
-                                </p>
-                            </div>
-                            <div class="table__col table__col_width_100 table__col_align_center">
-                                <p class="table__text">
-                                    <a href="#">35</a>
-                                </p>
-                            </div>
-                            <div class="table__col table__col_width_200">
-                                <div class="table__text-block">
-                                    <p class="table__text">28.04.2017</p>
-                                    <p class="table__text table__text_size_small">12:14:32</p>
                                 </div>
                             </div>
                             <div class="table__col table__col_width_260"></div>
@@ -1295,6 +1437,7 @@
                     </div>
                 </div>
             </div>
+            <div class="dropdown-overlay"></div>
         </div>
     </div>
     <script src="assets/scripts/app.min.js"></script>
