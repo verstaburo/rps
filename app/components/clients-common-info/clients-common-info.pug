@@ -1,68 +1,42 @@
-include ../../blocks/popup/popup
-include ../../blocks/inner-sidebar/inner-sidebar
-include ../../blocks/vertical-menu/vertical-menu
 include ../../blocks/field/field
 include ../../blocks/input/input
 include ../../blocks/button/button
 include ../../components/counter/counter
-include ../../components/add-tags/add-tags
 
 mixin clients-common-info()
-  +popup('Сбербанк')#clients-common-info
-    +b.clients-common-info
-      +inner-sidebar.__sidebar
-        +inner-sidebar-item._menu
-          +vertical-menu
-            +vertical-menu-item._active
-              +vertical-menu-text Общая информация
-            +vertical-menu-item
-              +vertical-menu-text Физ. лица
-            +vertical-menu-item
-              +vertical-menu-text Список ТС
-            +vertical-menu-item
-              +vertical-menu-text QR-коды
-            +vertical-menu-item
-              +vertical-menu-text MiFare карты
-            +vertical-menu-item
-              +vertical-menu-text Доступ в ЛК
-        +inner-sidebar-item
-          +add-tags(getData('add-tags'))
-        +inner-sidebar-item.clients-common-info__sidebar-btn
-          +icon-button('icon-trash')._uppercase._shadow.clients-common-info__delete-button Удалить компанию
+  +b.FORN.clients-common-info&attributes(attributes)
+    +e.FIELDSET.fieldset
+      +e.LEGEND.heading Данные о компании
+      +field
+        +field-label._align_right.clients-common-info__label Название:
+        +field-item
+          +input
+      +field
+        +field-label._align_right.clients-common-info__label Телефон:
+        +field-item
+          +input
+      +field
+        +field-label._align_right.clients-common-info__label E-mail:
+        +field-item
+          +input
+      +field
+        +field-label._align_right.clients-common-info__label Парковочных мест:
+        +field-item
+          +counter
+    +e.FIELDSET.fieldset
+      +e.LEGEND.heading Контактное лицо
+      +field
+        +field-label._align_right.clients-common-info__label ФИО:
+        +field-item
+          +input
+      +field
+        +field-label._align_right.clients-common-info__label Телефон:
+        +field-item
+          +input
+      +field
+        +field-label._align_right.clients-common-info__label E-mail:
+        +field-item
+          +input
 
-      +e.FORM.content
-        +e.FIELDSET.fieldset
-          +e.LEGEND.heading Данные о компании
-          +field
-            +field-label._align_right.clients-common-info__label Название:
-            +field-item
-              +input
-          +field
-            +field-label._align_right.clients-common-info__label Телефон:
-            +field-item
-              +input
-          +field
-            +field-label._align_right.clients-common-info__label E-mail:
-            +field-item
-              +input
-          +field
-            +field-label._align_right.clients-common-info__label Парковочных мест:
-            +field-item
-              +counter
-        +e.FIELDSET.fieldset
-          +e.LEGEND.heading Контактное лицо
-          +field
-            +field-label._align_right.clients-common-info__label ФИО:
-            +field-item
-              +input
-          +field
-            +field-label._align_right.clients-common-info__label Телефон:
-            +field-item
-              +input
-          +field
-            +field-label._align_right.clients-common-info__label E-mail:
-            +field-item
-              +input
-
-        +e.save-button
-          +button(href='#')._green._uppercase._align_center Сохранить изменения
+    +e.save-button
+      +button(href='#')._green._uppercase._align_center Сохранить изменения

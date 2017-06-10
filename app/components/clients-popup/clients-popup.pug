@@ -1,0 +1,34 @@
+include ../../blocks/popup/popup
+include ../../blocks/inner-sidebar/inner-sidebar
+include ../../blocks/vertical-menu/vertical-menu
+include ../../blocks/icon-button/icon-button
+include ../add-tags/add-tags
+include ../clients-common-info/clients-common-info
+include ../individual-info/individual-info
+
+mixin clients-popup()
+  +popup('Сбербанк')#clients-popup
+    +b.clients-popup
+      +inner-sidebar.__sidebar
+        +inner-sidebar-item._menu
+          +vertical-menu
+            +vertical-menu-item._active
+              +vertical-menu-text Общая информация
+            +vertical-menu-item
+              +vertical-menu-text Физ. лица
+            +vertical-menu-item
+              +vertical-menu-text Список ТС
+            +vertical-menu-item
+              +vertical-menu-text QR-коды
+            +vertical-menu-item
+              +vertical-menu-text MiFare карты
+            +vertical-menu-item
+              +vertical-menu-text Доступ в ЛК
+        +inner-sidebar-item
+          +add-tags(getData('add-tags'))
+        +inner-sidebar-item.clients-popup__sidebar-btn
+          +icon-button('icon-trash')(href='#')._uppercase._shadow.clients-popup__delete-button Удалить компанию
+
+      +e.content
+        //+clients-common-info
+        +individual-info

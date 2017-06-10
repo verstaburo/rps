@@ -1,0 +1,31 @@
+.clients-popup {
+  display: flex;
+  min-width: 908px;
+  height: 100%;
+
+  &__sidebar {
+    min-width: 239px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: block;
+    width: 100%;
+  }
+
+  &__sidebar-btn {
+    margin-top: auto;
+    padding: 12px;
+  }
+
+  &__delete-button {
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+
+    .icon-button__text {
+      padding-left: 5px;
+    }
+  }
+}

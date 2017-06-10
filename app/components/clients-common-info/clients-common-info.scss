@@ -3,20 +3,9 @@ $labelMgr: 10px; // margin right
 
 .clients-common-info {
   display: flex;
-  min-width: 908px;
-  height: 100%;
-
-  &__sidebar {
-    min-width: 239px;
-    flex-shrink: 0;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 17px 157px 15px 17px;
-  }
+  flex-direction: column;
+  width: 100%;
+  padding: 17px 157px 15px 17px;
 
   &__fieldset {
     border: 0;
@@ -48,19 +37,4 @@ $labelMgr: 10px; // margin right
     padding-top: 10px;
   }
 
-  &__sidebar-btn {
-    margin-top: auto;
-    padding: 12px;
-  }
-
-  &__delete-button {
-    box-sizing: border-box;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 10px;
-
-    .icon-button__text {
-      padding-left: 5px;
-    }
-  }
 }
