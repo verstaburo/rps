@@ -51,7 +51,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Novotel Moscow City
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -76,7 +75,6 @@ block layout-right
             +table-text
               a(href="#")
                 b ООО «ПТК»
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -100,7 +98,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Сбербанк
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -124,7 +121,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Globalone
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -150,7 +146,6 @@ block layout-right
                 a(href="#")
                   b Иванов Дмитрий Евгеньевич
               +table-text._grey Сбербанк
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -192,77 +187,162 @@ block layout-right
               +table-text 28.04.2017
               +table-text._size_small 12:14:32
           +table-col._width_260
-        +table-row._main
-          +table-col._flexible
-            +icon('icon-person').icon._person
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#")
-                b Васильев Генадий Николаевич
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
-          +table-col._width_120
-            +table-text Физ. лицо
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") —
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 2
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:14:32
-          +table-col._width_260
-        +table-row._main
-          +table-col._flexible
-            +icon('icon-person').icon._person
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#")
-                b Николаева Надежда Васильевна
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
-          +table-col._width_120
-            +table-text Физ. лицо
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") —
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:14:32
-          +table-col._width_260
-        +table-row._main
-          +table-col._flexible
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#")
-                b Александрова Александра  Александровна
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
-          +table-col._width_120
-            +table-text Физ. лицо
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") —
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 2
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:14:32
-          +table-col._width_260
+        +table-row._children
+          +table-row._parent
+            +table-row._main
+              +table-col._flexible
+                +icon('icon-person').icon._person
+                +checkbox('row', 'value').__checkbox
+                +table-text
+                  a(href="#")
+                    b Васильев Генадий Николаевич
+                +icon-button('icon-caret')(href='#')._shadow.__toggle
+              +table-col._width_120
+                +table-text Физ. лицо
+              +table-col._width_100._align_center
+                +table-text
+                  a(href="#") —
+              +table-col._width_100._align_center
+                +table-text
+                  a(href="#") 2
+              +table-col._width_100._align_center
+                +table-text
+                  a(href="#") 1
+              +table-col._width_200
+                +table-text-block
+                  +table-text 28.04.2017
+                  +table-text._size_small 12:14:32
+              +table-col._width_260
+            +table-row._children
+              +table-row._main
+                +table-col._flexible
+                  +icon('icon-card').icon._card
+                  +checkbox('row', 'value').__checkbox
+                  +table-text
+                    a(href="#")
+                      b 1234 5678 9067
+                +table-col._width_120
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_200
+                +table-col._width_260
+              +table-row._main
+                +table-col._flexible
+                  +icon('icon-card').icon._card
+                  +checkbox('row', 'value').__checkbox
+                  +table-text
+                    a(href="#")
+                      b 1234 5678 9067
+                +table-col._width_120
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_200
+                +table-col._width_260
+          +table-row._parent
+            +table-row._main
+              +table-col._flexible
+                +icon('icon-person').icon._person
+                +checkbox('row', 'value').__checkbox
+                +table-text
+                  a(href="#")
+                    b Николаева Надежда Васильевна
+                +icon-button('icon-caret')(href='#')._shadow.__toggle
+              +table-col._width_120
+                +table-text Физ. лицо
+              +table-col._width_100._align_center
+                +table-text
+                  a(href="#") —
+              +table-col._width_100._align_center
+                +table-text
+                  a(href="#") 1
+              +table-col._width_100._align_center
+                +table-text
+                  a(href="#") 1
+              +table-col._width_200
+                +table-text-block
+                  +table-text 28.04.2017
+                  +table-text._size_small 12:14:32
+              +table-col._width_260
+            +table-row._children
+              +table-row._main
+                +table-col._flexible
+                  +icon('icon-card').icon._card
+                  +checkbox('row', 'value').__checkbox
+                  +table-text
+                    a(href="#")
+                      b 1234 5678 9067
+                +table-col._width_120
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_200
+                +table-col._width_260
+              +table-row._main
+                +table-col._flexible
+                  +icon('icon-card').icon._card
+                  +checkbox('row', 'value').__checkbox
+                  +table-text
+                    a(href="#")
+                      b 1234 5678 9067
+                +table-col._width_120
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_200
+                +table-col._width_260
+          +table-row._parent
+            +table-row._main
+              +table-col._flexible
+                +checkbox('row', 'value').__checkbox
+                +table-text
+                  a(href="#")
+                    b Александрова Александра  Александровна
+                +icon-button('icon-caret')(href='#')._shadow.__toggle
+              +table-col._width_120
+                +table-text Физ. лицо
+              +table-col._width_100._align_center
+                +table-text
+                  a(href="#") —
+              +table-col._width_100._align_center
+                +table-text
+                  a(href="#") 2
+              +table-col._width_100._align_center
+                +table-text
+                  a(href="#") 1
+              +table-col._width_200
+                +table-text-block
+                  +table-text 28.04.2017
+                  +table-text._size_small 12:14:32
+              +table-col._width_260
+            +table-row._children
+              +table-row._main
+                +table-col._flexible
+                  +icon('icon-card').icon._card
+                  +checkbox('row', 'value').__checkbox
+                  +table-text
+                    a(href="#")
+                      b 1234 5678 9067
+                +table-col._width_120
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_200
+                +table-col._width_260
+              +table-row._main
+                +table-col._flexible
+                  +icon('icon-card').icon._card
+                  +checkbox('row', 'value').__checkbox
+                  +table-text
+                    a(href="#")
+                      b 1234 5678 9067
+                +table-col._width_120
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_100._align_center
+                +table-col._width_200
+                +table-col._width_260
       +table-row
         +table-row._main
           +table-col._flexible
@@ -270,7 +350,6 @@ block layout-right
             +table-text
               a(href="#")
                 b ООО «Робот-Икс»
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -296,7 +375,6 @@ block layout-right
                 a(href="#")
                   b Александрова Александра Александровна
               +table-text._grey Газпром
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text
               | Физ. лицо
@@ -321,7 +399,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Energizer
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -345,7 +422,6 @@ block layout-right
             +table-text
               a(href="#")
                 b 7Days
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -370,7 +446,6 @@ block layout-right
             +table-text
               a(href="#")
                 b ВТБ 24
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -394,7 +469,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Sun Clinic
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -418,7 +492,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Хостел Сити
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -442,7 +515,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Novotel Moscow City
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -467,7 +539,6 @@ block layout-right
             +table-text
               a(href="#")
                 b ООО «ПТК»
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -491,7 +562,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Сбербанк
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -515,7 +585,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Globalone
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -541,7 +610,6 @@ block layout-right
                 a(href="#")
                   b Иванов Дмитрий Евгеньевич
               +table-text._grey Сбербанк
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -566,7 +634,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Газпром
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -590,7 +657,6 @@ block layout-right
             +table-text
               a(href="#")
                 b ООО «Робот-Икс»
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -616,7 +682,6 @@ block layout-right
                 a(href="#")
                   b Александрова Александра Александровна
               +table-text._grey Газпром
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text
               | Физ. лицо
@@ -641,7 +706,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Energizer
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -665,7 +729,6 @@ block layout-right
             +table-text
               a(href="#")
                 b 7Days
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -690,7 +753,6 @@ block layout-right
             +table-text
               a(href="#")
                 b ВТБ 24
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -714,7 +776,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Sun Clinic
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
@@ -738,7 +799,6 @@ block layout-right
             +table-text
               a(href="#")
                 b Хостел Сити
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
             +table-text Компания
           +table-col._width_100._align_center
