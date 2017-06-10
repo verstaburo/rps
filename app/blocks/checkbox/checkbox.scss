@@ -13,8 +13,7 @@
     border-radius: 2px;
     transition: all .25s ease-in-out;
 
-    // indeterminate state
-    &::before {
+    &::before { // indeterminate state
       content: '';
       position: absolute;
       top: 50%;
