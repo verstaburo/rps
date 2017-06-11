@@ -5,6 +5,7 @@ import tags from '../blocks/tags/tags';
 import accordion from '../blocks/accordion/accordion';
 import table from '../blocks/table/table';
 import counter from '../components/counter/counter';
+import tsList from '../components/ts-list/ts-list';
 
 $(() => {
   popup();
@@ -13,4 +14,5 @@ $(() => {
   accordion();
   table();
   counter();
+  tsList();
 });

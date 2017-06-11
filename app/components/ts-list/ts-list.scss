@@ -1,0 +1,78 @@
+.ts-list {
+  min-width: 669px;
+  background-color: #fafafa;
+
+  &__row {
+    will-change: background-color;
+    transition: background-color .25s ease-in-out;
+
+    &_editing {
+
+      .ts-list {
+
+        &__cell_editable {
+          pointer-events: initial;
+        }
+
+        &__action_edit {
+          display: none;
+        }
+
+        &__action_remove {
+          display: flex;
+        }
+
+        &__action_save {
+          display: flex;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #f6f6f6;
+    }
+  }
+
+  &__cell {
+    padding: 10px;
+    width: 148px;
+
+    &_editable {
+      pointer-events: none;
+    }
+  }
+
+  &__actions {
+    display: inline-flex;
+  }
+
+  &__action {
+
+    &_edit {
+
+      .icon-button__icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &_remove {
+      display: none;
+
+      .icon-button__icon {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &_save {
+      display: none;
+      margin-right: 16px;
+
+      .icon-button__icon {
+        width: 18px;
+        height: 13px;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+include ../../blocks/default-table/default-table
+include ../../blocks/colorpicker/colorpicker
+include ../../blocks/icon-button/icon-button
+include ../../blocks/input/input
+
+mixin ts-list()
+  +b.ts-list&attributes(attributes)
+    +default-table
+      +default-table-header
+        +default-table-row
+          +default-table-cell.ts-list__cell Модель
+          +default-table-cell.ts-list__cell Цвет
+          +default-table-cell(colspan='2').ts-list__cell Номер ТС
+      +default-table-body
+        +default-table-row.ts-list__row
+          +default-table-cell.ts-list__cell._editable
+            +input()(value='Audi')._size_small._text-like
+          +default-table-cell.ts-list__cell._editable
+            +colorpicker('#ffffff')
+          +default-table-cell.ts-list__cell._editable
+            +input()(value='В654АЯ78')._size_small._text-like
+          +default-table-cell._align_right.ts-list__cell
+            .ts-list__actions
+              +icon-button('icon-pen')(href='#')._shadow._size_small.ts-list__action._edit
+              +icon-button('icon-accept')(href='#')._green._size_small.ts-list__action._save
+              +icon-button('icon-close')(href='#')._red._size_small.ts-list__action._remove
+        +default-table-row.ts-list__row
+          +default-table-cell.ts-list__cell._editable
+            +input()(value='Lada Kalina')._size_small._text-like
+          +default-table-cell.ts-list__cell._editable
+            +colorpicker('#007dff')
+          +default-table-cell.ts-list__cell._editable
+            +input()(value='В654АЯ78')._size_small._text-like
+          +default-table-cell._align_right.ts-list__cell
+            .ts-list__actions
+              +icon-button('icon-pen')(href='#')._shadow._size_small.ts-list__action._edit
+              +icon-button('icon-accept')(href='#')._green._size_small.ts-list__action._save
+              +icon-button('icon-close')(href='#')._red._size_small.ts-list__action._remove
+        +default-table-row.ts-list__row
+          +default-table-cell.ts-list__cell._editable
+            +input()(value='BMW X5')._size_small._text-like
+          +default-table-cell.ts-list__cell._editable
+            +colorpicker('#000000')
+          +default-table-cell.ts-list__cell._editable
+            +input()(value='О777ОО78')._size_small._text-like
+          +default-table-cell._align_right.ts-list__cell
+            .ts-list__actions
+              +icon-button('icon-pen')(href='#')._shadow._size_small.ts-list__action._edit
+              +icon-button('icon-accept')(href='#')._green._size_small.ts-list__action._save
+              +icon-button('icon-close')(href='#')._red._size_small.ts-list__action._remove
+        +default-table-row.ts-list__row
+          +default-table-cell.ts-list__cell._editable
+            +input()(value='KIA RIO')._size_small._text-like
+          +default-table-cell.ts-list__cell._editable
+            +colorpicker('#b80000')
+          +default-table-cell.ts-list__cell._editable
+            +input()(value='Я317ВК78')._size_small._text-like
+          +default-table-cell._align_right.ts-list__cell
+            .ts-list__actions
+              +icon-button('icon-pen')(href='#')._shadow._size_small.ts-list__action._edit
+              +icon-button('icon-accept')(href='#')._green._size_small.ts-list__action._save
+              +icon-button('icon-close')(href='#')._red._size_small.ts-list__action._remove
