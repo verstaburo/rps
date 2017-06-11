@@ -6,6 +6,7 @@ include ../add-tags/add-tags
 include ../clients-common-info/clients-common-info
 include ../individual-info/individual-info
 include ../ts-list/ts-list
+include ../search-bar-add/search-bar-add
 
 mixin clients-popup()
   +popup('Сбербанк')#clients-popup
@@ -13,10 +14,10 @@ mixin clients-popup()
       +inner-sidebar.__sidebar
         +inner-sidebar-item._menu
           +vertical-menu
-            +vertical-menu-item._active
+            +vertical-menu-item
               +vertical-menu-text Общая информация
             +vertical-menu-item
-              +vertical-menu-text Физ. лица
+              +vertical-menu-text._active Физ. лица
             +vertical-menu-item
               +vertical-menu-text Список ТС
             +vertical-menu-item
@@ -31,6 +32,13 @@ mixin clients-popup()
           +icon-button('icon-trash')(href='#')._uppercase._shadow.clients-popup__delete-button Удалить компанию
 
       +e.content
+        //- Общая информация
         //+clients-common-info
+        //- Физ. лица
         +individual-info
-        //+ts-list
+        //- Список ТС
+        //+search-bar-add('Добавить', 'Введите название партнёра, название или адрес объекта')
+        //+ts-list._transparent
+        //- QR-коды
+        //- MiFare карты
+        //- Доступ в ЛК

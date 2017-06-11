@@ -2,6 +2,10 @@
   min-width: 669px;
   background-color: #fafafa;
 
+  &_transparent {
+    background-color: transparent;
+  }
+
   &__row {
     will-change: background-color;
     transition: background-color .25s ease-in-out;
