@@ -5,6 +5,7 @@ include ../../blocks/icon-button/icon-button
 include ../add-tags/add-tags
 include ../clients-common-info/clients-common-info
 include ../individual-info/individual-info
+include ../ts-list/ts-list
 
 mixin clients-popup()
   +popup('Сбербанк')#clients-popup
@@ -32,3 +33,4 @@ mixin clients-popup()
       +e.content
         //+clients-common-info
         +individual-info
+        //+ts-list

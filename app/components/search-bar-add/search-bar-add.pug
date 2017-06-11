@@ -1,0 +1,7 @@
+include ../../blocks/button/button
+include ../search-bar/search-bar
+
+mixin search-bar-add(buttonText, placeholder)
+  +b.search-bar-add&attributes(attributes)
+    +button()(href='#')._green._uppercase.__button= buttonText
+    +search-bar(placeholder)._white.__search-bar

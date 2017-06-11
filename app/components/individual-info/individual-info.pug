@@ -4,14 +4,12 @@ include ../../blocks/icon-button/icon-button
 include ../../blocks/input/input
 include ../../blocks/tabs/tabs
 include ../../blocks/field/field
-include ../search-bar/search-bar
 include ../ts-list/ts-list
+include ../search-bar-add/search-bar-add
 
 mixin individual-info()
   +b.individual-info&attributes(attributes)
-    +e.header
-      +button()(href='#')._green._uppercase Добавить
-      +search-bar('Введите название партнёра, название или адрес объекта')._white.__search-bar
+    +search-bar-add('Добавить', 'Введите название партнёра, название или адрес объекта').__search-bar
     +accordion
       +accordion-item('Иванов Дмитрий Сергеевич')
         +e.container
@@ -25,11 +23,8 @@ mixin individual-info()
               +e.A(href='#').action
                 +icon('icon-trash').icon-trash
           +e.content
-            +e.ts-list
-              +e.header._add-ts
-                +button()(href='#')._green._uppercase Добавить ТС
-                +search-bar('Номер, модель ТС')._white.__search-bar
-              +ts-list
+            +search-bar-add('Добавить ТС', 'Введите название партнёра, название или адрес объекта')._size_small.__search-bar._add-ts
+            +ts-list
       +accordion-item('Александров Александр Александрович')
         +e.container
           +e.nav
