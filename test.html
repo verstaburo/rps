@@ -460,14 +460,14 @@
                                         <div class="inner-sidebar clients-popup__sidebar">
                                             <div class="inner-sidebar__item inner-sidebar__item_menu">
                                                 <ul class="vertical-menu">
-                                                    <li class="vertical-menu__item vertical-menu__item_active">
+                                                    <li class="vertical-menu__item">
                                                         <a class="vertical-menu__link" href="#">
                                                             <span class="vertical-menu__text">Общая информация</span>
                                                         </a>
                                                     </li>
                                                     <li class="vertical-menu__item">
                                                         <a class="vertical-menu__link" href="#">
-                                                            <span class="vertical-menu__text">Физ. лица</span>
+                                                            <span class="vertical-menu__text vertical-menu__text_active">Физ. лица</span>
                                                         </a>
                                                     </li>
                                                     <li class="vertical-menu__item">
@@ -526,9 +526,9 @@
                                         <div class="clients-popup__content">
                                             <!--+clients-common-info-->
                                             <div class="individual-info">
-                                                <div class="individual-info__header">
-                                                    <a class="button button_green button_uppercase" href="#">Добавить</a>
-                                                    <form class="search-bar search-bar_white individual-info__search-bar" method="post" action="#">
+                                                <div class="search-bar-add individual-info__search-bar">
+                                                    <a class="button button_green button_uppercase search-bar-add__button" href="#">Добавить</a>
+                                                    <form class="search-bar search-bar_white search-bar-add__search-bar" method="post" action="#">
                                                         <button class="search-bar__button" type="submit">
                                                             <svg><use xlink:href="assets/images/icon.svg#icon_icon-search"></use></svg>
                                                         </button>
@@ -545,10 +545,10 @@
                                                             <div class="individual-info__container">
                                                                 <div class="individual-info__nav">
                                                                     <ul class="tabs individual-info__tabs">
-                                                                        <li class="tabs__tab active">
+                                                                        <li class="tabs__tab">
                                                                             <a class="tabs__link" href="#">Информация</a>
                                                                         </li>
-                                                                        <li class="tabs__tab">
+                                                                        <li class="tabs__tab active">
                                                                             <a class="tabs__link" href="#">Список ТС</a>
                                                                         </li>
                                                                         <li class="tabs__tab">
@@ -563,37 +563,131 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="individual-info__content">
-                                                                    <div class="individual-info__fields">
-                                                                        <div class="field">
-                                                                            <div class="field__label field__label_align_right">Фамилия:</div>
-                                                                            <div class="field__content">
-                                                                                <input class="input" type="text" />
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="field">
-                                                                            <div class="field__label field__label_align_right">Имя:</div>
-                                                                            <div class="field__content">
-                                                                                <input class="input" type="text" />
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="field">
-                                                                            <div class="field__label field__label_align_right">Отчество:</div>
-                                                                            <div class="field__content">
-                                                                                <input class="input" type="text" />
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="field">
-                                                                            <div class="field__label field__label_align_right">Телефон:</div>
-                                                                            <div class="field__content">
-                                                                                <input class="input" type="text" />
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="field">
-                                                                            <div class="field__label field__label_align_right">E-mail:</div>
-                                                                            <div class="field__content">
-                                                                                <input class="input" type="text" />
-                                                                            </div>
-                                                                        </div>
+                                                                    <div class="search-bar-add search-bar-add_size_small individual-info__search-bar individual-info__search-bar_add-ts">
+                                                                        <a class="button button_green button_uppercase search-bar-add__button" href="#">Добавить ТС</a>
+                                                                        <form class="search-bar search-bar_white search-bar-add__search-bar" method="post" action="#">
+                                                                            <button class="search-bar__button" type="submit">
+                                                                                <svg><use xlink:href="assets/images/icon.svg#icon_icon-search"></use></svg>
+                                                                            </button>
+                                                                            <input class="search-bar__input" type="search" placeholder="Введите название партнёра, название или адрес объекта" />
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="ts-list">
+                                                                        <table class="default-table">
+                                                                            <thead class="default-table__header">
+                                                                                <tr class="default-table__row">
+                                                                                    <td class="default-table__cell ts-list__cell">Модель</td>
+                                                                                    <td class="default-table__cell ts-list__cell">Цвет</td>
+                                                                                    <td class="default-table__cell ts-list__cell" colspan="2">Номер ТС</td>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody class="default-table__body">
+                                                                                <tr class="default-table__row ts-list__row">
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <input class="input input_size_small input_text-like" value="Audi" type="text" />
+                                                                                    </td>
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <div class="colorpicker">
+                                                                                            <input class="colorpicker__input" type="color" value="#ffffff" />
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <input class="input input_size_small input_text-like" value="В654АЯ78" type="text" />
+                                                                                    </td>
+                                                                                    <td class="default-table__cell default-table__cell_align_right ts-list__cell">
+                                                                                        <div class="ts-list__actions">
+                                                                                            <a class="icon-button icon-button_shadow icon-button_size_small ts-list__action ts-list__action_edit" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-pen"></use></svg>
+                                                                                            </a>
+                                                                                            <a class="icon-button icon-button_green icon-button_size_small ts-list__action ts-list__action_save" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-accept"></use></svg>
+                                                                                            </a>
+                                                                                            <a class="icon-button icon-button_red icon-button_size_small ts-list__action ts-list__action_remove" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="default-table__row ts-list__row">
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <input class="input input_size_small input_text-like" value="Lada Kalina" type="text" />
+                                                                                    </td>
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <div class="colorpicker">
+                                                                                            <input class="colorpicker__input" type="color" value="#007dff" />
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <input class="input input_size_small input_text-like" value="В654АЯ78" type="text" />
+                                                                                    </td>
+                                                                                    <td class="default-table__cell default-table__cell_align_right ts-list__cell">
+                                                                                        <div class="ts-list__actions">
+                                                                                            <a class="icon-button icon-button_shadow icon-button_size_small ts-list__action ts-list__action_edit" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-pen"></use></svg>
+                                                                                            </a>
+                                                                                            <a class="icon-button icon-button_green icon-button_size_small ts-list__action ts-list__action_save" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-accept"></use></svg>
+                                                                                            </a>
+                                                                                            <a class="icon-button icon-button_red icon-button_size_small ts-list__action ts-list__action_remove" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="default-table__row ts-list__row">
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <input class="input input_size_small input_text-like" value="BMW X5" type="text" />
+                                                                                    </td>
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <div class="colorpicker">
+                                                                                            <input class="colorpicker__input" type="color" value="#000000" />
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <input class="input input_size_small input_text-like" value="О777ОО78" type="text" />
+                                                                                    </td>
+                                                                                    <td class="default-table__cell default-table__cell_align_right ts-list__cell">
+                                                                                        <div class="ts-list__actions">
+                                                                                            <a class="icon-button icon-button_shadow icon-button_size_small ts-list__action ts-list__action_edit" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-pen"></use></svg>
+                                                                                            </a>
+                                                                                            <a class="icon-button icon-button_green icon-button_size_small ts-list__action ts-list__action_save" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-accept"></use></svg>
+                                                                                            </a>
+                                                                                            <a class="icon-button icon-button_red icon-button_size_small ts-list__action ts-list__action_remove" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="default-table__row ts-list__row">
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <input class="input input_size_small input_text-like" value="KIA RIO" type="text" />
+                                                                                    </td>
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <div class="colorpicker">
+                                                                                            <input class="colorpicker__input" type="color" value="#b80000" />
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="default-table__cell ts-list__cell ts-list__cell_editable">
+                                                                                        <input class="input input_size_small input_text-like" value="Я317ВК78" type="text" />
+                                                                                    </td>
+                                                                                    <td class="default-table__cell default-table__cell_align_right ts-list__cell">
+                                                                                        <div class="ts-list__actions">
+                                                                                            <a class="icon-button icon-button_shadow icon-button_size_small ts-list__action ts-list__action_edit" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-pen"></use></svg>
+                                                                                            </a>
+                                                                                            <a class="icon-button icon-button_green icon-button_size_small ts-list__action ts-list__action_save" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-accept"></use></svg>
+                                                                                            </a>
+                                                                                            <a class="icon-button icon-button_red icon-button_size_small ts-list__action ts-list__action_remove" href="#">
+                                                                                                <svg class="icon-button__icon"><use xlink:href="assets/images/icon.svg#icon_icon-close"></use></svg>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -902,6 +996,8 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!--+search-bar-add('Добавить', 'Введите название партнёра, название или адрес объекта')-->
+                                            <!--+ts-list._transparent-->
                                         </div>
                                     </div>
                                 </div>
