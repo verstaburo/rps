@@ -5,6 +5,7 @@ include ../../blocks/input/input
 include ../../blocks/tabs/tabs
 include ../../blocks/field/field
 include ../search-bar/search-bar
+include ../ts-list/ts-list
 
 mixin individual-info()
   +b.individual-info&attributes(attributes)
@@ -16,35 +17,19 @@ mixin individual-info()
         +e.container
           +e.nav
             +tabs.__tabs
-              +tabs-tab('#', 'Информация').active
-              +tabs-tab('#', 'Список ТС')
+              +tabs-tab('#', 'Информация')
+              +tabs-tab('#', 'Список ТС').active
               +tabs-tab('#', 'MiFare Карты')
             +e.actions
               +button()(href='#')._text_green._uppercase.__action Сохранить
               +e.A(href='#').action
                 +icon('icon-trash').icon-trash
           +e.content
-            +e.fields
-              +field
-                +field-label._align_right Фамилия:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Имя:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Отчество:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Телефон:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right E-mail:
-                +field-item
-                  +input
+            +e.ts-list
+              +e.header._add-ts
+                +button()(href='#')._green._uppercase Добавить ТС
+                +search-bar('Номер, модель ТС')._white.__search-bar
+              +ts-list
       +accordion-item('Александров Александр Александрович')
         +e.container
           +e.nav
