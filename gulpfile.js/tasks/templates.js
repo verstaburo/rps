@@ -14,7 +14,7 @@ gulp.task('templates', () => (
     .pipe(plumber({ errorHandler: errorHandler('Error in templates task') }))
     .pipe(gulpIf(global.isWatching, pugInheritance({ basedir: 'app' })))
     .pipe(filter(file => /app[\\\/]pages/.test(file.path))) // eslint-disable-line no-useless-escape
-    .pipe(pug({ data: { getData } }))
+    .pipe(pug({ data: { getData }, pretty: true }))
     .pipe(prettify({
       braceStyle: 'expand',
       indentWithTabs: true,
