@@ -1,8 +1,9 @@
 include ../../blocks/button/button
-include ../../blocks/accordion/accordion
+include ../accordion/accordion
 include ../actions-header/actions-header
 include ../search-bar/search-bar
 include ../qr-form/qr-form
+include ../qr-codes-templates/qr-codes-templates
 
 mixin qr-codes()
   +b.qr-codes&attributes(attributes)
@@ -12,12 +13,11 @@ mixin qr-codes()
       +actions-header-col._flexible
         +search-bar('Название QR-кода')._white.__search-bar
       +actions-header-col
-        +button()(href='#')._grey._uppercase Шаблоны
+        +button()(href='#' data-target-popup='#qr-codes-templates')._grey._uppercase.js-show-popup Шаблоны
     +accordion
       - for (var i = 0; i < 5; i++)
         +accordion-item('QR-Код #1, скидка 100р.')
-          +e.buttons
+          +qr-form.__form
             +button()(href='#')._text_grey._uppercase Сохранить
             +button()(href='#')._text_green._uppercase Сохранить как шаблон
             +button()(href='#')._text_red._uppercase Удалить
-          +qr-form.__form

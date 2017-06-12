@@ -9,6 +9,10 @@
   background-color: rgba(0, 0, 0, .7);
   z-index: 70;
 
+  &_full_overlay {
+    z-index: 999;
+  }
+
   &_active {
     display: block;
 
@@ -30,7 +34,7 @@
     height: 100%;
     box-shadow: -2px 0 4px rgba(0, 0, 0, .5);
     background-color: #fff;
-    overflow-y: auto;
+    overflow-y: scroll;
     will-change: transform;
     transform: translate3d(100%, 0, 0);
     transition: transform .25s ease-in-out;

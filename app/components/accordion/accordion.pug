@@ -1,13 +1,16 @@
-include ../icon/icons
+include ../../blocks/icon/icons
+include ../../blocks/checkbox/checkbox
 
 mixin accordion()
   .accordion&attributes(attributes)
     block
 
-mixin accordion-item(heading)
+mixin accordion-item(heading, checkbox)
   .accordion__item&attributes(attributes)
     .accordion__button
       +icon('icon-caret', true).accordion__icon
       .accordion__heading= heading
+      if checkbox
+        +checkbox(checkbox.name, checkbox.value).accordion__select= checkbox.label
     .accordion__content
       block

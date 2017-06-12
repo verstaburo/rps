@@ -13,7 +13,7 @@ mixin popup(heading)
     +e.wrapper
       +e.content
         +e.header
-          +e.H2.heading= heading
+          +e.H2.heading!= heading
           +e.close
             +icon('icon-close').close-icon
         +e.body
