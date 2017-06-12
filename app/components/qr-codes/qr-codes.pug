@@ -14,9 +14,10 @@ mixin qr-codes()
       +actions-header-col
         +button()(href='#')._grey._uppercase Шаблоны
     +accordion
-      +accordion-item('QR-Код #1, скидка 100р.')
-        +e.buttons
-          +button()(href='#')._text_grey._uppercase Сохранить
-          +button()(href='#')._text_green._uppercase Сохранить как шаблон
-          +button()(href='#')._text_red._uppercase Удалить
-        +qr-form.__form
+      - for (var i = 0; i < 5; i++)
+        +accordion-item('QR-Код #1, скидка 100р.')
+          +e.buttons
+            +button()(href='#')._text_grey._uppercase Сохранить
+            +button()(href='#')._text_green._uppercase Сохранить как шаблон
+            +button()(href='#')._text_red._uppercase Удалить
+          +qr-form.__form
