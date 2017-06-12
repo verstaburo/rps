@@ -1,0 +1,19 @@
+.qr-form {
+  display: block;
+
+  &__label {
+    width: 146px;
+  }
+
+  &__field {
+    width: 320px;
+  }
+
+  &__small-field {
+    width: 148px;
+  }
+
+  &__checkbox {
+    margin-left: auto;
+  }
+}

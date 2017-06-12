@@ -1,0 +1,22 @@
+include ../../blocks/button/button
+include ../../blocks/accordion/accordion
+include ../actions-header/actions-header
+include ../search-bar/search-bar
+include ../qr-form/qr-form
+
+mixin qr-codes()
+  +b.qr-codes&attributes(attributes)
+    +actions-header
+      +actions-header-col
+        +button()(href='#')._green._uppercase Добавить
+      +actions-header-col._flexible
+        +search-bar('Название QR-кода')._white.__search-bar
+      +actions-header-col
+        +button()(href='#')._grey._uppercase Шаблоны
+    +accordion
+      +accordion-item('QR-Код #1, скидка 100р.')
+        +e.buttons
+          +button()(href='#')._text_grey._uppercase Сохранить
+          +button()(href='#')._text_green._uppercase Сохранить как шаблон
+          +button()(href='#')._text_red._uppercase Удалить
+        +qr-form.__form

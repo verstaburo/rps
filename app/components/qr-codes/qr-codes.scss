@@ -1,0 +1,12 @@
+.qr-codes {
+  min-width: 669px;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    padding-left: 17px;
+  }
+}

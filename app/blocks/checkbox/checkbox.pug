@@ -1,5 +1,13 @@
 mixin checkbox(name, value)
-  +b.LABEL.checkbox&attributes(attributes)
+
+  if block
+    - var className = '_with_label'
+
+  +b.LABEL.checkbox(class=className)&attributes(attributes)
     +e.INPUT.input(type="checkbox" name=name value=value)
     +e.SPAN.box
       +icon('icon-check').__icon
+
+    if block
+      +e.SPAN.text
+        block
