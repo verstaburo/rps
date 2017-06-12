@@ -21,5 +21,11 @@
     &:not(:first-child) {
       padding-left: 16px;
     }
+
+    a {
+      color: #0353a4;
+
+      &:hover { color: #3f7fbf; }
+    }
   }
 }
