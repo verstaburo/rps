@@ -16,4 +16,8 @@
   &__checkbox {
     margin-left: auto;
   }
+
+  &__group:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }

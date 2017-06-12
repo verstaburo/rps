@@ -2,39 +2,50 @@ include ../../blocks/field/field
 include ../../blocks/input/input
 include ../../blocks/select/select
 include ../../blocks/checkbox/checkbox
+include ../../blocks/textarea/textarea
 
 mixin qr-form()
   +b.FORM.qr-form&attributes(attributes)
-    +field
-      +field-label._align_right.qr-form__label Название штрихкода:
-      +field-item.qr-form__field
-        +input
-    +field
-      +field-label._align_right.qr-form__label ТП для гостя:
-      +field-item.qr-form__field
-        +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
-    +field
-      +field-label._align_right.qr-form__label ТС для гостя:
-      +field-item.qr-form__field
-        +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
-    +field
-      +field-label._align_right.qr-form__label ТП для арендатора:
-      +field-item.qr-form__field
-        +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
-    +field
-      +field-label._align_right.qr-form__label ТС для арендатора:
-      +field-item.qr-form__field
-        +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
-    +field
-      +field-label._align_right.qr-form__label ТП на арендованные места:
-      +field-item.qr-form__field
-        +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
-    +field
-      +field-label._align_right.qr-form__label ТС на арендованные места:
-      +field-item.qr-form__field
-        +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
-    +field
-      +field-label._align_right.qr-form__label Сумма скидки:
-      +field-item.qr-form__field
-        +input.qr-form__small-field
-        +checkbox('name', 'value')._with_label.qr-form__small-field.qr-form__checkbox Любая сумма
+    +e.group
+      +field
+        +field-label._align_right.qr-form__label Название штрихкода:
+        +field-item.qr-form__field
+          +input
+    +e.group
+      +field
+        +field-label._align_right.qr-form__label ТП для гостя:
+        +field-item.qr-form__field
+          +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
+      +field
+        +field-label._align_right.qr-form__label ТС для гостя:
+        +field-item.qr-form__field
+          +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
+    +e.group
+      +field
+        +field-label._align_right.qr-form__label ТП для арендатора:
+        +field-item.qr-form__field
+          +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
+      +field
+        +field-label._align_right.qr-form__label ТС для арендатора:
+        +field-item.qr-form__field
+          +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
+    +e.group
+      +field
+        +field-label._align_right.qr-form__label ТП на арендованные места:
+        +field-item.qr-form__field
+          +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
+      +field
+        +field-label._align_right.qr-form__label ТС на арендованные места:
+        +field-item.qr-form__field
+          +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
+    +e.group
+      +field
+        +field-label._align_right.qr-form__label Сумма скидки:
+        +field-item.qr-form__field
+          +input.qr-form__small-field
+          +checkbox('name', 'value')._with_label.qr-form__small-field.qr-form__checkbox Любая сумма
+    +e.group
+      +field
+        +field-label._align_right.qr-form__label Описание:
+        +field-item.qr-form__field
+          +textarea
