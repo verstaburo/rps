@@ -12,6 +12,7 @@ include ../../components/clients-popup/clients-popup
 include ../../components/search-filter/search-filter
 include ../../blocks/icon-menu/icon-menu
 include ../../components/accordion/accordion
+include ../../components/mifare-popup/mifare-popup
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -40,6 +41,9 @@ block layout-right
       div(style="display: inline-block; margin: 15px")
         +button(href='#' data-target-popup='#clients-popup')._uppercase._grey.js-show-popup Общая информаци о клиентах (попап)
 
+      div(style="display: inline-block; margin: 15px")
+        +button(href='#' data-target-popup='#mifare-popup')._uppercase._grey.js-show-popup MiFare попап
+
     div(style="display: block; margin: 15px; width: 300px;")
       +accordion
         +accordion-item('Заголовок')
@@ -55,3 +59,4 @@ block layout-right
 
       +add-to-blacklist
       +clients-popup
+      +mifare-popup

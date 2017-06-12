@@ -1,0 +1,42 @@
+.mifare-popup {
+  display: flex;
+  min-width: 908px;
+  min-height: 100%;
+
+  &__sidebar {
+    min-width: 239px;
+    flex-shrink: 0;
+  }
+
+  &__remove-card {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #797b7c;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color .25s ease-in-out;
+
+    &::before {
+      content: '';
+      display: block;
+      margin-right: 16px;
+      width: 16px;
+      height: 16px;
+      background-color: #797b7c;
+      border-radius: 50%;
+      transition: background-color .25s ease-in-out;
+    }
+
+    &:hover {
+      color: #f9ae17;
+
+      &::before { background-color: #f9ae17; }
+    }
+  }
+
+  &__content {
+    display: block;
+    width: 100%;
+  }
+}

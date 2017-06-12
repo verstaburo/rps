@@ -1,0 +1,25 @@
+include ../../blocks/popup/popup
+include ../../blocks/inner-sidebar/inner-sidebar
+include ../../blocks/vertical-menu/vertical-menu
+include ../mifare-card-info/mifare-card-info
+
+mixin mifare-popup()
+  +popup('5234 4256 9012 | Петров Василий Анатольевич')#mifare-popup
+    +b.mifare-popup
+      +inner-sidebar.__sidebar
+        +inner-sidebar-item._menu
+          +vertical-menu
+            +vertical-menu-item._active
+              +vertical-menu-text Информация
+            +vertical-menu-item
+              +vertical-menu-text Сессии
+            +vertical-menu-item
+              +vertical-menu-text Транзакции
+        +inner-sidebar-item._with_border
+          a(href='#').mifare-popup__remove-card Отвязать карту
+
+      +e.content
+        //- Информация
+        +mifare-card-info
+        //- Сессии
+        //- Транзакции
