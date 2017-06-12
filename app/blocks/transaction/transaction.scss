@@ -1,0 +1,72 @@
+.transaction {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 654px;
+  height: 280px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  border-radius: 3px;
+  border: 1px solid #d2d3d3;
+  background-color: #fff;
+  overflow: auto;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &_heading {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      height: 40px;
+      border-bottom: 1px solid #d2d3d3;
+
+      .transaction__item:not(:last-child)::after {
+        content: '';
+        display: block;
+        margin: 0 8px;
+        width: 1px;
+        height: 12px;
+        background-color: #202325;
+      }
+    }
+
+    &_content {
+      padding: 17px;
+
+      .transaction {
+
+        &__item:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+        &__text {
+          display: block;
+          width: 50%;
+          flex: none;
+
+          &_bold {
+            margin-right: 8px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    color: #202325;
+    font-size: 14px;
+    font-weight: 400;
+
+    &_bold {
+      font-weight: 500;
+    }
+  }
+}
