@@ -1,0 +1,69 @@
+include ../../blocks/input/input
+include ../../blocks/select/select
+include ../../blocks/field/field
+include ../../blocks/button/button
+
+mixin mifare-card-info()
+  +b.FORM.mifare-card-info&attributes(attributes)
+    +e.fields
+      +field
+        +field-label._align_right.mifare-card-info__label Группа доступа
+        +field-item.mifare-card-info__field
+          +select([{title: 'Новая группа', value: 1}, {title: 'Новая группа 1', value: 2}])
+      +field
+        +field-label._align_right.mifare-card-info__label Текущая зона
+        +field-item.mifare-card-info__field
+          +select([{title: 'Вне парковки', value: 1}, {title: 'Вне парковки 1', value: 2}])
+      +field
+        +field-label._align_right.mifare-card-info__label Время въезда
+        +field-item.mifare-card-info__field
+          +input(value='2016-11-20')
+          +input(value='12:40').mifare-card-info__small
+      +field
+        +field-label._align_right.mifare-card-info__label Время пересчета
+        +field-item.mifare-card-info__field
+          +input(value='2016-11-20')
+          +input(value='12:40').mifare-card-info__small
+      +field
+        +field-label._align_right.mifare-card-info__label Тарифный план
+        +field-item.mifare-card-info__field
+          +select([{title: 'Тарифный план', value: 1}, {title: 'Тарифный план 1', value: 2}])
+      +field
+        +field-label._align_right.mifare-card-info__label Тарифная сетка
+        +field-item.mifare-card-info__field
+          +select([{title: 'Сетка Владимира', value: 1}, {title: 'Сетка Владимира 1', value: 2}])
+      +field
+        +field-label._align_right.mifare-card-info__label Сумма на карте
+        +field-item.mifare-card-info__field
+          +input(value='0.00')
+      +field
+        +field-label._align_right.mifare-card-info__label ТВП
+        +field-item.mifare-card-info__field
+          +input(value='2000-01-01')
+          +input(value='00:00').mifare-card-info__small
+      +field
+        +field-label._align_right.mifare-card-info__label ТКВП
+        +field-item.mifare-card-info__field
+          +input(value='0')
+      +field
+        +field-label._align_right.mifare-card-info__label Обнуление ВП
+        +field-item.mifare-card-info__field
+          +input(value='2000-01-01')
+          +input(value='00:00').mifare-card-info__small
+      +field
+        +field-label._align_right.mifare-card-info__label Обнуление КВП
+        +field-item.mifare-card-info__field
+          +input(value='2000-01-01')
+          +input(value='00:00').mifare-card-info__small
+      +field
+        +field-label._align_right.mifare-card-info__label Обнуление абонемент
+        +field-item.mifare-card-info__field
+          +input(value='2000-01-01')
+          +input(value='00:00').mifare-card-info__small
+      +field
+        +field-label._align_right.mifare-card-info__label Тип клиента
+        +field-item.mifare-card-info__field
+          +select([{title: 'Разовый', value: 1}, {title: 'Разовый 1', value: 2}])
+
+    +e.button-wrap
+      +button()(href='#')._green._uppercase._align_center Сохранить изменения
