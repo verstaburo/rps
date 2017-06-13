@@ -9,7 +9,6 @@ include ../../blocks/partial-button/partial-button
 include ../../components/header/header
 include ../../components/actions-header/actions-header
 include ../../components/add-client-dropdown/add-client-dropdown
-include ../../components/session-detail/session-detail
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -18,9 +17,6 @@ block layout-left
   +sidebar
 
 block layout-right
-  div(style="width: 100vw; height: 100%; background-color: #f7f7f7; position: absolute; top: 0; left: 0; z-index: 9999; padding: 50px 0; display:flex; justify-content:center;")
-    +session-detail
-
   +header
   +b.index.page
     +actions-header
