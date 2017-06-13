@@ -13,6 +13,7 @@ include ../../components/search-filter/search-filter
 include ../../blocks/icon-menu/icon-menu
 include ../../components/accordion/accordion
 include ../../components/mifare-popup/mifare-popup
+include ../../components/edit-card-data-popup/edit-card-data-popup
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -27,8 +28,7 @@ block layout-right
       +actions-header-col
         +partial-button('icon-close')._grey 1
       +actions-header-col
-        //- TODO это для прмиера (убрать открытие попапа)
-        +button(href='#')._uppercase._grey Изменение данных карт
+        +button(href='#' data-target-popup='#edit-card-data-popup')._uppercase._grey.js-show-popup Изменение данных карт
       +actions-header-col
         +button(href='#')._uppercase._grey Удалить компанию
       +actions-header-col
@@ -60,3 +60,4 @@ block layout-right
       +add-to-blacklist
       +clients-popup
       +mifare-popup
+      +edit-card-data-popup

@@ -8,6 +8,6 @@ mixin select(items)
   +b.select&attributes(attributes)
     +e.SELECT.control
       each item in items
-        option(value=value)= item.title
+        option(value=item.value disabled=item.disabled selected=item.selected)= item.title
     +e.button
       +icon('icon-caret').caret

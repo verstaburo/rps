@@ -8,6 +8,7 @@ import counter from '../components/counter/counter';
 import tsList from '../components/ts-list/ts-list';
 import qrCodesTemplates from '../components/qr-codes-templates/qr-codes-templates';
 import searchFilter from '../components/search-filter/search-filter';
+import editCardDataPopup from '../components/edit-card-data-popup/edit-card-data-popup';
 
 $(() => {
   popup();
@@ -19,4 +20,5 @@ $(() => {
   tsList();
   qrCodesTemplates();
   searchFilter();
+  editCardDataPopup();
 });

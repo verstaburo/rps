@@ -1,0 +1,37 @@
+.edit-card-data-popup {
+  display: block;
+  min-width: 893px;
+
+  &__header {
+    min-height: 48px;
+  }
+
+  &__cell {
+    padding-left: 24px;
+
+    &:last-child {
+      padding-right: 8px;
+    }
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 50px;
+    color: #0c6;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d2d3d3;
+
+    &:hover { color: #0ee877; }
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    fill: #0c6;
+    transform: rotate(180deg);
+  }
+}
