@@ -1,0 +1,56 @@
+extends ../../layouts/default
+include ../../blocks/button/button
+include ../../blocks/table/table
+include ../../components/sidebar/sidebar
+include ../../components/header/header
+include ../../components/actions-header/actions-header
+include ../../components/add-to-blacklist/add-to-blacklist
+
+block head
+  - var pageTitle = 'RPS — Сессии'
+
+block layout-left
+  +sidebar
+
+block layout-right
+  +header('Чёрный список')
+  +b.blacklist.page
+    +actions-header
+      +actions-header-col
+        +button()(href='#' data-target-popup='#add-to-blacklist')._green._uppercase.js-show-popup Добавить ТС в черный список
+      +actions-header-col._flexible
+        +search-bar('Номер карты или номер транспортного средства...')._white.__search-bar
+      +actions-header-col
+        //- TODO заменить на datepicker
+        +search-bar('тест')._white
+
+    +table
+      +table-header
+        +table-header-col('Номер авто')._width_160
+          +table-filter-button 9-1
+        +table-header-col('Дата добавления')._width_200
+          +table-filter-button._orange 9-1
+        +table-header-col('Тип клиента')._width_160
+          +table-filter-button 9-1
+        +table-header-col('Способ добавления')._width_220
+          +table-filter-button 9-1
+        +table-header-col('Причина добавления')._flexible
+
+      - for (var i = 0; i < 15; i++)
+        +table-row
+          +table-row._main.blacklist__row
+            +table-col._width_160
+              +table-text У313АП 77
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text 13:34:32
+            +table-col._width_160
+              +table-text Компания
+            +table-col._width_220
+              +table-text Ручной
+            +table-col._flexible
+              +table-text Нарушение правил парковки
+              +button()(href='#')._grey._size_small._uppercase.blacklist__remove-btn Убрать из ЧС
+
+    +add-to-blacklist

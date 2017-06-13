@@ -1,0 +1,23 @@
+.blacklist {
+  display: block;
+
+  &__row {
+    transition: background-color .25s ease-in-out;
+
+    &:hover {
+      background-color: #fffaf0 !important;
+
+      .blacklist__remove-btn {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__remove-btn {
+    transition: opacity .25s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    margin-left: auto;
+  }
+}

@@ -13,6 +13,11 @@
     justify-content: center;
   }
 
+  &_size_small {
+    min-height: 32px;
+    padding: 0 22px;
+  }
+
   &_green {
     font-size: 14px;
     color: white;
