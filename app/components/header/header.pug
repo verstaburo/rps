@@ -3,13 +3,17 @@ include ../../blocks/notifications/notifications
 include ../../blocks/indicators/indicators
 include ../search-bar/search-bar
 
-mixin header()
+mixin header(activeMenuItem)
   +b.header&attributes(attributes)
     +e.col
+      - var clientsPage = !activeMenuItem || activeMenuItem === 'Клиенты' ? 'active' : '';
+      - var sessionsPage = activeMenuItem === 'Сессии' ? 'active' : '';
+      - var blackListPage = activeMenuItem === 'Чёрный список' ? 'active' : '';
+
       +tabs.__tabs
-        +tabs-tab("#", "Клиенты").active
-        +tabs-tab("#", "Сессии")
-        +tabs-tab("#", "Чёрный список")
+        +tabs-tab("/", "Клиенты")(class=clientsPage)
+        +tabs-tab("/sessions.html", "Сессии")(class=sessionsPage)
+        +tabs-tab("#", "Чёрный список")(class=blackListPage)
 
     +e.col
       +search-bar('ПОИСК').__col-block.__search-bar

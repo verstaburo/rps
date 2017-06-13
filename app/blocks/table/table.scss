@@ -18,6 +18,10 @@
     margin-left: auto;
     margin-right: -6px;
 
+    &_default {
+      margin: 0 18px 0 0;
+    }
+
     .icon-button__icon {
       width: 12px;
       height: 7px;

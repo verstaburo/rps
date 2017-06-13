@@ -1,0 +1,75 @@
+extends ../../layouts/default
+include ../../blocks/icon-button/icon-button
+include ../../blocks/table/table
+include ../../components/sidebar/sidebar
+include ../../components/header/header
+include ../../components/actions-header/actions-header
+include ../../components/session-detail/session-detail
+
+block head
+  - var pageTitle = 'RPS — Сессии'
+
+block layout-left
+  +sidebar
+
+block layout-right
+  +header('Сессии')
+  +b.sessions.page
+    +actions-header
+      +actions-header-col
+        //- TODO заменить на datepicker
+        +search-bar('тест')._white
+      +actions-header-col._flexible
+        +search-bar('Номер карты или номер транспортного средства...')._white.__search-bar
+      +actions-header-col
+        +icon-button('icon-export')(href='#')._uppercase Экспорт
+
+    +table
+      +table-header
+        +table-header-col('ID Сессии')._flexible
+        +table-header-col('Карта')._width_120
+        +table-header-col('Номер авто')._width_120
+        +table-header-col('Въезд Дата и время')._width_180
+          +table-filter-button._orange 9-1
+        +table-header-col('Устройство оплаты Сумма')._width_180
+        +table-header-col('Выезд Дата и время')._width_180
+          +table-filter-button._orange 9-1
+        +table-header-col('Время сессии')._width_180
+          +table-filter-button._orange 9-1
+        +table-header-col('Тип клиента')._width_160
+          +table-filter-button._orange 9-1
+
+      - for (var i = 0; i < 15; i++)
+        +table-row._parent
+          +table-row._main
+            +table-col._flexible
+              +icon-button('icon-caret')(href='#')._shadow.__toggle_default
+              +table-text
+                a(href="#")
+                  b 3123515
+            +table-col._width_120
+              +table-text
+                a(href="#")
+                  b 2344 3564 76
+            +table-col._width_120
+              +table-text У313АП 77
+            +table-col._width_180
+              +table-text-block
+                +table-text Въезд 1
+                +table-text 28.04.2017
+                +table-text 13:34:32
+            +table-col._width_180
+              +table-text-block
+                +table-text Касса 1
+                +table-text 340р
+            +table-col._width_180
+              +table-text-block
+                +table-text Выезд 1
+                +table-text 28.04.2017
+                +table-text 13:34:32
+            +table-col._width_180
+              +table-text 13:34:32
+            +table-col._width_160
+              +table-text Разовый
+          +table-row._children
+            +session-detail
