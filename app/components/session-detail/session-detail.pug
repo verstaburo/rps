@@ -1,0 +1,28 @@
+include ../../blocks/status/status
+include ../../blocks/photo/photo
+
+mixin session-detail()
+  +b.session-detail&attributes(attributes)
+    +e.block
+      +e.heading Фото въезда и выезда
+      +e.body._photos
+        +photo('assets/images/camera/photo-1.jpg', 'Стойка Въезда 1', 'Е338НТ78').__photo
+        +photo('assets/images/camera/photo-2.jpg', 'Стойка Выезда 1', 'Е338НТ78').__photo
+    +e.block
+      +e.heading Детализированная информация по сессии
+      +e.body._status
+        +status('in').__status
+          +status-date 12.02.2017 в 13:37:41
+          +status-message Стойка Въезда 1
+        +status('in').__status
+          +status-date 12.02.2017 в 13:37:41
+          +status-message Въезд: Зона B, Стойка переезда 1
+        +status('rotate').__status
+          +status-date 12.02.2017 в 13:37:41
+          +status-message Респешн. чтение карты
+        +status('out').__status
+          +status-date 12.02.2017 в 13:37:41
+          +status-message Въезд: Зона B, Стойка переезда 1
+        +status('out').__status
+          +status-date 12.02.2017 в 13:37:41
+          +status-message Стойка Выезда 1
