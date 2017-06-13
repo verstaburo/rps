@@ -15,16 +15,41 @@
   }
 
   &__footer {
-    display: flex;
     padding: 8px;
+  }
+
+  &__block {
+    width: 100%;
+    height: 100%;
+
+    &_default {
+      display: block;
+    }
+
+    &_saving {
+      display: none;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    width: 100%;
+    height: 100%;
   }
 
   &__reset {
     padding-left: 16px;
-    margin-right: auto;
+    padding-right: 16px;
   }
 
-  &__button:not(:last-child) {
-    margin-right: 16px;
+  &__col {
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &_flexible {
+      flex: 1;
+    }
   }
 }
