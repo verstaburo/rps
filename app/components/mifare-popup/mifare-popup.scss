@@ -1,7 +1,18 @@
 .mifare-popup {
   display: flex;
+  flex-direction: column;
   min-width: 908px;
   min-height: 100%;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+  }
+
+  &__alert {
+    box-shadow: 0 1px 0 #d2d3d3;
+  }
 
   &__sidebar {
     min-width: 239px;
@@ -38,5 +49,28 @@
   &__content {
     display: block;
     width: 100%;
+  }
+
+  &__sidebar-btn {
+    margin-top: auto;
+    padding: 12px;
+    background-color: #ffebe6;
+  }
+
+  &__unlock-button {
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+
+    .icon-button__icon {
+      width: 13px;
+      height: 16px;
+    }
+
+    .icon-button__text {
+      margin: 0 auto;
+      padding-left: 5px;
+    }
   }
 }

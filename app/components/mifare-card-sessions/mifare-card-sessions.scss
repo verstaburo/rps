@@ -1,0 +1,83 @@
+.mifare-card-sessions {
+  display: block;
+  min-width: 669px;
+  background-color: #f6f6f6;
+
+  &__status {
+    border-left: 1px solid #d2d3d3;
+
+    &:not(:first-child) {
+      margin-left: 14px;
+    }
+  }
+
+  &__detail-status {
+    margin-left: -22px;
+    margin-bottom: 14px;
+  }
+
+  &__tabs {
+    height: 48px;
+  }
+
+  &__photos {
+    display: block;
+    padding: 29px 32px;
+
+    &-row {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__detail {
+    display: flex;
+    min-height: 380px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 24px;
+    width: 50%;
+
+    &:not(:last-child) {
+      border-right: 1px solid #d2d3d3;
+    }
+  }
+
+  &__list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text {
+    display: block;
+    width: 50%;
+    color: #202325;
+    font-size: 14px;
+    font-weight: 400;
+
+    &_title {
+      font-weight: 500;
+    }
+  }
+}

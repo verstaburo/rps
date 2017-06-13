@@ -1,0 +1,22 @@
+include ../icon/icons
+
+mixin status(state)
+  +b.status&attributes(attributes)
+    +e.icon-wrap
+      case state
+        when 'in'
+          +icon('icon-arrow').icon._in
+        when 'out'
+          +icon('icon-arrow').icon._out
+        when 'rotate'
+          +icon('icon-arrow-rotate').icon._rotate
+    +e.body
+      block
+
+mixin status-date()
+  +e.SPAN.date&attributes(attributes)
+    block
+
+mixin status-message()
+  +e.SPAN.message&attributes(attributes)
+    block

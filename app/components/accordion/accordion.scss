@@ -69,6 +69,11 @@
     }
   }
 
+  &__block {
+    margin-left: auto;
+    padding: 0 8px;
+  }
+
   &__content {
     display: none;
   }

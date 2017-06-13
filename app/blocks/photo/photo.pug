@@ -1,0 +1,7 @@
+mixin photo(src, heading, number)
+  +b.photo&attributes(attributes)
+    +e.picture-wrap
+      +e.IMG(src=src alt=heading).picture
+    +e.body
+      +e.heading= heading
+      +e.number= number

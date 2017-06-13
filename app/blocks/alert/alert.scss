@@ -1,0 +1,25 @@
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  height: 24px;
+  color: #202325;
+  font-size: 18px;
+  font-weight: 300;
+
+  &_warning {
+    background-color: #fef3dd;
+    color: #ed1c24;
+  }
+
+  &_danger {
+    background-color: #ffebe6;
+    color: #ed1c24;
+  }
+
+  &_success {
+    background-color: rgba(153, 194, 77, .2);
+  }
+}

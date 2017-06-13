@@ -1,0 +1,88 @@
+include ../../blocks/tabs/tabs
+include ../../blocks/icon/icons
+include ../../blocks/status/status
+include ../../blocks/photo/photo
+include ../actions-header/actions-header
+include ../accordion/accordion
+include ../search-bar/search-bar
+
+mixin mifare-card-sessions()
+  +b.mifare-card-sessions&attributes(attributes)
+    +actions-header
+      +actions-header-col._flexible
+        +search-bar('ID Карты, ФИО')._white.__search-bar
+      +actions-header-col._flexible
+        //- TODO заменить на datepicker
+        +search-bar('ID Карты, ФИО')._white.__search-bar
+    +accordion
+      //- Детализированная информация
+      +accordion-item-custom
+        +accordion-button('ID 512453 | Е338НТ7')
+          +status('in')._size_small.mifare-card-sessions__status
+            +status-date 18.02.2017 в 13:37:41
+            +status-message Стойка Въезда 1
+          +status('out')._size_small.mifare-card-sessions__status
+            +status-date 18.02.2017 в 14:37:41
+            +status-message Стойка Въезда 1
+        +accordion-content
+          +tabs.__tabs
+            +tabs-tab('#', 'Фото с камер')
+            +tabs-tab('#', 'Детализированная информация').active
+          +e.content
+            +e.detail
+              +e.block
+                +e.UL.list
+                  +e.LI.item
+                    +e.SPAN.text._title Время сессии:
+                    +e.SPAN.text 60 минут
+                  +e.LI.item
+                    +e.SPAN.text._title Тип клиента:
+                    +e.SPAN.text Разовый
+                +e.UL.list
+                  +e.LI.item
+                    +e.SPAN.text._title Устройство оплаты:
+                    +e.SPAN.text Касса 2
+                  +e.LI.item
+                    +e.SPAN.text._title Дата оплаты:
+                    +e.SPAN.text 18.02.2017
+                  +e.LI.item
+                    +e.SPAN.text._title Время оплаты:
+                    +e.SPAN.text 14:30:23
+                  +e.LI.item
+                    +e.SPAN.text._title Сумма оплаты:
+                    +e.SPAN.text 540р.
+              +e.block
+                +status('in').__detail-status
+                  +status-date 12.02.2017 в 13:37:41
+                  +status-message Стойка Въезда 1
+                +status('in').__detail-status
+                  +status-date 12.02.2017 в 13:37:41
+                  +status-message Въезд: Зона B, Стойка переезда 1
+                +status('rotate').__detail-status
+                  +status-date 12.02.2017 в 13:37:41
+                  +status-message Респешн. чтение карты
+                +status('out').__detail-status
+                  +status-date 12.02.2017 в 13:37:41
+                  +status-message Въезд: Зона B, Стойка переезда 1
+                +status('out').__detail-status
+                  +status-date 12.02.2017 в 13:37:41
+                  +status-message Стойка Выезда 1
+      //- Фото с камер
+      each item in ['ID 512452 | В123АЯ78', 'ID 512451 | О000ОО78', 'ID 512449 | Я423АВ78', 'ID 512448 | К333ЯК78', 'ID 512447 | У512ВК78']
+        +accordion-item-custom
+          +accordion-button(item)
+            +status('in')._size_small.mifare-card-sessions__status
+              +status-date 18.02.2017 в 13:37:41
+              +status-message Стойка Въезда 1
+            +status('out')._size_small.mifare-card-sessions__status
+              +status-date 18.02.2017 в 14:37:41
+              +status-message Стойка Въезда 1
+          +accordion-content
+            +tabs.__tabs
+              +tabs-tab('#', 'Фото с камер').active
+              +tabs-tab('#', 'Детализированная информация')
+            +e.content
+              +e.photos
+                +e.photos-row
+                  +photo('assets/images/camera/photo-1.jpg', 'Стойка Въезда 1', 'Е338НТ78')
+                  +photo('assets/images/camera/photo-2.jpg', 'Стойка Выезда 1', 'Е338НТ78')

@@ -1,0 +1,32 @@
+.photo {
+  display: block;
+
+  &__picture {
+    @include fill-img;
+
+    &-wrap {
+      position: relative;
+      width: 287px;
+      height: 216px;
+    }
+  }
+
+  &__body {
+    display: block;
+    margin-top: 14px;
+    text-align: center;
+  }
+
+  &__heading {
+    color: #202325;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__number {
+    margin-top: 4px;
+    color: #797b7c;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

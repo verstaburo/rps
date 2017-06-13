@@ -1,0 +1,78 @@
+.status {
+  display: inline-flex;
+
+  &_size_small {
+
+    .status {
+
+      &__icon {
+
+        &-wrap {
+          width: 45px;
+        }
+
+        &_in, &_out {
+          width: 18px;
+          height: 12px;
+        }
+
+        &_rotate {
+          width: 14.25px;
+          height: 18px;
+        }
+      }
+
+      &__date, &__message {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__icon {
+
+    &_in {
+      width: 24px;
+      height: 16px;
+      fill: #0cce6b;
+      transform: rotate(180deg);
+    }
+
+    &_out {
+      width: 24px;
+      height: 16px;
+      fill: #ed1c24;
+    }
+
+    &_rotate {
+      width: 19px;
+      height: 24px;
+      fill: #797b7c;
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__date {
+    color: #202325;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__message {
+    margin-top: 2px;
+    color: #202325;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

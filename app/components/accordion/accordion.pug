@@ -14,3 +14,21 @@ mixin accordion-item(heading, checkbox)
         +checkbox(checkbox.name, checkbox.value).accordion__select= checkbox.label
     .accordion__content
       block
+
+//- Нижние миксина используется, если нужно поместить какой-то блок в заголовок (кнопку)
+//- Сделано для обратной совместимости, дабы не перепиливать пол проекта
+
+mixin accordion-item-custom()
+  .accordion__item&attributes(attributes)
+    block
+
+mixin accordion-button(heading)
+  .accordion__button
+    +icon('icon-caret', true).accordion__icon
+    .accordion__heading= heading
+    .accordion__block
+      block
+
+mixin accordion-content()
+  .accordion__content&attributes(attributes)
+    block
