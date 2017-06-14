@@ -13,7 +13,11 @@ block layout-left
   +sidebar
 
 block layout-right
-  +header('Чёрный список')
+  -
+    var menu = getData('header-menu');
+    menu[2].active = true;
+  +header(menu)
+
   +b.blacklist.page
     +actions-header
       +actions-header-col

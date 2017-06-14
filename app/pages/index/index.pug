@@ -17,7 +17,11 @@ block layout-left
   +sidebar
 
 block layout-right
-  +header
+  -
+    var menu = getData('header-menu');
+    menu[0].active = true;
+  +header(menu)
+
   +b.index.page
     +actions-header
       +actions-header-col

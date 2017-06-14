@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/",
+    "title": "Клиенты"
+  },
+  {
+    "path": "sessions.html",
+    "title": "Сессии"
+  },
+  {
+    "path": "blacklist.html",
+    "title": "Чёрный список"
+  }
+]
