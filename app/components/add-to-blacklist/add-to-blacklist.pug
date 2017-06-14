@@ -6,54 +6,56 @@ include ../../blocks/icon-button/icon-button
 include ../actions-header/actions-header
 
 mixin add-to-blacklist()
-  +popup('Добавить ТС в чёрный список')#add-to-blacklist
-    +b.add-to-blacklist&attributes(attributes)
-      +actions-header.__actions
-        +actions-header-col
-          +icon-button('icon-import')(href='#')._uppercase.add-to-blacklist__import Импорт
-        +actions-header-col._push_right
-          +button(href='#')._text_green._uppercase.add-to-blacklist__action-btn Сохранить
-          +button(href='#')._text_red._uppercase.add-to-blacklist__action-btn Отмена
-      +e.content
+  +popup#add-to-blacklist
+    +popup-header('Добавить ТС в чёрный список')
+    +popup-body
+      +b.add-to-blacklist&attributes(attributes)
+        +actions-header.__actions
+          +actions-header-col
+            +icon-button('icon-import')(href='#')._uppercase.add-to-blacklist__import Импорт
+          +actions-header-col._push_right
+            +button(href='#')._text_green._uppercase.add-to-blacklist__action-btn Сохранить
+            +button(href='#')._text_red._uppercase.add-to-blacklist__action-btn Отмена
+        +e.content
 
-        +default-table
-          +default-table-header
-            +default-table-row
-              +default-table-cell.add-to-blacklist__cell-sm Номер ТС
-              +default-table-cell(colspan='2') Причина добавления в ЧС
-          +default-table-body
-            +default-table-row
-              +default-table-cell.add-to-blacklist__cell-sm
-                +input(value='В654АЯ78')._size_small.add-to-blacklist__input
-              +default-table-cell
-                +input(value='Нарушил правила парковки')._size_small
-              +default-table-cell.add-to-blacklist__cell-xs
-                +icon-button('icon-trash')(href='#')._shadow._size_small
-            +default-table-row
-              +default-table-cell.add-to-blacklist__cell-sm
-                +input(value='В654АЯ78')._size_small.add-to-blacklist__input
-              +default-table-cell
-                +input(value='Водитель Uber')._size_small
-              +default-table-cell.add-to-blacklist__cell-xs
-                +icon-button('icon-trash')(href='#')._shadow._size_small
-            +default-table-row
-              +default-table-cell.add-to-blacklist__cell-sm
-                +input(value='О777ОО78')._size_small.add-to-blacklist__input
-              +default-table-cell
-                +input(value='Водитель Uber')._size_small
-              +default-table-cell.add-to-blacklist__cell-xs
-                +icon-button('icon-trash')(href='#')._shadow._size_small
-            +default-table-row
-              +default-table-cell.add-to-blacklist__cell-sm
-                +input(value='Я317ВК78')._size_small.add-to-blacklist__input
-              +default-table-cell
-                +input(value='Нарушил правила парковки')._size_small
-              +default-table-cell.add-to-blacklist__cell-xs
-                +icon-button('icon-trash')(href='#')._shadow._size_small
-            +default-table-row
-              +default-table-cell.add-to-blacklist__cell-sm
-                +input(placeholder='Номер ТС')._size_small.add-to-blacklist__input
-              +default-table-cell
-                +input(placeholder='Укажите причину добавления')._size_small
-              +default-table-cell.add-to-blacklist__cell-xs
-                +icon-button('icon-accept')(href='#')._green._shadow._size_small
+          +default-table
+            +default-table-header
+              +default-table-row
+                +default-table-cell.add-to-blacklist__cell-sm Номер ТС
+                +default-table-cell(colspan='2') Причина добавления в ЧС
+            +default-table-body
+              +default-table-row
+                +default-table-cell.add-to-blacklist__cell-sm
+                  +input(value='В654АЯ78')._size_small.add-to-blacklist__input
+                +default-table-cell
+                  +input(value='Нарушил правила парковки')._size_small
+                +default-table-cell.add-to-blacklist__cell-xs
+                  +icon-button('icon-trash')(href='#')._shadow._size_small
+              +default-table-row
+                +default-table-cell.add-to-blacklist__cell-sm
+                  +input(value='В654АЯ78')._size_small.add-to-blacklist__input
+                +default-table-cell
+                  +input(value='Водитель Uber')._size_small
+                +default-table-cell.add-to-blacklist__cell-xs
+                  +icon-button('icon-trash')(href='#')._shadow._size_small
+              +default-table-row
+                +default-table-cell.add-to-blacklist__cell-sm
+                  +input(value='О777ОО78')._size_small.add-to-blacklist__input
+                +default-table-cell
+                  +input(value='Водитель Uber')._size_small
+                +default-table-cell.add-to-blacklist__cell-xs
+                  +icon-button('icon-trash')(href='#')._shadow._size_small
+              +default-table-row
+                +default-table-cell.add-to-blacklist__cell-sm
+                  +input(value='Я317ВК78')._size_small.add-to-blacklist__input
+                +default-table-cell
+                  +input(value='Нарушил правила парковки')._size_small
+                +default-table-cell.add-to-blacklist__cell-xs
+                  +icon-button('icon-trash')(href='#')._shadow._size_small
+              +default-table-row
+                +default-table-cell.add-to-blacklist__cell-sm
+                  +input(placeholder='Номер ТС')._size_small.add-to-blacklist__input
+                +default-table-cell
+                  +input(placeholder='Укажите причину добавления')._size_small
+                +default-table-cell.add-to-blacklist__cell-xs
+                  +icon-button('icon-accept')(href='#')._green._shadow._size_small

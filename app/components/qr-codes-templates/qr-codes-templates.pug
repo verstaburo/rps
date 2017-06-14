@@ -5,16 +5,18 @@ include ../actions-header/actions-header
 include ../search-bar/search-bar
 
 mixin qr-codes-templates()
-  +popup('Шаблоны QR-кодов | выбрано: <span class="js-qr-codes-templates-count">0</span>')._full_overlay#qr-codes-templates
-    +b.qr-codes-templates&attributes(attributes)
-      +actions-header
-        +actions-header-col._flexible
-          +search-bar('Название QR-кода')._white.__search-bar
-        +actions-header-col
-          +button()(href='#')._green._uppercase Добавить выбранные QR-Коды
-      +accordion
-        - for (var i = 0; i < 5; i++)
-          +accordion-item('QR-Код #1, скидка 100р.', { name: 'name', value: 'value', label: 'Выбрать'})
-            +qr-form
-              +button()(href='#')._text_grey._uppercase Сохранить
-              +button()(href='#')._text_red._uppercase Удалить
+  +popup._full_overlay#qr-codes-templates
+    +popup-header('Шаблоны QR-кодов | выбрано: <span class="js-qr-codes-templates-count">0</span>')
+    +popup-body
+      +b.qr-codes-templates&attributes(attributes)
+        +actions-header
+          +actions-header-col._flexible
+            +search-bar('Название QR-кода')._white.__search-bar
+          +actions-header-col
+            +button()(href='#')._green._uppercase Добавить выбранные QR-Коды
+        +accordion
+          - for (var i = 0; i < 5; i++)
+            +accordion-item('QR-Код #1, скидка 100р.', { name: 'name', value: 'value', label: 'Выбрать'})
+              +qr-form
+                +button()(href='#')._text_grey._uppercase Сохранить
+                +button()(href='#')._text_red._uppercase Удалить

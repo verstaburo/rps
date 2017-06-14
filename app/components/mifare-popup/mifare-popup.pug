@@ -7,28 +7,30 @@ include ../mifare-card-sessions/mifare-card-sessions
 include ../mifare-card-transactions/mifare-card-transactions
 
 mixin mifare-popup()
-  +popup('5234 4256 9012 | Петров Василий Анатольевич')#mifare-popup
-    +b.mifare-popup
-      +alert._danger.__alert Внимание! Карта заблокирована.
-      +e.container
-        +inner-sidebar.__sidebar
-          +inner-sidebar-item._menu
-            +vertical-menu
-              +vertical-menu-item
-                +vertical-menu-text Информация
-              +vertical-menu-item
-                +vertical-menu-text Сессии
-              +vertical-menu-item._active
-                +vertical-menu-text Транзакции
-          +inner-sidebar-item._with_border
-            a(href='#').mifare-popup__remove-card Отвязать карту
-          +inner-sidebar-item.mifare-popup__sidebar-btn
-            +icon-button('icon-lock')(href='#')._uppercase._shadow.mifare-popup__unlock-button Разблокировать
+  +popup#mifare-popup
+    +popup-header('5234 4256 9012 | Петров Василий Анатольевич')
+    +popup-body
+      +b.mifare-popup
+        +alert._danger.__alert Внимание! Карта заблокирована.
+        +e.container
+          +inner-sidebar.__sidebar
+            +inner-sidebar-item._menu
+              +vertical-menu
+                +vertical-menu-item
+                  +vertical-menu-text Информация
+                +vertical-menu-item
+                  +vertical-menu-text Сессии
+                +vertical-menu-item._active
+                  +vertical-menu-text Транзакции
+            +inner-sidebar-item._with_border
+              a(href='#').mifare-popup__remove-card Отвязать карту
+            +inner-sidebar-item.mifare-popup__sidebar-btn
+              +icon-button('icon-lock')(href='#')._uppercase._shadow.mifare-popup__unlock-button Разблокировать
 
-        +e.content
-          //- Информация
-          //- +mifare-card-info
-          //- Сессии
-          //+mifare-card-sessions
-          //- Транзакции
-          +mifare-card-transactions
+          +e.content
+            //- Информация
+            //- +mifare-card-info
+            //- Сессии
+            //+mifare-card-sessions
+            //- Транзакции
+            +mifare-card-transactions

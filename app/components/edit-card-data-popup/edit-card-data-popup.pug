@@ -7,32 +7,34 @@ include ../../blocks/icon/icons
 include ../actions-header/actions-header
 
 mixin edit-card-data-popup()
-  +popup('Изменение данных карт')#edit-card-data-popup
-    +b.edit-card-data-popup&attributes(attributes)
-      +actions-header
-        +actions-header-col
-          +button()(href='#')._green._uppercase Выполнить изменения
-        +actions-header-col._align_center
-          +e.A.link(href='#') для 15 карт…
-      +e.content
-        +default-table
-          +default-table-header.edit-card-data-popup__header
-            +default-table-row
-              +default-table-cell._border_bottom.edit-card-data-popup__cell Параметр
-              +default-table-cell._border_bottom.edit-card-data-popup__cell(colspan='2') До изменения
-              +default-table-cell._border_bottom.edit-card-data-popup__cell(colspan='2') После изменения
-          +default-table-body
-            - for (var i = 0; i < 5; i++)
+  +popup#edit-card-data-popup
+    +popup-header('Изменение данных карт')
+    +popup-body
+      +b.edit-card-data-popup&attributes(attributes)
+        +actions-header
+          +actions-header-col
+            +button()(href='#')._green._uppercase Выполнить изменения
+          +actions-header-col._align_center
+            +e.A.link(href='#') для 15 карт…
+        +e.content
+          +default-table
+            +default-table-header.edit-card-data-popup__header
               +default-table-row
-                +default-table-cell._border_bottom.edit-card-data-popup__cell
-                  +select([{title: 'Название параметра', value: 1, disabled: true}, {title: 'Название параметра 1', value: 2}])._size_small
-                +default-table-cell._border_bottom.edit-card-data-popup__cell
-                  +select([{title: 'Название параметра', value: 1, disabled: true}, {title: 'Название параметра 1', value: 2}])._size_small
-                +default-table-cell._border_bottom.edit-card-data-popup__cell
-                  +icon('icon-arrow', true).edit-card-data-popup__arrow
-                +default-table-cell._border_bottom.edit-card-data-popup__cell
-                  +select([{title: 'Название параметра', value: 1, disabled: true}, {title: 'Название параметра 1', value: 2}])._size_small
-                +default-table-cell._border_bottom.edit-card-data-popup__cell
-                  +icon-button('icon-trash')(href='#')._shadow._size_small.js-edit-card-data-popup-remove
+                +default-table-cell._border_bottom.edit-card-data-popup__cell Параметр
+                +default-table-cell._border_bottom.edit-card-data-popup__cell(colspan='2') До изменения
+                +default-table-cell._border_bottom.edit-card-data-popup__cell(colspan='2') После изменения
+            +default-table-body
+              - for (var i = 0; i < 5; i++)
+                +default-table-row
+                  +default-table-cell._border_bottom.edit-card-data-popup__cell
+                    +select([{title: 'Название параметра', value: 1, disabled: true}, {title: 'Название параметра 1', value: 2}])._size_small
+                  +default-table-cell._border_bottom.edit-card-data-popup__cell
+                    +select([{title: 'Название параметра', value: 1, disabled: true}, {title: 'Название параметра 1', value: 2}])._size_small
+                  +default-table-cell._border_bottom.edit-card-data-popup__cell
+                    +icon('icon-arrow', true).edit-card-data-popup__arrow
+                  +default-table-cell._border_bottom.edit-card-data-popup__cell
+                    +select([{title: 'Название параметра', value: 1, disabled: true}, {title: 'Название параметра 1', value: 2}])._size_small
+                  +default-table-cell._border_bottom.edit-card-data-popup__cell
+                    +icon-button('icon-trash')(href='#')._shadow._size_small.js-edit-card-data-popup-remove
 
-        +e.A(href='#').add.js-edit-card-data-popup__add-row + Добавить изменение
+          +e.A(href='#').add.js-edit-card-data-popup__add-row + Добавить изменение

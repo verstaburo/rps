@@ -3,48 +3,50 @@ include ../../blocks/icon-button/icon-button
 include ../../blocks/notification-info/notification-info
 
 mixin notifications-popup()
-  +popup('Уведомления: 4')#notifications-popup
-    +b.notifications-popup&attributes(attributes)
-      +e.notifications
-        +e.heading Сегодня
-        +e.items
-          +notification-info.__item
-            +notification-info-col._align_center
-              +notification-info-heading 13:35
-              +notification-info-indicator
-            +notification-info-col
-              +notification-info-heading Поддержка
-              +notification-info-body
-                +notification-info-text Вам ответили по проблеме: 
-                +notification-info-text.A(href='#') Нет никакой связи со стойками передней парковки
-          +notification-info.__item
-            +notification-info-col._align_center
-              +notification-info-heading 13:35
-              +notification-info-indicator
-            +notification-info-col
-              +notification-info-heading Поддержка
-              +notification-info-body
-                +notification-info-text Вам ответили по проблеме: 
-                +notification-info-text.A(href='#') Нет никакой связи со стойками передней парковки
-      +e.notifications
-        +e.heading Вчера
-        +e.items
-          +notification-info.__item
-            +notification-info-col._align_center
-              +notification-info-heading 13:35
-              +notification-info-indicator(true)
-            +notification-info-col
-              +notification-info-heading Системное уведомление
-              +notification-info-body
-                +notification-info-text Обычное системное уведомление, которое чтобы прочитать нужно нажать на кружок слева
-          +notification-info.__item
-            +notification-info-col._align_center
-              +notification-info-heading 13:35
-              +notification-info-indicator
-            +notification-info-col
-              +notification-info-heading Поддержка
-              +notification-info-body
-                +notification-info-text Вам ответили по проблеме: 
-                +notification-info-text.A(href='#') Нет никакой связи со стойками передней парковки
+  +popup#notifications-popup
+    +popup-header('Уведомления: 4')
+    +popup-body
+      +b.notifications-popup&attributes(attributes)
+        +e.notifications
+          +e.heading Сегодня
+          +e.items
+            +notification-info.__item
+              +notification-info-col._align_center
+                +notification-info-heading 13:35
+                +notification-info-indicator
+              +notification-info-col
+                +notification-info-heading Поддержка
+                +notification-info-body
+                  +notification-info-text Вам ответили по проблеме: 
+                  +notification-info-text.A(href='#') Нет никакой связи со стойками передней парковки
+            +notification-info.__item
+              +notification-info-col._align_center
+                +notification-info-heading 13:35
+                +notification-info-indicator
+              +notification-info-col
+                +notification-info-heading Поддержка
+                +notification-info-body
+                  +notification-info-text Вам ответили по проблеме: 
+                  +notification-info-text.A(href='#') Нет никакой связи со стойками передней парковки
+        +e.notifications
+          +e.heading Вчера
+          +e.items
+            +notification-info.__item
+              +notification-info-col._align_center
+                +notification-info-heading 13:35
+                +notification-info-indicator(true)
+              +notification-info-col
+                +notification-info-heading Системное уведомление
+                +notification-info-body
+                  +notification-info-text Обычное системное уведомление, которое чтобы прочитать нужно нажать на кружок слева
+            +notification-info.__item
+              +notification-info-col._align_center
+                +notification-info-heading 13:35
+                +notification-info-indicator
+              +notification-info-col
+                +notification-info-heading Поддержка
+                +notification-info-body
+                  +notification-info-text Вам ответили по проблеме: 
+                  +notification-info-text.A(href='#') Нет никакой связи со стойками передней парковки
 
-      +icon-button('icon-caret')(href='#')._shadow._uppercase.__expand Развернуть
+        +icon-button('icon-caret')(href='#')._shadow._uppercase.__expand Развернуть
