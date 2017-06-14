@@ -1,0 +1,24 @@
+mixin notification-info()
+  +b.notification-info&attributes(attributes)
+    block
+
+mixin notification-info-indicator(done)
+  +e.A(href='#').indicator&attributes(attributes)
+    if done
+      +icon('icon-accept').done
+
+mixin notification-info-col()
+  +e.col&attributes(attributes)
+    block
+
+mixin notification-info-heading()
+  +e.SPAN.heading&attributes(attributes)
+    block
+
+mixin notification-info-body()
+  +e.body&attributes(attributes)
+    block
+
+mixin notification-info-text()
+  +e.SPAN.text&attributes(attributes)
+    block

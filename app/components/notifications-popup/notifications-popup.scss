@@ -1,0 +1,50 @@
+.notifications-popup {
+  display: block;
+  min-width: 368px;
+  min-height: 100%;
+
+  &__notifictions {
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    width: 100%;
+    min-height: 32px;
+    box-shadow: 0 1px 0 #d2d3d3;
+    background-color: #f6f6f6;
+    color: #202325;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    padding: 16px 22px 25px 24px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 44px;
+  }
+
+  &__expand {
+    width: 336px;
+    margin-left: 16px;
+    justify-content: flex-start;
+
+    .icon-button__icon {
+      width: 12px;
+      height: 8px;
+    }
+
+    .icon-button__text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
