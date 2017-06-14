@@ -18,7 +18,7 @@
         <div class="layout__left">
             <div class="layout__scroll">
                 <div class="sidebar">
-                    <a class="sidebar__logo" href="#">
+                    <a class="sidebar__logo" href="/">
                         <svg>
                             <use xlink:href="assets/images/icon.svg#icon_logo"></use>
                         </svg>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="aside-menu__item active">
-                            <a class="aside-menu__link" href="#">
+                            <a class="aside-menu__link" href="control-center.html">
                                 <span class="aside-menu__icon">
                                     <svg>
                                         <use xlink:href="assets/images/icon.svg#icon_icon-ui-1"></use>
@@ -47,7 +47,7 @@
                             </a>
                         </div>
                         <div class="aside-menu__item">
-                            <a class="aside-menu__link" href="#">
+                            <a class="aside-menu__link" href="/">
                                 <span class="aside-menu__icon">
                                     <svg>
                                         <use xlink:href="assets/images/icon.svg#icon_icon-ui-2"></use>
@@ -67,7 +67,7 @@
                             </a>
                         </div>
                         <div class="aside-menu__item">
-                            <a class="aside-menu__link" href="#">
+                            <a class="aside-menu__link" href="statistics.html">
                                 <span class="aside-menu__icon">
                                     <svg>
                                         <use xlink:href="assets/images/icon.svg#icon_icon-ui-4"></use>
@@ -77,7 +77,7 @@
                             </a>
                         </div>
                         <div class="aside-menu__item">
-                            <a class="aside-menu__link" href="#">
+                            <a class="aside-menu__link" href="settings-devices-zone.html">
                                 <span class="aside-menu__icon">
                                     <svg>
                                         <use xlink:href="assets/images/icon.svg#icon_icon-ui-5"></use>
@@ -105,14 +105,14 @@
             <div class="header">
                 <div class="header__col">
                     <ul class="tabs header__tabs">
-                        <li class="tabs__tab active">
-                            <a class="tabs__link" href="#">Клиенты</a>
+                        <li class="tabs__tab">
+                            <a class="tabs__link" href="/">Клиенты</a>
                         </li>
                         <li class="tabs__tab">
-                            <a class="tabs__link" href="#">Сессии</a>
+                            <a class="tabs__link" href="sessions.html">Сессии</a>
                         </li>
                         <li class="tabs__tab">
-                            <a class="tabs__link" href="#">Чёрный список</a>
+                            <a class="tabs__link" href="blacklist.html">Чёрный список</a>
                         </li>
                     </ul>
                 </div>
@@ -164,7 +164,7 @@
                         </a>
                     </div>
                     <div class="actions-header__col">
-                        <a class="button button_uppercase button_grey" href="#">Изменение данных карт</a>
+                        <a class="button button_uppercase button_grey js-show-popup" href="#" data-target-popup="#edit-card-data-popup">Изменение данных карт</a>
                     </div>
                     <div class="actions-header__col">
                         <a class="button button_uppercase button_grey" href="#">Удалить компанию</a>
@@ -183,207 +183,11 @@
                     <div style="display: inline-block; margin: 15px;">
                         <a class="button button_uppercase button_grey js-show-popup" href="#" data-target-popup="#mifare-popup">MiFare попап</a>
                     </div>
-                </div>
-                <div style="display: block; margin: 15px; width: 300px;">
-                    <div class="accordion">
-                        <div class="accordion__item">
-                            <div class="accordion__button">
-                                <svg class="accordion__icon">
-                                    <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
-                                </svg>
-                                <div class="accordion__heading">Заголовок</div>
-                            </div>
-                            <div class="accordion__content">
-                                <div style="font-size: 14px; padding: 10px; background-color: lightblue;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi at ante elementum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec rhoncus posuere accumsan. Duis
-                                    rutrum, nisl in rhoncus posuere, risus velit convallis velit, ut rhoncus velit elit nec urna. Fusce id volutpat arcu, vel aliquam velit. Integer volutpat velit eu arcu ultricies venenatis. Donec mollis diam id cursus
-                                    lobortis. Nam eget tempor enim. Quisque ipsum urna, efficitur non mollis sit amet, tincidunt sed magna. Phasellus sit amet fringilla sem. Etiam in nibh pharetra, posuere nibh quis, pharetra massa. Sed quis ante cursus,
-                                    vestibulum tellus et, sollicitudin neque. In ultrices justo vitae nibh aliquet mattis. Aliquam eu lorem eget nisl facilisis consequat sed at tellus.</div>
-                            </div>
-                        </div>
+                    <div style="display: inline-block; margin: 15px;">
+                        <a class="button button_uppercase button_grey js-show-popup" href="#" data-target-popup="#notifications-popup">Уведомления</a>
                     </div>
-                </div>
-                <div style="display: flex;">
-                    <div style="display: block; width: 300px; margin: 15px;">
-                        <ul class="icon-menu">
-                            <li class="icon-menu__item">
-                                <a class="icon-menu__link" href="#">
-                                    <span class="icon-menu__icon-wrap">
-                                        <svg class="icon-menu__icon">
-                                            <use xlink:href="assets/images/icon.svg#icon_icon-company"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="icon-menu__text">Компанию</span>
-                                </a>
-                            </li>
-                            <li class="icon-menu__item">
-                                <a class="icon-menu__link" href="#">
-                                    <span class="icon-menu__icon-wrap">
-                                        <svg class="icon-menu__icon">
-                                            <use xlink:href="assets/images/icon.svg#icon_icon-person"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="icon-menu__text">Физ. лицо</span>
-                                </a>
-                            </li>
-                            <li class="icon-menu__item">
-                                <a class="icon-menu__link" href="#">
-                                    <span class="icon-menu__icon-wrap">
-                                        <svg class="icon-menu__icon">
-                                            <use xlink:href="assets/images/icon.svg#icon_icon-import"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="icon-menu__text">Импорт</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="display: block; width: 300px; margin: 15px;">
-                        <div class="dropdown dropdown_right" id="search-filter-dropdown">
-                            <div class="search-filter">
-                                <div class="inner-sidebar">
-                                    <div class="inner-sidebar__item inner-sidebar__item_menu">
-                                        <ul class="vertical-menu">
-                                            <li class="vertical-menu__item vertical-menu__item_active">
-                                                <a class="vertical-menu__link" href="#">
-                                                    <span class="vertical-menu__text">Новый фильтр</span>
-                                                </a>
-                                            </li>
-                                            <li class="vertical-menu__item">
-                                                <a class="vertical-menu__link" href="#">
-                                                    <span class="vertical-menu__text">Физ. лица без привязки</span>
-                                                </a>
-                                            </li>
-                                            <li class="vertical-menu__item">
-                                                <a class="vertical-menu__link" href="#">
-                                                    <span class="vertical-menu__text">Компании без физ. лиц</span>
-                                                </a>
-                                            </li>
-                                            <li class="vertical-menu__item">
-                                                <a class="vertical-menu__link" href="#">
-                                                    <span class="vertical-menu__text">Клиенты без карт</span>
-                                                </a>
-                                            </li>
-                                            <li class="vertical-menu__item">
-                                                <a class="vertical-menu__link" href="#">
-                                                    <span class="vertical-menu__text">Компании без карт</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="search-filter__container">
-                                    <div class="search-filter__content">
-                                        <div class="field field_align_top">
-                                            <div class="field__label">Тэги:
-                                            </div>
-                                            <div class="field__content">
-                                                <ul class="tags">
-                                                    <li class="tags__item">
-                                                        <label class="tags__box">
-                                                            <input class="tags__control" type="checkbox" />
-                                                            <span class="tags__text">VIP-Клиент</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="tags__item">
-                                                        <label class="tags__box">
-                                                            <input class="tags__control" type="checkbox" checked="checked" />
-                                                            <span class="tags__text">Империя</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="tags__item">
-                                                        <label class="tags__box">
-                                                            <input class="tags__control" type="checkbox" />
-                                                            <span class="tags__text">С доступом в личный кабинет</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="tags__item">
-                                                        <label class="tags__box">
-                                                            <input class="tags__control" type="checkbox" />
-                                                            <span class="tags__text">Свои места на парковке</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="tags__item">
-                                                        <label class="tags__box">
-                                                            <input class="tags__control" type="checkbox" />
-                                                            <span class="tags__text">Тэг</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="tags__item">
-                                                        <label class="tags__box">
-                                                            <input class="tags__control" type="checkbox" checked="checked" />
-                                                            <span class="tags__text">Партнёры</span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="field">
-                                            <div class="field__label">Тип клиента:
-                                            </div>
-                                            <div class="field__content">
-                                                <div class="select select_size_small">
-                                                    <select class="select__control">
-                                                        <option>Разовый</option>
-                                                        <option>Разовый 1</option>
-                                                    </select>
-                                                    <div class="select__button">
-                                                        <svg class="select__caret">
-                                                            <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="field">
-                                            <div class="field__label">Последняя дата изменения:
-                                            </div>
-                                            <div class="field__content">
-                                                <input class="input input_size_small" type="text" />
-                                            </div>
-                                        </div>
-                                        <div class="field">
-                                            <div class="field__label">Группа доступа:
-                                            </div>
-                                            <div class="field__content">
-                                                <div class="select select_size_small">
-                                                    <select class="select__control">
-                                                        <option>Любая</option>
-                                                        <option>Любая 1</option>
-                                                    </select>
-                                                    <div class="select__button">
-                                                        <svg class="select__caret">
-                                                            <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="field">
-                                            <div class="field__label">Тарифный план:
-                                            </div>
-                                            <div class="field__content">
-                                                <div class="select select_size_small">
-                                                    <select class="select__control">
-                                                        <option>Любой</option>
-                                                        <option>Любой 1</option>
-                                                    </select>
-                                                    <div class="select__button">
-                                                        <svg class="select__caret">
-                                                            <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="search-filter__footer">
-                                        <a class="button button_text_grey button_uppercase search-filter__reset" href="#">Сбросить</a>
-                                        <a class="button button_grey button_uppercase search-filter__button" href="#">Сохранить фильтр</a>
-                                        <a class="button button_green button_uppercase search-filter__button" href="#">Применить</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div style="display: inline-block; margin: 15px;">
+                        <a class="button button_uppercase button_grey js-show-popup" href="#" data-target-popup="#alarms-popup">Тревоги</a>
                     </div>
                     <div class="popup" id="add-to-blacklist">
                         <div class="popup__wrapper">
@@ -734,8 +538,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -751,8 +555,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -770,8 +574,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -787,8 +591,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -806,8 +610,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -823,8 +627,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -905,8 +709,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -922,8 +726,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -941,8 +745,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -958,8 +762,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -977,8 +781,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -994,8 +798,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1076,8 +880,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1093,8 +897,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1112,8 +916,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1129,8 +933,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1148,8 +952,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1165,8 +969,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1247,8 +1051,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1264,8 +1068,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1283,8 +1087,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1300,8 +1104,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1319,8 +1123,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1336,8 +1140,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1418,8 +1222,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1435,8 +1239,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1454,8 +1258,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1471,8 +1275,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1490,8 +1294,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1507,8 +1311,8 @@
                                                                     <div class="field__content qr-form__field">
                                                                         <div class="select">
                                                                             <select class="select__control">
-                                                                                <option>Все города</option>
-                                                                                <option>Option</option>
+                                                                                <option value="1">Все города</option>
+                                                                                <option value="2">Option</option>
                                                                             </select>
                                                                             <div class="select__button">
                                                                                 <svg class="select__caret">
@@ -1570,186 +1374,684 @@
                                 </div>
                                 <div class="popup__body">
                                     <div class="mifare-popup">
-                                        <div class="inner-sidebar mifare-popup__sidebar">
-                                            <div class="inner-sidebar__item inner-sidebar__item_menu">
-                                                <ul class="vertical-menu">
-                                                    <li class="vertical-menu__item vertical-menu__item_active">
-                                                        <a class="vertical-menu__link" href="#">
-                                                            <span class="vertical-menu__text">Информация</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="vertical-menu__item">
-                                                        <a class="vertical-menu__link" href="#">
-                                                            <span class="vertical-menu__text">Сессии</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="vertical-menu__item">
-                                                        <a class="vertical-menu__link" href="#">
-                                                            <span class="vertical-menu__text">Транзакции</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="inner-sidebar__item inner-sidebar__item_with_border">
-                                                <a class="mifare-popup__remove-card" href="#">Отвязать карту</a>
-                                            </div>
+                                        <div class="alert alert_danger mifare-popup__alert">Внимание! Карта заблокирована.
                                         </div>
-                                        <div class="mifare-popup__content">
-                                            <form class="mifare-card-info">
-                                                <div class="mifare-card-info__fields">
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Группа доступа
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <div class="select">
-                                                                <select class="select__control">
-                                                                    <option>Новая группа</option>
-                                                                    <option>Новая группа 1</option>
-                                                                </select>
-                                                                <div class="select__button">
-                                                                    <svg class="select__caret">
-                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                        <div class="mifare-popup__container">
+                                            <div class="inner-sidebar mifare-popup__sidebar">
+                                                <div class="inner-sidebar__item inner-sidebar__item_menu">
+                                                    <ul class="vertical-menu">
+                                                        <li class="vertical-menu__item">
+                                                            <a class="vertical-menu__link" href="#">
+                                                                <span class="vertical-menu__text">Информация</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="vertical-menu__item">
+                                                            <a class="vertical-menu__link" href="#">
+                                                                <span class="vertical-menu__text">Сессии</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="vertical-menu__item vertical-menu__item_active">
+                                                            <a class="vertical-menu__link" href="#">
+                                                                <span class="vertical-menu__text">Транзакции</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="inner-sidebar__item inner-sidebar__item_with_border">
+                                                    <a class="mifare-popup__remove-card" href="#">Отвязать карту</a>
+                                                </div>
+                                                <div class="inner-sidebar__item mifare-popup__sidebar-btn">
+                                                    <a class="icon-button icon-button_uppercase icon-button_shadow mifare-popup__unlock-button" href="#">
+                                                        <svg class="icon-button__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-lock"></use>
+                                                        </svg>
+                                                        <span class="icon-button__text">Разблокировать</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="mifare-popup__content">
+                                                <!--+mifare-card-sessions-->
+                                                <div class="mifare-card-transactions">
+                                                    <div class="actions-header">
+                                                        <div class="actions-header__col actions-header__col_flexible">
+                                                            <form class="search-bar search-bar_white actions-header__search-bar" method="post" action="#">
+                                                                <button class="search-bar__button" type="submit">
+                                                                    <svg>
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-search"></use>
                                                                     </svg>
-                                                                </div>
-                                                            </div>
+                                                                </button>
+                                                                <input class="search-bar__input" type="search" placeholder="тест" />
+                                                            </form>
                                                         </div>
                                                     </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Текущая зона
+                                                    <div class="mifare-card-transactions__content">
+                                                        <div class="transaction mifare-card-transactions__transaction">
+                                                            <ul class="transaction__list transaction__list_heading">
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">21.04.2017 12:08:34</span>
+                                                                </li>
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">ID: 63</span>
+                                                                </li>
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">Выезд</span>
+                                                                </li>
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">Стойка</span>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="transaction__list transaction__list_content">
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Тип транзакции:</span>
+                                                                    <span class="transaction__text">Попытка проезда</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Время на парковке:</span>
+                                                                    <span class="transaction__text">—</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Зона до:</span>
+                                                                    <span class="transaction__text">Зона А</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Зона после:</span>
+                                                                    <span class="transaction__text">Вне парковки</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Время въезда в зону:</span>
+                                                                    <span class="transaction__text">21.04.2017 12:08:34</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Сумма на карте - задолженность:</span>
+                                                                    <span class="transaction__text">530р</span>
+                                                                </li>
+                                                            </ul>
                                                         </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <div class="select">
-                                                                <select class="select__control">
-                                                                    <option>Вне парковки</option>
-                                                                    <option>Вне парковки 1</option>
-                                                                </select>
-                                                                <div class="select__button">
-                                                                    <svg class="select__caret">
-                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
-                                                                    </svg>
-                                                                </div>
-                                                            </div>
+                                                        <div class="transaction mifare-card-transactions__transaction">
+                                                            <ul class="transaction__list transaction__list_heading">
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">21.04.2017 12:08:34</span>
+                                                                </li>
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">ID: 63</span>
+                                                                </li>
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">Выезд</span>
+                                                                </li>
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">Стойка</span>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="transaction__list transaction__list_content">
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Тип транзакции:</span>
+                                                                    <span class="transaction__text">Попытка проезда</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Время на парковке:</span>
+                                                                    <span class="transaction__text">—</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Зона до:</span>
+                                                                    <span class="transaction__text">Зона А</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Зона после:</span>
+                                                                    <span class="transaction__text">Вне парковки</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Время въезда в зону:</span>
+                                                                    <span class="transaction__text">21.04.2017 12:08:34</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Сумма на карте - задолженность:</span>
+                                                                    <span class="transaction__text">530р</span>
+                                                                </li>
+                                                            </ul>
                                                         </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Время въезда
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <input class="input" value="2016-11-20" type="text" />
-                                                            <input class="input mifare-card-info__small" value="12:40" type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Время пересчета
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <input class="input" value="2016-11-20" type="text" />
-                                                            <input class="input mifare-card-info__small" value="12:40" type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Тарифный план
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <div class="select">
-                                                                <select class="select__control">
-                                                                    <option>Тарифный план</option>
-                                                                    <option>Тарифный план 1</option>
-                                                                </select>
-                                                                <div class="select__button">
-                                                                    <svg class="select__caret">
-                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
-                                                                    </svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Тарифная сетка
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <div class="select">
-                                                                <select class="select__control">
-                                                                    <option>Сетка Владимира</option>
-                                                                    <option>Сетка Владимира 1</option>
-                                                                </select>
-                                                                <div class="select__button">
-                                                                    <svg class="select__caret">
-                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
-                                                                    </svg>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Сумма на карте
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <input class="input" value="0.00" type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">ТВП
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <input class="input" value="2000-01-01" type="text" />
-                                                            <input class="input mifare-card-info__small" value="00:00" type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">ТКВП
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <input class="input" value="0" type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Обнуление ВП
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <input class="input" value="2000-01-01" type="text" />
-                                                            <input class="input mifare-card-info__small" value="00:00" type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Обнуление КВП
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <input class="input" value="2000-01-01" type="text" />
-                                                            <input class="input mifare-card-info__small" value="00:00" type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Обнуление абонемент
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <input class="input" value="2000-01-01" type="text" />
-                                                            <input class="input mifare-card-info__small" value="00:00" type="text" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="field">
-                                                        <div class="field__label field__label_align_right mifare-card-info__label">Тип клиента
-                                                        </div>
-                                                        <div class="field__content mifare-card-info__field">
-                                                            <div class="select">
-                                                                <select class="select__control">
-                                                                    <option>Разовый</option>
-                                                                    <option>Разовый 1</option>
-                                                                </select>
-                                                                <div class="select__button">
-                                                                    <svg class="select__caret">
-                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
-                                                                    </svg>
-                                                                </div>
-                                                            </div>
+                                                        <div class="transaction mifare-card-transactions__transaction">
+                                                            <ul class="transaction__list transaction__list_heading">
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">21.04.2017 12:08:34</span>
+                                                                </li>
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">ID: 63</span>
+                                                                </li>
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">Выезд</span>
+                                                                </li>
+                                                                <li class="transaction__item">
+                                                                    <span class="transaction__text transaction__text_bold">Стойка</span>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="transaction__list transaction__list_content">
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Тип транзакции:</span>
+                                                                    <span class="transaction__text">Попытка проезда</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Время на парковке:</span>
+                                                                    <span class="transaction__text">—</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Зона до:</span>
+                                                                    <span class="transaction__text">Зона А</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Зона после:</span>
+                                                                    <span class="transaction__text">Вне парковки</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Время въезда в зону:</span>
+                                                                    <span class="transaction__text">21.04.2017 12:08:34</span>
+                                                                </li>
+                                                                <li class="transaction__item transaction__item_inline">
+                                                                    <span class="transaction__text transaction__text_bold">Сумма на карте - задолженность:</span>
+                                                                    <span class="transaction__text">530р</span>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="mifare-card-info__button-wrap">
-                                                    <a class="button button_green button_uppercase button_align_center" href="#">Сохранить изменения</a>
-                                                </div>
-                                            </form>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="edit-card-data-popup">
+                        <div class="popup__wrapper">
+                            <div class="popup__content">
+                                <div class="popup__header">
+                                    <h2 class="popup__heading">Изменение данных карт
+                                    </h2>
+                                    <div class="popup__close">
+                                        <svg class="popup__close-icon">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-close"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="popup__body">
+                                    <div class="edit-card-data-popup">
+                                        <div class="actions-header">
+                                            <div class="actions-header__col">
+                                                <a class="button button_green button_uppercase" href="#">Выполнить изменения</a>
+                                            </div>
+                                            <div class="actions-header__col actions-header__col_align_center">
+                                                <a class="actions-header__link" href="#">для 15 карт…</a>
+                                            </div>
+                                        </div>
+                                        <div class="edit-card-data-popup__content">
+                                            <table class="default-table">
+                                                <thead class="default-table__header edit-card-data-popup__header">
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">Параметр
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell" colspan="2">До изменения
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell" colspan="2">После изменения
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="default-table__body">
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <svg class="edit-card-data-popup__arrow">
+                                                                <use xlink:href="assets/images/icon.svg#icon_icon-arrow"></use>
+                                                            </svg>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <a class="icon-button icon-button_shadow icon-button_size_small js-edit-card-data-popup-remove" href="#">
+                                                                <svg class="icon-button__icon">
+                                                                    <use xlink:href="assets/images/icon.svg#icon_icon-trash"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <svg class="edit-card-data-popup__arrow">
+                                                                <use xlink:href="assets/images/icon.svg#icon_icon-arrow"></use>
+                                                            </svg>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <a class="icon-button icon-button_shadow icon-button_size_small js-edit-card-data-popup-remove" href="#">
+                                                                <svg class="icon-button__icon">
+                                                                    <use xlink:href="assets/images/icon.svg#icon_icon-trash"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <svg class="edit-card-data-popup__arrow">
+                                                                <use xlink:href="assets/images/icon.svg#icon_icon-arrow"></use>
+                                                            </svg>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <a class="icon-button icon-button_shadow icon-button_size_small js-edit-card-data-popup-remove" href="#">
+                                                                <svg class="icon-button__icon">
+                                                                    <use xlink:href="assets/images/icon.svg#icon_icon-trash"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <svg class="edit-card-data-popup__arrow">
+                                                                <use xlink:href="assets/images/icon.svg#icon_icon-arrow"></use>
+                                                            </svg>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <a class="icon-button icon-button_shadow icon-button_size_small js-edit-card-data-popup-remove" href="#">
+                                                                <svg class="icon-button__icon">
+                                                                    <use xlink:href="assets/images/icon.svg#icon_icon-trash"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="default-table__row">
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <svg class="edit-card-data-popup__arrow">
+                                                                <use xlink:href="assets/images/icon.svg#icon_icon-arrow"></use>
+                                                            </svg>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <div class="select select_size_small">
+                                                                <select class="select__control">
+                                                                    <option value="1" disabled="disabled">Название параметра</option>
+                                                                    <option value="2">Название параметра 1</option>
+                                                                </select>
+                                                                <div class="select__button">
+                                                                    <svg class="select__caret">
+                                                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="default-table__cell default-table__cell_border_bottom edit-card-data-popup__cell">
+                                                            <a class="icon-button icon-button_shadow icon-button_size_small js-edit-card-data-popup-remove" href="#">
+                                                                <svg class="icon-button__icon">
+                                                                    <use xlink:href="assets/images/icon.svg#icon_icon-trash"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a class="edit-card-data-popup__add js-edit-card-data-popup__add-row" href="#">+ Добавить изменение</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="notifications-popup">
+                        <div class="popup__wrapper">
+                            <div class="popup__content">
+                                <div class="popup__header">
+                                    <h2 class="popup__heading">Уведомления: 4
+                                    </h2>
+                                    <div class="popup__close">
+                                        <svg class="popup__close-icon">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-close"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="popup__body">
+                                    <div class="notifications-popup">
+                                        <div class="notifications-popup__notifications">
+                                            <div class="notifications-popup__heading">Сегодня
+                                            </div>
+                                            <div class="notifications-popup__items">
+                                                <div class="notification-info notifications-popup__item">
+                                                    <div class="notification-info__col notification-info__col_align_center">
+                                                        <span class="notification-info__heading">13:35</span>
+                                                        <a class="notification-info__indicator" href="#"></a>
+                                                    </div>
+                                                    <div class="notification-info__col">
+                                                        <span class="notification-info__heading">Поддержка</span>
+                                                        <div class="notification-info__body">
+                                                            <span class="notification-info__text">Вам ответили по проблеме:
+                                                            </span>
+                                                            <a class="notification-info__text" href="#">Нет никакой связи со стойками передней парковки</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="notification-info notifications-popup__item">
+                                                    <div class="notification-info__col notification-info__col_align_center">
+                                                        <span class="notification-info__heading">13:35</span>
+                                                        <a class="notification-info__indicator" href="#"></a>
+                                                    </div>
+                                                    <div class="notification-info__col">
+                                                        <span class="notification-info__heading">Поддержка</span>
+                                                        <div class="notification-info__body">
+                                                            <span class="notification-info__text">Вам ответили по проблеме:
+                                                            </span>
+                                                            <a class="notification-info__text" href="#">Нет никакой связи со стойками передней парковки</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notifications-popup__notifications">
+                                            <div class="notifications-popup__heading">Вчера
+                                            </div>
+                                            <div class="notifications-popup__items">
+                                                <div class="notification-info notifications-popup__item">
+                                                    <div class="notification-info__col notification-info__col_align_center">
+                                                        <span class="notification-info__heading">13:35</span>
+                                                        <a class="notification-info__indicator" href="#">
+                                                            <svg class="notification-info__done">
+                                                                <use xlink:href="assets/images/icon.svg#icon_icon-accept"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <div class="notification-info__col">
+                                                        <span class="notification-info__heading">Системное уведомление</span>
+                                                        <div class="notification-info__body">
+                                                            <span class="notification-info__text">Обычное системное уведомление, которое чтобы прочитать нужно нажать на кружок слева</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="notification-info notifications-popup__item">
+                                                    <div class="notification-info__col notification-info__col_align_center">
+                                                        <span class="notification-info__heading">13:35</span>
+                                                        <a class="notification-info__indicator" href="#"></a>
+                                                    </div>
+                                                    <div class="notification-info__col">
+                                                        <span class="notification-info__heading">Поддержка</span>
+                                                        <div class="notification-info__body">
+                                                            <span class="notification-info__text">Вам ответили по проблеме:
+                                                            </span>
+                                                            <a class="notification-info__text" href="#">Нет никакой связи со стойками передней парковки</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="icon-button icon-button_shadow icon-button_uppercase notifications-popup__expand" href="#">
+                                            <svg class="icon-button__icon">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                            </svg>
+                                            <span class="icon-button__text">Развернуть</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="alarms-popup">
+                        <div class="popup__wrapper">
+                            <div class="popup__content">
+                                <div class="popup__header">
+                                    <h2 class="popup__heading">Тревоги: 39
+                                    </h2>
+                                    <div class="indicators alarms-popup__header-indicators">
+                                        <a class="indicators__item indicators__item_red" href="#">
+                                            <span class="indicators__circle"></span>
+                                            <span class="indicators__text">7</span>
+                                        </a>
+                                        <a class="indicators__item indicators__item_brown" href="#">
+                                            <span class="indicators__circle"></span>
+                                            <span class="indicators__text">24</span>
+                                        </a>
+                                        <a class="indicators__item indicators__item_yellow" href="#">
+                                            <span class="indicators__circle"></span>
+                                            <span class="indicators__text">12</span>
+                                        </a>
+                                        <a class="indicators__item indicators__item_grey" href="#">
+                                            <span class="indicators__circle"></span>
+                                            <span class="indicators__text">0</span>
+                                        </a>
+                                    </div>
+                                    <div class="popup__close">
+                                        <svg class="popup__close-icon">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-close"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="popup__body">
+                                    <div class="alarms-popup">
+                                        <table class="default-table alarms-popup__table">
+                                            <thead class="default-table__header">
+                                                <tr class="default-table__row">
+                                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_100 alarms-popup__th">Код
+                                                    </td>
+                                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_160 alarms-popup__th">Устройство
+                                                    </td>
+                                                    <td class="default-table__cell default-table__cell_border_bottom alarms-popup__th">Описание
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="default-table__body">
+                                                <tr class="default-table__row">
+                                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_100 alarms-popup__td">
+                                                        <div class="indicators alarms-popup__indicators">
+                                                            <a class="indicators__item indicators__item_brown" href="#">
+                                                                <span class="indicators__circle"></span>
+                                                                <span class="indicators__text">101</span>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_160 alarms-popup__td">Стойка въезда
+                                                    </td>
+                                                    <td class="default-table__cell default-table__cell_border_bottom alarms-popup__td">Нет связи с внешним ридером. Проверьте подключение, питание и работоспособность устройства.
+                                                    </td>
+                                                </tr>
+                                                <tr class="default-table__row">
+                                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_100 alarms-popup__td">
+                                                        <div class="indicators alarms-popup__indicators">
+                                                            <a class="indicators__item indicators__item_brown" href="#">
+                                                                <span class="indicators__circle"></span>
+                                                                <span class="indicators__text">102</span>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_160 alarms-popup__td">Стойка въезда
+                                                    </td>
+                                                    <td class="default-table__cell default-table__cell_border_bottom alarms-popup__td">Нет связи с внешним ридером. Проверьте подключение, питание и работоспособность устройства.
+                                                    </td>
+                                                </tr>
+                                                <tr class="default-table__row">
+                                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_100 alarms-popup__td">
+                                                        <div class="indicators alarms-popup__indicators">
+                                                            <a class="indicators__item indicators__item_brown" href="#">
+                                                                <span class="indicators__circle"></span>
+                                                                <span class="indicators__text">103</span>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_160 alarms-popup__td">Стойка въезда
+                                                    </td>
+                                                    <td class="default-table__cell default-table__cell_border_bottom alarms-popup__td">Нет связи с внешним ридером. Проверьте подключение, питание и работоспособность устройства.
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>

@@ -18,7 +18,7 @@
         <div class="layout__left">
             <div class="layout__scroll">
                 <div class="sidebar">
-                    <a class="sidebar__logo" href="#">
+                    <a class="sidebar__logo" href="/">
                         <svg>
                             <use xlink:href="assets/images/icon.svg#icon_logo"></use>
                         </svg>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="aside-menu__item active">
-                            <a class="aside-menu__link" href="#">
+                            <a class="aside-menu__link" href="control-center.html">
                                 <span class="aside-menu__icon">
                                     <svg>
                                         <use xlink:href="assets/images/icon.svg#icon_icon-ui-1"></use>
@@ -47,7 +47,7 @@
                             </a>
                         </div>
                         <div class="aside-menu__item">
-                            <a class="aside-menu__link" href="#">
+                            <a class="aside-menu__link" href="/">
                                 <span class="aside-menu__icon">
                                     <svg>
                                         <use xlink:href="assets/images/icon.svg#icon_icon-ui-2"></use>
@@ -67,7 +67,7 @@
                             </a>
                         </div>
                         <div class="aside-menu__item">
-                            <a class="aside-menu__link" href="#">
+                            <a class="aside-menu__link" href="statistics.html">
                                 <span class="aside-menu__icon">
                                     <svg>
                                         <use xlink:href="assets/images/icon.svg#icon_icon-ui-4"></use>
@@ -77,7 +77,7 @@
                             </a>
                         </div>
                         <div class="aside-menu__item">
-                            <a class="aside-menu__link" href="#">
+                            <a class="aside-menu__link" href="settings-devices-zone.html">
                                 <span class="aside-menu__icon">
                                     <svg>
                                         <use xlink:href="assets/images/icon.svg#icon_icon-ui-5"></use>
@@ -106,13 +106,13 @@
                 <div class="header__col">
                     <ul class="tabs header__tabs">
                         <li class="tabs__tab active">
-                            <a class="tabs__link" href="#">Клиенты</a>
+                            <a class="tabs__link" href="/">Клиенты</a>
                         </li>
                         <li class="tabs__tab">
-                            <a class="tabs__link" href="#">Сессии</a>
+                            <a class="tabs__link" href="sessions.html">Сессии</a>
                         </li>
                         <li class="tabs__tab">
-                            <a class="tabs__link" href="#">Чёрный список</a>
+                            <a class="tabs__link" href="blacklist.html">Чёрный список</a>
                         </li>
                     </ul>
                 </div>
@@ -314,8 +314,8 @@
                                                 <div class="field__content">
                                                     <div class="select select_size_small">
                                                         <select class="select__control">
-                                                            <option>Разовый</option>
-                                                            <option>Разовый 1</option>
+                                                            <option value="1">Разовый</option>
+                                                            <option value="2">Разовый 1</option>
                                                         </select>
                                                         <div class="select__button">
                                                             <svg class="select__caret">
@@ -338,8 +338,8 @@
                                                 <div class="field__content">
                                                     <div class="select select_size_small">
                                                         <select class="select__control">
-                                                            <option>Любая</option>
-                                                            <option>Любая 1</option>
+                                                            <option value="1">Любая</option>
+                                                            <option value="2">Любая 1</option>
                                                         </select>
                                                         <div class="select__button">
                                                             <svg class="select__caret">
@@ -355,8 +355,8 @@
                                                 <div class="field__content">
                                                     <div class="select select_size_small">
                                                         <select class="select__control">
-                                                            <option>Любой</option>
-                                                            <option>Любой 1</option>
+                                                            <option value="1">Любой</option>
+                                                            <option value="2">Любой 1</option>
                                                         </select>
                                                         <div class="select__button">
                                                             <svg class="select__caret">
@@ -368,9 +368,32 @@
                                             </div>
                                         </div>
                                         <div class="search-filter__footer">
-                                            <a class="button button_text_grey button_uppercase search-filter__reset" href="#">Сбросить</a>
-                                            <a class="button button_grey button_uppercase search-filter__button" href="#">Сохранить фильтр</a>
-                                            <a class="button button_green button_uppercase search-filter__button" href="#">Применить</a>
+                                            <div class="search-filter__block search-filter__block_default">
+                                                <div class="search-filter__controls">
+                                                    <div class="search-filter__col search-filter__col_flexible">
+                                                        <a class="button button_text_grey button_uppercase search-filter__reset" href="#">Сбросить</a>
+                                                    </div>
+                                                    <div class="search-filter__col">
+                                                        <a class="button button_grey button_uppercase js-search-filter-action-save" href="#">Сохранить фильтр</a>
+                                                    </div>
+                                                    <div class="search-filter__col">
+                                                        <a class="button button_green button_uppercase" href="#">Применить</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-filter__block search-filter__block_saving">
+                                                <div class="search-filter__controls">
+                                                    <div class="search-filter__col search-filter__col_flexible">
+                                                        <input class="input" type="text" />
+                                                    </div>
+                                                    <div class="search-filter__col">
+                                                        <a class="button button_green button_uppercase" href="#">Готово</a>
+                                                    </div>
+                                                    <div class="search-filter__col">
+                                                        <a class="button button_text_grey button_uppercase search-filter__reset js-search-filter-action-abort" href="#">Отмена</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -665,6 +688,425 @@
                                 </div>
                             </div>
                             <div class="table__col table__col_width_260">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__row table__row_parent">
+                        <div class="table__row table__row_main">
+                            <div class="table__col table__col_flexible">
+                                <label class="checkbox table__checkbox">
+                                    <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                    <span class="checkbox__box">
+                                        <svg class="checkbox__icon">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                        </svg>
+                                    </span>
+                                </label>
+                                <p class="table__text">
+                                    <a href="#">
+                                        <b>Газпром</b>
+                                    </a>
+                                </p>
+                                <a class="icon-button icon-button_shadow table__toggle" href="#">
+                                    <svg class="icon-button__icon">
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="table__col table__col_width_120">
+                                <p class="table__text">Компания
+                                </p>
+                            </div>
+                            <div class="table__col table__col_width_100 table__col_align_center">
+                                <p class="table__text">
+                                    <a href="#">2</a>
+                                </p>
+                            </div>
+                            <div class="table__col table__col_width_100 table__col_align_center">
+                                <p class="table__text">
+                                    <a href="#">5</a>
+                                </p>
+                            </div>
+                            <div class="table__col table__col_width_100 table__col_align_center">
+                                <p class="table__text">
+                                    <a href="#">35</a>
+                                </p>
+                            </div>
+                            <div class="table__col table__col_width_200">
+                                <div class="table__text-block">
+                                    <p class="table__text">28.04.2017
+                                    </p>
+                                    <p class="table__text table__text_size_small">12:14:32
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="table__col table__col_width_260">
+                            </div>
+                        </div>
+                        <div class="table__row table__row_children">
+                            <div class="table__row table__row_parent">
+                                <div class="table__row table__row_main">
+                                    <div class="table__col table__col_flexible">
+                                        <svg class="table__icon table__icon_person">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-person"></use>
+                                        </svg>
+                                        <label class="checkbox table__checkbox">
+                                            <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                            <span class="checkbox__box">
+                                                <svg class="checkbox__icon">
+                                                    <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                </svg>
+                                            </span>
+                                        </label>
+                                        <p class="table__text">
+                                            <a href="#">
+                                                <b>Васильев Генадий Николаевич</b>
+                                            </a>
+                                        </p>
+                                        <a class="icon-button icon-button_shadow table__toggle" href="#">
+                                            <svg class="icon-button__icon">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="table__col table__col_width_120">
+                                        <p class="table__text">Физ. лицо
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_100 table__col_align_center">
+                                        <p class="table__text">
+                                            <a href="#">—</a>
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_100 table__col_align_center">
+                                        <p class="table__text">
+                                            <a href="#">2</a>
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_100 table__col_align_center">
+                                        <p class="table__text">
+                                            <a href="#">1</a>
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_200">
+                                        <div class="table__text-block">
+                                            <p class="table__text">28.04.2017
+                                            </p>
+                                            <p class="table__text table__text_size_small">12:14:32
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table__col table__col_width_260">
+                                    </div>
+                                </div>
+                                <div class="table__row table__row_children">
+                                    <div class="table__row table__row_main table__row_left_padding">
+                                        <div class="table__col table__col_flexible">
+                                            <svg class="table__icon table__icon_card">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-card"></use>
+                                            </svg>
+                                            <label class="checkbox table__checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__icon">
+                                                        <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                            <p class="table__text">
+                                                <a href="#">
+                                                    <b>1234 5678 9067</b>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="table__col table__col_width_120">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_200">
+                                        </div>
+                                        <div class="table__col table__col_width_260">
+                                        </div>
+                                    </div>
+                                    <div class="table__row table__row_main table__row_left_padding">
+                                        <div class="table__col table__col_flexible">
+                                            <svg class="table__icon table__icon_card">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-card"></use>
+                                            </svg>
+                                            <label class="checkbox table__checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__icon">
+                                                        <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                            <p class="table__text">
+                                                <a href="#">
+                                                    <b>1234 5678 9067</b>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="table__col table__col_width_120">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_200">
+                                        </div>
+                                        <div class="table__col table__col_width_260">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table__row table__row_parent">
+                                <div class="table__row table__row_main">
+                                    <div class="table__col table__col_flexible">
+                                        <svg class="table__icon table__icon_person">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-person"></use>
+                                        </svg>
+                                        <label class="checkbox table__checkbox">
+                                            <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                            <span class="checkbox__box">
+                                                <svg class="checkbox__icon">
+                                                    <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                </svg>
+                                            </span>
+                                        </label>
+                                        <p class="table__text">
+                                            <a href="#">
+                                                <b>Николаева Надежда Васильевна</b>
+                                            </a>
+                                        </p>
+                                        <a class="icon-button icon-button_shadow table__toggle" href="#">
+                                            <svg class="icon-button__icon">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="table__col table__col_width_120">
+                                        <p class="table__text">Физ. лицо
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_100 table__col_align_center">
+                                        <p class="table__text">
+                                            <a href="#">—</a>
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_100 table__col_align_center">
+                                        <p class="table__text">
+                                            <a href="#">1</a>
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_100 table__col_align_center">
+                                        <p class="table__text">
+                                            <a href="#">1</a>
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_200">
+                                        <div class="table__text-block">
+                                            <p class="table__text">28.04.2017
+                                            </p>
+                                            <p class="table__text table__text_size_small">12:14:32
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table__col table__col_width_260">
+                                    </div>
+                                </div>
+                                <div class="table__row table__row_children">
+                                    <div class="table__row table__row_main table__row_left_padding">
+                                        <div class="table__col table__col_flexible">
+                                            <svg class="table__icon table__icon_card">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-card"></use>
+                                            </svg>
+                                            <label class="checkbox table__checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__icon">
+                                                        <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                            <p class="table__text">
+                                                <a href="#">
+                                                    <b>1234 5678 9067</b>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="table__col table__col_width_120">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_200">
+                                        </div>
+                                        <div class="table__col table__col_width_260">
+                                        </div>
+                                    </div>
+                                    <div class="table__row table__row_main table__row_left_padding">
+                                        <div class="table__col table__col_flexible">
+                                            <svg class="table__icon table__icon_card">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-card"></use>
+                                            </svg>
+                                            <label class="checkbox table__checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__icon">
+                                                        <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                            <p class="table__text">
+                                                <a href="#">
+                                                    <b>1234 5678 9067</b>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="table__col table__col_width_120">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_200">
+                                        </div>
+                                        <div class="table__col table__col_width_260">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table__row table__row_parent">
+                                <div class="table__row table__row_main table__row_left_padding">
+                                    <div class="table__col table__col_flexible">
+                                        <label class="checkbox table__checkbox">
+                                            <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                            <span class="checkbox__box">
+                                                <svg class="checkbox__icon">
+                                                    <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                </svg>
+                                            </span>
+                                        </label>
+                                        <p class="table__text">
+                                            <a href="#">
+                                                <b>Александрова Александра Александровна
+                                                </b>
+                                            </a>
+                                        </p>
+                                        <a class="icon-button icon-button_shadow table__toggle" href="#">
+                                            <svg class="icon-button__icon">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="table__col table__col_width_120">
+                                        <p class="table__text">Физ. лицо
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_100 table__col_align_center">
+                                        <p class="table__text">
+                                            <a href="#">—</a>
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_100 table__col_align_center">
+                                        <p class="table__text">
+                                            <a href="#">2</a>
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_100 table__col_align_center">
+                                        <p class="table__text">
+                                            <a href="#">1</a>
+                                        </p>
+                                    </div>
+                                    <div class="table__col table__col_width_200">
+                                        <div class="table__text-block">
+                                            <p class="table__text">28.04.2017
+                                            </p>
+                                            <p class="table__text table__text_size_small">12:14:32
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="table__col table__col_width_260">
+                                    </div>
+                                </div>
+                                <div class="table__row table__row_children">
+                                    <div class="table__row table__row_main table__row_left_padding">
+                                        <div class="table__col table__col_flexible">
+                                            <svg class="table__icon table__icon_card">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-card"></use>
+                                            </svg>
+                                            <label class="checkbox table__checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__icon">
+                                                        <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                            <p class="table__text">
+                                                <a href="#">
+                                                    <b>1234 5678 9067</b>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="table__col table__col_width_120">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_200">
+                                        </div>
+                                        <div class="table__col table__col_width_260">
+                                        </div>
+                                    </div>
+                                    <div class="table__row table__row_main table__row_left_padding">
+                                        <div class="table__col table__col_flexible">
+                                            <svg class="table__icon table__icon_card">
+                                                <use xlink:href="assets/images/icon.svg#icon_icon-card"></use>
+                                            </svg>
+                                            <label class="checkbox table__checkbox">
+                                                <input class="checkbox__input" type="checkbox" name="row" value="value" />
+                                                <span class="checkbox__box">
+                                                    <svg class="checkbox__icon">
+                                                        <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                            <p class="table__text">
+                                                <a href="#">
+                                                    <b>1234 5678 9067</b>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <div class="table__col table__col_width_120">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_100 table__col_align_center">
+                                        </div>
+                                        <div class="table__col table__col_width_200">
+                                        </div>
+                                        <div class="table__col table__col_width_260">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

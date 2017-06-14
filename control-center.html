@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RPS — Центр управления</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="layout__left">
+            <div class="layout__scroll">
+                <div class="sidebar">
+                    <a class="sidebar__logo" href="/">
+                        <svg>
+                            <use xlink:href="assets/images/icon.svg#icon_logo"></use>
+                        </svg>
+                    </a>
+                    <div class="aside-menu">
+                        <div class="aside-menu__bottom-block">
+                            <div class="aside-menu__item">
+                                <a class="aside-menu__link" href="#">
+                                    <span class="aside-menu__icon">
+                                        <svg>
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-ui-7"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="aside-menu__text">Выход</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="aside-menu__item active">
+                            <a class="aside-menu__link" href="control-center.html">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-1"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Центр управления</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="/">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-2"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Клиенты</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-3"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Касса</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="statistics.html">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-4"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Статистика</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="settings-devices-zone.html">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-5"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Настройки</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-6"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Помощь</span>
+                                <span class="aside-menu__counter">4</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout__right">
+            <div class="header">
+                <div class="header__col">
+                    <ul class="tabs header__tabs">
+                        <li class="tabs__tab active">
+                            <a class="tabs__link" href="#">Moscow-city</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__col">
+                    <form class="search-bar header__col-block header__search-bar" method="post" action="#">
+                        <button class="search-bar__button" type="submit">
+                            <svg>
+                                <use xlink:href="assets/images/icon.svg#icon_icon-search"></use>
+                            </svg>
+                        </button>
+                        <input class="search-bar__input" type="search" placeholder="ПОИСК" />
+                    </form>
+                    <div class="indicators header__col-block header__indicators">
+                        <a class="indicators__item indicators__item_red" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">7</span>
+                        </a>
+                        <a class="indicators__item indicators__item_brown" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">24</span>
+                        </a>
+                        <a class="indicators__item indicators__item_yellow" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">12</span>
+                        </a>
+                        <a class="indicators__item indicators__item_grey" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">0</span>
+                        </a>
+                    </div>
+                    <span class="notifications header__col-block header__notifications">
+                        <svg class="notifications__icon">
+                            <use xlink:href="assets/images/icon.svg#icon_icon-bell"></use>
+                        </svg>
+                        <span class="notifications__counter">3</span>
+                    </span>
+                </div>
+            </div>
+            <div class="control-center">
+                <div class="inner-sidebar">
+                    <div class="inner-sidebar__item">
+                        <div class="inner-sidebar__header">
+                            <div class="inner-sidebar__heading">ВТБ
+                            </div>
+                            <div class="inner-sidebar__badge">15
+                            </div>
+                        </div>
+                        <div class="indicators indicators_vertical control-center__sidebar-indicators">
+                            <a class="indicators__item indicators__item_red" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВТБ Въезд</span>
+                            </a>
+                            <a class="indicators__item indicators__item_green" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВТБ Выезд</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="inner-sidebar__item">
+                        <div class="inner-sidebar__header">
+                            <div class="inner-sidebar__heading">Выставочная низ
+                            </div>
+                            <div class="inner-sidebar__badge">255
+                            </div>
+                        </div>
+                        <div class="indicators indicators_vertical control-center__sidebar-indicators">
+                            <a class="indicators__item indicators__item_grey indicators__item_active" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВН Въезд</span>
+                            </a>
+                            <a class="indicators__item indicators__item_yellow" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВН Выезд</span>
+                            </a>
+                            <a class="indicators__item indicators__item_green" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВН Выезд</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="inner-sidebar__item">
+                        <div class="inner-sidebar__header">
+                            <div class="inner-sidebar__heading">Выставочная верх
+                            </div>
+                            <div class="inner-sidebar__badge">1155
+                            </div>
+                        </div>
+                        <div class="indicators indicators_vertical control-center__sidebar-indicators">
+                            <a class="indicators__item indicators__item_brown" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВВ Въезд</span>
+                            </a>
+                            <a class="indicators__item indicators__item_brown" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВВ Выезд</span>
+                            </a>
+                            <a class="indicators__item indicators__item_red" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВВ Касса стандарт</span>
+                            </a>
+                            <a class="indicators__item indicators__item_green" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВВ Реверс въезд</span>
+                            </a>
+                            <a class="indicators__item indicators__item_grey" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">ВВ Реверс выезд</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="inner-sidebar__item">
+                        <div class="inner-sidebar__header">
+                            <div class="inner-sidebar__heading">ОКО
+                            </div>
+                            <div class="inner-sidebar__badge">130
+                            </div>
+                        </div>
+                        <div class="indicators indicators_vertical control-center__sidebar-indicators">
+                            <a class="indicators__item indicators__item_grey" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">Въезд ОКО</span>
+                            </a>
+                            <a class="indicators__item indicators__item_brown" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">Въезд ОКО</span>
+                            </a>
+                            <a class="indicators__item indicators__item_red" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">Касса ОКО</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="inner-sidebar__item">
+                        <div class="inner-sidebar__header">
+                            <div class="inner-sidebar__heading">Империя
+                            </div>
+                            <div class="inner-sidebar__badge">410
+                            </div>
+                        </div>
+                        <div class="indicators indicators_vertical control-center__sidebar-indicators">
+                            <a class="indicators__item indicators__item_brown indicators__item_active" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">Въезд империя</span>
+                            </a>
+                            <a class="indicators__item indicators__item_green" href="#">
+                                <span class="indicators__circle"></span>
+                                <span class="indicators__text">Въезд империя</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-center__content">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RPS — Статистика</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="layout__left">
+            <div class="layout__scroll">
+                <div class="sidebar">
+                    <a class="sidebar__logo" href="/">
+                        <svg>
+                            <use xlink:href="assets/images/icon.svg#icon_logo"></use>
+                        </svg>
+                    </a>
+                    <div class="aside-menu">
+                        <div class="aside-menu__bottom-block">
+                            <div class="aside-menu__item">
+                                <a class="aside-menu__link" href="#">
+                                    <span class="aside-menu__icon">
+                                        <svg>
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-ui-7"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="aside-menu__text">Выход</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="aside-menu__item active">
+                            <a class="aside-menu__link" href="control-center.html">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-1"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Центр управления</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="/">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-2"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Клиенты</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-3"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Касса</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="statistics.html">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-4"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Статистика</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="settings-devices-zone.html">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-5"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Настройки</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-6"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Помощь</span>
+                                <span class="aside-menu__counter">4</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout__right">
+            <div class="header">
+                <div class="header__col">
+                    <ul class="tabs header__tabs">
+                        <li class="tabs__tab active">
+                            <a class="tabs__link" href="#">Таблицы</a>
+                        </li>
+                        <li class="tabs__tab">
+                            <a class="tabs__link" href="#">Графики</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__col">
+                    <form class="search-bar header__col-block header__search-bar" method="post" action="#">
+                        <button class="search-bar__button" type="submit">
+                            <svg>
+                                <use xlink:href="assets/images/icon.svg#icon_icon-search"></use>
+                            </svg>
+                        </button>
+                        <input class="search-bar__input" type="search" placeholder="ПОИСК" />
+                    </form>
+                    <div class="indicators header__col-block header__indicators">
+                        <a class="indicators__item indicators__item_red" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">7</span>
+                        </a>
+                        <a class="indicators__item indicators__item_brown" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">24</span>
+                        </a>
+                        <a class="indicators__item indicators__item_yellow" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">12</span>
+                        </a>
+                        <a class="indicators__item indicators__item_grey" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">0</span>
+                        </a>
+                    </div>
+                    <span class="notifications header__col-block header__notifications">
+                        <svg class="notifications__icon">
+                            <use xlink:href="assets/images/icon.svg#icon_icon-bell"></use>
+                        </svg>
+                        <span class="notifications__counter">3</span>
+                    </span>
+                </div>
+            </div>
+            <div class="statistics">
+                <div class="inner-sidebar">
+                    <div class="inner-sidebar__item">
+                        <div class="inner-sidebar__heading">Стандартные отчёты
+                        </div>
+                        <ul class="vertical-menu vertical-menu_left_border statistics__vertical-menu">
+                            <li class="vertical-menu__item vertical-menu__item_active">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Журнал тревог</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Журнал действий опреатора</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner-sidebar__item">
+                        <div class="inner-sidebar__heading">Ваши отчёты
+                        </div>
+                        <ul class="vertical-menu vertical-menu_left_border statistics__vertical-menu">
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Транзакции</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Оплата и проезды по дням</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Ежемесячный отчёт</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Распознование</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Оплаты за день</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Постоянные</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Оплаты детально</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Отчёты по кассам</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Список транзаций по комп...</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Оплаты по дням</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Годовой отчёт</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Распознование</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Оплаты за день</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Постоянные</span>
+                                </a>
+                            </li>
+                            <li class="vertical-menu__item">
+                                <a class="vertical-menu__link" href="#">
+                                    <span class="vertical-menu__text">Оплаты детально</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner-sidebar__item">
+                        <a class="button button_green button_uppercase button_align_center" href="#">Создать отчет</a>
+                    </div>
+                </div>
+                <div class="statistics__content">
+                    <div class="actions-header">
+                        <div class="actions-header__col">
+                            <div class="select">
+                                <select class="select__control">
+                                    <option value="1">Стандартный вид</option>
+                                    <option value="2">Стандартный вид 1</option>
+                                </select>
+                                <div class="select__button">
+                                    <svg class="select__caret">
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="actions-header__col actions-header__col_flexible">
+                            <form class="search-bar search-bar_white actions-header__search-bar" method="post" action="#">
+                                <button class="search-bar__button" type="submit">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-search"></use>
+                                    </svg>
+                                </button>
+                                <input class="search-bar__input" type="search" placeholder="тест" />
+                            </form>
+                        </div>
+                        <div class="actions-header__col">
+                            <a class="icon-button icon-button_uppercase" href="#">
+                                <svg class="icon-button__icon">
+                                    <use xlink:href="assets/images/icon.svg#icon_icon-export"></use>
+                                </svg>
+                                <span class="icon-button__text">Экспорт</span>
+                            </a>
+                        </div>
+                        <div class="actions-header__col">
+                            <a class="icon-button" href="#">
+                                <svg class="icon-button__icon">
+                                    <use xlink:href="assets/images/icon.svg#icon_icon-arrow-rotate"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <div class="table__header">
+                            <div class="table__col table__col_width_140">
+                                <p class="table__header-text">Начало
+                                </p>
+                                <div class="table__filter-button">9-1
+                                </div>
+                            </div>
+                            <div class="table__col table__col_width_140">
+                                <p class="table__header-text">Конец
+                                </p>
+                                <div class="table__filter-button table__filter-button_orange">9-1
+                                </div>
+                            </div>
+                            <div class="table__col table__col_width_180">
+                                <p class="table__header-text">Длительность
+                                </p>
+                                <div class="table__filter-button">9-1
+                                </div>
+                            </div>
+                            <div class="table__col table__col_width_180">
+                                <p class="table__header-text">Устройство
+                                </p>
+                                <div class="table__filter-button">Все
+                                </div>
+                            </div>
+                            <div class="table__col table__col_width_160">
+                                <p class="table__header-text">Код ошибки
+                                </p>
+                                <div class="table__filter-button">Все
+                                </div>
+                            </div>
+                            <div class="table__col table__col_flexible">
+                                <p class="table__header-text">Описание ошибки
+                                </p>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__row table__row_main">
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_140">
+                                    <div class="table__text-block">
+                                        <p class="table__text">28.04.2017
+                                        </p>
+                                        <p class="table__text">13:34:32
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">0 мин 32 сек
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_180">
+                                    <p class="table__text">КПП1 Выезд
+                                    </p>
+                                </div>
+                                <div class="table__col table__col_width_160">
+                                    <p class="table__text">116
+                                    </p>
+                                    <a class="button button_grey button_shadow statistics__info-btn" href="#">?</a>
+                                </div>
+                                <div class="table__col table__col_flexible">
+                                    <p class="table__text">Петля А долго занята
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RPS — Настройки / Устройство / Зона</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="layout__left">
+            <div class="layout__scroll">
+                <div class="sidebar">
+                    <a class="sidebar__logo" href="/">
+                        <svg>
+                            <use xlink:href="assets/images/icon.svg#icon_logo"></use>
+                        </svg>
+                    </a>
+                    <div class="aside-menu">
+                        <div class="aside-menu__bottom-block">
+                            <div class="aside-menu__item">
+                                <a class="aside-menu__link" href="#">
+                                    <span class="aside-menu__icon">
+                                        <svg>
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-ui-7"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="aside-menu__text">Выход</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="aside-menu__item active">
+                            <a class="aside-menu__link" href="control-center.html">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-1"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Центр управления</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="/">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-2"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Клиенты</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-3"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Касса</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="statistics.html">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-4"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Статистика</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="settings-devices-zone.html">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-5"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Настройки</span>
+                            </a>
+                        </div>
+                        <div class="aside-menu__item">
+                            <a class="aside-menu__link" href="#">
+                                <span class="aside-menu__icon">
+                                    <svg>
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-ui-6"></use>
+                                    </svg>
+                                </span>
+                                <span class="aside-menu__text">Помощь</span>
+                                <span class="aside-menu__counter">4</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout__right">
+            <div class="header">
+                <div class="header__col">
+                    <ul class="tabs header__tabs">
+                        <li class="tabs__tab active">
+                            <a class="tabs__link" href="settings-devices-zone.html">Устройства</a>
+                        </li>
+                        <li class="tabs__tab">
+                            <a class="tabs__link" href="#">Тарифы</a>
+                        </li>
+                        <li class="tabs__tab">
+                            <a class="tabs__link" href="#">Пользователи</a>
+                        </li>
+                        <li class="tabs__tab">
+                            <a class="tabs__link" href="#">Группы</a>
+                        </li>
+                        <li class="tabs__tab">
+                            <a class="tabs__link" href="#">Обновления</a>
+                        </li>
+                        <li class="tabs__tab">
+                            <a class="tabs__link" href="#">Прочие</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__col">
+                    <form class="search-bar header__col-block header__search-bar" method="post" action="#">
+                        <button class="search-bar__button" type="submit">
+                            <svg>
+                                <use xlink:href="assets/images/icon.svg#icon_icon-search"></use>
+                            </svg>
+                        </button>
+                        <input class="search-bar__input" type="search" placeholder="ПОИСК" />
+                    </form>
+                    <div class="indicators header__col-block header__indicators">
+                        <a class="indicators__item indicators__item_red" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">7</span>
+                        </a>
+                        <a class="indicators__item indicators__item_brown" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">24</span>
+                        </a>
+                        <a class="indicators__item indicators__item_yellow" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">12</span>
+                        </a>
+                        <a class="indicators__item indicators__item_grey" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">0</span>
+                        </a>
+                    </div>
+                    <span class="notifications header__col-block header__notifications">
+                        <svg class="notifications__icon">
+                            <use xlink:href="assets/images/icon.svg#icon_icon-bell"></use>
+                        </svg>
+                        <span class="notifications__counter">3</span>
+                    </span>
+                </div>
+            </div>
+            <div class="settings-devices-zone">
+                <div class="actions-header">
+                    <div class="actions-header__col">
+                        <a class="button button_green button_uppercase settings-devices-zone__add" href="#">Добавить зону</a>
+                    </div>
+                    <div class="actions-header__col actions-header__col_flexible">
+                        <form class="search-bar search-bar_white actions-header__search-bar" method="post" action="#">
+                            <button class="search-bar__button" type="submit">
+                                <svg>
+                                    <use xlink:href="assets/images/icon.svg#icon_icon-search"></use>
+                                </svg>
+                            </button>
+                            <input class="search-bar__input" type="search" placeholder="Номер карты или номер транспортного средства..." />
+                        </form>
+                    </div>
+                    <div class="actions-header__col">
+                        <form class="search-bar search-bar_white actions-header__search-bar" method="post" action="#">
+                            <button class="search-bar__button" type="submit">
+                                <svg>
+                                    <use xlink:href="assets/images/icon.svg#icon_icon-search"></use>
+                                </svg>
+                            </button>
+                            <input class="search-bar__input" type="search" placeholder="тест" />
+                        </form>
+                    </div>
+                </div>
+                <div class="settings-devices-zone__container">
+                    <div class="inner-sidebar">
+                        <div class="inner-sidebar__item">
+                            <a class="inner-sidebar__heading inner-sidebar__heading_active" href="settings-devices-zone.html">Сити 129</a>
+                            <ul class="vertical-menu">
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Въезд 1</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Выезд 1</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Въезд 2</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Выезд 2</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Въезд 3</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Выезд 3</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Въезд 4</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Выезд 4</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-sidebar__item">
+                            <a class="inner-sidebar__heading" href="settings-devices-zone.html"> Око</a>
+                            <ul class="vertical-menu">
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Въезд 1</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Выезд 1</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Въезд 2</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Выезд 2</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Въезд 3</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Выезд 3</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Въезд 4</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-menu__item">
+                                    <a class="vertical-menu__link" href="settings-devices-device.html">
+                                        <span class="vertical-menu__text">КПП Выезд 4</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="settings-devices-zone__content">
+                        <div class="setting-actions">
+                            <div class="setting-actions__heading">Сити 129
+                            </div>
+                            <div class="setting-actions__actions">
+                                <a class="button button_text_green button_uppercase setting-actions__action" href="#">Сохранить</a>
+                                <a class="button button_text_red button_uppercase setting-actions__action" href="#">Удалить</a>
+                            </div>
+                        </div>
+                        <form class="settings-devices-zone__form" action="#" method="post">
+                            <div class="field">
+                                <div class="field__label field__label_align_right settings-devices-zone__label">Название:
+                                </div>
+                                <div class="field__content settings-devices-zone__field">
+                                    <input class="input" type="text" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="field__label field__label_align_right settings-devices-zone__label">Кол-во машиномест::
+                                </div>
+                                <div class="field__content settings-devices-zone__field">
+                                    <input class="input" type="text" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="field__label field__label_align_right settings-devices-zone__label">Кол-во свободных машиномест:
+                                </div>
+                                <div class="field__content settings-devices-zone__field">
+                                    <input class="input" type="text" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
