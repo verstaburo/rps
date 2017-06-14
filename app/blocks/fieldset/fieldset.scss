@@ -1,0 +1,22 @@
+.fieldset {
+  display: block;
+  width: 100%;
+  border: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__heading {
+    width: 100%;
+    padding: 12px 0;
+    color: #202325;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid #d2d3d3;
+  }
+
+  &__content {
+    margin-top: 32px;
+  }
+}

@@ -6,13 +6,14 @@ include ../../blocks/vertical-menu/vertical-menu
 include ../../blocks/field/field
 include ../../blocks/input/input
 include ../../blocks/select/select
+include ../../blocks/fieldset/fieldset
 include ../../components/sidebar/sidebar
 include ../../components/header/header
 include ../../components/actions-header/actions-header
 include ../../components/setting-actions/setting-actions
 
 block head
-  - var pageTitle = 'RPS — Настройки / Устройство / Зона'
+  - var pageTitle = 'RPS — Найстройка / Устройства / Устройство'
 
 block layout-left
   +sidebar
@@ -23,7 +24,7 @@ block layout-right
     menu[0].active = true;
   +header(menu)
 
-  +b.settings-devices-zone
+  +b.settings-devices-device
     +actions-header
       +actions-header-col
         +button()(href='#')._green._uppercase.settings-devices-zone__add Добавить зону
@@ -36,10 +37,12 @@ block layout-right
     +e.container
       +inner-sidebar
         +inner-sidebar-item
-          +inner-sidebar-heading.A(href='settings-devices-zone.html')._active Сити 129
+          +inner-sidebar-header
+            +inner-sidebar-heading.A(href='settings-devices-zone.html') Сити 129
+            +inner-sidebar-badge 15
           +vertical-menu
-            +vertical-menu-item('settings-devices-device.html')
-              +vertical-menu-text КПП Въезд 1
+            +vertical-menu-item('settings-devices-device.html')._active
+              +vertical-menu-text._active КПП Въезд 1
             +vertical-menu-item('settings-devices-device.html')
               +vertical-menu-text КПП Выезд 1
             +vertical-menu-item('settings-devices-device.html')
@@ -55,7 +58,9 @@ block layout-right
             +vertical-menu-item('settings-devices-device.html')
               +vertical-menu-text КПП Выезд 4
         +inner-sidebar-item
-          +inner-sidebar-heading.A(href='settings-devices-zone.html')  Око
+          +inner-sidebar-header
+            +inner-sidebar-heading.A(href='settings-devices-zone.html') Око
+            +inner-sidebar-badge 15
           +vertical-menu
             +vertical-menu-item('settings-devices-device.html')
               +vertical-menu-text КПП Въезд 1
@@ -75,18 +80,19 @@ block layout-right
               +vertical-menu-text КПП Выезд 4
 
       +e.content
-        +setting-actions Сити 129
+        +setting-actions КПП Въезд 1
 
         +e.FORM.form(action='#' method='post')
-          +field
-            +field-label._align_right.settings-devices-zone__label Название:
-            +field-item.settings-devices-zone__field
-              +input
-          +field
-            +field-label._align_right.settings-devices-zone__label Кол-во машиномест::
-            +field-item.settings-devices-zone__field
-              +input
-          +field
-            +field-label._align_right.settings-devices-zone__label Кол-во свободных машиномест:
-            +field-item.settings-devices-zone__field
-              +input
+          +fieldset('1. Общие')
+            +field
+              +field-label._align_right.settings-devices-zone__label Название устройства:
+              +field-item.settings-devices-zone__field
+                +input
+            +field
+              +field-label._align_right.settings-devices-zone__label Тип проезда:
+              +field-item.settings-devices-zone__field
+                +select([{title: 'Выберите', value: 1}, {title: 'Выберите 2', value: 2}])
+            +field
+              +field-label._align_right.settings-devices-zone__label Зона до:
+              +field-item.settings-devices-zone__field
+                +select([{title: 'Все города', value: 1}, {title: 'Все города 2', value: 2}])

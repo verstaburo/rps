@@ -1,0 +1,6 @@
+mixin fieldset(heading)
+  fieldset.fieldset&attributes(attributes)
+    legend.fieldset__heading=heading
+
+    .fieldset__content
+      block

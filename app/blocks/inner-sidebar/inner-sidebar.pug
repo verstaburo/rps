@@ -6,6 +6,14 @@ mixin inner-sidebar-item()
   +e.item&attributes(attributes)
     block
 
+mixin inner-sidebar-header()
+  +e.header
+    block
+
 mixin inner-sidebar-heading()
   +e.heading&attributes(attributes)
+    block
+
+mixin inner-sidebar-badge()
+  +e.badge&attributes(attributes)
     block
