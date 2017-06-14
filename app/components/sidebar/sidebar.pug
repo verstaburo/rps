@@ -3,16 +3,16 @@ include ../../blocks/aside-menu/aside-menu
 
 mixin sidebar()
   +b.sidebar&attributes(attributes)
-    +e.A.logo(href="#")
+    +e.A.logo(href="/")
       +icon('logo')
-      
+
     +aside-menu
       +aside-menu-bottom-block
         +aside-menu-item("#", "Выход", "icon-ui-7")
-      +aside-menu-item("#", "Центр управления", "icon-ui-1").active  
-      +aside-menu-item("#", "Клиенты", "icon-ui-2")  
-      +aside-menu-item("#", "Касса", "icon-ui-3")  
-      +aside-menu-item("#", "Статистика", "icon-ui-4")  
-      +aside-menu-item("#", "Настройки", "icon-ui-5")  
+      +aside-menu-item("#", "Центр управления", "icon-ui-1").active
+      +aside-menu-item("/", "Клиенты", "icon-ui-2")
+      +aside-menu-item("#", "Касса", "icon-ui-3")
+      +aside-menu-item("statistics.html", "Статистика", "icon-ui-4")
+      +aside-menu-item("#", "Настройки", "icon-ui-5")
       +aside-menu-item("#", "Помощь", "icon-ui-6")
         +aside-menu-item-counter 4

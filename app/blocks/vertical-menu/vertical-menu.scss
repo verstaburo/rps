@@ -1,6 +1,14 @@
 .vertical-menu {
   display: block;
 
+  &_left_border {
+    border-left: 1px solid #d2d3d3;
+
+    .vertical-menu__item {
+      transform: translateX(-2px);
+    }
+  }
+
   &__item {
     display: block;
 

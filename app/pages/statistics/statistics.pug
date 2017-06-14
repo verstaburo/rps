@@ -1,0 +1,112 @@
+extends ../../layouts/default
+include ../../blocks/button/button
+include ../../blocks/table/table
+include ../../blocks/inner-sidebar/inner-sidebar
+include ../../blocks/vertical-menu/vertical-menu
+include ../../blocks/select/select
+include ../../blocks/icon-button/icon-button
+include ../../components/search-bar/search-bar
+include ../../components/sidebar/sidebar
+include ../../components/header/header
+include ../../components/actions-header/actions-header
+
+block head
+  - var pageTitle = 'RPS — Статистика'
+
+block layout-left
+  +sidebar
+
+block layout-right
+  +header([{path: '#', title: 'Таблицы', active: true}, {path: '#', title: 'Графики'}])
+
+  +b.statistics.page
+    +inner-sidebar
+      +inner-sidebar-item
+        +inner-sidebar-heading Стандартные отчёты
+        +vertical-menu._left_border.statistics__vertical-menu
+          +vertical-menu-item._active
+            +vertical-menu-text Журнал тревог
+          +vertical-menu-item
+            +vertical-menu-text Журнал действий опреатора
+      +inner-sidebar-item
+        +inner-sidebar-heading Ваши отчёты
+        +vertical-menu._left_border.statistics__vertical-menu
+          +vertical-menu-item
+            +vertical-menu-text Транзакции
+          +vertical-menu-item
+            +vertical-menu-text Оплата и проезды по дням
+          +vertical-menu-item
+            +vertical-menu-text Ежемесячный  отчёт
+          +vertical-menu-item
+            +vertical-menu-text Распознование
+          +vertical-menu-item
+            +vertical-menu-text Оплаты за день
+          +vertical-menu-item
+            +vertical-menu-text Постоянные
+          +vertical-menu-item
+            +vertical-menu-text Оплаты детально
+          +vertical-menu-item
+            +vertical-menu-text Отчёты по кассам
+          +vertical-menu-item
+            +vertical-menu-text Список транзаций по комп...
+          +vertical-menu-item
+            +vertical-menu-text Оплаты по дням
+          +vertical-menu-item
+            +vertical-menu-text Годовой  отчёт
+          +vertical-menu-item
+            +vertical-menu-text Распознование
+          +vertical-menu-item
+            +vertical-menu-text Оплаты за день
+          +vertical-menu-item
+            +vertical-menu-text Постоянные
+          +vertical-menu-item
+            +vertical-menu-text Оплаты детально
+      +inner-sidebar-item
+        +button()(href='#')._green._uppercase._align_center Создать отчет
+
+    +e.content
+      +actions-header
+        +actions-header-col
+          +select([{title: 'Стандартный вид', value: 1}, {title: 'Стандартный вид 1', value: 2}])
+        +actions-header-col._flexible
+          //- TODO заменить на datepicker
+          +search-bar('тест')._white.__search-bar
+        +actions-header-col
+          +icon-button('icon-export')(href='#')._uppercase Экспорт
+        +actions-header-col
+          +icon-button('icon-arrow-rotate')(href='#')
+
+      +table
+        +table-header
+          +table-header-col('Начало')._width_140
+            +table-filter-button 9-1
+          +table-header-col('Конец')._width_140
+            +table-filter-button._orange 9-1
+          +table-header-col('Длительность')._width_180
+            +table-filter-button 9-1
+          +table-header-col('Устройство')._width_180
+            +table-filter-button Все
+          +table-header-col('Код ошибки')._width_160
+            +table-filter-button Все
+          +table-header-col('Описание ошибки')._flexible
+
+        - for (var i = 0; i < 15; i++)
+          +table-row
+            +table-row._main
+              +table-col._width_140
+                +table-text-block
+                  +table-text 28.04.2017
+                  +table-text 13:34:32
+              +table-col._width_140
+                +table-text-block
+                  +table-text 28.04.2017
+                  +table-text 13:34:32
+              +table-col._width_180
+                +table-text 0 мин 32 сек
+              +table-col._width_180
+                +table-text КПП1 Выезд
+              +table-col._width_160
+                +table-text 116
+                +button()(href='#')._grey._shadow.statistics__info-btn ?
+              +table-col._flexible
+                +table-text Петля А долго занята
