@@ -25,10 +25,14 @@
   }
 
   &__heading {
+    display: block;
     color: #202325;
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 8px;
     margin-left: -5px;
+    transition: color .25s ease-in-out;
+
+    &:hover, &_active { color: #f9ad1a; }
   }
 }

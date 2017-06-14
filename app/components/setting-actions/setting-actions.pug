@@ -1,0 +1,9 @@
+include ../../blocks/button/button
+
+mixin setting-actions()
+  +b.setting-actions&attributes(attributes)
+    +e.heading
+      block
+    +e.actions
+      +button()(href='#')._text_green._uppercase.__action Сохранить
+      +button()(href='#')._text_red._uppercase.__action Удалить

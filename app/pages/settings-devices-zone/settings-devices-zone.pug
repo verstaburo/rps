@@ -1,7 +1,92 @@
 extends ../../layouts/default
+include ../../blocks/button/button
+include ../../blocks/table/table
+include ../../blocks/inner-sidebar/inner-sidebar
+include ../../blocks/vertical-menu/vertical-menu
+include ../../blocks/field/field
+include ../../blocks/input/input
+include ../../blocks/select/select
+include ../../components/sidebar/sidebar
+include ../../components/header/header
+include ../../components/actions-header/actions-header
+include ../../components/setting-actions/setting-actions
 
 block head
-- var pageTitle = 'Versta Project Template'
+  - var pageTitle = 'RPS — Сессии'
 
-block content
+block layout-left
+  +sidebar
+
+block layout-right
+  -
+    var menu = getData('header-menu-settings');
+    menu[0].active = true;
+  +header(menu)
+
   +b.settings-devices-zone
+    +actions-header
+      +actions-header-col
+        +button()(href='#')._green._uppercase.settings-devices-zone__add Добавить зону
+      +actions-header-col._flexible
+        +search-bar('Номер карты или номер транспортного средства...')._white.__search-bar
+      +actions-header-col
+        //- TODO заменить на datepicker
+        +search-bar('тест')._white.__search-bar
+
+    +e.container
+      +inner-sidebar
+        +inner-sidebar-item
+          +inner-sidebar-heading.A(href='#')._active Сити 129
+          +vertical-menu
+            +vertical-menu-item
+              +vertical-menu-text КПП Въезд 1
+            +vertical-menu-item
+              +vertical-menu-text КПП Выезд 1
+            +vertical-menu-item
+              +vertical-menu-text КПП Въезд 2
+            +vertical-menu-item
+              +vertical-menu-text КПП Выезд 2
+            +vertical-menu-item
+              +vertical-menu-text КПП Въезд 3
+            +vertical-menu-item
+              +vertical-menu-text КПП Выезд 3
+            +vertical-menu-item
+              +vertical-menu-text КПП Въезд 4
+            +vertical-menu-item
+              +vertical-menu-text КПП Выезд 4
+        +inner-sidebar-item
+          +inner-sidebar-heading.A(href='#')  Око
+          +vertical-menu
+            +vertical-menu-item
+              +vertical-menu-text КПП Въезд 1
+            +vertical-menu-item
+              +vertical-menu-text КПП Выезд 1
+            +vertical-menu-item
+              +vertical-menu-text КПП Въезд 2
+            +vertical-menu-item
+              +vertical-menu-text КПП Выезд 2
+            +vertical-menu-item
+              +vertical-menu-text КПП Въезд 3
+            +vertical-menu-item
+              +vertical-menu-text КПП Выезд 3
+            +vertical-menu-item
+              +vertical-menu-text КПП Въезд 4
+            +vertical-menu-item
+              +vertical-menu-text КПП Выезд 4
+
+      +e.content
+        +setting-actions Сити 129
+
+        +e.FORM.form(action='#' method='post')
+          +field
+            +field-label._align_right.settings-devices-zone__label Название:
+            +field-item.settings-devices-zone__field
+              +input
+          +field
+            +field-label._align_right.settings-devices-zone__label Кол-во машиномест::
+            +field-item.settings-devices-zone__field
+              +input
+          +field
+            +field-label._align_right.settings-devices-zone__label Кол-во свободных машиномест:
+            +field-item.settings-devices-zone__field
+              +input
