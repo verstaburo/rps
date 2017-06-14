@@ -1,0 +1,31 @@
+.alarms-popup {
+  display: block;
+  width: 593px;
+  min-height: 100%;
+
+  &__header-indicators {
+    margin-left: auto;
+    margin-right: 24px;
+  }
+
+  &__table {
+    border: 0;
+  }
+
+  &__th {
+    height: 56px;
+    background-color: #f6f6f6;
+    border: 0;
+    padding-left: 16px;
+  }
+
+  &__td {
+    vertical-align: top;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__indicators {
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,28 @@
+include ../../blocks/indicators/indicators
+include ../../blocks/popup/popup
+include ../../blocks/default-table/default-table
+
+mixin alarms-popup()
+  +popup#alarms-popup
+    +popup-header('Тревоги: 39')
+      +indicators.alarms-popup__header-indicators
+        +indicator(href="#")._red 7
+        +indicator(href="#")._brown 24
+        +indicator(href="#")._yellow 12
+        +indicator(href="#")._grey 0
+    +popup-body
+      +b.alarms-popup&attributes(attributes)
+        +default-table.alarms-popup__table
+          +default-table-header
+            +default-table-row
+              +default-table-cell._border_bottom._width_100.alarms-popup__th Код
+              +default-table-cell._border_bottom._width_160.alarms-popup__th Устройство
+              +default-table-cell._border_bottom.alarms-popup__th Описание
+          +default-table-body
+            - for (var i = 0; i < 3; i++)
+              +default-table-row
+                +default-table-cell._border_bottom._width_100.alarms-popup__td
+                  +indicators.alarms-popup__indicators
+                    +indicator(href="#")._brown= `${101 + i}`
+                +default-table-cell._border_bottom._width_160.alarms-popup__td Стойка въезда
+                +default-table-cell._border_bottom.alarms-popup__td Нет связи с внешним ридером. Проверьте подключение, питание и работоспособность устройства.

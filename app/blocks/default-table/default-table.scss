@@ -1,5 +1,6 @@
 .default-table {
   width: 100%;
+  border-collapse: collapse;
 
   &__header {
 
@@ -13,6 +14,17 @@
     font-size: 14px;
     font-weight: 400;
     padding: 10px 0;
+
+    &_width_90 { width: 90px; }
+    &_width_100 { width: 100px; }
+    &_width_120 { width: 120px; }
+    &_width_140 { width: 140px; }
+    &_width_160 { width: 160px; }
+    &_width_180 { width: 180px; }
+    &_width_200 { width: 200px; }
+    &_width_220 { width: 220px; }
+    &_width_240 { width: 240px; }
+    &_width_260 { width: 260px; }
 
     &_border_bottom {
       border-bottom: 1px solid #d2d3d3;

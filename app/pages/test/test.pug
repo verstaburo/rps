@@ -14,6 +14,8 @@ include ../../blocks/icon-menu/icon-menu
 include ../../components/accordion/accordion
 include ../../components/mifare-popup/mifare-popup
 include ../../components/edit-card-data-popup/edit-card-data-popup
+include ../../components/notifications-popup/notifications-popup
+include ../../components/alarms-popup/alarms-popup
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -44,20 +46,15 @@ block layout-right
       div(style="display: inline-block; margin: 15px")
         +button(href='#' data-target-popup='#mifare-popup')._uppercase._grey.js-show-popup MiFare попап
 
-    div(style="display: block; margin: 15px; width: 300px;")
-      +accordion
-        +accordion-item('Заголовок')
-          div(style="font-size: 14px; padding: 10px; background-color: lightblue")
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non mi at ante elementum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec rhoncus posuere accumsan. Duis rutrum, nisl in rhoncus posuere, risus velit convallis velit, ut rhoncus velit elit nec urna. Fusce id volutpat arcu, vel aliquam velit. Integer volutpat velit eu arcu ultricies venenatis. Donec mollis diam id cursus lobortis. Nam eget tempor enim. Quisque ipsum urna, efficitur non mollis sit amet, tincidunt sed magna. Phasellus sit amet fringilla sem. Etiam in nibh pharetra, posuere nibh quis, pharetra massa. Sed quis ante cursus, vestibulum tellus et, sollicitudin neque. In ultrices justo vitae nibh aliquet mattis. Aliquam eu lorem eget nisl facilisis consequat sed at tellus.
+      div(style="display: inline-block; margin: 15px")
+        +button(href='#' data-target-popup='#notifications-popup')._uppercase._grey.js-show-popup Уведомления
 
-    div(style="display: flex")
-      div(style="display: block; width: 300px; margin: 15px")
-        +icon-menu(getData('add-client-menu'))
-
-      div(style="display: block; width: 300px; margin: 15px")
-        +search-filter
+      div(style="display: inline-block; margin: 15px")
+        +button(href='#' data-target-popup='#alarms-popup')._uppercase._grey.js-show-popup Тревоги
 
       +add-to-blacklist
       +clients-popup
       +mifare-popup
       +edit-card-data-popup
+      +notifications-popup
+      +alarms-popup
