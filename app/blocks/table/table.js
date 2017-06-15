@@ -35,10 +35,37 @@ export default () => {
       return; // eslint-disable-line consistent-return
     }
 
+    const parentRow = row
+      .parents('.table__row_parent')
+      .last();
+
+    const parentCheckbox = parentRow
+      .children()
+      .eq(0)
+      .find('.checkbox__input');
+
+    const childrenCheckboxes = parentRow
+      .find('.table__row_children')
+      .find('.checkbox__input')
+      .toArray()
+      .map(el => el.checked);
+
     // if childrens are selected, then mark parent as checked
+    if (childrenCheckboxes.every(item => item)) {
+      return parentCheckbox // eslint-disable-line consistent-return
+        .prop('checked', true)
+        .prop('indeterminate', false);
+    }
     // if childrens aren't selected, then mark parent as unchecked
+    if (childrenCheckboxes.every(item => !item)) {
+      return parentCheckbox // eslint-disable-line consistent-return
+        .prop('checked', false)
+        .prop('indeterminate', false);
+    }
     // otherwise mark parent as indeterminate
-    console.log('children has been changed');
+    parentCheckbox
+      .prop('checked', false)
+      .prop('indeterminate', true);
   });
 
   // toggle row
