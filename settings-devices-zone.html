@@ -9,8 +9,11 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/libs/daterangepicker.min.css" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery-3.2.1.min.js"></script>
+    <script src="assets/scripts/libs/moment.min.js"></script>
+    <script src="assets/scripts/libs/jquery.daterangepicker.min.js"></script>
 </head>
 
 <body>
@@ -176,14 +179,12 @@
                         </form>
                     </div>
                     <div class="actions-header__col">
-                        <form class="search-bar search-bar_white actions-header__search-bar" method="post" action="#">
-                            <button class="search-bar__button" type="submit">
-                                <svg>
-                                    <use xlink:href="assets/images/icon.svg#icon_icon-search"></use>
-                                </svg>
-                            </button>
-                            <input class="search-bar__input" type="search" placeholder="тест" />
-                        </form>
+                        <div class="datepicker">
+                            <svg class="datepicker__icon">
+                                <use xlink:href="assets/images/icon.svg#icon_icon-calendar"></use>
+                            </svg>
+                            <input class="datepicker__control" type="text" />
+                        </div>
                     </div>
                 </div>
                 <div class="settings-devices-zone__container">
@@ -284,8 +285,10 @@
                             <div class="setting-actions__heading">Сити 129
                             </div>
                             <div class="setting-actions__actions">
-                                <a class="button button_text_green button_uppercase setting-actions__action" href="#">Сохранить</a>
-                                <a class="button button_text_red button_uppercase setting-actions__action" href="#">Удалить</a>
+                                <button class="button button_text_green button_uppercase setting-actions__action">Сохранить
+                                </button>
+                                <button class="button button_text_red button_uppercase setting-actions__action">Удалить
+                                </button>
                             </div>
                         </div>
                         <form class="settings-devices-zone__form" action="#" method="post">

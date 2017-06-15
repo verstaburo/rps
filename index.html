@@ -9,8 +9,11 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/libs/daterangepicker.min.css" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery-3.2.1.min.js"></script>
+    <script src="assets/scripts/libs/moment.min.js"></script>
+    <script src="assets/scripts/libs/jquery.daterangepicker.min.js"></script>
 </head>
 
 <body>
@@ -371,13 +374,16 @@
                                             <div class="search-filter__block search-filter__block_default">
                                                 <div class="search-filter__controls">
                                                     <div class="search-filter__col search-filter__col_flexible">
-                                                        <a class="button button_text_grey button_uppercase search-filter__reset" href="#">Сбросить</a>
+                                                        <button class="button button_text_grey button_uppercase search-filter__reset">Сбросить
+                                                        </button>
                                                     </div>
                                                     <div class="search-filter__col">
-                                                        <a class="button button_grey button_uppercase js-search-filter-action-save" href="#">Сохранить фильтр</a>
+                                                        <button class="button button_grey button_uppercase js-search-filter-action-save">Сохранить фильтр
+                                                        </button>
                                                     </div>
                                                     <div class="search-filter__col">
-                                                        <a class="button button_green button_uppercase" href="#">Применить</a>
+                                                        <button class="button button_green button_uppercase">Применить
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -387,10 +393,12 @@
                                                         <input class="input" type="text" />
                                                     </div>
                                                     <div class="search-filter__col">
-                                                        <a class="button button_green button_uppercase" href="#">Готово</a>
+                                                        <button class="button button_green button_uppercase">Готово
+                                                        </button>
                                                     </div>
                                                     <div class="search-filter__col">
-                                                        <a class="button button_text_grey button_uppercase search-filter__reset js-search-filter-action-abort" href="#">Отмена</a>
+                                                        <button class="button button_text_grey button_uppercase search-filter__reset js-search-filter-action-abort">Отмена
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
