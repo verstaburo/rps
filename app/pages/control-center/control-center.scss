@@ -29,6 +29,7 @@
 
   &__controls {
     display: flex;
+    align-items: flex-start;
     width: 100%;
   }
 
@@ -48,7 +49,6 @@
     &_buttons {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       flex-flow: row wrap;
       min-width: 426px;
       flex-shrink: 0;
