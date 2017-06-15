@@ -23,7 +23,7 @@ mixin accordion-item-custom()
     block
 
 mixin accordion-button(heading)
-  .accordion__button
+  .accordion__button&attributes(attributes)
     +icon('icon-caret', true).accordion__icon
     .accordion__heading= heading
     .accordion__block

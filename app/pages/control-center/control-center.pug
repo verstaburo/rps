@@ -1,7 +1,10 @@
 extends ../../layouts/default
 include ../../blocks/table/table
+include ../../blocks/button/button
+include ../../blocks/icon-button/icon-button
 include ../../blocks/inner-sidebar/inner-sidebar
 include ../../blocks/indicators/indicators
+include ../../components/accordion/accordion
 include ../../components/sidebar/sidebar
 include ../../components/header/header
 
@@ -58,3 +61,73 @@ block layout-right
           +indicator(href='#')._green Въезд империя
 
     +e.content
+      +accordion
+        +accordion-item-custom
+          +accordion-button('Штатный режим проезда').accordion__button_left.control-center__accordion-button
+            +e.SPAN.heading ВН Въезд
+          +accordion-content
+            //- content
+      +e.controls
+        +e.col._video
+          +e.VIDEO(autoplay=true loop=true).video
+            source(src='video.mp4' type='video/mp4')
+        +e.col._buttons
+          +button()(href='#')._grey.__button Проезд одного автомобиля
+          +button()(href='#')._grey.__button Проезд по QR-коду
+          +icon-button('icon-volume')(href='#')._shadow.__button_small._locked
+          +icon-button('icon-phone')(href='#')._shadow.__button_small
+
+      +table
+        +table-header.control-center__table-header
+          +table-header-col('Код')._width_120._align_center
+          +table-header-col('Описание')._flexible
+
+        +table-row
+          +table-col._width_120
+            +indicators.alarms-popup__indicators
+              +indicator(href="#")._brown 101
+          +table-col._flexible
+            +table-text Нет связи с внешним ридером. Проверьте подключение, питание и работоспособность устройства.
+            +button()(href='#')._grey._shadow.control-center__info-btn ?
+        +table-row
+          +table-col._width_120
+            +indicators.alarms-popup__indicators
+              +indicator(href="#")._brown 103
+          +table-col._flexible
+            +table-text Нет связи с внешним ридером. Проверьте подключение, питание и работоспособность устройства.
+            +button()(href='#')._grey._shadow.control-center__info-btn ?
+        +table-row
+          +table-col._width_120
+            +indicators.alarms-popup__indicators
+              +indicator(href="#")._yellow 105
+          +table-col._flexible
+            +table-text Карты в диспенсере карт подходят к концу. Загрузите в тубус новые карты.
+            +button()(href='#')._grey._shadow.control-center__info-btn ?
+        +table-row
+          +table-col._width_120
+            +indicators.alarms-popup__indicators
+              +indicator(href="#")._yellow 112
+          +table-col._flexible
+            +table-text Верхняя дверь открыта
+            +button()(href='#')._grey._shadow.control-center__info-btn ?
+        +table-row
+          +table-col._width_120
+            +indicators.alarms-popup__indicators
+              +indicator(href="#")._yellow 105
+          +table-col._flexible
+            +table-text Карты в диспенсере карт подходят к концу. Загрузите в тубус новые карты.
+            +button()(href='#')._grey._shadow.control-center__info-btn ?
+        +table-row
+          +table-col._width_120
+            +indicators.alarms-popup__indicators
+              +indicator(href="#")._red 305
+          +table-col._flexible
+            +table-text Карты в диспенсере карт подходят к концу. Загрузите в тубус новые карты.
+            +button()(href='#')._grey._shadow.control-center__info-btn ?
+        +table-row
+          +table-col._width_120
+            +indicators.alarms-popup__indicators
+              +indicator(href="#")._yellow 105
+          +table-col._flexible
+            +table-text Карты в диспенсере карт подходят к концу. Загрузите в тубус новые карты.
+            +button()(href='#')._grey._shadow.control-center__info-btn ?

@@ -142,6 +142,8 @@
     flex-wrap: wrap;
     min-width: 0;
 
+    &_align_center { text-align: center; }
+
     &_width_90 { width: 90px; }
     &_width_100 { width: 100px; }
     &_width_120 { width: 120px; }

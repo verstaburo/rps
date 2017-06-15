@@ -10,6 +10,28 @@
     background-color: #fff;
     cursor: pointer;
 
+    &_left {
+      padding-right: 16px;
+
+      .accordion {
+
+        &__block {
+          order: 1;
+          margin-left: 0;
+          margin-right: auto;
+        }
+
+        &__heading {
+          margin-left: auto;
+          order: 2;
+        }
+
+        &__icon {
+          order: 3;
+        }
+      }
+    }
+
     &:hover {
 
       .accordion {
