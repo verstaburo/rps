@@ -1,6 +1,10 @@
+include ../icon-button/icon-button
+
 mixin notification-info()
   +b.notification-info&attributes(attributes)
-    block
+    +e.content
+      block
+    +icon-button('icon-caret')(href='#')._shadow._uppercase.__expand Развернуть
 
 mixin notification-info-indicator(done)
   +e.A(href='#').indicator&attributes(attributes)

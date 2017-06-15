@@ -31,20 +31,4 @@
   &__item:not(:last-child) {
     margin-bottom: 44px;
   }
-
-  &__expand {
-    width: 336px;
-    margin-left: 16px;
-    justify-content: flex-start;
-
-    .icon-button__icon {
-      width: 12px;
-      height: 8px;
-    }
-
-    .icon-button__text {
-      width: 100%;
-      text-align: center;
-    }
-  }
 }

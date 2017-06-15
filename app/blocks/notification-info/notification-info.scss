@@ -1,6 +1,31 @@
 .notification-info {
-  display: flex;
-  width: 100%;
+  display: block;
+
+  &__content {
+    display: flex;
+    width: 100%;
+  }
+
+  &__expand {
+    display: none;
+    margin-top: 24px;
+    width: 100%;
+    justify-content: flex-start;
+
+    &_visible {
+      display: flex;
+    }
+
+    .icon-button__icon {
+      width: 12px;
+      height: 8px;
+    }
+
+    .icon-button__text {
+      width: 100%;
+      text-align: center;
+    }
+  }
 
   &__col {
     display: flex;
@@ -28,6 +53,12 @@
     max-width: 235px;
     font-size: 14px;
     margin-top: -.28em;
+    max-height: 59px;
+    overflow: hidden;
+
+    &_active {
+      max-height: initial;
+    }
 
     a {
       text-decoration: underline;
