@@ -1,0 +1,14 @@
+extends ../../layouts/simple
+include ../../components/login-form/login-form
+
+block head
+  - var pageTitle = 'РПС - Вход'
+
+block content
+  +b.login
+    +e.A(href='#').logo
+      +e.IMG(src='assets/images/logo.svg' alt='').logo-image
+
+    +e.content
+      +login-form
+      +e.A(href='#').forget-pass Забыли пароль?

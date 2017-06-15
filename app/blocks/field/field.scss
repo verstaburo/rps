@@ -10,6 +10,22 @@
     align-items: flex-start;
   }
 
+  &_vertical {
+    display: block;
+
+    .field {
+
+      &__label {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+
+      &__item {
+        width: 100%;
+      }
+    }
+  }
+
   &__label {
     display: block;
     color: #202325;

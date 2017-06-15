@@ -1,0 +1,18 @@
+include ../../blocks/button/button
+include ../../blocks/input/input
+include ../../blocks/field/field
+
+mixin login-form()
+  +b.FORM(method='post' action='#').login-form&attributes(attributes)
+    +e.SPAN.heading Вход в Рабочую станцию
+    +e.fields
+      +field._vertical.__field
+        +field-label Телефон:
+        +field-item
+          +input
+      +field._vertical.__field
+        +field-label Пароль:
+        +field-item
+          +input()(type='password')
+
+      +button()(href='#')._orange._uppercase.__submit Войти

@@ -1,0 +1,28 @@
+.login-form {
+  display: block;
+  padding: 14px 80px 48px;
+  box-shadow: 0 2px 2px #d3d3d3;
+  border-radius: 4px;
+  background-color: #fff;
+
+  &__heading {
+    display: block;
+    margin-bottom: 48px;
+    width: 100%;
+    text-align: center;
+    color: #202325;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__field {
+    width: 311px;
+  }
+
+  &__submit {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    margin-top: 48px;
+  }
+}
