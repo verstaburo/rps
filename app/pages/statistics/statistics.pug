@@ -5,6 +5,7 @@ include ../../blocks/inner-sidebar/inner-sidebar
 include ../../blocks/vertical-menu/vertical-menu
 include ../../blocks/select/select
 include ../../blocks/icon-button/icon-button
+include ../../blocks/datepicker/datepicker
 include ../../components/search-bar/search-bar
 include ../../components/sidebar/sidebar
 include ../../components/header/header
@@ -69,8 +70,7 @@ block layout-right
         +actions-header-col
           +select([{title: 'Стандартный вид', value: 1}, {title: 'Стандартный вид 1', value: 2}])
         +actions-header-col._flexible
-          //- TODO заменить на datepicker
-          +search-bar('тест')._white.__search-bar
+          +datepicker()
         +actions-header-col
           +icon-button('icon-export')(href='#')._uppercase Экспорт
         +actions-header-col

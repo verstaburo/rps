@@ -1,4 +1,5 @@
 include ../../blocks/transaction/transaction
+include ../../blocks/datepicker/datepicker
 include ../actions-header/actions-header
 include ../search-bar/search-bar
 
@@ -6,8 +7,7 @@ mixin mifare-card-transactions()
   +b.mifare-card-transactions&attributes(attributes)
     +actions-header
       +actions-header-col._flexible
-        //- TODO заменить на datepicker
-        +search-bar('тест')._white.__search-bar
+        +datepicker
     +e.content
       - for (var i = 0; i < 3; i++)
         +transaction.__transaction

@@ -1,0 +1,36 @@
+.date-picker {
+  font-family: $font-main;
+
+  &-wrapper {
+    z-index: 50;
+  }
+}
+
+.datepicker {
+  display: flex;
+  padding: 0 14px;
+  width: 100%;
+  min-height: 40px;
+  border-radius: 3px;
+  border: 1px solid #d2d3d3;
+  background-color: #fff;
+
+  &__control {
+    height: 100%;
+    padding-left: 19px;
+    flex: 1;
+    text-align: center;
+    color: #202325;
+    font-size: 14px;
+    font-weight: 400;
+    border: 0;
+    background-color: transparent;
+  }
+
+  &__icon {
+    align-self: center;
+    width: 18px;
+    height: 20px;
+    fill: #d2d3d3;
+  }
+}

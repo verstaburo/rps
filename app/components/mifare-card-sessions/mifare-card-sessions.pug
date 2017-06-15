@@ -2,6 +2,7 @@ include ../../blocks/tabs/tabs
 include ../../blocks/icon/icons
 include ../../blocks/status/status
 include ../../blocks/photo/photo
+include ../../blocks/datepicker/datepicker
 include ../actions-header/actions-header
 include ../accordion/accordion
 include ../search-bar/search-bar
@@ -12,8 +13,7 @@ mixin mifare-card-sessions()
       +actions-header-col._flexible
         +search-bar('ID Карты, ФИО')._white.__search-bar
       +actions-header-col._flexible
-        //- TODO заменить на datepicker
-        +search-bar('ID Карты, ФИО')._white.__search-bar
+        +datepicker
     +accordion
       //- Детализированная информация
       +accordion-item-custom

@@ -1,0 +1,6 @@
+include ../icon/icons
+
+mixin datepicker()
+  +b.datepicker&attributes(attributes)
+    +icon('icon-calendar').icon
+    +e.INPUT.control

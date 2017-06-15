@@ -1,6 +1,7 @@
 extends ../../layouts/default
 include ../../blocks/button/button
 include ../../blocks/table/table
+include ../../blocks/datepicker/datepicker
 include ../../components/sidebar/sidebar
 include ../../components/header/header
 include ../../components/actions-header/actions-header
@@ -25,8 +26,7 @@ block layout-right
       +actions-header-col._flexible
         +search-bar('Номер карты или номер транспортного средства...')._white.__search-bar
       +actions-header-col
-        //- TODO заменить на datepicker
-        +search-bar('тест')._white
+        +datepicker
 
     +table
       +table-header
