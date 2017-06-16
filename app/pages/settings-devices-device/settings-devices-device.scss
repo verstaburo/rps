@@ -3,8 +3,12 @@
   height: 100%;
 
   &__add {
-    width: 210px;
+    min-width: 210px;
     justify-content: center;
+  }
+
+  &__datepicker {
+    min-width: 316px;
   }
 
   &__container {
