@@ -4,7 +4,6 @@
   &__tab {
     display: inline-flex;
     vertical-align: top;
-    height: 100%;
 
     &.active, &:hover {
 
@@ -25,7 +24,6 @@
     padding: 2px 18px 0;
     text-transform: uppercase;
     letter-spacing: .02em;
-    height: 100%;
     align-items: center;
   }
 }
