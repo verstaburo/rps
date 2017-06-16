@@ -4,6 +4,7 @@ include ../../blocks/button/button
 include ../../blocks/icon-button/icon-button
 include ../../blocks/inner-sidebar/inner-sidebar
 include ../../blocks/indicators/indicators
+include ../../blocks/list/list
 include ../../components/accordion/accordion
 include ../../components/sidebar/sidebar
 include ../../components/header/header
@@ -66,7 +67,11 @@ block layout-right
           +accordion-button('Штатный режим проезда').accordion__button_left.control-center__accordion-button
             +e.SPAN.heading ВН Въезд
           +accordion-content
-            //- content
+            +list
+              +list-item._align_right
+                +list-item-link(href='#') Test #1
+              +list-item._align_right
+                +list-item-link(href='#') Test #2
       +e.controls
         +e.col._video
           +e.VIDEO(autoplay=true loop=true).video

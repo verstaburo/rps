@@ -1,0 +1,36 @@
+.list {
+  display: block;
+  border-bottom: 1px solid #d2d3d3;
+  background-color: #fff;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 56px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 1px solid #d2d3d3;
+    color: #202325;
+    font-size: 14px;
+    font-weight: 400;
+
+    &_align_right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: inherit;
+    width: 100%;
+    min-height: 56px;
+    will-change: color;
+    transition: color .25s ease-in-out;
+    color: #0353a4;
+    text-decoration: underline;
+
+    &:hover { color: #f9ad1a; }
+  }
+}
