@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import svg4everybody from 'svg4everybody';
 import datepicker from '../blocks/datepicker/datepicker';
 import popup from '../blocks/popup/popup';
 import dropdown from '../blocks/dropdown/dropdown';
@@ -14,6 +15,7 @@ import searchFilter from '../components/search-filter/search-filter';
 import editCardDataPopup from '../components/edit-card-data-popup/edit-card-data-popup';
 
 $(() => {
+  svg4everybody();
   datepicker();
   popup();
   dropdown();
