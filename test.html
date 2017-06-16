@@ -10,10 +10,12 @@
     <meta name="keywords" content="">
     <link href="favicon.ico" rel="shortcut icon">
     <link href="assets/styles/libs/daterangepicker.min.css" rel="stylesheet">
+    <link href="assets/styles/libs/spectrum.css" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery-3.2.1.min.js"></script>
     <script src="assets/scripts/libs/moment.min.js"></script>
     <script src="assets/scripts/libs/jquery.daterangepicker.min.js"></script>
+    <script src="assets/scripts/libs/spectrum.js"></script>
 </head>
 
 <body>
@@ -192,6 +194,9 @@
                     <div style="display: inline-block; margin: 15px;">
                         <a class="button button_uppercase button_grey js-show-popup" href="#" data-target-popup="#alarms-popup">Тревоги</a>
                     </div>
+                    <div style="display: inline-block; margin: 15px;">
+                        <a class="button button_uppercase button_grey js-show-popup" href="#" data-target-popup="#clients-settings">Настройки</a>
+                    </div>
                 </div>
                 <div style="margin: 20px;">
                     <forn class="clients-common-info">
@@ -351,7 +356,7 @@
                                                             </td>
                                                             <td class="default-table__cell ts-list__cell ts-list__cell_editable">
                                                                 <div class="colorpicker">
-                                                                    <input class="colorpicker__input" type="color" value="#ffffff" />
+                                                                    <input class="colorpicker__input" type="text" value="#ffffff" />
                                                                 </div>
                                                             </td>
                                                             <td class="default-table__cell ts-list__cell ts-list__cell_editable">
@@ -383,7 +388,7 @@
                                                             </td>
                                                             <td class="default-table__cell ts-list__cell ts-list__cell_editable">
                                                                 <div class="colorpicker">
-                                                                    <input class="colorpicker__input" type="color" value="#007dff" />
+                                                                    <input class="colorpicker__input" type="text" value="#007dff" />
                                                                 </div>
                                                             </td>
                                                             <td class="default-table__cell ts-list__cell ts-list__cell_editable">
@@ -415,7 +420,7 @@
                                                             </td>
                                                             <td class="default-table__cell ts-list__cell ts-list__cell_editable">
                                                                 <div class="colorpicker">
-                                                                    <input class="colorpicker__input" type="color" value="#000000" />
+                                                                    <input class="colorpicker__input" type="text" value="#000000" />
                                                                 </div>
                                                             </td>
                                                             <td class="default-table__cell ts-list__cell ts-list__cell_editable">
@@ -447,7 +452,7 @@
                                                             </td>
                                                             <td class="default-table__cell ts-list__cell ts-list__cell_editable">
                                                                 <div class="colorpicker">
-                                                                    <input class="colorpicker__input" type="color" value="#b80000" />
+                                                                    <input class="colorpicker__input" type="text" value="#b80000" />
                                                                 </div>
                                                             </td>
                                                             <td class="default-table__cell ts-list__cell ts-list__cell_editable">
@@ -860,7 +865,7 @@
                                     </td>
                                     <td class="default-table__cell ts-list__cell ts-list__cell_editable">
                                         <div class="colorpicker">
-                                            <input class="colorpicker__input" type="color" value="#ffffff" />
+                                            <input class="colorpicker__input" type="text" value="#ffffff" />
                                         </div>
                                     </td>
                                     <td class="default-table__cell ts-list__cell ts-list__cell_editable">
@@ -892,7 +897,7 @@
                                     </td>
                                     <td class="default-table__cell ts-list__cell ts-list__cell_editable">
                                         <div class="colorpicker">
-                                            <input class="colorpicker__input" type="color" value="#007dff" />
+                                            <input class="colorpicker__input" type="text" value="#007dff" />
                                         </div>
                                     </td>
                                     <td class="default-table__cell ts-list__cell ts-list__cell_editable">
@@ -924,7 +929,7 @@
                                     </td>
                                     <td class="default-table__cell ts-list__cell ts-list__cell_editable">
                                         <div class="colorpicker">
-                                            <input class="colorpicker__input" type="color" value="#000000" />
+                                            <input class="colorpicker__input" type="text" value="#000000" />
                                         </div>
                                     </td>
                                     <td class="default-table__cell ts-list__cell ts-list__cell_editable">
@@ -956,7 +961,7 @@
                                     </td>
                                     <td class="default-table__cell ts-list__cell ts-list__cell_editable">
                                         <div class="colorpicker">
-                                            <input class="colorpicker__input" type="color" value="#b80000" />
+                                            <input class="colorpicker__input" type="text" value="#b80000" />
                                         </div>
                                     </td>
                                     <td class="default-table__cell ts-list__cell ts-list__cell_editable">
@@ -1853,49 +1858,51 @@
                                 <input class="search-bar__input" type="search" placeholder="ID Карты, ФИО" />
                             </form>
                         </div>
-                        <table class="default-table mifare-cards__content">
-                            <thead class="default-table__header">
-                                <tr class="default-table__row">
-                                    <td class="default-table__cell">ID Карты
-                                    </td>
-                                    <td class="default-table__cell">Привязана
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody class="default-table__body">
-                                <tr class="default-table__row">
-                                    <td class="default-table__cell">
-                                        <a href="#">1234 5678 9012</a>
-                                    </td>
-                                    <td class="default-table__cell">Нет
-                                    </td>
-                                </tr>
-                                <tr class="default-table__row">
-                                    <td class="default-table__cell">
-                                        <a href="#">5234 4256 9012</a>
-                                    </td>
-                                    <td class="default-table__cell">
-                                        <a href="#">Петров Василий Анатольевич</a>
-                                    </td>
-                                </tr>
-                                <tr class="default-table__row">
-                                    <td class="default-table__cell">
-                                        <a href="#">7346 2134 9012</a>
-                                    </td>
-                                    <td class="default-table__cell">
-                                        <a href="#">Смирнов Алексей Борисович</a>
-                                    </td>
-                                </tr>
-                                <tr class="default-table__row">
-                                    <td class="default-table__cell">
-                                        <a href="#">1234 6467 9012</a>
-                                    </td>
-                                    <td class="default-table__cell">
-                                        <a href="#">Алексеев Иван Сергеевич</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="mifare-cards__content">
+                            <table class="default-table">
+                                <thead class="default-table__header">
+                                    <tr class="default-table__row">
+                                        <td class="default-table__cell">ID Карты
+                                        </td>
+                                        <td class="default-table__cell">Привязана
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody class="default-table__body">
+                                    <tr class="default-table__row">
+                                        <td class="default-table__cell">
+                                            <a href="#">1234 5678 9012</a>
+                                        </td>
+                                        <td class="default-table__cell">Нет
+                                        </td>
+                                    </tr>
+                                    <tr class="default-table__row">
+                                        <td class="default-table__cell">
+                                            <a href="#">5234 4256 9012</a>
+                                        </td>
+                                        <td class="default-table__cell">
+                                            <a href="#">Петров Василий Анатольевич</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="default-table__row">
+                                        <td class="default-table__cell">
+                                            <a href="#">7346 2134 9012</a>
+                                        </td>
+                                        <td class="default-table__cell">
+                                            <a href="#">Смирнов Алексей Борисович</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="default-table__row">
+                                        <td class="default-table__cell">
+                                            <a href="#">1234 6467 9012</a>
+                                        </td>
+                                        <td class="default-table__cell">
+                                            <a href="#">Алексеев Иван Сергеевич</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <div style="margin: 20px;">
@@ -3883,49 +3890,51 @@
                                                     <input class="search-bar__input" type="search" placeholder="ID Карты, ФИО" />
                                                 </form>
                                             </div>
-                                            <table class="default-table mifare-cards__content">
-                                                <thead class="default-table__header">
-                                                    <tr class="default-table__row">
-                                                        <td class="default-table__cell">ID Карты
-                                                        </td>
-                                                        <td class="default-table__cell">Привязана
-                                                        </td>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="default-table__body">
-                                                    <tr class="default-table__row">
-                                                        <td class="default-table__cell">
-                                                            <a href="#">1234 5678 9012</a>
-                                                        </td>
-                                                        <td class="default-table__cell">Нет
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="default-table__row">
-                                                        <td class="default-table__cell">
-                                                            <a href="#">5234 4256 9012</a>
-                                                        </td>
-                                                        <td class="default-table__cell">
-                                                            <a href="#">Петров Василий Анатольевич</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="default-table__row">
-                                                        <td class="default-table__cell">
-                                                            <a href="#">7346 2134 9012</a>
-                                                        </td>
-                                                        <td class="default-table__cell">
-                                                            <a href="#">Смирнов Алексей Борисович</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="default-table__row">
-                                                        <td class="default-table__cell">
-                                                            <a href="#">1234 6467 9012</a>
-                                                        </td>
-                                                        <td class="default-table__cell">
-                                                            <a href="#">Алексеев Иван Сергеевич</a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <div class="mifare-cards__content">
+                                                <table class="default-table">
+                                                    <thead class="default-table__header">
+                                                        <tr class="default-table__row">
+                                                            <td class="default-table__cell">ID Карты
+                                                            </td>
+                                                            <td class="default-table__cell">Привязана
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="default-table__body">
+                                                        <tr class="default-table__row">
+                                                            <td class="default-table__cell">
+                                                                <a href="#">1234 5678 9012</a>
+                                                            </td>
+                                                            <td class="default-table__cell">Нет
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="default-table__row">
+                                                            <td class="default-table__cell">
+                                                                <a href="#">5234 4256 9012</a>
+                                                            </td>
+                                                            <td class="default-table__cell">
+                                                                <a href="#">Петров Василий Анатольевич</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="default-table__row">
+                                                            <td class="default-table__cell">
+                                                                <a href="#">7346 2134 9012</a>
+                                                            </td>
+                                                            <td class="default-table__cell">
+                                                                <a href="#">Смирнов Алексей Борисович</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="default-table__row">
+                                                            <td class="default-table__cell">
+                                                                <a href="#">1234 6467 9012</a>
+                                                            </td>
+                                                            <td class="default-table__cell">
+                                                                <a href="#">Алексеев Иван Сергеевич</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -5561,6 +5570,216 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" id="clients-settings">
+                    <div class="popup__wrapper">
+                        <div class="popup__content">
+                            <div class="popup__header">
+                                <h2 class="popup__heading">Настройки
+                                </h2>
+                                <div class="popup__close">
+                                    <svg class="popup__close-icon">
+                                        <use xlink:href="assets/images/icon.svg#icon_icon-close"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="popup__body">
+                                <div class="clients-settings">
+                                    <ul class="clients-settings__items">
+                                        <li class="clients-settings__item">
+                                            <label class="clients-settings__field">
+                                                <label class="checkbox checkbox_with_label clients-settings__checkbox">
+                                                    <input class="checkbox__input" type="checkbox" name="name" value="value" checked="checked" />
+                                                    <span class="checkbox__box">
+                                                        <svg class="checkbox__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="checkbox__text">Клиент — Название компании или ФИО Физ. Лица</span>
+                                                </label>
+                                            </label>
+                                            <div class="clients-settings__burger">
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="clients-settings__item">
+                                            <label class="clients-settings__field">
+                                                <label class="checkbox checkbox_with_label clients-settings__checkbox">
+                                                    <input class="checkbox__input" type="checkbox" name="name" value="value" checked="checked" />
+                                                    <span class="checkbox__box">
+                                                        <svg class="checkbox__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="checkbox__text">Тип клиента — компания или физ. лицо</span>
+                                                </label>
+                                            </label>
+                                            <div class="clients-settings__burger">
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="clients-settings__item">
+                                            <label class="clients-settings__field">
+                                                <label class="checkbox checkbox_with_label clients-settings__checkbox">
+                                                    <input class="checkbox__input" type="checkbox" name="name" value="value" checked="checked" />
+                                                    <span class="checkbox__box">
+                                                        <svg class="checkbox__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="checkbox__text">Физ. лица — количество физ. лиц в компании</span>
+                                                </label>
+                                            </label>
+                                            <div class="clients-settings__burger">
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="clients-settings__item">
+                                            <label class="clients-settings__field">
+                                                <label class="checkbox checkbox_with_label clients-settings__checkbox">
+                                                    <input class="checkbox__input" type="checkbox" name="name" value="value" checked="checked" />
+                                                    <span class="checkbox__box">
+                                                        <svg class="checkbox__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="checkbox__text">Карты — количество карт привязанных к компании или физ. лицу</span>
+                                                </label>
+                                            </label>
+                                            <div class="clients-settings__burger">
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="clients-settings__item">
+                                            <label class="clients-settings__field">
+                                                <label class="checkbox checkbox_with_label clients-settings__checkbox">
+                                                    <input class="checkbox__input" type="checkbox" name="name" value="value" checked="checked" />
+                                                    <span class="checkbox__box">
+                                                        <svg class="checkbox__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="checkbox__text">ТС — количество транспортных средств компании или физ. лица</span>
+                                                </label>
+                                            </label>
+                                            <div class="clients-settings__burger">
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="clients-settings__item">
+                                            <label class="clients-settings__field">
+                                                <label class="checkbox checkbox_with_label clients-settings__checkbox">
+                                                    <input class="checkbox__input" type="checkbox" name="name" value="value" checked="checked" />
+                                                    <span class="checkbox__box">
+                                                        <svg class="checkbox__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="checkbox__text">Дата изменения — последнее изменение компании или физ. лица</span>
+                                                </label>
+                                            </label>
+                                            <div class="clients-settings__burger">
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="clients-settings__item">
+                                            <label class="clients-settings__field">
+                                                <label class="checkbox checkbox_with_label clients-settings__checkbox">
+                                                    <input class="checkbox__input" type="checkbox" name="name" value="value" checked="checked" />
+                                                    <span class="checkbox__box">
+                                                        <svg class="checkbox__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="checkbox__text">Комментарий — отображает комментарий по компании</span>
+                                                </label>
+                                            </label>
+                                            <div class="clients-settings__burger">
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="clients-settings__item">
+                                            <label class="clients-settings__field">
+                                                <label class="checkbox checkbox_with_label clients-settings__checkbox">
+                                                    <input class="checkbox__input" type="checkbox" name="name" value="value" />
+                                                    <span class="checkbox__box">
+                                                        <svg class="checkbox__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="checkbox__text">Параметр 1 — описание параметра 1</span>
+                                                </label>
+                                            </label>
+                                            <div class="clients-settings__burger">
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="clients-settings__item">
+                                            <label class="clients-settings__field">
+                                                <label class="checkbox checkbox_with_label clients-settings__checkbox">
+                                                    <input class="checkbox__input" type="checkbox" name="name" value="value" />
+                                                    <span class="checkbox__box">
+                                                        <svg class="checkbox__icon">
+                                                            <use xlink:href="assets/images/icon.svg#icon_icon-check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="checkbox__text">Параметр 2 — описание параметра 2</span>
+                                                </label>
+                                            </label>
+                                            <div class="clients-settings__burger">
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                                <div class="clients-settings__burger-line">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
