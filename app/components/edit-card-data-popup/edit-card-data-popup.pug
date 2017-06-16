@@ -25,15 +25,17 @@ mixin edit-card-data-popup()
                 +default-table-cell._border_bottom.edit-card-data-popup__cell(colspan='2') После изменения
             +default-table-body
               - for (var i = 0; i < 5; i++)
-                +default-table-row
+                +default-table-row.edit-card-data-popup__row
                   +default-table-cell._border_bottom.edit-card-data-popup__cell
-                    +select([{title: 'Название параметра', value: 1, disabled: true}, {title: 'Название параметра 1', value: 2}])._size_small
+                    +select([{title: 'Название параметра', value: 1, disabled: true, selected: true}, {title: 'Название параметра 1', value: 2}])._size_small.js-edit-card-data-popup__parent-select
                   +default-table-cell._border_bottom.edit-card-data-popup__cell
-                    +select([{title: 'Название параметра', value: 1, disabled: true}, {title: 'Название параметра 1', value: 2}])._size_small
+                    span.edit-card-data-popup__select-param Выберите параметр
+                    +select([{title: 'Название параметра', value: 1}, {title: 'Название параметра 1', value: 2}])._size_small
                   +default-table-cell._border_bottom.edit-card-data-popup__cell
                     +icon('icon-arrow', true).edit-card-data-popup__arrow
                   +default-table-cell._border_bottom.edit-card-data-popup__cell
-                    +select([{title: 'Название параметра', value: 1, disabled: true}, {title: 'Название параметра 1', value: 2}])._size_small
+                    span.edit-card-data-popup__select-param Выберите параметр
+                    +select([{title: 'Название параметра', value: 1}, {title: 'Название параметра 1', value: 2}])._size_small
                   +default-table-cell._border_bottom.edit-card-data-popup__cell
                     +icon-button('icon-trash')(href='#')._shadow._size_small.js-edit-card-data-popup-remove
 
