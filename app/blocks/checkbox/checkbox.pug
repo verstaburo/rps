@@ -1,10 +1,10 @@
-mixin checkbox(name, value)
+mixin checkbox(name, value, checked)
 
   if block
     - var className = '_with_label'
 
   +b.LABEL.checkbox(class=className)&attributes(attributes)
-    +e.INPUT.input(type="checkbox" name=name value=value)
+    +e.INPUT.input(type="checkbox" name=name value=value checked=checked)
     +e.SPAN.box
       +icon('icon-check').__icon
 

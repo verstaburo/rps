@@ -1,0 +1,72 @@
+include ../../blocks/popup/popup
+include ../../blocks/checkbox/checkbox
+
+mixin clients-settings()
+  +popup#clients-settings
+    +popup-header('Настройки')
+    +popup-body
+      +b.clients-settings&attributes(attributes)
+        +e.UL.items
+          +e.LI.item
+            +e.LABEL.field
+              +checkbox('name', 'value', true).__checkbox Клиент — Название компании или ФИО Физ. Лица
+            +e.burger
+              +e.burger-line
+              +e.burger-line
+              +e.burger-line
+          +e.LI.item
+            +e.LABEL.field
+              +checkbox('name', 'value', true).__checkbox Тип клиента — компания или физ. лицо
+            +e.burger
+              +e.burger-line
+              +e.burger-line
+              +e.burger-line
+          +e.LI.item
+            +e.LABEL.field
+              +checkbox('name', 'value', true).__checkbox Физ. лица — количество физ. лиц в компании
+            +e.burger
+              +e.burger-line
+              +e.burger-line
+              +e.burger-line
+          +e.LI.item
+            +e.LABEL.field
+              +checkbox('name', 'value', true).__checkbox Карты — количество карт привязанных к компании или физ. лицу
+            +e.burger
+              +e.burger-line
+              +e.burger-line
+              +e.burger-line
+          +e.LI.item
+            +e.LABEL.field
+              +checkbox('name', 'value', true).__checkbox ТС — количество транспортных средств компании или физ. лица
+            +e.burger
+              +e.burger-line
+              +e.burger-line
+              +e.burger-line
+          +e.LI.item
+            +e.LABEL.field
+              +checkbox('name', 'value', true).__checkbox Дата изменения — последнее изменение компании или физ. лица
+            +e.burger
+              +e.burger-line
+              +e.burger-line
+              +e.burger-line
+          +e.LI.item
+            +e.LABEL.field
+              +checkbox('name', 'value', true).__checkbox Комментарий — отображает комментарий по компании
+            +e.burger
+              +e.burger-line
+              +e.burger-line
+              +e.burger-line
+          +e.LI.item
+            +e.LABEL.field
+              +checkbox('name', 'value').__checkbox Параметр 1 — описание параметра 1
+            +e.burger
+              +e.burger-line
+              +e.burger-line
+              +e.burger-line
+          +e.LI.item
+            +e.LABEL.field
+              +checkbox('name', 'value').__checkbox Параметр 2 — описание параметра 2
+            +e.burger
+              +e.burger-line
+              +e.burger-line
+              +e.burger-line

@@ -25,6 +25,7 @@ include ../../components/mifare-cards/mifare-cards
 include ../../components/mifare-card-info/mifare-card-info
 include ../../components/mifare-card-sessions/mifare-card-sessions
 include ../../components/mifare-card-transactions/mifare-card-transactions
+include ../../components/clients-settings/clients-settings
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -60,6 +61,9 @@ block layout-right
 
       div(style="display: inline-block; margin: 15px")
         +button(href='#' data-target-popup='#alarms-popup')._uppercase._grey.js-show-popup Тревоги
+
+      div(style="display: inline-block; margin: 15px")
+        +button(href='#' data-target-popup='#clients-settings')._uppercase._grey.js-show-popup Настройки
 
     div(style="margin: 20px")
       //- Общая информация
@@ -104,3 +108,4 @@ block layout-right
     +edit-card-data-popup
     +notifications-popup
     +alarms-popup
+    +clients-settings

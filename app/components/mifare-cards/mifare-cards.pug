@@ -4,28 +4,29 @@ include ../search-bar-add/search-bar-add
 mixin mifare-cards()
   +b.mifare-cards&attributes(attributes)
     +search-bar-add('Добавить', 'ID Карты, ФИО')
-    +default-table.__content
-      +default-table-header
-        +default-table-row
-          +default-table-cell ID Карты
-          +default-table-cell Привязана
-      +default-table-body
-        +default-table-row
-          +default-table-cell
-            a(href='#') 1234 5678 9012
-          +default-table-cell Нет
-        +default-table-row
-          +default-table-cell
-            a(href='#') 5234 4256 9012
-          +default-table-cell
-            a(href='#') Петров Василий Анатольевич
-        +default-table-row
-          +default-table-cell
-            a(href='#') 7346 2134 9012
-          +default-table-cell
-            a(href='#') Смирнов Алексей Борисович
-        +default-table-row
-          +default-table-cell
-            a(href='#') 1234 6467 9012
-          +default-table-cell
-            a(href='#') Алексеев Иван Сергеевич
+    +e.content
+      +default-table
+        +default-table-header
+          +default-table-row
+            +default-table-cell ID Карты
+            +default-table-cell Привязана
+        +default-table-body
+          +default-table-row
+            +default-table-cell
+              a(href='#') 1234 5678 9012
+            +default-table-cell Нет
+          +default-table-row
+            +default-table-cell
+              a(href='#') 5234 4256 9012
+            +default-table-cell
+              a(href='#') Петров Василий Анатольевич
+          +default-table-row
+            +default-table-cell
+              a(href='#') 7346 2134 9012
+            +default-table-cell
+              a(href='#') Смирнов Алексей Борисович
+          +default-table-row
+            +default-table-cell
+              a(href='#') 1234 6467 9012
+            +default-table-cell
+              a(href='#') Алексеев Иван Сергеевич
