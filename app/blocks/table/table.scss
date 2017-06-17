@@ -17,6 +17,7 @@
     padding: 0;
     margin-left: auto;
     margin-right: -6px;
+    flex-shrink: 0;
 
     &_default {
       margin: 0 18px 0 0;
@@ -141,6 +142,8 @@
     align-items: center;
     flex-wrap: wrap;
     min-width: 0;
+
+    &_nowrap { flex-wrap: nowrap; }
 
     &_align_center { text-align: center; }
 
