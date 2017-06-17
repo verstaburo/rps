@@ -10,7 +10,7 @@ include ../../blocks/dropdown/dropdown
 mixin search-filter()
   +dropdown#search-filter-dropdown._right
     +b.search-filter&attributes(attributes)
-      +inner-sidebar
+      +inner-sidebar.__sidebar
         +inner-sidebar-item._menu
           +vertical-menu
             +vertical-menu-item._active
@@ -59,9 +59,9 @@ mixin search-filter()
               +e.col._flexible
                 +button.BUTTON._text_grey._uppercase.__reset Сбросить
               +e.col
-                +button.BUTTON._grey._uppercase.js-search-filter-action-save Сохранить фильтр
+                +button.BUTTON._grey._uppercase.__button.js-search-filter-action-save Сохранить фильтр
               +e.col
-                +button.BUTTON._green._uppercase Применить
+                +button.BUTTON._green._uppercase.__button Применить
           +e.block._saving
             +e.controls
               +e.col._flexible
