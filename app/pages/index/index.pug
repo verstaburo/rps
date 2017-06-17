@@ -23,7 +23,7 @@ block layout-right
   +header(menu)
 
   +b.index.page
-    +actions-header
+    +actions-header.js-index-actions-default
       +actions-header-col
         +button(href="#" data-target-dropdown='#add-client-dropdown')._green.js-show-dropdown Добавить клиента
         +add-client-dropdown
@@ -31,6 +31,15 @@ block layout-right
         +search-bar-filter('Введите название партнёра, название или адрес объекта')._white.__search-bar
       +actions-header-col
         +icon-button('icon-settings')(href="#")
+    +actions-header.js-index-actions-selected
+      +actions-header-col
+        +partial-button('icon-close')._grey.js-index-actions-count 1
+      +actions-header-col
+        +button(href='#' data-target-popup='#edit-card-data-popup')._uppercase._grey.js-show-popup Изменение данных карт
+      +actions-header-col
+        +button(href='#')._uppercase._grey Удалить компанию
+      +actions-header-col
+        +button(href='#')._uppercase._grey Удалить Физ. лицо
 
     +table()
       +table-header
