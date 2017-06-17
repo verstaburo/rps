@@ -1,10 +1,10 @@
 .login {
-  display: flex;
-  flex-direction: column;
+  display: block;
   width: 100%;
   min-height: 100vh;
   background-color: #efefef;
   border-top: 6px solid #202325;
+  padding-right: 6px;
 
   &__logo {
     display: block;
@@ -24,7 +24,9 @@
 
   &__content {
     display: block;
-    margin: auto;
+    padding-top: 100px;
+    width: 471px;
+    margin: 0 auto;
   }
 
   &__forget-pass {
