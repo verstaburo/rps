@@ -1,3 +1,7 @@
 .sessions {
   display: block;
+
+  &__datepicker {
+    width: 316px;
+  }
 }
