@@ -9,6 +9,7 @@ include ../../blocks/partial-button/partial-button
 include ../../components/header/header
 include ../../components/actions-header/actions-header
 include ../../components/add-client-dropdown/add-client-dropdown
+include ../../components/edit-card-data-popup/edit-card-data-popup
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -824,4 +825,5 @@ block layout-right
               +table-text 28.04.2017
               +table-text._size_small 12:23:32
           +table-col._width_260
+  +edit-card-data-popup
   +dropdown-overlay

@@ -2,7 +2,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 10px 28px;
+  padding: 10px 16px;
 
   &_uppercase {
     text-transform: uppercase;
@@ -17,7 +17,7 @@
   }
 
   &_size_small {
-    padding: 6px 22px;
+    padding: 6px 16px;
   }
 
   &_green {
