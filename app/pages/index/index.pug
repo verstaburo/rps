@@ -57,776 +57,635 @@ block layout-right
           +table-filter-button._orange 9-1
         +table-header-col('Комментарий')._width_260
 
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Novotel Moscow City
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 51
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 67
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 67
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 13:34:32
-          +table-col._width_260
-            +table-text Перезвонить 28.04.2017
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b ООО «ПТК»
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 21
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 45
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 34
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 13:32:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Сбербанк
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 12
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 56
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 12
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:56:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Globalone
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 32
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 35
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 36
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:47:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text-block
+      - for (var i = 0; i < 2; i++)
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
               +table-text
-                a(href="#")
-                  b Иванов Дмитрий Евгеньевич
-              +table-text._grey Сбербанк
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") —
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 10:44:00
-          +table-col._width_260
-      +table-row._parent
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Газпром
-            +icon-button('icon-caret')(href='#')._shadow.__toggle
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 2
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 5
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 35
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:14:32
-          +table-col._width_260
-        +table-row._children
-          +table-row._parent
-            +table-row._main
-              +table-col._flexible._nowrap
-                +icon('icon-person').icon._person
-                +checkbox('row', 'value').__checkbox
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Novotel Moscow City
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 51
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-cards').js-show-popup 67
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 67
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 13:34:32
+            +table-col._width_260
+              +table-text Перезвонить 28.04.2017
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b ООО «ПТК»
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 21
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 45
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 34
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 13:32:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Сбербанк
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 12
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 56
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 12
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:56:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Globalone
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 32
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 35
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 36
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:47:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text-block
                 +table-text
                   a(href="#")
-                    b Васильев Генадий Николаевич
-                +icon-button('icon-caret')(href='#')._shadow.__toggle
-              +table-col._width_120
-                +table-text Физ. лицо
-              +table-col._width_100._align_center
-                +table-text
-                  a(href="#") —
-              +table-col._width_100._align_center
-                +table-text
-                  a(href="#") 2
-              +table-col._width_100._align_center
-                +table-text
-                  a(href="#") 1
-              +table-col._width_200
-                +table-text-block
-                  +table-text 28.04.2017
-                  +table-text._size_small 12:14:32
-              +table-col._width_260
-            +table-row._children
-              +table-row._main._left_padding
+                    b Иванов Дмитрий Евгеньевич
+                +table-text._grey Сбербанк
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup —
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 1
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 1
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 10:44:00
+            +table-col._width_260
+        +table-row._parent
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Газпром
+              +icon-button('icon-caret')(href='#')._shadow.__toggle
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 2
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 5
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 35
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:14:32
+            +table-col._width_260
+          +table-row._children
+            +table-row._parent
+              +table-row._main
                 +table-col._flexible._nowrap
-                  +icon('icon-card').icon._card
+                  +icon('icon-person').icon._person
                   +checkbox('row', 'value').__checkbox
                   +table-text
                     a(href="#")
-                      b 1234 5678 9067
+                      b Васильев Генадий Николаевич
+                  +icon-button('icon-caret')(href='#')._shadow.__toggle
                 +table-col._width_120
+                  +table-text Физ. лицо
                 +table-col._width_100._align_center
+                  +table-text
+                    a(href="#") —
                 +table-col._width_100._align_center
+                  +table-text
+                    a(href="#") 2
                 +table-col._width_100._align_center
+                  +table-text
+                    a(href="#") 1
                 +table-col._width_200
+                  +table-text-block
+                    +table-text 28.04.2017
+                    +table-text._size_small 12:14:32
                 +table-col._width_260
-              +table-row._main._left_padding
+              +table-row._children
+                +table-row._main._left_padding
+                  +table-col._flexible._nowrap
+                    +icon('icon-card').icon._card
+                    +checkbox('row', 'value').__checkbox
+                    +table-text
+                      a(href="#")
+                        b 1234 5678 9067
+                  +table-col._width_120
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_200
+                  +table-col._width_260
+                +table-row._main._left_padding
+                  +table-col._flexible._nowrap
+                    +icon('icon-card').icon._card
+                    +checkbox('row', 'value').__checkbox
+                    +table-text
+                      a(href="#")
+                        b 1234 5678 9067
+                  +table-col._width_120
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_200
+                  +table-col._width_260
+            +table-row._parent
+              +table-row._main
                 +table-col._flexible._nowrap
-                  +icon('icon-card').icon._card
+                  +icon('icon-person').icon._person
                   +checkbox('row', 'value').__checkbox
                   +table-text
                     a(href="#")
-                      b 1234 5678 9067
+                      b Николаева Надежда Васильевна
+                  +icon-button('icon-caret')(href='#')._shadow.__toggle
                 +table-col._width_120
+                  +table-text Физ. лицо
                 +table-col._width_100._align_center
+                  +table-text
+                    a(href="#") —
                 +table-col._width_100._align_center
+                  +table-text
+                    a(href="#") 1
                 +table-col._width_100._align_center
+                  +table-text
+                    a(href="#") 1
                 +table-col._width_200
+                  +table-text-block
+                    +table-text 28.04.2017
+                    +table-text._size_small 12:14:32
                 +table-col._width_260
-          +table-row._parent
-            +table-row._main
-              +table-col._flexible._nowrap
-                +icon('icon-person').icon._person
-                +checkbox('row', 'value').__checkbox
+              +table-row._children
+                +table-row._main._left_padding
+                  +table-col._flexible._nowrap
+                    +icon('icon-card').icon._card
+                    +checkbox('row', 'value').__checkbox
+                    +table-text
+                      a(href="#")
+                        b 1234 5678 9067
+                  +table-col._width_120
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_200
+                  +table-col._width_260
+                +table-row._main._left_padding
+                  +table-col._flexible._nowrap
+                    +icon('icon-card').icon._card
+                    +checkbox('row', 'value').__checkbox
+                    +table-text
+                      a(href="#")
+                        b 1234 5678 9067
+                  +table-col._width_120
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_200
+                  +table-col._width_260
+            +table-row._parent
+              +table-row._main._left_padding
+                +table-col._flexible._nowrap
+                  +checkbox('row', 'value').__checkbox
+                  +table-text
+                    a(href="#")
+                      b Александрова Александра  Александровна
+                  +icon-button('icon-caret')(href='#')._shadow.__toggle
+                +table-col._width_120
+                  +table-text Физ. лицо
+                +table-col._width_100._align_center
+                  +table-text
+                    a(href="#") —
+                +table-col._width_100._align_center
+                  +table-text
+                    a(href="#") 2
+                +table-col._width_100._align_center
+                  +table-text
+                    a(href="#") 1
+                +table-col._width_200
+                  +table-text-block
+                    +table-text 28.04.2017
+                    +table-text._size_small 12:14:32
+                +table-col._width_260
+              +table-row._children
+                +table-row._main._left_padding
+                  +table-col._flexible._nowrap
+                    +icon('icon-card').icon._card
+                    +checkbox('row', 'value').__checkbox
+                    +table-text
+                      a(href="#")
+                        b 1234 5678 9067
+                  +table-col._width_120
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_200
+                  +table-col._width_260
+                +table-row._main._left_padding
+                  +table-col._flexible._nowrap
+                    +icon('icon-card').icon._card
+                    +checkbox('row', 'value').__checkbox
+                    +table-text
+                      a(href="#")
+                        b 1234 5678 9067
+                  +table-col._width_120
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_100._align_center
+                  +table-col._width_200
+                  +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b ООО «Робот-Икс»
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 23
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-cards').js-show-popup 5
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 56
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 10:57:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text-block
+                +table-text
+                  a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                    b Александрова Александра Александровна
+                +table-text._grey Газпром
+            +table-col._width_120
+              +table-text
+                | Физ. лицо
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup —
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-cards').js-show-popup 1
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 5
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 11:22:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Energizer
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 5
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 45
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 45
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:05:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b 7Days
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 2
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 2
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 1
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:23:32
+            +table-col._width_260
+              +table-text Очень много неоплачено
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b ВТБ 24
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 143
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 167
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 145
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:23:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Sun Clinic
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 8
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 10
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 8
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:23:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Хостел Сити
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 12
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 15
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 15
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:23:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Novotel Moscow City
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 51
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 67
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 67
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 13:34:32
+            +table-col._width_260
+              +table-text Перезвонить 28.04.2017
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b ООО «ПТК»
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 21
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 45
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 34
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 13:32:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Сбербанк
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 12
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 56
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 12
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:56:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Globalone
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 32
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 35
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 36
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:47:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text-block
                 +table-text
                   a(href="#")
-                    b Николаева Надежда Васильевна
-                +icon-button('icon-caret')(href='#')._shadow.__toggle
-              +table-col._width_120
-                +table-text Физ. лицо
-              +table-col._width_100._align_center
-                +table-text
-                  a(href="#") —
-              +table-col._width_100._align_center
-                +table-text
-                  a(href="#") 1
-              +table-col._width_100._align_center
-                +table-text
-                  a(href="#") 1
-              +table-col._width_200
-                +table-text-block
-                  +table-text 28.04.2017
-                  +table-text._size_small 12:14:32
-              +table-col._width_260
-            +table-row._children
-              +table-row._main._left_padding
-                +table-col._flexible._nowrap
-                  +icon('icon-card').icon._card
-                  +checkbox('row', 'value').__checkbox
-                  +table-text
-                    a(href="#")
-                      b 1234 5678 9067
-                +table-col._width_120
-                +table-col._width_100._align_center
-                +table-col._width_100._align_center
-                +table-col._width_100._align_center
-                +table-col._width_200
-                +table-col._width_260
-              +table-row._main._left_padding
-                +table-col._flexible._nowrap
-                  +icon('icon-card').icon._card
-                  +checkbox('row', 'value').__checkbox
-                  +table-text
-                    a(href="#")
-                      b 1234 5678 9067
-                +table-col._width_120
-                +table-col._width_100._align_center
-                +table-col._width_100._align_center
-                +table-col._width_100._align_center
-                +table-col._width_200
-                +table-col._width_260
-          +table-row._parent
-            +table-row._main._left_padding
-              +table-col._flexible._nowrap
-                +checkbox('row', 'value').__checkbox
-                +table-text
-                  a(href="#")
-                    b Александрова Александра  Александровна
-                +icon-button('icon-caret')(href='#')._shadow.__toggle
-              +table-col._width_120
-                +table-text Физ. лицо
-              +table-col._width_100._align_center
-                +table-text
-                  a(href="#") —
-              +table-col._width_100._align_center
-                +table-text
-                  a(href="#") 2
-              +table-col._width_100._align_center
-                +table-text
-                  a(href="#") 1
-              +table-col._width_200
-                +table-text-block
-                  +table-text 28.04.2017
-                  +table-text._size_small 12:14:32
-              +table-col._width_260
-            +table-row._children
-              +table-row._main._left_padding
-                +table-col._flexible._nowrap
-                  +icon('icon-card').icon._card
-                  +checkbox('row', 'value').__checkbox
-                  +table-text
-                    a(href="#")
-                      b 1234 5678 9067
-                +table-col._width_120
-                +table-col._width_100._align_center
-                +table-col._width_100._align_center
-                +table-col._width_100._align_center
-                +table-col._width_200
-                +table-col._width_260
-              +table-row._main._left_padding
-                +table-col._flexible._nowrap
-                  +icon('icon-card').icon._card
-                  +checkbox('row', 'value').__checkbox
-                  +table-text
-                    a(href="#")
-                      b 1234 5678 9067
-                +table-col._width_120
-                +table-col._width_100._align_center
-                +table-col._width_100._align_center
-                +table-col._width_100._align_center
-                +table-col._width_200
-                +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b ООО «Робот-Икс»
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 23
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 5
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 56
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 10:57:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text-block
+                    b Иванов Дмитрий Евгеньевич
+                +table-text._grey Сбербанк
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
               +table-text
-                a(href="#")
-                  b Александрова Александра Александровна
-              +table-text._grey Газпром
-          +table-col._width_120
-            +table-text
-              | Физ. лицо
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") —
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 5
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 11:22:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Energizer
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 5
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 45
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 45
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:05:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b 7Days
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 2
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 2
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:23:32
-          +table-col._width_260
-            +table-text Очень много неоплачено
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b ВТБ 24
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 143
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 167
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 145
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:23:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Sun Clinic
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 8
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 10
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 8
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:23:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Хостел Сити
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 12
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 15
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 15
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:23:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Novotel Moscow City
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 51
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 67
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 67
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 13:34:32
-          +table-col._width_260
-            +table-text Перезвонить 28.04.2017
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b ООО «ПТК»
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 21
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 45
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 34
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 13:32:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Сбербанк
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 12
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 56
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 12
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:56:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Globalone
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 32
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 35
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 36
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:47:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text-block
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup —
+            +table-col._width_100._align_center
               +table-text
-                a(href="#")
-                  b Иванов Дмитрий Евгеньевич
-              +table-text._grey Сбербанк
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") —
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 10:44:00
-          +table-col._width_260
-            +table-text
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Газпром
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 2
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 5
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 35
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:14:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b ООО «Робот-Икс»
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 23
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 5
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 56
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 10:57:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text-block
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 1
+            +table-col._width_100._align_center
               +table-text
-                a(href="#")
-                  b Александрова Александра Александровна
-              +table-text._grey Газпром
-          +table-col._width_120
-            +table-text
-              | Физ. лицо
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") —
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 5
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 11:22:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Energizer
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 5
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 45
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 45
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:05:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#")
-                b 7Days
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 2
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 2
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 1
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:23:32
-          +table-col._width_260
-            +table-text Очень много неоплачено
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b ВТБ 24
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 143
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 167
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 145
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:23:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Sun Clinic
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 8
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 10
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 8
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:23:32
-          +table-col._width_260
-      +table-row
-        +table-row._main
-          +table-col._flexible._nowrap
-            +checkbox('row', 'value').__checkbox
-            +table-text
-              a(href="#" data-target-popup='#clients-popup').js-show-popup
-                b Хостел Сити
-          +table-col._width_120
-            +table-text Компания
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 12
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 15
-          +table-col._width_100._align_center
-            +table-text
-              a(href="#") 15
-          +table-col._width_200
-            +table-text-block
-              +table-text 28.04.2017
-              +table-text._size_small 12:23:32
-          +table-col._width_260
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 1
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 10:44:00
+            +table-col._width_260
+              +table-text
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b Газпром
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 2
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-info').js-show-popup 5
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 35
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 12:14:32
+            +table-col._width_260
+        +table-row
+          +table-row._main
+            +table-col._flexible._nowrap
+              +checkbox('row', 'value').__checkbox
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-common-info').js-show-popup
+                  b ООО «Робот-Икс»
+            +table-col._width_120
+              +table-text Компания
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-individual-info').js-show-popup 23
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-mifare-cards').js-show-popup 5
+            +table-col._width_100._align_center
+              +table-text
+                a(href="#" data-target-popup='#clients-popup' data-subtarget='#clients-popup-ts-list').js-show-popup 56
+            +table-col._width_200
+              +table-text-block
+                +table-text 28.04.2017
+                +table-text._size_small 10:57:32
+            +table-col._width_260
   +edit-card-data-popup
   +clients-popup
   +clients-settings

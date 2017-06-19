@@ -1,6 +1,5 @@
-import $ from 'jquery';
-
 export default () => {
+  const { $ } = window;
   const block = $('.edit-card-data-popup');
 
   if (!block.length) {

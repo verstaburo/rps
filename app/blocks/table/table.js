@@ -1,6 +1,5 @@
-import $ from 'jquery';
-
 export default () => {
+  const { $ } = window;
   const table = $('.table');
 
   if (!table.length) {

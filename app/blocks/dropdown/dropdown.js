@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { freeze, unfreeze } from '../../scripts/libs/disable-scroll';
 
 export default () => {
@@ -10,6 +9,7 @@ export default () => {
   const DATA_ATTRIBUTE = 'target-dropdown';
   const FADE_DURATION = 250;
 
+  const { $ } = window;
   const items = $(DROPDOWN_CLASS);
   const overlay = $(OVERLAY_CLASS);
 

@@ -1,6 +1,5 @@
-import $ from 'jquery';
-
 export default () => {
+  const { $ } = window;
   const block = $('.qr-codes-templates');
   const count = $('.js-qr-codes-templates-count');
   const checkboxes = block.find('.accordion__select .checkbox__input');

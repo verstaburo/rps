@@ -1,6 +1,5 @@
-import $ from 'jquery';
-
 export default () => {
+  const { $ } = window;
   const popup = $('#notifications-popup');
   const notifications = popup.find('.notification-info');
 

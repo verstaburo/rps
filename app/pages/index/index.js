@@ -1,6 +1,5 @@
-import $ from 'jquery';
-
 export default () => {
+  const { $ } = window;
   const index = $('.index');
 
   if (!index.length) {

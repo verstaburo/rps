@@ -1,7 +1,6 @@
-import $ from 'jquery';
-
 // Freeze page content scrolling
 export function freeze() {
+  const { $ } = window;
   const h = $('html');
 
   if (h.css('position') !== 'fixed') {
@@ -17,6 +16,7 @@ export function freeze() {
 
 // Unfreeze page content scrolling
 export function unfreeze() {
+  const { $ } = window;
   const h = $('html');
 
   if (h.css('position') === 'fixed') {

@@ -8,4 +8,17 @@ export default () => {
   }
 
   block.tabs();
+
+  // set active tab, depends on 'data-subtarget' param
+  const popup = $('#clients-popup');
+
+  popup.on('popup:show', (e, subtarget) => {
+    if (!subtarget) {
+      return;
+    }
+
+    block
+      .find(`a[href="${subtarget}"]`)
+      .click();
+  });
 };

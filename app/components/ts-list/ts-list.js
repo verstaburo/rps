@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export default () => {
   const COMPONENT = '.ts-list';
   const ACTION_BTN = '.ts-list__action';
@@ -11,6 +9,7 @@ export default () => {
   const INPUT = '.input';
   const INPUT_DEFAULT_STATE = 'input_text-like';
 
+  const { $ } = window;
   const component = $(COMPONENT);
 
   if (!component.length) {

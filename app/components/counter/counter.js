@@ -1,6 +1,5 @@
-import $ from 'jquery';
-
 export default () => {
+  const { $ } = window;
   const counter = $('.counter');
 
   if (!counter.length) {

@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { freeze, unfreeze } from '../../scripts/libs/disable-scroll';
 
 export default () => {
@@ -8,6 +7,7 @@ export default () => {
   const CLOSE_BUTTON_CLASS = '.popup__close';
   const DATA_ATTRIBUTE = 'target-popup';
 
+  const { $ } = window;
   const popups = $(POPUP_CLASS);
 
   if (!popups.length) {
@@ -54,6 +54,7 @@ export default () => {
     e.preventDefault();
     const btn = $(this);
     const id = btn.data(DATA_ATTRIBUTE);
+    const subtarget = btn.data('subtarget');
     const popup = $(id);
 
     if (!popup.length) {
@@ -63,7 +64,7 @@ export default () => {
       return;
     }
 
-    popup.trigger('popup:show');
+    popup.trigger('popup:show', [subtarget]);
   });
 
   // close btn handler

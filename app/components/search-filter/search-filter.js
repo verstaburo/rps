@@ -1,6 +1,5 @@
-import $ from 'jquery';
-
 export default () => {
+  const { $ } = window;
   const block = $('.search-filter');
 
   if (!block.length) {
