@@ -25,11 +25,11 @@ mixin individual-info()
                   +icon('icon-trash').icon-trash
             +e.content(id=`individual-info-info-${i}`)
               +e.fields
-                +field
+                +field.LABEL
                   +field-label._align_right Фамилия:
                   +field-item
                     +input
-                +field
+                +field.LABEL
                   +field-label._align_right Имя:
                   +field-item
                     +input
@@ -37,11 +37,11 @@ mixin individual-info()
                   +field-label._align_right Отчество:
                   +field-item
                     +input
-                +field
+                +field.LABEL
                   +field-label._align_right Телефон:
                   +field-item
                     +input(type='tel')
-                +field
+                +field.LABEL
                   +field-label._align_right E-mail:
                   +field-item
                     +input(type='email')

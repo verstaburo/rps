@@ -14,12 +14,12 @@ mixin mifare-card-info()
         +field-label._align_right.mifare-card-info__label Текущая зона
         +field-item.mifare-card-info__field
           +select([{title: 'Вне парковки', value: 1}, {title: 'Вне парковки 1', value: 2}])
-      +field
+      +field.LABEL
         +field-label._align_right.mifare-card-info__label Время въезда
         +field-item.mifare-card-info__field
           +input(type='date' value='2016-11-20')
           +input(type='time' value='12:40').mifare-card-info__small
-      +field
+      +field.LABEL
         +field-label._align_right.mifare-card-info__label Время пересчета
         +field-item.mifare-card-info__field
           +input(type='date' value='2016-11-20')
@@ -32,30 +32,30 @@ mixin mifare-card-info()
         +field-label._align_right.mifare-card-info__label Тарифная сетка
         +field-item.mifare-card-info__field
           +select([{title: 'Сетка Владимира', value: 1}, {title: 'Сетка Владимира 1', value: 2}])
-      +field
+      +field.LABEL
         +field-label._align_right.mifare-card-info__label Сумма на карте
         +field-item.mifare-card-info__field
           +input(value='0.00')
-      +field
+      +field.LABEL
         +field-label._align_right.mifare-card-info__label ТВП
         +field-item.mifare-card-info__field
           +input(type='date' value='2000-01-01')
           +input(type='time' value='00:00').mifare-card-info__small
-      +field
+      +field.LABEL
         +field-label._align_right.mifare-card-info__label ТКВП
         +field-item.mifare-card-info__field
           +input(value='0')
-      +field
+      +field.LABEL
         +field-label._align_right.mifare-card-info__label Обнуление ВП
         +field-item.mifare-card-info__field
           +input(type='date' value='2000-01-01')
           +input(type='time' value='00:00').mifare-card-info__small
-      +field
+      +field.LABEL
         +field-label._align_right.mifare-card-info__label Обнуление КВП
         +field-item.mifare-card-info__field
           +input(type='date' value='2000-01-01')
           +input(type='time' value='00:00').mifare-card-info__small
-      +field
+      +field.LABEL
         +field-label._align_right.mifare-card-info__label Обнуление абонемент
         +field-item.mifare-card-info__field
           +input(type='date' value='2000-01-01')

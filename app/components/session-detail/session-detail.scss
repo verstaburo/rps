@@ -24,13 +24,14 @@
 
   &__body {
     display: flex;
-    margin-top: 25px;
 
     &_photos {
+      margin-top: 40px;
       justify-content: space-between;
     }
 
     &_status {
+      margin-top: 25px;
       flex-direction: column;
     }
   }

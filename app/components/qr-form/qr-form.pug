@@ -11,7 +11,7 @@ mixin qr-form()
         block
     +e.content
       +e.group
-        +field
+        +field.LABEL
           +field-label._align_right.qr-form__label Название штрихкода:
           +field-item.qr-form__field
             +input
@@ -43,13 +43,13 @@ mixin qr-form()
           +field-item.qr-form__field
             +select([{title: 'Все города', value: 1}, {title: 'Option', value: 2}])
       +e.group
-        +field
+        +field.LABEL
           +field-label._align_right.qr-form__label Сумма скидки:
           +field-item.qr-form__field
             +input.qr-form__small-field
             +checkbox('name', 'value')._with_label.qr-form__small-field.qr-form__checkbox Любая сумма
       +e.group
-        +field
+        +field.LABEL
           +field-label._align_right.qr-form__label Описание:
           +field-item.qr-form__field
             +textarea
