@@ -11,7 +11,8 @@ mixin mifare-popup()
     +popup-header('5234 4256 9012 | Петров Василий Анатольевич')
     +popup-body
       +b.mifare-popup
-        +alert._danger.__alert Внимание! Карта заблокирована.
+        +e.alert
+          +alert._danger Внимание! Карта заблокирована.
         +e.container
           +inner-sidebar.__sidebar
             +inner-sidebar-item._menu
@@ -25,7 +26,10 @@ mixin mifare-popup()
             +inner-sidebar-item._with_border
               a(href='#').mifare-popup__remove-card Отвязать карту
             +inner-sidebar-item.mifare-popup__sidebar-btn
-              +icon-button('icon-lock')(href='#')._uppercase._shadow.mifare-popup__unlock-button Разблокировать
+              .mifare-popup__action.mifare-popup__action_unblock
+                +icon-button('icon-lock')(href='#')._uppercase._shadow.mifare-popup__action-btn Разблокировать
+              .mifare-popup__action.mifare-popup__action_block
+                +icon-button('icon-lock')(href='#')._uppercase._shadow.mifare-popup__action-btn Заблокировать
 
           +e.content
             // Информация
