@@ -13,9 +13,6 @@
     <link href="assets/styles/libs/spectrum.css" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery-3.2.1.min.js"></script>
-    <script src="assets/scripts/libs/moment.min.js"></script>
-    <script src="assets/scripts/libs/jquery.daterangepicker.min.js"></script>
-    <script src="assets/scripts/libs/spectrum.js"></script>
 </head>
 
 <body>
@@ -139,7 +136,7 @@
                         </button>
                         <input class="search-bar__input" type="search" placeholder="ПОИСК" />
                     </form>
-                    <div class="indicators header__col-block header__indicators">
+                    <div class="indicators header__col-block header__indicators js-show-popup" data-target-popup="#alarms-popup">
                         <a class="indicators__item indicators__item_red" href="#">
                             <span class="indicators__circle"></span>
                             <span class="indicators__text">7</span>
@@ -157,7 +154,7 @@
                             <span class="indicators__text">0</span>
                         </a>
                     </div>
-                    <span class="notifications header__col-block header__notifications">
+                    <span class="notifications header__col-block header__notifications js-show-popup" data-target-popup="#notifications-popup">
                         <svg class="notifications__icon">
                             <use xlink:href="assets/images/icon.svg#icon_icon-bell"></use>
                         </svg>
@@ -305,14 +302,14 @@
                                 <div class="field__label field__label_align_right settings-devices-zone__label">Кол-во машиномест::
                                 </div>
                                 <div class="field__content settings-devices-zone__field">
-                                    <input class="input" type="text" />
+                                    <input class="input" type="number" />
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="field__label field__label_align_right settings-devices-zone__label">Кол-во свободных машиномест:
                                 </div>
                                 <div class="field__content settings-devices-zone__field">
-                                    <input class="input" type="text" />
+                                    <input class="input" type="number" />
                                 </div>
                             </div>
                         </form>
@@ -321,6 +318,225 @@
             </div>
         </div>
     </div>
+    <div class="popup" id="alarms-popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div class="popup__header">
+                    <h2 class="popup__heading">Тревоги: 39
+                    </h2>
+                    <div class="indicators alarms-popup__header-indicators">
+                        <a class="indicators__item indicators__item_red" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">7</span>
+                        </a>
+                        <a class="indicators__item indicators__item_brown" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">24</span>
+                        </a>
+                        <a class="indicators__item indicators__item_yellow" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">12</span>
+                        </a>
+                        <a class="indicators__item indicators__item_grey" href="#">
+                            <span class="indicators__circle"></span>
+                            <span class="indicators__text">0</span>
+                        </a>
+                    </div>
+                    <div class="popup__close">
+                        <svg class="popup__close-icon">
+                            <use xlink:href="assets/images/icon.svg#icon_icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="popup__body">
+                    <div class="alarms-popup">
+                        <table class="default-table alarms-popup__table">
+                            <thead class="default-table__header">
+                                <tr class="default-table__row">
+                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_100 alarms-popup__th">Код
+                                    </td>
+                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_160 alarms-popup__th">Устройство
+                                    </td>
+                                    <td class="default-table__cell default-table__cell_border_bottom alarms-popup__th">Описание
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody class="default-table__body">
+                                <tr class="default-table__row">
+                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_100 alarms-popup__td">
+                                        <div class="indicators alarms-popup__indicators">
+                                            <a class="indicators__item indicators__item_brown" href="#">
+                                                <span class="indicators__circle"></span>
+                                                <span class="indicators__text">101</span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_160 alarms-popup__td">Стойка въезда
+                                    </td>
+                                    <td class="default-table__cell default-table__cell_border_bottom alarms-popup__td">Нет связи с внешним ридером. Проверьте подключение, питание и работоспособность устройства.
+                                    </td>
+                                </tr>
+                                <tr class="default-table__row">
+                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_100 alarms-popup__td">
+                                        <div class="indicators alarms-popup__indicators">
+                                            <a class="indicators__item indicators__item_brown" href="#">
+                                                <span class="indicators__circle"></span>
+                                                <span class="indicators__text">102</span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_160 alarms-popup__td">Стойка въезда
+                                    </td>
+                                    <td class="default-table__cell default-table__cell_border_bottom alarms-popup__td">Нет связи с внешним ридером. Проверьте подключение, питание и работоспособность устройства.
+                                    </td>
+                                </tr>
+                                <tr class="default-table__row">
+                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_100 alarms-popup__td">
+                                        <div class="indicators alarms-popup__indicators">
+                                            <a class="indicators__item indicators__item_brown" href="#">
+                                                <span class="indicators__circle"></span>
+                                                <span class="indicators__text">103</span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="default-table__cell default-table__cell_border_bottom default-table__cell_width_160 alarms-popup__td">Стойка въезда
+                                    </td>
+                                    <td class="default-table__cell default-table__cell_border_bottom alarms-popup__td">Нет связи с внешним ридером. Проверьте подключение, питание и работоспособность устройства.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="notifications-popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div class="popup__header">
+                    <h2 class="popup__heading">Уведомления: 4
+                    </h2>
+                    <div class="popup__close">
+                        <svg class="popup__close-icon">
+                            <use xlink:href="assets/images/icon.svg#icon_icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="popup__body">
+                    <div class="notifications-popup">
+                        <div class="notifications-popup__notifications">
+                            <div class="notifications-popup__heading">Сегодня
+                            </div>
+                            <div class="notifications-popup__items">
+                                <div class="notification-info notifications-popup__item">
+                                    <div class="notification-info__content">
+                                        <div class="notification-info__col notification-info__col_align_center">
+                                            <span class="notification-info__heading">13:35</span>
+                                            <a class="notification-info__indicator" href="#"></a>
+                                        </div>
+                                        <div class="notification-info__col">
+                                            <span class="notification-info__heading">Поддержка</span>
+                                            <div class="notification-info__body">
+                                                <span class="notification-info__text">Вам ответили по проблеме:
+                                                </span>
+                                                <a class="notification-info__text" href="#">Нет никакой связи со стойками передней парковки</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="icon-button icon-button_shadow icon-button_uppercase notification-info__expand" href="#">
+                                        <svg class="icon-button__icon">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                        </svg>
+                                        <span class="icon-button__text">Развернуть</span>
+                                    </a>
+                                </div>
+                                <div class="notification-info notifications-popup__item">
+                                    <div class="notification-info__content">
+                                        <div class="notification-info__col notification-info__col_align_center">
+                                            <span class="notification-info__heading">13:35</span>
+                                            <a class="notification-info__indicator" href="#"></a>
+                                        </div>
+                                        <div class="notification-info__col">
+                                            <span class="notification-info__heading">Поддержка</span>
+                                            <div class="notification-info__body">
+                                                <span class="notification-info__text">Вам ответили по проблеме:
+                                                </span>
+                                                <a class="notification-info__text" href="#">Нет никакой связи со стойками передней парковки</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="icon-button icon-button_shadow icon-button_uppercase notification-info__expand" href="#">
+                                        <svg class="icon-button__icon">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                        </svg>
+                                        <span class="icon-button__text">Развернуть</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notifications-popup__notifications">
+                            <div class="notifications-popup__heading">Вчера
+                            </div>
+                            <div class="notifications-popup__items">
+                                <div class="notification-info notifications-popup__item">
+                                    <div class="notification-info__content">
+                                        <div class="notification-info__col notification-info__col_align_center">
+                                            <span class="notification-info__heading">13:35</span>
+                                            <a class="notification-info__indicator" href="#">
+                                                <svg class="notification-info__done">
+                                                    <use xlink:href="assets/images/icon.svg#icon_icon-accept"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="notification-info__col">
+                                            <span class="notification-info__heading">Системное уведомление</span>
+                                            <div class="notification-info__body">
+                                                <span class="notification-info__text">Обычное системное уведомление, которое чтобы прочитать нужно нажать на кружок слева. Обычное системное уведомление, которое чтобы прочитать нужно нажать на кружок слева. Обычное системное уведомление, которое
+                                                    чтобы прочитать нужно нажать на кружок слева.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="icon-button icon-button_shadow icon-button_uppercase notification-info__expand" href="#">
+                                        <svg class="icon-button__icon">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                        </svg>
+                                        <span class="icon-button__text">Развернуть</span>
+                                    </a>
+                                </div>
+                                <div class="notification-info notifications-popup__item">
+                                    <div class="notification-info__content">
+                                        <div class="notification-info__col notification-info__col_align_center">
+                                            <span class="notification-info__heading">13:35</span>
+                                            <a class="notification-info__indicator" href="#"></a>
+                                        </div>
+                                        <div class="notification-info__col">
+                                            <span class="notification-info__heading">Поддержка</span>
+                                            <div class="notification-info__body">
+                                                <span class="notification-info__text">Вам ответили по проблеме:
+                                                </span>
+                                                <a class="notification-info__text" href="#">Нет никакой связи со стойками передней парковки Нет никакой связи со стойками передней парковки Нет никакой связи со стойками передней парковки</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="icon-button icon-button_shadow icon-button_uppercase notification-info__expand" href="#">
+                                        <svg class="icon-button__icon">
+                                            <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
+                                        </svg>
+                                        <span class="icon-button__text">Развернуть</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/libs/jquery-ui.min.js"></script>
+    <script src="assets/scripts/libs/moment.min.js"></script>
+    <script src="assets/scripts/libs/jquery.daterangepicker.min.js"></script>
+    <script src="assets/scripts/libs/spectrum.js"></script>
     <script src="assets/scripts/app.min.js"></script>
 </body>
 
