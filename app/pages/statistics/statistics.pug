@@ -21,7 +21,7 @@ block layout-right
   +header([{path: '#', title: 'Таблицы', active: true}, {path: '#', title: 'Графики'}])
 
   +b.statistics
-    +inner-sidebar
+    +inner-sidebar.__sidebar
       +inner-sidebar-item
         +inner-sidebar-heading Стандартные отчёты
         +vertical-menu._left_border.statistics__vertical-menu
@@ -67,7 +67,7 @@ block layout-right
 
     +e.content
       +actions-header
-        +actions-header-col.statistic__view
+        +actions-header-col.statistics__view
           +select([{title: 'Стандартный вид', value: 1}, {title: 'Стандартный вид 1', value: 2}])
         +actions-header-col._flexible
           +datepicker

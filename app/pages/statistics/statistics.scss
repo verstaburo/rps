@@ -3,8 +3,13 @@
   width: 100%;
   min-height: 100%;
 
+  &__sidebar {
+    width: 233px;
+    flex-basis: 233px;
+  }
+
   &__view {
-    min-width: 232px;
+    min-width: 231px;
     max-width: 400px;
   }
 
