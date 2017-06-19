@@ -8,12 +8,21 @@
     padding-bottom: 15px;
   }
 
-  &__sidebar-indicators {
-    padding-top: 8px;
+  &__sidebar {
+    width: 232px;
+    flex-basis: 232px;
 
-    .indicators__circle {
-      width: 12px;
-      height: 12px;
+    &-item {
+      padding-top: 11px;
+    }
+
+    &-indicators {
+      padding-top: 8px;
+
+      .indicators__circle {
+        width: 12px;
+        height: 12px;
+      }
     }
   }
 
@@ -25,6 +34,7 @@
 
   &__accordion-button {
     box-shadow: none;
+    height: 55px;
   }
 
   &__controls {

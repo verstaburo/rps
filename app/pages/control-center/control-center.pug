@@ -19,15 +19,15 @@ block layout-right
   +header([{path: '#', title: 'Moscow-city', active: true}])
 
   +b.control-center
-    +inner-sidebar
-      +inner-sidebar-item
+    +inner-sidebar.__sidebar
+      +inner-sidebar-item.control-center__sidebar-item
         +inner-sidebar-header
           +inner-sidebar-heading ВТБ
           +inner-sidebar-badge 15
         +indicators._vertical.control-center__sidebar-indicators
           +indicator(href='#')._red ВТБ Въезд
           +indicator(href='#')._green ВТБ Выезд
-      +inner-sidebar-item
+      +inner-sidebar-item.control-center__sidebar-item
         +inner-sidebar-header
           +inner-sidebar-heading Выставочная низ
           +inner-sidebar-badge 255
@@ -35,7 +35,7 @@ block layout-right
           +indicator(href='#')._grey._active ВН Въезд
           +indicator(href='#')._yellow ВН Выезд
           +indicator(href='#')._green ВН Выезд
-      +inner-sidebar-item
+      +inner-sidebar-item.control-center__sidebar-item
         +inner-sidebar-header
           +inner-sidebar-heading Выставочная верх
           +inner-sidebar-badge 1155
@@ -45,7 +45,7 @@ block layout-right
           +indicator(href='#')._red ВВ Касса стандарт
           +indicator(href='#')._green ВВ Реверс въезд
           +indicator(href='#')._grey ВВ Реверс выезд
-      +inner-sidebar-item
+      +inner-sidebar-item.control-center__sidebar-item
         +inner-sidebar-header
           +inner-sidebar-heading ОКО
           +inner-sidebar-badge 130
@@ -53,7 +53,7 @@ block layout-right
           +indicator(href='#')._grey Въезд ОКО
           +indicator(href='#')._brown Въезд ОКО
           +indicator(href='#')._red Касса ОКО
-      +inner-sidebar-item
+      +inner-sidebar-item.control-center__sidebar-item
         +inner-sidebar-header
           +inner-sidebar-heading Империя
           +inner-sidebar-badge 410

@@ -8,6 +8,9 @@ export default () => {
   }
 
   inputs.each(function () { // eslint-disable-line func-names
-    $(this).spectrum();
+    $(this).spectrum({
+      chooseText: 'Применить',
+      cancelText: 'Отменить',
+    });
   });
 };
