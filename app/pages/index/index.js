@@ -35,7 +35,15 @@ export default () => {
 
   toggleActions(0);
 
-  index.on('change', '.table .checkbox__input', () => {
-    toggleActions(250);
-  });
+  index
+    .on('change', '.table .checkbox__input', () => {
+      toggleActions(250);
+    })
+    .on('click', '.js-index-actions-count', (e) => {
+      e.preventDefault();
+      index
+        .find('.table .checkbox__input')
+        .prop('checked', false)
+        .trigger('change');
+    });
 };

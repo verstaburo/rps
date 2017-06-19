@@ -13,10 +13,10 @@ mixin header(tabs)
     +e.col
       +search-bar('ПОИСК').__col-block.__search-bar
 
-      +indicators.__col-block.__indicators
+      +indicators(data-target-popup='#alarms-popup').__col-block.__indicators.js-show-popup
         +indicator(href="#")._red 7
         +indicator(href="#")._brown 24
         +indicator(href="#")._yellow 12
         +indicator(href="#")._grey 0
 
-      +notifications.__col-block.__notifications
+      +notifications(data-target-popup='#notifications-popup').__col-block.__notifications.js-show-popup

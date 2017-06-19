@@ -10,6 +10,8 @@ include ../../components/header/header
 include ../../components/actions-header/actions-header
 include ../../components/add-client-dropdown/add-client-dropdown
 include ../../components/edit-card-data-popup/edit-card-data-popup
+include ../../components/clients-popup/clients-popup
+include ../../components/clients-settings/clients-settings
 
 block head
   - var pageTitle = 'RPS — Главная'
@@ -31,7 +33,7 @@ block layout-right
       +actions-header-col._flexible
         +search-bar-filter('Введите название партнёра, название или адрес объекта')._white.__search-bar
       +actions-header-col
-        +icon-button('icon-settings')(href="#")
+        +icon-button('icon-settings')(href="#" data-target-popup='#clients-settings').js-show-popup
     +actions-header.js-index-actions-selected
       +actions-header-col
         +partial-button('icon-close')._grey.js-index-actions-count 1
@@ -60,7 +62,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Novotel Moscow City
           +table-col._width_120
             +table-text Компания
@@ -84,7 +86,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b ООО «ПТК»
           +table-col._width_120
             +table-text Компания
@@ -107,7 +109,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Сбербанк
           +table-col._width_120
             +table-text Компания
@@ -130,7 +132,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Globalone
           +table-col._width_120
             +table-text Компания
@@ -178,7 +180,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Газпром
             +icon-button('icon-caret')(href='#')._shadow.__toggle
           +table-col._width_120
@@ -358,7 +360,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b ООО «Робот-Икс»
           +table-col._width_120
             +table-text Компания
@@ -407,7 +409,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Energizer
           +table-col._width_120
             +table-text Компания
@@ -430,7 +432,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b 7Days
           +table-col._width_120
             +table-text Компания
@@ -454,7 +456,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b ВТБ 24
           +table-col._width_120
             +table-text Компания
@@ -477,7 +479,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Sun Clinic
           +table-col._width_120
             +table-text Компания
@@ -500,7 +502,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Хостел Сити
           +table-col._width_120
             +table-text Компания
@@ -523,7 +525,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Novotel Moscow City
           +table-col._width_120
             +table-text Компания
@@ -547,7 +549,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b ООО «ПТК»
           +table-col._width_120
             +table-text Компания
@@ -570,7 +572,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Сбербанк
           +table-col._width_120
             +table-text Компания
@@ -593,7 +595,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Globalone
           +table-col._width_120
             +table-text Компания
@@ -642,7 +644,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Газпром
           +table-col._width_120
             +table-text Компания
@@ -665,7 +667,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b ООО «Робот-Икс»
           +table-col._width_120
             +table-text Компания
@@ -714,7 +716,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Energizer
           +table-col._width_120
             +table-text Компания
@@ -761,7 +763,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b ВТБ 24
           +table-col._width_120
             +table-text Компания
@@ -784,7 +786,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Sun Clinic
           +table-col._width_120
             +table-text Компания
@@ -807,7 +809,7 @@ block layout-right
           +table-col._flexible._nowrap
             +checkbox('row', 'value').__checkbox
             +table-text
-              a(href="#")
+              a(href="#" data-target-popup='#clients-popup').js-show-popup
                 b Хостел Сити
           +table-col._width_120
             +table-text Компания
@@ -826,4 +828,6 @@ block layout-right
               +table-text._size_small 12:23:32
           +table-col._width_260
   +edit-card-data-popup
+  +clients-popup
+  +clients-settings
   +dropdown-overlay

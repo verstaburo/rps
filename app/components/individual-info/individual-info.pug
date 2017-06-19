@@ -11,174 +11,41 @@ mixin individual-info()
   +b.individual-info&attributes(attributes)
     +search-bar-add('Добавить', 'Введите название партнёра, название или адрес объекта').__search-bar
     +accordion
-      +accordion-item('Иванов Дмитрий Сергеевич')
-        +e.container
-          +e.nav
-            +tabs.__tabs
-              +tabs-tab('#', 'Информация')
-              +tabs-tab('#', 'Список ТС').active
-              +tabs-tab('#', 'MiFare Карты')
-            +e.actions
-              +button()(href='#')._text_green._uppercase.__action Сохранить
-              +e.A(href='#').action
-                +icon('icon-trash').icon-trash
-          +e.content
-            +search-bar-add('Добавить ТС', 'Введите название партнёра, название или адрес объекта')._size_small.__search-bar._add-ts
-            +ts-list
-      +accordion-item('Александров Александр Александрович')
-        +e.container
-          +e.nav
-            +tabs
-              +tabs-tab('#', 'Информация').active
-              +tabs-tab('#', 'Список ТС')
-              +tabs-tab('#', 'MiFare Карты')
-            +e.actions
-              +button()(href='#')._text_green._uppercase Сохранить
-              +e.A(href='#').delete
-                +icon('icon-trash').icon-trash
-          +e.content
-            +e.fields
-              +field
-                +field-label._align_right Фамилия:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Имя:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Отчество:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Телефон:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right E-mail:
-                +field-item
-                  +input
-      +accordion-item('Сергеев Василий Анатольевич')
-        +e.container
-          +e.nav
-            +tabs
-              +tabs-tab('#', 'Информация').active
-              +tabs-tab('#', 'Список ТС')
-              +tabs-tab('#', 'MiFare Карты')
-            +e.actions
-              +button()(href='#')._text_green._uppercase Сохранить
-              +e.A(href='#').delete
-                +icon('icon-trash').icon-trash
-          +e.content
-            +e.fields
-              +field
-                +field-label._align_right Фамилия:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Имя:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Отчество:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Телефон:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right E-mail:
-                +field-item
-                  +input
-      +accordion-item('Васильев Анатолий Сергеевич')
-        +e.container
-          +e.nav
-            +tabs
-              +tabs-tab('#', 'Информация').active
-              +tabs-tab('#', 'Список ТС')
-              +tabs-tab('#', 'MiFare Карты')
-            +e.actions
-              +button()(href='#')._text_green._uppercase Сохранить
-              +e.A(href='#').delete
-                +icon('icon-trash').icon-trash
-          +e.content
-            +e.fields
-              +field
-                +field-label._align_right Фамилия:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Имя:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Отчество:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Телефон:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right E-mail:
-                +field-item
-                  +input
-      +accordion-item('Алёхин Генадий Станиславович')
-        +e.container
-          +e.nav
-            +tabs
-              +tabs-tab('#', 'Информация').active
-              +tabs-tab('#', 'Список ТС')
-              +tabs-tab('#', 'MiFare Карты')
-            +e.actions
-              +button()(href='#')._text_green._uppercase Сохранить
-              +e.A(href='#').delete
-                +icon('icon-trash').icon-trash
-          +e.content
-            +e.fields
-              +field
-                +field-label._align_right Фамилия:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Имя:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Отчество:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right Телефон:
-                +field-item
-                  +input
-              +field
-                +field-label._align_right E-mail:
-                +field-item
-                  +input
-      +accordion-item('Власов Юрий Сергеевич')
-        +e.container
-          +e.nav
-            +tabs
-              +tabs-tab('#', 'Информация').active
-              +tabs-tab('#', 'Список ТС')
-              +tabs-tab('#', 'MiFare Карты')
-            +e.actions
-              +button()(href='#')._text_green._uppercase Сохранить
-              +e.A(href='#').delete
-                +icon('icon-trash').icon-trash
+      - for (var i = 0; i < 5; i++)
+        +accordion-item('Иванов Дмитрий Сергеевич')
           +e.container
-          +e.fields
-            +field
-              +field-label._align_right Фамилия:
-              +field-item
-                +input
-            +field
-              +field-label._align_right Телефон:
-              +field-item
-                +input
-            +field
-              +field-label._align_right E-mail:
-              +field-item
-              +input
+            +e.nav
+              +tabs.__tabs
+                +tabs-tab(`#individual-info-info-${i}`, 'Информация')
+                +tabs-tab(`#individual-info-ts-list-${i}`, 'Список ТС')
+                +tabs-tab('javascript:void(0)', 'MiFare Карты')
+              +e.actions
+                +button()(href='#')._text_green._uppercase.__action Сохранить
+                +e.A(href='#').action
+                  +icon('icon-trash').icon-trash
+            +e.content(id=`individual-info-info-${i}`)
+              +e.fields
+                +field
+                  +field-label._align_right Фамилия:
+                  +field-item
+                    +input
+                +field
+                  +field-label._align_right Имя:
+                  +field-item
+                    +input
+                +field
+                  +field-label._align_right Отчество:
+                  +field-item
+                    +input
+                +field
+                  +field-label._align_right Телефон:
+                  +field-item
+                    +input
+                +field
+                  +field-label._align_right E-mail:
+                  +field-item
+                    +input
+
+            +e.content(id=`individual-info-ts-list-${i}`)
+              +search-bar-add('Добавить ТС', 'Введите название партнёра, название или адрес объекта')._size_small.__search-bar._add-ts
+              +ts-list

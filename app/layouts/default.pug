@@ -2,10 +2,18 @@ include ../../node_modules/bemto.pug/bemto
 include ../blocks/grid/grid
 include ../blocks/layout/layout
 include ../components/sidebar/sidebar
+include ../components/alarms-popup/alarms-popup
+include ../components/notifications-popup/notifications-popup
 
 doctype html
 html(lang='ru')
   include head
   body
     +layout
+    +alarms-popup
+    +notifications-popup
+    script(src='assets/scripts/libs/jquery-ui.min.js')
+    script(src='assets/scripts/libs/moment.min.js')
+    script(src='assets/scripts/libs/jquery.daterangepicker.min.js')
+    script(src='assets/scripts/libs/spectrum.js')
     script(src='assets/scripts/app.min.js')

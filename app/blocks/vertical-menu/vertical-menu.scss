@@ -12,7 +12,7 @@
   &__item {
     display: block;
 
-    &:hover, &_active {
+    &:hover, &_active, &.ui-tabs-active {
 
       .vertical-menu {
 

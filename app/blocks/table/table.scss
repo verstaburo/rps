@@ -168,7 +168,10 @@
       align-items: flex-start;
     }
 
-    &_flexible { flex: 1; min-width: 140px; }
+    &_flexible {
+      flex: 1;
+      min-width: 140px;
+    }
 
     &:not(:last-child) { border-right: 1px solid transparent; }
   }

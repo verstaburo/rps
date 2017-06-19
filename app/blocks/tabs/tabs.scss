@@ -5,7 +5,7 @@
     display: inline-flex;
     vertical-align: top;
 
-    &.active, &:hover {
+    &.active, &:hover, &.ui-tabs-active {
 
       .tabs__link {
         border-color: $color-main;

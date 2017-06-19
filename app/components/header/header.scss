@@ -16,7 +16,10 @@
 
   &__notifications { padding: 4px 7px 4px 19px; }
 
-  &__indicators { padding: 0 17px; }
+  &__indicators {
+    padding: 0 17px;
+    cursor: pointer;
+  }
 
   &__search-bar {
     padding: 0 17px;

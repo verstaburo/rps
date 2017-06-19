@@ -9,6 +9,7 @@ include ../ts-list/ts-list
 include ../search-bar-add/search-bar-add
 include ../qr-codes/qr-codes
 include ../mifare-cards/mifare-cards
+include ../mifare-popup/mifare-popup
 
 mixin clients-popup()
   +popup#clients-popup
@@ -18,21 +19,21 @@ mixin clients-popup()
         +inner-sidebar.__sidebar
           +inner-sidebar-item._menu
             +vertical-menu
-              +vertical-menu-item
+              +vertical-menu-item('#clients-popup-common-info')
                 +vertical-menu-text Общая информация
-              +vertical-menu-item
+              +vertical-menu-item('#clients-popup-individual-info')
                 +vertical-menu-text Физ. лица
                 +vertical-menu-text 27
-              +vertical-menu-item
+              +vertical-menu-item('#clients-popup-ts-list')
                 +vertical-menu-text Список ТС
                 +vertical-menu-text 5
-              +vertical-menu-item
+              +vertical-menu-item('#clients-popup-qr-codes')
                 +vertical-menu-text QR-коды
                 +vertical-menu-text 15
-              +vertical-menu-item._active
+              +vertical-menu-item('#clients-popup-mifare-cards')
                 +vertical-menu-text MiFare карты
                 +vertical-menu-text 25
-              +vertical-menu-item
+              +vertical-menu-item('javascript:void(0)')
                 +vertical-menu-text Доступ в ЛК
                 +vertical-menu-text Есть
           +inner-sidebar-item
@@ -41,18 +42,20 @@ mixin clients-popup()
             +icon-button('icon-trash')(href='#')._uppercase._shadow.clients-popup__delete-button Удалить компанию
 
         +e.content
-          //- Общая информация
-          //+clients-common-info
-          //- Физ. лица
-          //+individual-info
-          //- Список ТС
-          //+search-bar-add('Добавить', 'Введите название партнёра, название или адрес объекта')
-          //+ts-list._transparent
-          //- QR-коды
-          //+qr-codes
-          //- MiFare карты
-          +mifare-cards
-          //- Доступ в ЛК
+          // Общая информация
+          +clients-common-info#clients-popup-common-info
+          // Физ. лица
+          +individual-info#clients-popup-individual-info
+          // Список ТС
+          div#clients-popup-ts-list
+            +search-bar-add('Добавить', 'Введите название партнёра, название или адрес объекта')
+            +ts-list._transparent
+          // QR-коды
+          +qr-codes#clients-popup-qr-codes
+          // MiFare карты
+          +mifare-cards#clients-popup-mifare-cards
 
   //- qr-codes dependencies
   +qr-codes-templates
+  //- mifare-cards denepndencies
+  +mifare-popup
