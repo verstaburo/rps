@@ -40,11 +40,11 @@ mixin individual-info()
                 +field
                   +field-label._align_right Телефон:
                   +field-item
-                    +input
+                    +input(type='tel')
                 +field
                   +field-label._align_right E-mail:
                   +field-item
-                    +input
+                    +input(type='email')
 
             +e.content(id=`individual-info-ts-list-${i}`)
               +search-bar-add('Добавить ТС', 'Введите название партнёра, название или адрес объекта')._size_small.__search-bar._add-ts
