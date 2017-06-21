@@ -5,38 +5,39 @@ include ../../components/counter/counter
 
 mixin clients-common-info()
   +b.FORN.clients-common-info&attributes(attributes)
-    +e.FIELDSET.fieldset
-      +e.LEGEND.heading Данные о компании
-      +field.LABEL
-        +field-label._align_right.clients-common-info__label Название:
-        +field-item
-          +input
-      +field.LABEL
-        +field-label._align_right.clients-common-info__label Телефон:
-        +field-item
-          +input(type='tel')
-      +field.LABEL
-        +field-label._align_right.clients-common-info__label E-mail:
-        +field-item
-          +input(type='email')
-      +field.LABEL
-        +field-label._align_right.clients-common-info__label Парковочных мест:
-        +field-item
-          +counter
-    +e.FIELDSET.fieldset
-      +e.LEGEND.heading Контактное лицо
-      +field.LABEL
-        +field-label._align_right.clients-common-info__label ФИО:
-        +field-item
-          +input
-      +field.LABEL
-        +field-label._align_right.clients-common-info__label Телефон:
-        +field-item
-          +input(type='tel')
-      +field.LABEL
-        +field-label._align_right.clients-common-info__label E-mail:
-        +field-item
-          +input(type='email')
+    +e.content
+      +e.FIELDSET.fieldset
+        +e.LEGEND.heading Данные о компании
+        +field.LABEL
+          +field-label._align_right.clients-common-info__label Название:
+          +field-item
+            +input
+        +field.LABEL
+          +field-label._align_right.clients-common-info__label Телефон:
+          +field-item
+            +input(type='tel')
+        +field.LABEL
+          +field-label._align_right.clients-common-info__label E-mail:
+          +field-item
+            +input(type='email')
+        +field.LABEL
+          +field-label._align_right.clients-common-info__label Парковочных мест:
+          +field-item
+            +counter
+      +e.FIELDSET.fieldset
+        +e.LEGEND.heading Контактное лицо
+        +field.LABEL
+          +field-label._align_right.clients-common-info__label ФИО:
+          +field-item
+            +input
+        +field.LABEL
+          +field-label._align_right.clients-common-info__label Телефон:
+          +field-item
+            +input(type='tel')
+        +field.LABEL
+          +field-label._align_right.clients-common-info__label E-mail:
+          +field-item
+            +input(type='email')
 
     +e.save-button
       +button.BUTTON(type='submit')._green._uppercase._align_center Сохранить изменения
