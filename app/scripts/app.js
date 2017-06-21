@@ -9,6 +9,7 @@ import table from '../blocks/table/table';
 import notificationInfo from '../blocks/notification-info/notification-info';
 import clientsPopup from '../components/clients-popup/clients-popup';
 import individualInfo from '../components/individual-info/individual-info';
+import clientsSettings from '../components/clients-settings/clients-settings';
 import mifareCardSessions from '../components/mifare-card-sessions/mifare-card-sessions';
 import mifarePopup from '../components/mifare-popup/mifare-popup';
 import accordion from '../components/accordion/accordion';
@@ -35,6 +36,7 @@ $(() => {
   counter();
   notificationsPopup();
   tsList();
+  clientsSettings();
   qrCodesTemplates();
   searchFilter();
   editCardDataPopup();
