@@ -21,6 +21,7 @@
     border-left: 1px solid #d3d4d4;
     border-radius: 0;
     background-color: transparent;
+    transition: all .25s ease-in-out;
 
     &:hover, &.active {
       background-color: transparent;
@@ -55,13 +56,22 @@
     will-change: border-color, box-shadow;
     transition: box-shadow .25s ease-in-out, border-color .25s ease-in-out;
 
-    &:hover, &.focus { border-color: #f9ad1a; }
+    &:hover, &.focus {
+      border-color: #f9ad1a;
+
+      .search-bar__filter-button {
+        border-color: #f9ad1a;
+      }
+    }
+
     &.focus { box-shadow: 0 0 4px rgba(249, 173, 26, .5); }
 
     .search-bar {
 
       &__button {
         fill: #d2d3d3;
+
+        &:hover { fill: #f9ad1a; }
       }
 
       &__input {
