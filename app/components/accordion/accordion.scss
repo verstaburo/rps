@@ -9,6 +9,7 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
     background-color: #fff;
     cursor: pointer;
+    border-bottom: 1px solid #d2d3d3;
 
     &_left {
       padding-right: 16px;
@@ -26,9 +27,7 @@
           order: 2;
         }
 
-        &__icon {
-          order: 3;
-        }
+        &__icon { order: 3; }
       }
     }
 
@@ -36,13 +35,9 @@
 
       .accordion {
 
-        &__heading {
-          color: #f9ad1b;
-        }
+        &__heading { color: #f9ad1b; }
 
-        &__icon {
-          stroke: #f9ad1b;
-        }
+        &__icon { stroke: #f9ad1b; }
       }
     }
   }
@@ -61,7 +56,7 @@
     padding-right: 16px;
     color: #0353a4;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     will-change: color;
     transition: color .25s ease-in-out;
   }
@@ -80,13 +75,11 @@
 
       .accordion {
 
-        &__icon {
-          transform: rotate(180deg);
-        }
+        &__icon { transform: rotate(180deg); }
 
-        &__content {
-          display: block;
-        }
+        &__content { display: block; }
+
+        &__heading { font-weight: 500; }
       }
     }
   }
@@ -96,7 +89,5 @@
     padding: 0 8px;
   }
 
-  &__content {
-    display: none;
-  }
+  &__content { display: none; }
 }

@@ -12,7 +12,7 @@ mixin individual-info()
     +search-bar-add('Добавить', 'Введите название партнёра, название или адрес объекта').__search-bar
     +accordion
       - for (var i = 0; i < 5; i++)
-        +accordion-item('Иванов Дмитрий Сергеевич')
+        +accordion-item('Иванов Дмитрий Сергеевич').individual-info__accordion-item
           +e.container
             +e.nav
               +tabs.__tabs

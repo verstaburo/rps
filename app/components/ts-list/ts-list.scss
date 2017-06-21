@@ -6,9 +6,12 @@
     background-color: transparent;
   }
 
+  .default-table__header .default-table__row { border-bottom: 1px solid #d2d3d3; }
+
   &__row {
     will-change: background-color;
     transition: background-color .25s ease-in-out;
+    border-bottom: 1px solid #d2d3d3;
 
     &_editing {
 
