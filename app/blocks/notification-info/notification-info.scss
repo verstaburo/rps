@@ -19,6 +19,7 @@
     .icon-button__icon {
       width: 12px;
       height: 8px;
+      transition: all .25s ease-in-out;
     }
 
     .icon-button__text {
@@ -55,9 +56,10 @@
     margin-top: -.28em;
     max-height: 59px;
     overflow: hidden;
+    transition: all .25s ease-in-out;
 
     &_active {
-      max-height: initial;
+      max-height: 300px;
     }
 
     a {
@@ -85,6 +87,11 @@
     border-radius: 50%;
     transition: box-shadow .25s ease-in-out;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-color: #fffaef;
+
+    &_done {
+      background-color: #fff;
+    }
 
     &:hover { box-shadow: 0 0 4px rgba(249, 173, 26, .5); }
   }

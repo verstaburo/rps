@@ -27,11 +27,22 @@ export default () => {
       e.preventDefault();
 
       const btn = $(this);
+      const btnText = btn.find('.icon-button__text');
+      const btnIcon = btn.find('.icon-button__icon');
 
-      btn
-        .fadeOut(250)
+      const text = btn
         .parents('.notification-info')
-        .find('.notification-info__body')
-        .addClass('notification-info__body_active');
+        .find('.notification-info__body');
+
+
+      if (text.hasClass('notification-info__body_active')) {
+        btnText.text('развернуть');
+        text.removeClass('notification-info__body_active');
+        btnIcon.css('transform', '');
+      } else {
+        btnText.text('свернуть');
+        text.addClass('notification-info__body_active');
+        btnIcon.css('transform', 'rotate(180deg');
+      }
     });
 };

@@ -6,6 +6,11 @@
   background-color: #efefef;
   border-right: 1px solid #d9d9d9;
 
+  &_scrollable {
+    height: 100%;
+    overflow-y: auto;
+  }
+
   &__item {
     display: block;
     padding: 20px 13px 20px 22px;

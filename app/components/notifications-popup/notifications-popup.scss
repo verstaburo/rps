@@ -3,11 +3,8 @@
   min-width: 368px;
   min-height: 100%;
 
-  &__notifictions {
-
-    &:not(:last-child) {
-      margin-bottom: 24px;
-    }
+  &__notifications:not(:last-child) {
+    border-bottom: 1px solid #d2d3d3;
   }
 
   &__heading {
@@ -25,10 +22,17 @@
   }
 
   &__items {
-    padding: 16px 22px 25px 24px;
+    padding-top: 16px;
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 44px;
+  &__item {
+    padding-left: 24px;
+    padding-right: 22px;
+    padding-bottom: 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 19px;
+      border-bottom: 1px solid #d2d3d3;
+    }
   }
 }
