@@ -8,6 +8,7 @@ import tags from '../blocks/tags/tags';
 import table from '../blocks/table/table';
 import notificationInfo from '../blocks/notification-info/notification-info';
 import clientsPopup from '../components/clients-popup/clients-popup';
+import searchBar from '../components/search-bar/search-bar';
 import individualInfo from '../components/individual-info/individual-info';
 import clientsSettings from '../components/clients-settings/clients-settings';
 import mifareCardSessions from '../components/mifare-card-sessions/mifare-card-sessions';
@@ -36,6 +37,7 @@ $(() => {
   counter();
   notificationsPopup();
   tsList();
+  searchBar();
   clientsSettings();
   qrCodesTemplates();
   searchFilter();
