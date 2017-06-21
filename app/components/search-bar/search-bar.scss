@@ -22,7 +22,8 @@
     border-radius: 0;
     background-color: transparent;
 
-    &.active {
+    &:hover, &.active {
+      background-color: transparent;
 
       .icon-button__icon {
         fill: #f9af0f;
