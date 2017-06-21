@@ -3,6 +3,10 @@
   min-width: 669px;
   background-color: #f6f6f6;
 
+  &__accordion-item:last-child {
+    .accordion__button { box-shadow: none; }
+  }
+
   &__status {
     border-left: 1px solid #d2d3d3;
 
@@ -14,10 +18,13 @@
   &__detail-status {
     margin-left: -22px;
     margin-bottom: 14px;
+    border-bottom: 1px solid #d2d3d3;
+    padding-bottom: 14px;
   }
 
   &__tabs {
     height: 48px;
+    border-bottom: 1px solid #d2d3d3;
   }
 
   &__photos {
@@ -37,7 +44,6 @@
 
   &__detail {
     display: flex;
-    min-height: 380px;
   }
 
   &__block {

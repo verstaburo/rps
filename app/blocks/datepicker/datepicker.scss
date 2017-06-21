@@ -2,11 +2,12 @@
   font-family: $font-main;
 
   &-wrapper {
-    z-index: 999;
+    z-index: 1200;
   }
 }
 
 .datepicker {
+  position: relative;
   display: flex;
   padding: 0 14px;
   width: 100%;

@@ -7,26 +7,26 @@ mixin mifare-cards()
     +e.content
       +default-table
         +default-table-header
-          +default-table-row
-            +default-table-cell ID Карты
-            +default-table-cell Привязана
+          +default-table-row.mifare-cards__row
+            +default-table-cell.mifare-cards__cell ID Карты
+            +default-table-cell.mifare-cards__cell Привязана
         +default-table-body
-          +default-table-row
-            +default-table-cell
+          +default-table-row.mifare-cards__row
+            +default-table-cell.mifare-cards__cell
               a(href='#' data-target-popup='#mifare-popup').js-show-popup 1234 5678 9012
-            +default-table-cell Нет
-          +default-table-row
-            +default-table-cell
+            +default-table-cell.mifare-cards__cell Нет
+          +default-table-row.mifare-cards__row
+            +default-table-cell.mifare-cards__cell
               a(href='#' data-target-popup='#mifare-popup').js-show-popup 5234 4256 9012
-            +default-table-cell
+            +default-table-cell.mifare-cards__cell
               a(href='#') Петров Василий Анатольевич
-          +default-table-row
-            +default-table-cell
+          +default-table-row.mifare-cards__row
+            +default-table-cell.mifare-cards__cell
               a(href='#' data-target-popup='#mifare-popup').js-show-popup 7346 2134 9012
-            +default-table-cell
+            +default-table-cell.mifare-cards__cell
               a(href='#') Смирнов Алексей Борисович
-          +default-table-row
-            +default-table-cell
+          +default-table-row.mifare-cards__row
+            +default-table-cell.mifare-cards__cell
               a(href='#' data-target-popup='#mifare-popup').js-show-popup 1234 6467 9012
-            +default-table-cell
+            +default-table-cell.mifare-cards__cell
               a(href='#') Алексеев Иван Сергеевич
