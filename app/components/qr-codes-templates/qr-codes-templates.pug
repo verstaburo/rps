@@ -9,7 +9,7 @@ mixin qr-codes-templates()
     +popup-header('Шаблоны QR-кодов | выбрано: <span class="js-qr-codes-templates-count">0</span>')
     +popup-body
       +b.qr-codes-templates&attributes(attributes)
-        +actions-header
+        +actions-header.__actions-header
           +actions-header-col._flexible
             +search-bar('Название QR-кода')._white.__search-bar
           +actions-header-col
@@ -18,5 +18,7 @@ mixin qr-codes-templates()
           - for (var i = 0; i < 5; i++)
             +accordion-item('QR-Код #1, скидка 100р.', { name: 'name', value: 'value', label: 'Выбрать'})
               +qr-form
-                +button.BUTTON._text_grey._uppercase Сохранить
-                +button.BUTTON._text_red._uppercase Удалить
+                +e.col
+                  +button.BUTTON._text_grey._uppercase.__button Сохранить
+                +e.col
+                  +button.BUTTON._text_red._uppercase.__button Удалить

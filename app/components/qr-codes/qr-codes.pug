@@ -7,17 +7,20 @@ include ../qr-codes-templates/qr-codes-templates
 
 mixin qr-codes()
   +b.qr-codes&attributes(attributes)
-    +actions-header
+    +actions-header.__action-header
       +actions-header-col
         +button()(href='#')._green._uppercase Добавить
       +actions-header-col._flexible
         +search-bar('Название QR-кода')._white.__search-bar
       +actions-header-col
         +button()(href='#' data-target-popup='#qr-codes-templates')._grey._uppercase.js-show-popup Шаблоны
-    +accordion
+    +accordion.qr-codes__accordion
       - for (var i = 0; i < 5; i++)
-        +accordion-item('QR-Код #1, скидка 100р.')
+        +accordion-item('QR-Код #1, скидка 100р.').qr-codes__accordion-item
           +qr-form.__form
-            +button.BUTTON._text_grey._uppercase Сохранить
-            +button.BUTTON._text_green._uppercase Сохранить как шаблон
-            +button.BUTTON._text_red._uppercase Удалить
+            +e.col
+              +button.BUTTON._text_grey._uppercase.__button Сохранить
+            +e.col
+              +button.BUTTON._text_green._uppercase.__button_big Сохранить как шаблон
+            +e.col
+              +button.BUTTON._text_red._uppercase.__button Удалить

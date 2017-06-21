@@ -2,8 +2,6 @@
   display: inline-block;
   cursor: pointer;
 
-  &_white .checkbox__box { background-color: #fff; }
-
   &_with_label {
     display: flex;
     align-items: center;
@@ -23,6 +21,7 @@
     border: 1px solid #d2d3d3;
     border-radius: 2px;
     transition: all .25s ease-in-out;
+    background-color: #fff;
 
     &::before { // indeterminate state
       content: '';

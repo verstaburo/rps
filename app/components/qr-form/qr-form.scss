@@ -5,7 +5,30 @@
 
   &__buttons {
     display: flex;
-    justify-content: space-around;
+    border-bottom: 1px solid #d2d3d3;
+  }
+
+  &__button {
+    width: 100%;
+    justify-content: center;
+
+    &_big {
+      padding-left: 50px;
+      padding-right: 50px;
+      white-space: nowrap;
+    }
+  }
+
+  &__col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+
+    &_shrinkless { flex-shrink: 0; }
+
+    &:not(:last-child) { border-right: 1px solid #d2d3d3; }
   }
 
   &__content {
@@ -13,23 +36,13 @@
     padding-left: 17px;
   }
 
-  &__label {
-    width: 146px;
-  }
+  &__label { width: 146px; }
 
-  &__field {
-    width: 320px;
-  }
+  &__field { width: 320px; }
 
-  &__small-field {
-    width: 148px;
-  }
+  &__small-field { width: 148px; }
 
-  &__checkbox {
-    margin-left: auto;
-  }
+  &__checkbox { margin-left: auto; }
 
-  &__group:not(:last-child) {
-    margin-bottom: 32px;
-  }
+  &__group:not(:last-child) { margin-bottom: 32px; }
 }
