@@ -13,6 +13,7 @@
     <link href="assets/styles/libs/spectrum.css" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery-3.2.1.min.js"></script>
+    <script src="assets/scripts/libs/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -104,7 +105,7 @@
             </div>
         </div>
         <div class="layout__right">
-            <div class="header">
+            <div class="header header_shadow">
                 <div class="header__col">
                     <ul class="tabs header__tabs">
                         <li class="tabs__tab active">
@@ -262,7 +263,7 @@
                 </div>
                 <div class="control-center__content">
                     <div class="accordion">
-                        <div class="accordion__item">
+                        <div class="accordion__item control-center__accordion-item">
                             <div class="accordion__button accordion__button_left control-center__accordion-button">
                                 <svg class="accordion__icon">
                                     <use xlink:href="assets/images/icon.svg#icon_icon-caret"></use>
@@ -316,9 +317,9 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="table__row">
+                        <div class="table__row control-center__table-row">
                             <div class="table__col table__col_width_120">
-                                <div class="indicators alarms-popup__indicators">
+                                <div class="indicators control-center__indicators">
                                     <a class="indicators__item indicators__item_brown" href="#">
                                         <span class="indicators__circle"></span>
                                         <span class="indicators__text">101</span>
@@ -331,9 +332,9 @@
                                 <a class="button button_grey button_shadow control-center__info-btn" href="#">?</a>
                             </div>
                         </div>
-                        <div class="table__row">
+                        <div class="table__row control-center__table-row">
                             <div class="table__col table__col_width_120">
-                                <div class="indicators alarms-popup__indicators">
+                                <div class="indicators control-center__indicators">
                                     <a class="indicators__item indicators__item_brown" href="#">
                                         <span class="indicators__circle"></span>
                                         <span class="indicators__text">103</span>
@@ -346,9 +347,9 @@
                                 <a class="button button_grey button_shadow control-center__info-btn" href="#">?</a>
                             </div>
                         </div>
-                        <div class="table__row">
+                        <div class="table__row control-center__table-row">
                             <div class="table__col table__col_width_120">
-                                <div class="indicators alarms-popup__indicators">
+                                <div class="indicators control-center__indicators">
                                     <a class="indicators__item indicators__item_yellow" href="#">
                                         <span class="indicators__circle"></span>
                                         <span class="indicators__text">105</span>
@@ -361,9 +362,9 @@
                                 <a class="button button_grey button_shadow control-center__info-btn" href="#">?</a>
                             </div>
                         </div>
-                        <div class="table__row">
+                        <div class="table__row control-center__table-row">
                             <div class="table__col table__col_width_120">
-                                <div class="indicators alarms-popup__indicators">
+                                <div class="indicators control-center__indicators">
                                     <a class="indicators__item indicators__item_yellow" href="#">
                                         <span class="indicators__circle"></span>
                                         <span class="indicators__text">112</span>
@@ -376,9 +377,9 @@
                                 <a class="button button_grey button_shadow control-center__info-btn" href="#">?</a>
                             </div>
                         </div>
-                        <div class="table__row">
+                        <div class="table__row control-center__table-row">
                             <div class="table__col table__col_width_120">
-                                <div class="indicators alarms-popup__indicators">
+                                <div class="indicators control-center__indicators">
                                     <a class="indicators__item indicators__item_yellow" href="#">
                                         <span class="indicators__circle"></span>
                                         <span class="indicators__text">105</span>
@@ -391,9 +392,9 @@
                                 <a class="button button_grey button_shadow control-center__info-btn" href="#">?</a>
                             </div>
                         </div>
-                        <div class="table__row">
+                        <div class="table__row control-center__table-row">
                             <div class="table__col table__col_width_120">
-                                <div class="indicators alarms-popup__indicators">
+                                <div class="indicators control-center__indicators">
                                     <a class="indicators__item indicators__item_red" href="#">
                                         <span class="indicators__circle"></span>
                                         <span class="indicators__text">305</span>
@@ -406,9 +407,9 @@
                                 <a class="button button_grey button_shadow control-center__info-btn" href="#">?</a>
                             </div>
                         </div>
-                        <div class="table__row">
+                        <div class="table__row control-center__table-row">
                             <div class="table__col table__col_width_120">
-                                <div class="indicators alarms-popup__indicators">
+                                <div class="indicators control-center__indicators">
                                     <a class="indicators__item indicators__item_yellow" href="#">
                                         <span class="indicators__circle"></span>
                                         <span class="indicators__text">105</span>
@@ -591,7 +592,7 @@
                                     <div class="notification-info__content">
                                         <div class="notification-info__col notification-info__col_align_center">
                                             <span class="notification-info__heading">13:35</span>
-                                            <a class="notification-info__indicator" href="#">
+                                            <a class="notification-info__indicator notification-info__indicator_done" href="#">
                                                 <svg class="notification-info__done">
                                                     <use xlink:href="assets/images/icon.svg#icon_icon-accept"></use>
                                                 </svg>
@@ -641,7 +642,6 @@
             </div>
         </div>
     </div>
-    <script src="assets/scripts/libs/jquery-ui.min.js"></script>
     <script src="assets/scripts/libs/moment.min.js"></script>
     <script src="assets/scripts/libs/jquery.daterangepicker.min.js"></script>
     <script src="assets/scripts/libs/spectrum.js"></script>
