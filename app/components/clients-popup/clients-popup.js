@@ -47,7 +47,25 @@ export default () => {
       const tab = popup.find('.clients-popup__ts-list');
       const actions = tab.find('.search-bar-add');
       const content = tab.find('.ts-list');
-      console.log(tab, actions, content);
+
+      content.height(vH - header.outerHeight() - actions.outerHeight());
+    }
+
+    // mifare-cards
+    {
+      const tab = popup.find('.mifare-cards');
+      const actions = tab.find('.search-bar-add');
+      const content = tab.find('.mifare-cards__content');
+
+      content.height(vH - header.outerHeight() - actions.outerHeight());
+    }
+
+    // qr-codes
+    {
+      const tab = popup.find('.qr-codes');
+      const actions = tab.find('.qr-codes__action-header');
+      const content = tab.find('.qr-codes__accordion');
+
       content.height(vH - header.outerHeight() - actions.outerHeight());
     }
 
