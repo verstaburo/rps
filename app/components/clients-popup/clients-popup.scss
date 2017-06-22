@@ -3,6 +3,8 @@
   min-width: 908px;
   min-height: 100%;
 
+  &__ts-list .ts-list { overflow-y: auto; }
+
   &__sidebar {
     min-width: 239px;
     flex-shrink: 0;

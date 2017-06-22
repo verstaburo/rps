@@ -3,6 +3,11 @@
   min-width: 669px;
   background-color: #f7f7f7;
 
+  .accordion {
+    overflow: auto;
+    background-color: #fff;
+  }
+
   &__accordion-item:last-child {
     .accordion__button { box-shadow: none; }
   }
@@ -43,8 +48,11 @@
     &:hover .individual-info__icon-trash { opacity: .75; }
   }
 
+  &__container { background-color: #f7f7f7; }
+
   &__content {
     padding-top: 23px;
+    overflow-y: auto;
   }
 
   &__fields {

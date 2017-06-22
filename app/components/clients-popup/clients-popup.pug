@@ -17,27 +17,28 @@ mixin clients-popup()
     +popup-body._scrolless
       +b.clients-popup
         +inner-sidebar.__sidebar
-          +inner-sidebar-item._menu
-            +vertical-menu
-              +vertical-menu-item('#clients-popup-common-info')
-                +vertical-menu-text Общая информация
-              +vertical-menu-item('#clients-popup-individual-info')
-                +vertical-menu-text Физ. лица
-                +vertical-menu-text 27
-              +vertical-menu-item('#clients-popup-ts-list')
-                +vertical-menu-text Список ТС
-                +vertical-menu-text 5
-              +vertical-menu-item('#clients-popup-qr-codes')
-                +vertical-menu-text QR-коды
-                +vertical-menu-text 15
-              +vertical-menu-item('#clients-popup-mifare-cards')
-                +vertical-menu-text MiFare карты
-                +vertical-menu-text 25
-              +vertical-menu-item('javascript:void(0)')
-                +vertical-menu-text Доступ в ЛК
-                +vertical-menu-text Есть
-          +inner-sidebar-item
-            +add-tags(getData('add-tags'))
+          +e.group
+            +inner-sidebar-item._menu
+              +vertical-menu
+                +vertical-menu-item('#clients-popup-common-info')
+                  +vertical-menu-text Общая информация
+                +vertical-menu-item('#clients-popup-individual-info')
+                  +vertical-menu-text Физ. лица
+                  +vertical-menu-text 27
+                +vertical-menu-item('#clients-popup-ts-list')
+                  +vertical-menu-text Список ТС
+                  +vertical-menu-text 5
+                +vertical-menu-item('#clients-popup-qr-codes')
+                  +vertical-menu-text QR-коды
+                  +vertical-menu-text 15
+                +vertical-menu-item('#clients-popup-mifare-cards')
+                  +vertical-menu-text MiFare карты
+                  +vertical-menu-text 25
+                +vertical-menu-item('javascript:void(0)')
+                  +vertical-menu-text Доступ в ЛК
+                  +vertical-menu-text Есть
+            +inner-sidebar-item
+              +add-tags(getData('add-tags'))
           +inner-sidebar-item.clients-popup__sidebar-btn
             +icon-button('icon-trash')(href='#')._uppercase._shadow.clients-popup__delete-button Удалить компанию
 
@@ -47,7 +48,7 @@ mixin clients-popup()
           // Физ. лица
           +individual-info#clients-popup-individual-info
           // Список ТС
-          div#clients-popup-ts-list
+          +e.ts-list#clients-popup-ts-list
             +search-bar-add('Добавить', 'Введите название партнёра, название или адрес объекта')
             +ts-list._transparent
           // QR-коды
