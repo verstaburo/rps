@@ -24,6 +24,7 @@ import indexPage from '../pages/index/index';
 import statisticsPage from '../pages/statistics/statistics';
 import settingsDevicesZonePage from '../pages/settings-devices-zone/settings-devices-zone';
 import settingsDevicesDevicePage from '../pages/settings-devices-device/settings-devices-device';
+import controlCenterPage from '../pages/control-center/control-center';
 
 const { $ } = window;
 $(() => {
@@ -53,4 +54,5 @@ $(() => {
   statisticsPage();
   settingsDevicesZonePage();
   settingsDevicesDevicePage();
+  controlCenterPage();
 });

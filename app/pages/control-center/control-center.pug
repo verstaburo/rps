@@ -1,4 +1,4 @@
-extends ../../layouts/default
+extends ../../layouts/custom-scroll
 include ../../blocks/table/table
 include ../../blocks/button/button
 include ../../blocks/icon-button/icon-button
@@ -19,7 +19,7 @@ block layout-right
   +header([{path: '#', title: 'Moscow-city', active: true}])._shadow
 
   +b.control-center
-    +inner-sidebar.__sidebar
+    +inner-sidebar._scrollable.__sidebar
       +inner-sidebar-item.control-center__sidebar-item
         +inner-sidebar-header
           +inner-sidebar-heading ВТБ
