@@ -54,6 +54,10 @@
   &__video {
     width: 100%;
     height: auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    border-right: 1px solid #d2d3d3;
   }
 
   &__col {
