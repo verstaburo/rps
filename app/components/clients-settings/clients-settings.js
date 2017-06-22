@@ -5,7 +5,6 @@ export default () => {
   if (!items.length) {
     return;
   }
-  console.log(items);
-  console.log(items.tabs);
+
   items.sortable({ handle: '.clients-settings__burger' });
 };
