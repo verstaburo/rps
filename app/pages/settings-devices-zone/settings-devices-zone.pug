@@ -1,4 +1,4 @@
-extends ../../layouts/default
+extends ../../layouts/custom-scroll
 include ../../blocks/button/button
 include ../../blocks/table/table
 include ../../blocks/inner-sidebar/inner-sidebar
@@ -34,10 +34,10 @@ block layout-right
         +datepicker.settings-devices-zone__datepicker
 
     +e.container
-      +inner-sidebar
+      +inner-sidebar._scrollable
         +inner-sidebar-item
           +inner-sidebar-heading.A(href='settings-devices-zone.html')._active Сити 129
-          +vertical-menu
+          +vertical-menu._left_border.statistics__vertical-menu
             +vertical-menu-item('settings-devices-device.html')
               +vertical-menu-text КПП Въезд 1
             +vertical-menu-item('settings-devices-device.html')
@@ -56,7 +56,7 @@ block layout-right
               +vertical-menu-text КПП Выезд 4
         +inner-sidebar-item
           +inner-sidebar-heading.A(href='settings-devices-zone.html')  Око
-          +vertical-menu
+          +vertical-menu._left_border.statistics__vertical-menu
             +vertical-menu-item('settings-devices-device.html')
               +vertical-menu-text КПП Въезд 1
             +vertical-menu-item('settings-devices-device.html')

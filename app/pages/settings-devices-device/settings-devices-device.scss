@@ -2,6 +2,10 @@
   display: block;
   height: 100%;
 
+  &__vertical-menu .vertical-menu__text {
+    padding-left: 8px;
+  }
+
   &__add {
     min-width: 210px;
     justify-content: center;
@@ -20,6 +24,7 @@
   &__content {
     flex: 1;
     padding-bottom: 15px;
+    overflow-y: auto;
   }
 
   &__form {

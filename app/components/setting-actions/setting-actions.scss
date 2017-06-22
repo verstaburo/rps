@@ -1,6 +1,7 @@
 .setting-actions {
   display: flex;
   width: 100%;
+  border-bottom: 1px solid #d2d3d3;
 
   &__heading {
     display: block;
@@ -18,7 +19,7 @@
   }
 
   &__action {
-    border-left: 2px solid #d2d3d3;
+    border-left: 1px solid #d2d3d3;
     height: 100%;
   }
 }
