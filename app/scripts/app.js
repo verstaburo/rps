@@ -21,6 +21,7 @@ import qrCodesTemplates from '../components/qr-codes-templates/qr-codes-template
 import searchFilter from '../components/search-filter/search-filter';
 import editCardDataPopup from '../components/edit-card-data-popup/edit-card-data-popup';
 import indexPage from '../pages/index/index';
+import statisticsPage from '../pages/statistics/statistics';
 
 const { $ } = window;
 $(() => {
@@ -47,4 +48,5 @@ $(() => {
   mifarePopup();
   mifareCardSessions();
   indexPage();
+  statisticsPage();
 });

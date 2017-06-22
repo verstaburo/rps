@@ -3,9 +3,23 @@
   width: 100%;
   min-height: 100%;
 
+  &__actions-header { border-top: 0; }
+
+  &__table {
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  &__sidebar-btn {
+    padding-top: 20px;
+    margin-top: auto;
+  }
+
   &__sidebar {
+    justify-content: flex-start;
     width: 233px;
     flex-basis: 233px;
+    height: 100%;
   }
 
   &__view {

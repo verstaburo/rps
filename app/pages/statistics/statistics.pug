@@ -1,4 +1,4 @@
-extends ../../layouts/default
+extends ../../layouts/custom-scroll
 include ../../blocks/button/button
 include ../../blocks/table/table
 include ../../blocks/inner-sidebar/inner-sidebar
@@ -18,55 +18,56 @@ block layout-left
   +sidebar
 
 block layout-right
-  +header([{path: '#', title: 'Таблицы', active: true}, {path: '#', title: 'Графики'}])
+  +header([{path: '#', title: 'Таблицы', active: true}, {path: '#', title: 'Графики'}])._border-bottom
 
   +b.statistics
     +inner-sidebar.__sidebar
-      +inner-sidebar-item
-        +inner-sidebar-heading Стандартные отчёты
-        +vertical-menu._left_border.statistics__vertical-menu
-          +vertical-menu-item._active
-            +vertical-menu-text Журнал тревог
-          +vertical-menu-item
-            +vertical-menu-text Журнал действий опреатора
-      +inner-sidebar-item
-        +inner-sidebar-heading Ваши отчёты
-        +vertical-menu._left_border.statistics__vertical-menu
-          +vertical-menu-item
-            +vertical-menu-text Транзакции
-          +vertical-menu-item
-            +vertical-menu-text Оплата и проезды по дням
-          +vertical-menu-item
-            +vertical-menu-text Ежемесячный  отчёт
-          +vertical-menu-item
-            +vertical-menu-text Распознование
-          +vertical-menu-item
-            +vertical-menu-text Оплаты за день
-          +vertical-menu-item
-            +vertical-menu-text Постоянные
-          +vertical-menu-item
-            +vertical-menu-text Оплаты детально
-          +vertical-menu-item
-            +vertical-menu-text Отчёты по кассам
-          +vertical-menu-item
-            +vertical-menu-text Список транзаций по комп...
-          +vertical-menu-item
-            +vertical-menu-text Оплаты по дням
-          +vertical-menu-item
-            +vertical-menu-text Годовой  отчёт
-          +vertical-menu-item
-            +vertical-menu-text Распознование
-          +vertical-menu-item
-            +vertical-menu-text Оплаты за день
-          +vertical-menu-item
-            +vertical-menu-text Постоянные
-          +vertical-menu-item
-            +vertical-menu-text Оплаты детально
-      +inner-sidebar-item
+      +e.group
+        +inner-sidebar-item
+          +inner-sidebar-heading Стандартные отчёты
+          +vertical-menu._left_border.statistics__vertical-menu
+            +vertical-menu-item._active
+              +vertical-menu-text Журнал тревог
+            +vertical-menu-item
+              +vertical-menu-text Журнал действий опреатора
+        +inner-sidebar-item
+          +inner-sidebar-heading Ваши отчёты
+          +vertical-menu._left_border.statistics__vertical-menu
+            +vertical-menu-item
+              +vertical-menu-text Транзакции
+            +vertical-menu-item
+              +vertical-menu-text Оплата и проезды по дням
+            +vertical-menu-item
+              +vertical-menu-text Ежемесячный  отчёт
+            +vertical-menu-item
+              +vertical-menu-text Распознование
+            +vertical-menu-item
+              +vertical-menu-text Оплаты за день
+            +vertical-menu-item
+              +vertical-menu-text Постоянные
+            +vertical-menu-item
+              +vertical-menu-text Оплаты детально
+            +vertical-menu-item
+              +vertical-menu-text Отчёты по кассам
+            +vertical-menu-item
+              +vertical-menu-text Список транзаций по комп...
+            +vertical-menu-item
+              +vertical-menu-text Оплаты по дням
+            +vertical-menu-item
+              +vertical-menu-text Годовой  отчёт
+            +vertical-menu-item
+              +vertical-menu-text Распознование
+            +vertical-menu-item
+              +vertical-menu-text Оплаты за день
+            +vertical-menu-item
+              +vertical-menu-text Постоянные
+            +vertical-menu-item
+              +vertical-menu-text Оплаты детально
+      +inner-sidebar-item.statistics__sidebar-btn
         +button()(href='#')._green._uppercase._align_center Создать отчет
 
     +e.content
-      +actions-header
+      +actions-header.__actions-header
         +actions-header-col.statistics__view
           +select([{title: 'Стандартный вид', value: 1}, {title: 'Стандартный вид 1', value: 2}])
         +actions-header-col._flexible
@@ -76,7 +77,7 @@ block layout-right
         +actions-header-col
           +icon-button('icon-arrow-rotate')(href='#')
 
-      +table
+      +table.__table
         +table-header
           +table-header-col('Начало')._width_140
             +table-filter-button 9-1

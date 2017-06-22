@@ -1,7 +1,7 @@
-mixin layout()
+mixin layout(offScroll)
   +b.layout&attributes(attributes)
     +e.left
       +e.scroll
         block layout-left
-    +e.right
+    +e.right(class=offScroll ? '_scrollless' : '')
       block layout-right
