@@ -3,4 +3,6 @@
   min-width: 669px;
 
   &__actions-header { border-top: 0; }
+
+  .accordion__item:last-child .accordion__button { box-shadow: none; }
 }
