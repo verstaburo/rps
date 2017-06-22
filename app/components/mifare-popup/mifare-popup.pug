@@ -9,22 +9,23 @@ include ../mifare-card-transactions/mifare-card-transactions
 mixin mifare-popup()
   +popup#mifare-popup
     +popup-header('5234 4256 9012 | Петров Василий Анатольевич')
-    +popup-body
+    +popup-body._scrolless
       +b.mifare-popup
         +e.alert
           +alert._danger Внимание! Карта заблокирована.
         +e.container
           +inner-sidebar.__sidebar
-            +inner-sidebar-item._menu
-              +vertical-menu
-                +vertical-menu-item('#mifare-popup-info')
-                  +vertical-menu-text Информация
-                +vertical-menu-item('#mifare-popup-sessions')
-                  +vertical-menu-text Сессии
-                +vertical-menu-item('#mifare-popup-transactions')
-                  +vertical-menu-text Транзакции
-            +inner-sidebar-item._with_border
-              a(href='#').mifare-popup__remove-card Отвязать карту
+            +e.group
+              +inner-sidebar-item._menu
+                +vertical-menu
+                  +vertical-menu-item('#mifare-popup-info')
+                    +vertical-menu-text Информация
+                  +vertical-menu-item('#mifare-popup-sessions')
+                    +vertical-menu-text Сессии
+                  +vertical-menu-item('#mifare-popup-transactions')
+                    +vertical-menu-text Транзакции
+              +inner-sidebar-item._with_border
+                a(href='#').mifare-popup__remove-card Отвязать карту
             +inner-sidebar-item.mifare-popup__sidebar-btn
               .mifare-popup__action.mifare-popup__action_unblock
                 +icon-button('icon-lock')(href='#')._uppercase._shadow.mifare-popup__action-btn Разблокировать

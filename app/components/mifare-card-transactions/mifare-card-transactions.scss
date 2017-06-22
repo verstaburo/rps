@@ -4,6 +4,7 @@
 
   &__content {
     padding: 8px;
+    overflow-y: scroll;
   }
 
   &__transaction:not(:last-child) {

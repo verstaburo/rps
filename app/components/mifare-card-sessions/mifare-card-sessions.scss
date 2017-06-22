@@ -3,6 +3,8 @@
   min-width: 669px;
   background-color: #f6f6f6;
 
+  .accordion { overflow-y: auto; }
+
   &__accordion-item:last-child {
     .accordion__button { box-shadow: none; }
   }
