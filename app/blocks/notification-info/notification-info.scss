@@ -80,18 +80,35 @@
 
   &__indicator {
     display: block;
+    cursor: pointer;
+  }
+
+  &__control {
+    display: none;
+
+    &:checked + .notification-info {
+
+      &__box {
+        background-color: #fff;
+
+        .notification-info__done {
+          transform: scale(1);
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__box {
+    display: block;
     position: relative;
     width: 24px;
     height: 24px;
     border: 1px solid #f9ae17;
     border-radius: 50%;
-    transition: box-shadow .25s ease-in-out;
+    transition: all .25s ease-in-out;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     background-color: #fffaef;
-
-    &_done {
-      background-color: #fff;
-    }
 
     &:hover { box-shadow: 0 0 4px rgba(249, 173, 26, .5); }
   }
@@ -103,5 +120,8 @@
     width: 18px;
     height: 13px;
     fill: #fab325;
+    transition: all .25s ease-in-out;
+    transform: scale(0);
+    visibility: hidden;
   }
 }

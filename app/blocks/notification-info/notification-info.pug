@@ -6,12 +6,11 @@ mixin notification-info()
       block
     +icon-button('icon-caret')(href='#')._shadow._uppercase.__expand Развернуть
 
-mixin notification-info-indicator(done)
-  if done
-    +e.A(href='#').indicator._done&attributes(attributes)
+mixin notification-info-indicator(name, value, checked)
+  +e.LABEL.indicator&attributes(attributes)
+    +e.INPUT.control(type="checkbox" name=name value=value checked=checked)
+    +e.box
       +icon('icon-accept').done
-  else
-    +e.A(href='#').indicator&attributes(attributes)
 
 mixin notification-info-col()
   +e.col&attributes(attributes)
