@@ -5,4 +5,8 @@
     min-width: 210px;
     justify-content: center;
   }
+
+  &__table {
+    overflow-y: scroll;
+  }
 }

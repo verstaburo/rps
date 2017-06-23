@@ -1,11 +1,30 @@
+const { $ } = window;
+
+function indexScroll() {
+  const block = $('.index');
+
+  if (!block.length) {
+    return;
+  }
+
+  const vH = $(window).height();
+  const header = $('.header');
+  const actions = block.find('.actions-header');
+  const content = block.find('.index__table');
+
+  content.height(vH - header.outerHeight() - actions.outerHeight());
+}
+
+$(window).on('resize', indexScroll);
+
 export default () => {
-  const { $ } = window;
   const index = $('.index');
 
   if (!index.length) {
     return;
   }
 
+  indexScroll();
   const actionsSelected = $('.js-index-actions-selected');
   const actionsDefault = $('.js-index-actions-default');
   const countBtn = $('.js-index-actions-count');
