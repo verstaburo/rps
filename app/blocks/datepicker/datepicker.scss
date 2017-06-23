@@ -15,6 +15,11 @@
   border-radius: 3px;
   border: 1px solid #d2d3d3;
   background-color: #fff;
+  transition: all .25s ease-in-out;
+
+  &:hover, &.focus { border-color: #f9ad1a; }
+
+  &.focus { box-shadow: 0 0 4px rgba(249, 173, 26, .5); }
 
   &__control {
     height: 100%;

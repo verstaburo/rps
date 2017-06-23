@@ -20,4 +20,22 @@ export default () => {
       defaultEndTime: moment().endOf('day').toDate(),
     });
   });
+
+  const block = $('.datepicker');
+
+  if (!block.length) {
+    return;
+  }
+
+  block
+    .on('focus', '.datepicker__control', function () { // eslint-disable-line func-names
+      $(this)
+        .parents('.datepicker')
+        .addClass('focus');
+    })
+    .on('blur', '.datepicker__control', function () { // eslint-disable-line func-names
+      $(this)
+        .parents('.datepicker')
+        .removeClass('focus');
+    });
 };
