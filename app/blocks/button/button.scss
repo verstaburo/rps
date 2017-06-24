@@ -3,11 +3,8 @@
   cursor: pointer;
   transition: all .25s esae-in-out;
   box-shadow: inset 0 1px 0 #fff;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: inherit;
   padding: 10px 16px;
+  text-align: center;
 
   &_uppercase {
     text-transform: uppercase;

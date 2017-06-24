@@ -85,6 +85,7 @@
     width: 19px;
     height: 19px;
     transition: all .25s ease-in-out;
+    flex-shrink: 0;
   }
 
   &__text {
@@ -93,5 +94,6 @@
     font-weight: 400;
     letter-spacing: 1px;
     padding-left: 17px;
+    white-space: nowrap;
   }
 }
