@@ -91,6 +91,8 @@
 
     &_lvl_2 { background-color: #f6f6f6 !important; }
 
+    &_shadow { box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1); }
+
     &:nth-of-type(odd) {
       .table__row_main { background-color: #f9f9f9; }
     }
