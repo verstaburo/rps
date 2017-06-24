@@ -6,6 +6,8 @@
   .accordion {
     overflow: auto;
     background-color: #fff;
+
+    .accordion__content { border-bottom: 1px solid #d2d3d3; }
   }
 
   &__accordion-item:last-child {
