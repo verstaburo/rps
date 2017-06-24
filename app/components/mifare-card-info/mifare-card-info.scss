@@ -6,11 +6,11 @@
 
   &__fields {
     display: block;
-    max-height: 80vh;
     overflow-y: auto;
-    padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
+
+    .field:first-child { margin-top: 15px; }
   }
 
   &__label {
@@ -27,8 +27,8 @@
   }
 
   &__button-wrap {
-    margin-top: auto;
-    padding-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 166px;
     width: 320px;
     box-sizing: content-box;
@@ -36,7 +36,6 @@
     .button {
       width: 100%;
       box-sizing: border-box;
-      margin-bottom: 15px;
     }
   }
 }

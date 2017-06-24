@@ -16,7 +16,7 @@ export default () => {
     const sidebar = popup.find('.mifare-popup__sidebar');
     const sidebarGroup = sidebar.find('.inner-sidebar__group');
     const sidebarBtn = sidebar.find('.mifare-popup__sidebar-btn');
-    const alertEl = popup.find('.alert');
+    const alertEl = popup.find('.mifare-popup__alert');
     const alert = alertEl.is(':visible') ? alertEl.outerHeight() : 0;
 
     // sidebar
@@ -57,24 +57,21 @@ export default () => {
   block.on('click', '.mifare-popup__action', function (e) { // eslint-disable-line func-names
     e.preventDefault();
     const el = $(this);
+    const alert = block.find('.mifare-popup__alert');
 
     // block
     if (el.hasClass('mifare-popup__action_block')) {
       // the code should be in ajax success callback
-      block
-        .find('.mifare-popup__alert')
-        .slideDown(250, () => {
-          block.addClass('mifare-popup_blocked');
-        });
+      alert.slideDown(250, () => {
+        block.addClass('mifare-popup_blocked');
+        resize();
+      });
     } else {
       // the code should be in ajax success callback
-      block
-        .find('.mifare-popup__alert')
-        .slideUp(250, () => {
-          block.removeClass('mifare-popup_blocked');
-        });
+      alert.slideUp(250, () => {
+        block.removeClass('mifare-popup_blocked');
+        resize();
+      });
     }
-
-    resize();
   });
 };

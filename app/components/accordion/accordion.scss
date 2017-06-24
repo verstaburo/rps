@@ -72,6 +72,10 @@
   &__item {
     display: block;
 
+    &:not(.accordion__item_active):last-child {
+      .accordion__button { box-shadow: none; }
+    }
+
     &_active {
 
       .accordion {

@@ -10,10 +10,6 @@
     .accordion__content { border-bottom: 1px solid #d2d3d3; }
   }
 
-  &__accordion-item:last-child {
-    .accordion__button { box-shadow: none; }
-  }
-
   &__search-bar {
 
     &_add-ts {
