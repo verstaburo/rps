@@ -26,6 +26,9 @@
     justify-content: flex-end;
     width: 100%;
     height: 100vh;
+    padding-left: 80px;
+
+    &_align_left { justify-content: flex-start; }
   }
 
   &__content {
