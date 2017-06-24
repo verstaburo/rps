@@ -14,21 +14,26 @@ export default () => {
     return;
   }
 
-  const toggleParent = (action = 'show') => {
-    $(document)
-      .find('.popup_active')
+  const toggleParent = (action = 'show', currentID) => {
+    const activePopups = $(document).find('.popup_active');
+
+    if (!activePopups.length) {
+      return;
+    }
+
+    activePopups
+      .filter(function () { // eslint-disable-line func-names
+        return $(this).attr('id') !== currentID;
+      })
       .each(function () { // eslint-disable-line func-names
         const content = $(this).find('.popup__content');
         const sidebar = $('.layout__left');
-        let offset = 0;
 
         if (action === 'show') {
-          offset = ($(window).innerWidth() - content.outerWidth() - sidebar.width()) * -1;
+          content.css('transform', `translate3d(-${$(window).innerWidth() - content.outerWidth() - sidebar.width()}px, 0, 0)`);
         } else {
-          offset = 0;
+          content.css('transform', '');
         }
-
-        content.css('transform', `translate3d(${offset}px, 0, 0)`);
       });
   };
 
@@ -38,10 +43,11 @@ export default () => {
     if (popup.hasClass(ACTIVE_POPUP_CLASS)) {
       return;
     }
-    toggleParent();
+
     popup.fadeIn(250, () => {
       freeze();
       popup.addClass(ACTIVE_POPUP_CLASS);
+      toggleParent('show', popup.attr('id'));
     });
   };
 
@@ -55,12 +61,13 @@ export default () => {
     const content = popup.find('.popup__content');
 
     popup.removeClass(ACTIVE_POPUP_CLASS);
+    toggleParent('hide', popup.attr('id'));
 
     content.on('transitionend', () => {
-      toggleParent('hide');
-      unfreeze();
-      popup.fadeOut(250);
-      content.off('transitionend');
+      popup.fadeOut(250, () => {
+        unfreeze();
+        content.off('transitionend');
+      });
     });
   };
 
@@ -71,6 +78,7 @@ export default () => {
   // open btn handler
   $(document).on('click', OPEN_BUTTON_CLASS, function (e) { // eslint-disable-line func-names
     e.preventDefault();
+    e.stopPropagation();
     const btn = $(this);
     const id = btn.data(DATA_ATTRIBUTE);
     const subtarget = btn.data('subtarget');
@@ -89,6 +97,7 @@ export default () => {
   // close btn handler
   $(document).on('click', CLOSE_BUTTON_CLASS, function (e) { // eslint-disable-line func-names
     e.preventDefault();
+    e.stopPropagation();
     const popup = $(this).parents('.popup');
 
     if (!popup.length) {
@@ -105,6 +114,8 @@ export default () => {
     const target = $(e.target);
 
     if (target.hasClass(POPUP_CLASS.slice(1)) || target.hasClass('popup__wrapper')) {
+      e.preventDefault();
+      e.stopPropagation();
       popup.trigger('popup:hide');
     }
   });

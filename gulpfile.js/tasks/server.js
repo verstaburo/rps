@@ -18,6 +18,7 @@ gulp.task('server', () => {
       baseDir: [
         './dist',
       ],
+      tunnel: 'verstarps',
     },
     directory: false,
     middleware: [debuga()],
