@@ -5,6 +5,7 @@
   &__content {
     padding: 8px;
     overflow-y: scroll;
+    background-color: #efefef;
   }
 
   &__transaction:not(:last-child) {
