@@ -18,11 +18,9 @@ gulp.task('server', () => {
       baseDir: [
         './dist',
       ],
-      tunnel: 'verstarps',
     },
     directory: false,
     middleware: [debuga()],
+    tunnel: 'verstarps',
   });
-
-  bs.watch('dist/**/*.*').on('change', bs.reload);
 });

@@ -6,5 +6,5 @@ export default () => {
     return;
   }
 
-  items.sortable({ handle: '.clients-settings__burger' });
+  items.sortable({ handle: '.clients-settings__burger', axis: 'y' });
 };

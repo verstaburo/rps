@@ -23,6 +23,7 @@
 
   &__control {
     height: 100%;
+    min-height: inherit;
     padding-left: 19px;
     flex: 1;
     text-align: center;

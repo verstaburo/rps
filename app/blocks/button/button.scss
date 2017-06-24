@@ -1,17 +1,20 @@
 .button {
+  display: block;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 10px 16px;
   transition: all .25s esae-in-out;
   box-shadow: inset 0 1px 0 #fff;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: inherit;
+  padding: 10px 16px;
 
   &_uppercase {
     text-transform: uppercase;
   }
 
   &_align_center {
-    justify-content: center;
+    text-align: center;
   }
 
   &_shadow {
