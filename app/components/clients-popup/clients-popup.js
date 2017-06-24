@@ -28,9 +28,8 @@ export default () => {
     {
       const tab = popup.find('.clients-common-info');
       const content = tab.find('.clients-common-info__content');
-      const btn = tab.find('.clients-common-info__save-button');
 
-      content.height(vH - header.outerHeight() - btn.outerHeight());
+      content.height(vH - header.outerHeight() - sidebarBtn.outerHeight());
     }
 
     // individual-info
