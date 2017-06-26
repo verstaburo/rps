@@ -1,4 +1,4 @@
-extends ../../layouts/default
+extends ../../layouts/custom-scroll
 include ../../blocks/button/button
 include ../../blocks/table/table
 include ../../blocks/datepicker/datepicker
@@ -19,7 +19,7 @@ block layout-right
     menu[2].active = true;
   +header(menu)
 
-  +b.blacklist.page
+  +b.blacklist
     +actions-header
       +actions-header-col
         +button()(href='#' data-target-popup='#add-to-blacklist')._green._uppercase.js-show-popup Добавить ТС в черный список
@@ -28,7 +28,7 @@ block layout-right
       +actions-header-col
         +datepicker
 
-    +table
+    +table.__table
       +table-header
         +table-header-col('Номер авто')._width_160
           +table-filter-button 9-1

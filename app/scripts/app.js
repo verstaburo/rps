@@ -21,6 +21,8 @@ import qrCodesTemplates from '../components/qr-codes-templates/qr-codes-template
 import searchFilter from '../components/search-filter/search-filter';
 import editCardDataPopup from '../components/edit-card-data-popup/edit-card-data-popup';
 import indexPage from '../pages/index/index';
+import blacklistPage from '../pages/blacklist/blacklist';
+import sessionsPage from '../pages/sessions/sessions';
 import statisticsPage from '../pages/statistics/statistics';
 import settingsDevicesZonePage from '../pages/settings-devices-zone/settings-devices-zone';
 import settingsDevicesDevicePage from '../pages/settings-devices-device/settings-devices-device';
@@ -52,6 +54,8 @@ $(() => {
   mifareCardSessions();
   indexPage();
   statisticsPage();
+  blacklistPage();
+  sessionsPage();
   settingsDevicesZonePage();
   settingsDevicesDevicePage();
   controlCenterPage();

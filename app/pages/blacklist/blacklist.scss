@@ -21,4 +21,6 @@
     pointer-events: none;
     margin-left: auto;
   }
+
+  &__table { overflow-y: auto; }
 }

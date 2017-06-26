@@ -1,4 +1,4 @@
-extends ../../layouts/default
+extends ../../layouts/custom-scroll
 include ../../blocks/icon-button/icon-button
 include ../../blocks/table/table
 include ../../blocks/datepicker/datepicker
@@ -19,7 +19,7 @@ block layout-right
     menu[1].active = true;
   +header(menu)
 
-  +b.sessions.page
+  +b.sessions
     +actions-header
       +actions-header-col.sessions__datepicker
         +datepicker
@@ -28,7 +28,7 @@ block layout-right
       +actions-header-col
         +icon-button('icon-export')(href='#')._uppercase Экспорт
 
-    +table
+    +table.__table
       +table-header
         +table-header-col('ID Сессии')._flexible
         +table-header-col('Карта')._width_120
