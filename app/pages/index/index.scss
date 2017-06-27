@@ -8,5 +8,13 @@
 
   &__table {
     overflow-y: scroll;
+
+    .table__row {
+      transition: background-color .25s ease-in-out;
+
+      &:hover {
+        background-color: #fffaf0 !important;
+      }
+    }
   }
 }
