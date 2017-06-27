@@ -15,4 +15,13 @@ export default function sessionsPage() {
   content.height(vH - header.outerHeight() - actions.outerHeight());
 }
 
+$('.sessions').on('click', '.js-sessions-toggle', function (e) { // eslint-disable-line func-names
+  e.preventDefault();
+
+  $(this)
+    .parents('.table__col')
+    .find('.table__toggle')
+    .click();
+});
+
 $(window).on('resize', sessionsPage);
