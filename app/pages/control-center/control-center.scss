@@ -8,6 +8,8 @@
     overflow-y: auto;
   }
 
+  &__table { overflow-y: auto; }
+
   &__sidebar {
     width: 232px;
     flex-basis: 232px;

@@ -62,27 +62,28 @@ block layout-right
           +indicator(href='#')._green Въезд империя
 
     +e.content
-      +accordion
-        +accordion-item-custom.control-center__accordion-item
-          +accordion-button('Штатный режим проезда').accordion__button_left.control-center__accordion-button
-            +e.SPAN.heading ВН Въезд
-          +accordion-content
-            +list
-              +list-item._align_right
-                +list-item-link(href='#') Test #1
-              +list-item._align_right
-                +list-item-link(href='#') Test #2
-      +e.controls
-        +e.col._video
-          +e.VIDEO(autoplay=true loop=true).video
-            source(src='video.mp4' type='video/mp4')
-        +e.col._buttons
-          +button()(href='#')._grey.__button Проезд одного автомобиля
-          +button()(href='#')._grey.__button Проезд по QR-коду
-          +icon-button('icon-volume')(href='#')._shadow.__button_small._locked
-          +icon-button('icon-phone')(href='#')._shadow.__button_small
+      +e.container
+        +accordion
+          +accordion-item-custom.control-center__accordion-item
+            +accordion-button('Штатный режим проезда').accordion__button_left.control-center__accordion-button
+              +e.SPAN.heading ВН Въезд
+            +accordion-content
+              +list
+                +list-item._align_right
+                  +list-item-link(href='#') Test #1
+                +list-item._align_right
+                  +list-item-link(href='#') Test #2
+        +e.controls
+          +e.col._video
+            +e.VIDEO(autoplay=true loop=true).video
+              source(src='video.mp4' type='video/mp4')
+          +e.col._buttons
+            +button()(href='#')._grey.__button Проезд одного автомобиля
+            +button()(href='#')._grey.__button Проезд по QR-коду
+            +icon-button('icon-volume')(href='#')._shadow.__button_small._locked
+            +icon-button('icon-phone')(href='#')._shadow.__button_small
 
-      +table
+      +table.__table
         +table-header.control-center__table-header
           +table-header-col('Код')._width_120._align_center
           +table-header-col('Описание')._flexible
