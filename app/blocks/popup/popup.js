@@ -14,7 +14,7 @@ export default () => {
     return;
   }
 
-  const toggleParent = (action = 'show', currentID) => {
+  const toggleParent = (action = 'show', currentPopup) => {
     const activePopups = $(document).find('.popup_active');
 
     if (!activePopups.length) {
@@ -23,14 +23,14 @@ export default () => {
 
     activePopups
       .filter(function () { // eslint-disable-line func-names
-        return $(this).attr('id') !== currentID;
+        return $(this).attr('id') !== currentPopup.attr('id');
       })
       .each(function () { // eslint-disable-line func-names
         const content = $(this).find('.popup__content');
-        const sidebar = $('.layout__left');
+        // const sidebar = $('.layout__left');
 
         if (action === 'show') {
-          content.css('transform', `translate3d(-${$(window).innerWidth() - content.outerWidth() - sidebar.width()}px, 0, 0)`);
+          content.css('transform', `translate3d(-${currentPopup.find('.popup__body').outerWidth()}px, 0, 0)`);
         } else {
           content.css('transform', '');
         }
@@ -47,7 +47,7 @@ export default () => {
     popup.fadeIn(250, () => {
       freeze();
       popup.addClass(ACTIVE_POPUP_CLASS);
-      toggleParent('show', popup.attr('id'));
+      toggleParent('show', popup);
     });
   };
 
@@ -61,7 +61,7 @@ export default () => {
     const content = popup.find('.popup__content');
 
     popup.removeClass(ACTIVE_POPUP_CLASS);
-    toggleParent('hide', popup.attr('id'));
+    toggleParent('hide', popup);
 
     content.on('transitionend', () => {
       popup.fadeOut(250, () => {
