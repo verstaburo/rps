@@ -33,6 +33,12 @@ export default () => {
     return;
   }
 
+  // init checkboxes
+  $('.js-index-checkbox .checkbox__input').each(function () {
+    const el = $(this);
+    el.data('checked', el.attr('checked'));
+  });
+
   const toggleActions = (delay) => {
     const selectetCheckboxesCount = index.find('.table .checkbox__input:checked').length;
 
