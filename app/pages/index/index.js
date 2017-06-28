@@ -34,9 +34,10 @@ export default () => {
   }
 
   // init checkboxes
-  $('.js-index-checkbox .checkbox__input').each(function () {
+  $('.js-index-checkbox .checkbox__input').each(function () { // eslint-disable-line func-names
     const el = $(this);
-    el.data('checked', el.attr('checked'));
+    const checked = el.attr('checked') ? 1 : 0;
+    el.data('checked', checked);
   });
 
   const toggleActions = (delay) => {
