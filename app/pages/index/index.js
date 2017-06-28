@@ -41,7 +41,11 @@ export default () => {
   });
 
   const toggleActions = (delay) => {
-    const selectetCheckboxesCount = index.find('.table .checkbox__input:checked').length;
+    const selectetCheckboxesCount = index.find('.table .checkbox__input')
+      .filter(function () { // eslint-disable-line func-names
+        const el = $(this);
+        return el.prop('checked') || el.prop('indeterminate');
+      }).length;
 
     if (selectetCheckboxesCount && actionsDefault.is(':visible')) {
       actionsDefault.fadeOut(delay, () => {
@@ -120,61 +124,4 @@ export default () => {
         .find('.js-index-checkbox .checkbox__input')
         .prop('checked', false);
     });
-
-// checkboxes
-// eslint-disable-next-line
-// table.on('change', '.checkbox__input', function () { // eslint-disable-line func-names, consistent-return
-
-  // // if the row is the first one, then check/uncheck all children checkboxes
-  // const isFirstParentCheckbox = row
-  //   .parent()
-  //   .parent()
-  //   .hasClass('table');
-  //
-  // if (isFirstParentCheckbox) {
-  //   row
-  //     .parent()
-  //     .find('.table__row_children')
-  //     .find('.checkbox__input')
-  //     .prop('checked', checkbox.prop('checked'))
-  //     .trigger('change', ['fromParent']);
-  // }
-  //
-  // // make no sense to check childrens state, if it was changed on parent checkbox
-  // if (data && data === 'fromParent') {
-  //   return; // eslint-disable-line consistent-return
-  // }
-  //
-  // const parentRow = row
-  //   .parents('.table__row_parent')
-  //   .last();
-  //
-  // const parentCheckbox = parentRow
-  //   .children()
-  //   .eq(0)
-  //   .find('.checkbox__input');
-  //
-  // const childrenCheckboxes = parentRow
-  //   .find('.table__row_children')
-  //   .find('.checkbox__input')
-  //   .toArray()
-  //   .map(el => el.checked);
-  //
-  // // if childrens are selected, then mark parent as checked
-  // if (childrenCheckboxes.every(item => item)) {
-  //   return parentCheckbox // eslint-disable-line consistent-return
-  //     .prop('checked', true)
-  //     .prop('indeterminate', false);
-  // }
-  // // if childrens aren't selected, then mark parent as unchecked
-  // if (childrenCheckboxes.every(item => !item)) {
-  //   return parentCheckbox // eslint-disable-line consistent-return
-  //     .prop('checked', false)
-  //     .prop('indeterminate', false);
-  // }
-  // // otherwise mark parent as indeterminate
-  // parentCheckbox
-  //   .prop('checked', false)
-  //   .prop('indeterminate', true);
-// });
 };
