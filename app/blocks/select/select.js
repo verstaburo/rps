@@ -8,14 +8,21 @@ export default () => {
   }
 
   $(document)
-    .on('click', '.select', function (e) { // eslint-disable-line func-names
+    .on('change', '.select__control', function () { // eslint-disable-line func-names
+      $(this)
+        .parents('.select')
+        .removeClass('select_active')
+        .data('changed', true);
+    })
+    .on('click', '.select', function (e) { // eslint-disable-line func-names, consistent-return
       e.stopPropagation();
+      const el = $(this);
 
-      if ($(e.target).prop('disabled')) {
-        return;
+      if (el.data('changed')) {
+        return el.data('changed', false);
       }
 
-      $(this).toggleClass('select_active');
+      el.addClass('select_active');
     })
     .on('click', () => {
       $(document)
