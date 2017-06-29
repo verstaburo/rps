@@ -31,7 +31,12 @@
   }
 
   &__cell-sm {
-    width: 100px;
+    width: 110px;
+
+    .add-to-blacklist__input {
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
 
   &__cell-xs {
